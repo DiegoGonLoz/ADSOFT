@@ -1,7 +1,7 @@
 public class Pelicula {
-    private String titulo;
-    private String genero;
-    private int anyo;
+    private final String titulo;
+    private final String genero;
+    private final int anyo;
     public Pelicula (String titulo, String genero, int anyo) {
         this.titulo = titulo;
         this.genero = genero;
