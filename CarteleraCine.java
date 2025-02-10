@@ -34,9 +34,9 @@ public class CarteleraCine {
         return "Cine: "+this.nombreCine+"\nPeliculas en cartelera: "+this.peliculas;
     }
     public static void main(String ...args) {
-        Pelicula peliculas[] = { new Pelicula("Perfect days", "Drama", 2023),
-                new Pelicula("Inception", "Accion", 2010),
-                new Pelicula("Jumanji", "Aventura", 1995) };
+        Pelicula peliculas[] = { new Pelicula("Perfect days", "Drama", 2023, "Wim Wenders"),
+                new Pelicula("Inception", "Accion", 2010, "Christopher Nolan"),
+                new Pelicula("Jumanji", "Aventura", 1995, "Joe Johnston") };
         CarteleraCine cinesTelmo = new CarteleraCine("Telmo", peliculas);
         System.out.println(cinesTelmo.toString());
 

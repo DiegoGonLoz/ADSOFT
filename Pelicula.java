@@ -11,7 +11,7 @@ public class Pelicula {
     }
     @Override
     public String toString() {
-        return this.titulo+" ("+this.genero+"): "+this.anyo;
+        return this.titulo+" - dirigida por: "+ this.director+" ("+this.genero+"): "+this.anyo;
     }
     public String getTitulo() {
         return titulo;
@@ -21,5 +21,9 @@ public class Pelicula {
     }
     public int getAnyo() {
         return anyo;
+    }
+
+    public String getDirector() {
+        return director;
     }
 }
