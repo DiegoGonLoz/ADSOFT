@@ -1,8 +1,7 @@
 Ejercicio 3:
 
 ● ¿Qué sucede si creas dos objetos Pelicula con los mismos parámetros?
-    No pasa nada ya que son objetos distintos, que compartan parámetros no afecta a la naturaleza de
-    los mismos.
+    No pasa nada ya que son objetos distintos y no importa que sus parámetros sean iguales.
 
 ● ¿Puedes crear una Pelicula sin género? ¿Y con varios?
 
