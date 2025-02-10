@@ -2,10 +2,12 @@ public class Pelicula {
     private final String titulo;
     private final String genero;
     private final int anyo;
-    public Pelicula (String titulo, String genero, int anyo) {
+    private final String director;
+    public Pelicula (String titulo, String genero, int anyo, String director) {
         this.titulo = titulo;
         this.genero = genero;
         this.anyo = anyo;
+        this.director = director;
     }
     @Override
     public String toString() {
