@@ -5,11 +5,11 @@ public class CarteleraCine {
     private List<Pelicula> peliculas = new ArrayList<>();
     public CarteleraCine(String cine, Pelicula[] peliculas) {
         this.nombreCine = cine;
-        for (Pelicula p : peliculas){
+        for (Pelicula p : peliculas)
             this.peliculas.add(p);
-        }
+
     }
-    public List<Pelicula> peliculasPorGenero(Pelicula[] peliculas, String genero){
+    public List<Pelicula> peliculasPorGenero(String genero){
          List<Pelicula> resultado = new ArrayList<>();
          for (Pelicula pelicula : peliculas) {
              if (pelicula.getGenero().equalsIgnoreCase(genero)) {
@@ -19,7 +19,7 @@ public class CarteleraCine {
          return resultado;
     }
 
-    public List<Pelicula> peliculasPosterioresA(Pelicula[] peliculas, int anyo){
+    public List<Pelicula> peliculasPosterioresA(int anyo){
         List<Pelicula> resultado = new ArrayList<>();
         for (Pelicula pelicula : peliculas) {
             if (pelicula.getAnyo() > anyo) {
@@ -38,7 +38,7 @@ public class CarteleraCine {
                 new Pelicula("Inception", "Accion", 2010),
                 new Pelicula("Jumanji", "Aventura", 1995) };
         CarteleraCine cinesTelmo = new CarteleraCine("Telmo", peliculas);
-        //List<Pelicula> PeliculasDramas = peliculasPorGenero(peliculas[], "Drama");
+        Pelicula PeliculasDramas[] = cinesTelmo.peliculasPorGenero(peliculas[], "Drama");
         System.out.println(cinesTelmo);
     }
 }
