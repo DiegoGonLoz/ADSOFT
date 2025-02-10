@@ -9,16 +9,26 @@ public class CarteleraCine {
             this.peliculas.add(p);
         }
     }
-    public peliculasPorGenero(Pelicula[] peliculas, String genero){
-           // List<Pelicula> resultado = new ArrayList<>();
-           // for (Pelicula pelicula : this.peliculas) {
-           //     if (pelicula.getGenero().equalsIgnoreCase(genero)) {
-           //         resultado.add(pelicula);
-           //     }
-           // }
-           // return resultado;
-        }
+    public List<Pelicula> peliculasPorGenero(Pelicula[] peliculas, String genero){
+         List<Pelicula> resultado = new ArrayList<>();
+         for (Pelicula pelicula : peliculas) {
+             if (pelicula.getGenero().equalsIgnoreCase(genero)) {
+                 resultado.add(pelicula);
+             }
+         }
+         return resultado;
     }
+
+    public List<Pelicula> peliculasPosterioresA(Pelicula[] peliculas, int anyo){
+        List<Pelicula> resultado = new ArrayList<>();
+        for (Pelicula pelicula : peliculas) {
+            if (pelicula.getAnyo() > anyo) {
+                resultado.add(pelicula);
+            }
+        }
+        return resultado;
+    }
+
     @Override
     public String toString() {
         return "Cine: "+this.nombreCine+"\nPeliculas en cartelera: "+this.peliculas;
@@ -28,6 +38,7 @@ public class CarteleraCine {
                 new Pelicula("Inception", "Accion", 2010),
                 new Pelicula("Jumanji", "Aventura", 1995) };
         CarteleraCine cinesTelmo = new CarteleraCine("Telmo", peliculas);
+        //List<Pelicula> PeliculasDramas = peliculasPorGenero(peliculas[], "Drama");
         System.out.println(cinesTelmo);
     }
 }
