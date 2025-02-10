@@ -1,0 +1,11 @@
+Ejercicio 3:
+
+● ¿Qué sucede si creas dos objetos Pelicula con los mismos parámetros?
+    No pasa nada ya que son objetos distintos, que compartan parámetros no afecta a la naturaleza de
+    los mismos.
+
+● ¿Puedes crear una Pelicula sin género? ¿Y con varios?
+
+
+● ¿Qué sucede si le pasas al objeto CarteleraCine un array vacío? ¿Y null? ¿Cómo puedes mejorar el código
+para que ese problema no suceda?
