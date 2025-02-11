@@ -23,6 +23,9 @@ Ejercicio 4:
 ● Si se quisieran obtener las películas por otros criterios, habría que añadir más métodos a la clase
 CarteleraCine. ¿Se te ocurre alguna manera de generalizar el diseño para que no haya que añadir un método
 por cada posible criterio de interés?
-
+    Se podrían comprobar todos los argumentos dentro de la misma función, pero moralmente sería equivalente
+    a crear funciones diferentes para cada argumento. Otra opción más general es usar el método IndexOf()
+    para buscar el argumento dentro del retorno del método CarteleraCine.toString(). Así, bastaría con
+    mantener este método actualizado y seríamos capaces de buscar por el criterio que nosotros quisiésemos.
 
 
