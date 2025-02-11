@@ -26,9 +26,9 @@ public class Pelicula {
     }
 
     /**
-     * Refinamiento de la funcion toString() para la clase pelicula
+     * Refinamiento del metodo toString() para la clase pelicula
      *
-     * @return
+     * @return Atributos de Pelicula en un formato adecuado
      */
     @Override
     public String toString() {
@@ -36,32 +36,36 @@ public class Pelicula {
     }
 
     /**
+     * Metodo que permite obtener el titulo de una Pelicula
      *
-     * @return
+     * @return String con el titulo de una Pelicula
      */
     public String getTitulo() {
         return titulo;
     }
 
     /**
+     * Metodo que permite obtener el genero de una Pelicula
      *
-     * @return
+     * @return String con el genero de una Pelicula
      */
     public String getGenero() {
         return genero;
     }
 
     /**
+     * Metodo que permite obtener el anyo de una Pelicula
      *
-     * @return
+     * @return Int con el anyo de una Pelicula
      */
     public int getAnyo() {
         return anyo;
     }
 
     /**
+     * Metodo que permite obtener el director de una Pelicula
      *
-     * @return
+     * @return String con el director de una Pelicula
      */
     public String getDirector() {
         return director;

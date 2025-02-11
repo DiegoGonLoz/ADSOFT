@@ -1,8 +1,7 @@
 import java.util.*;
 
 /**
- * Esta clase contiene la funcion main. Sirve para inicializar un Cine con
- * varias peliculas en cartelera
+ * Esta clase contiene toda la funcionalidad de la clase Cartelera Cine y la funcion main. Sirve para inicializar un Cine con varias peliculas en cartelera
  *
  * @author Diego Lesma, Diego Gonzalez
  */
