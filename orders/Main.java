@@ -1,14 +1,13 @@
 package orders;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Esta clase prueba la funcionalidad de la aplicacion
  *
  * @author Diego Lesma, Diego Gonzalez
  */
-
-import java.util.ArrayList;
-import java.util.List;
-
-
 
 public class Main {
     /**
