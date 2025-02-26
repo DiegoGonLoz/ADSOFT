@@ -11,6 +11,13 @@ import java.util.List;
 
 public class Main {
     /**
+     * Constructor por defecto de Main.
+     */
+    public Main() {
+        // Constructor vacío
+    }
+
+    /**
      * Funcion main, crea una varias orders con distintas caracteristicas para probar los distintos
      * metodos implementados en las clases
      *
