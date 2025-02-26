@@ -1,5 +1,22 @@
 package orders;
+/**
+ * Esta clase prueba la funcionalidad de la aplicacion
+ *
+ * @author Diego Lesma, Diego Gonzalez
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
 public class Main {
+    /**
+     * Funcion main, crea una varias orders con distintas caracteristicas para probar los distintos
+     * metodos implementados en las clases
+     *
+     * @param args coleccion de strings (no utilizados)
+     */
     public static void main(String[] args) {
         Order[] orders = {
                 new OnlineOrder("The Java bible", 50, "Peter Smith", "smith@gmail.com"),
@@ -17,3 +34,4 @@ public class Main {
         }
     }
 }
+
