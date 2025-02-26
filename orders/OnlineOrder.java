@@ -1,13 +1,14 @@
 package orders;
 
-public class OnlineOrder extends Orders{
-    private BookStore store;
-    public OnlineOrder(String item, double price, String customer, BookStore store){
-        super(item, price, customer);
-        this.store = store;
+public class OnlineOrder extends Order{
+    String email;
+
+    public OnlineOrder(String item, double price, String customer, String email){
+        super(item, price+5, customer);
+        this.email = email;
     }
     @Override
     public String toString() {
-        return super.toString()+"\nStore: "+this.store;
+        return super.toString()+"\nEmail: "+this.email;
     }
 }

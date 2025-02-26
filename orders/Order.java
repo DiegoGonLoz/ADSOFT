@@ -15,5 +15,14 @@ public abstract class Order {
     public String toString() {
         return "Order of '"+this.item+"' for "+this.customer+" ("+this.totalPrice()+"$)";
     }
+
+    public double setDiscount(double discount) {
+        if(discount >= 100) {
+            this.basePrice = 0;
+        } else if(discount > 0) {
+            this.basePrice -= (this.basePrice * discount / 100);
+        }
+        return this.basePrice;
+    }
 }
 
