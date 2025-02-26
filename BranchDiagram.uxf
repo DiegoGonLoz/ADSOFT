@@ -18,14 +18,16 @@
       <x>170</x>
       <y>250</y>
       <w>260</w>
-      <h>100</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Branch
 --
 -nombre:String
 --
 +newBranch(nombre: String): boolean
-+toString(): String</panel_attributes>
++toString(): String
++commit():
++getCommits(): Commit[*]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -54,6 +56,6 @@ m1=subBranches
 r1=*
 m2=superBranch
 r2=0,1</panel_attributes>
-    <additional_attributes>10.0;70.0;200.0;140.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;200.0;140.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
