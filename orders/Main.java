@@ -1,0 +1,43 @@
+package orders;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Esta clase prueba la funcionalidad de la aplicacion
+ *
+ * @author Diego Lesma, Diego Gonzalez
+ */
+
+public class Main {
+    /**
+     * Constructor por defecto de Main.
+     */
+    public Main() {
+        // Constructor vacío
+    }
+
+    /**
+     * Funcion main, crea una varias orders con distintas caracteristicas para probar los distintos
+     * metodos implementados en las clases
+     *
+     * @param args coleccion de strings (no utilizados)
+     */
+    public static void main(String[] args) {
+        Order[] orders = {
+                new OnlineOrder("The Java bible", 50, "Peter Smith", "smith@gmail.com"),
+                new InStoreOrder("Basic programming", 30, "Sue Rogers", BookStore.MAIN),
+                new InStoreOrder("Functional Pearls", 50, "Donald Knuth", BookStore.NEWARK),
+        };
+        for (Order o: orders) {
+            System.out.println(o+"\n---------------------");
+            if (o.totalPrice()>=50) {
+                o.setDiscount(5.0);
+                System.out.println("With 5.0% discount on base price:\n"+
+                        o+
+                        "\n---------------------");
+            }
+        }
+    }
+}
+
