@@ -1,21 +1,13 @@
 package Commits;
 
-import java.util.List;
-import java.util.Date;
+public class ChangeCommit {
+    private String type;
+    private String file;
+    private int linesMoved;
 
-public class ChangeCommit extends Commit {
-    private List<Change> changes;
-    public ChangeCommit(String userName, Date date, String description) {
-        super(userName, date, description);
-    }
-
-    @Override
-    public String printCommit() {
-        return "";
-    }
-
-    @Override
-    public int totalLinesMoved() {
-        return 0;
+    public ChangeCommit(String type, String file, int linesMoved) {
+        this.type = type;
+        this.file = file;
+        this.linesMoved = linesMoved;
     }
 }
