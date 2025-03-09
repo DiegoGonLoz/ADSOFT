@@ -14,8 +14,12 @@
 - userName: String
 - date: Date
 - description: String
-
+- id: int
+- code: String
 --
+- generateId(): int
+- generateCode(): String
+
 - generateUserName(): String
 - generateDescription(): String
 + printCommit(): String
@@ -24,60 +28,16 @@
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>930</x>
-      <y>130</y>
-      <w>220</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>IdChangeCommit
---
-- id: int
-- code: String
-
---
-- generateId(): int
-- generateCode(): String</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>740</x>
-      <y>240</y>
-      <w>220</w>
-      <h>280</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;260.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>960</x>
-      <y>490</y>
-      <w>240</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Change
---
-- type: String
-- file: String
-- linesMoved: int</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>740</x>
       <y>530</y>
-      <w>240</w>
+      <w>170</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*</panel_attributes>
-    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -146,5 +106,23 @@ m1=commits
 r1=*
 r2=0,1</panel_attributes>
     <additional_attributes>130.0;20.0;10.0;20.0;10.0;300.0;60.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>490</y>
+      <w>150</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>/Change/
+--
+-filePath: String
+-firstLine: int
+-type: TypeChange
+--
+/+toString(): String/
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
