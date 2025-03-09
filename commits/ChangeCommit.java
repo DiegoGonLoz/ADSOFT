@@ -1,4 +1,4 @@
-package Commits;
+package commits;
 
 public class ChangeCommit {
     private String type;

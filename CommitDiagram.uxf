@@ -1,157 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>11</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>297</x>
-      <y>737</y>
-      <w>165</w>
-      <h>121</h>
-    </coordinates>
-    <panel_attributes>/Change/
---
--filePath: String
--firstLine: int
--tipe: TipeChange
---
-/+toString(): String/
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>121</x>
-      <y>968</y>
-      <w>143</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>AddChange
---
--content: String
---
-+toString(): String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>286</x>
-      <y>968</y>
-      <w>143</w>
-      <h>99</h>
-    </coordinates>
-    <panel_attributes>ModifyChange
---
--endLine: int
--content: String
---
-+toString(): String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>451</x>
-      <y>979</y>
-      <w>143</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>RemoveChange
---
--endLine: int
---
-+toString(): String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>330</x>
-      <y>847</y>
-      <w>55</w>
-      <h>143</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>154</x>
-      <y>847</y>
-      <w>187</w>
-      <h>143</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;10.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>396</x>
-      <y>847</y>
-      <w>121</w>
-      <h>154</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>66</x>
-      <y>726</y>
-      <w>110</w>
-      <h>33</h>
-    </coordinates>
-    <panel_attributes>ChangeTester</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>517</x>
-      <y>781</y>
-      <w>110</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumerate&gt;&gt;
-TipeChange
---
-+ +
-+ /
-+ -</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>550</x>
-      <y>495</y>
-      <w>110</w>
-      <h>33</h>
+      <x>320</x>
+      <y>120</y>
+      <w>390</w>
+      <h>260</h>
     </coordinates>
     <panel_attributes>/Commit/
 --
+- userName: String
+- date: Date
+- description: String
+
+--
+- generateUserName(): String
+- generateDescription(): String
++ printCommit(): String
++ printChange(c:Change): String
++ totalLinesMoved(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>130</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>IdChangeCommit
+--
+- id: int
+- code: String
+
+--
+- generateId(): int
+- generateCode(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>240</y>
+      <w>220</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>490</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Change
+--
+- type: String
+- file: String
+- linesMoved: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>530</y>
+      <w>240</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>490</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>MergeCommit
+--
++ printCommit(): String
++ totalLinesMoved(): int
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>319</x>
-      <y>473</y>
-      <w>165</w>
-      <h>77</h>
+      <x>520</x>
+      <y>490</y>
+      <w>230</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>CommitID
+    <panel_attributes>ChangeCommit
 --
-- id: String</panel_attributes>
++ printCommit(): String
++ totalLinesMoved(): int
+
+</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>370</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>370</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>220</y>
+      <w>150</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=commits
+r1=*
+r2=0,1</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0;10.0;300.0;60.0;300.0</additional_attributes>
   </element>
 </diagram>

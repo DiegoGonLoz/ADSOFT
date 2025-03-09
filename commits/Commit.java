@@ -1,4 +1,4 @@
-package Commits;
+package commits;
 
 import java.util.Date;
 

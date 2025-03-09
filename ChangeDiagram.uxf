@@ -13,7 +13,7 @@
 --
 -filePath: String
 -firstLine: int
--tipe: TipeChange
+-type: TypeChange
 --
 /+toString(): String/
 </panel_attributes>
@@ -110,7 +110,7 @@
       <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumerate&gt;&gt;
-TipeChange
+TypeChange
 --
 + +
 + /
