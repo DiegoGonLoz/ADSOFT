@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>297</x>
+      <y>737</y>
+      <w>165</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>/Change/
+--
+-filePath: String
+-firstLine: int
+-tipe: TipeChange
+--
+/+toString(): String/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>121</x>
+      <y>968</y>
+      <w>143</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>AddChange
+--
+-content: String
+--
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>968</y>
+      <w>143</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>ModifyChange
+--
+-endLine: int
+-content: String
+--
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>451</x>
+      <y>979</y>
+      <w>143</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>RemoveChange
+--
+-endLine: int
+--
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>847</y>
+      <w>55</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>154</x>
+      <y>847</y>
+      <w>187</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>847</y>
+      <w>121</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>66</x>
+      <y>726</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>ChangeTester</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>517</x>
+      <y>781</y>
+      <w>110</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumerate&gt;&gt;
+TipeChange
+--
++ +
++ /
++ -</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>495</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>/Commit/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>319</x>
+      <y>473</y>
+      <w>165</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>CommitID
+--
+- id: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
