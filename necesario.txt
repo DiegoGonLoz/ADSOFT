@@ -1,0 +1,9 @@
+Métodos necesarios pero que no estan implementados:
+- Change:
+    -
+- Commit:
+    -
+- Branch:
+    -
+- Repository:
+    -

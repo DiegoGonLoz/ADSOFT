@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>440</y>
+      <x>330</x>
+      <y>370</y>
       <w>150</w>
       <h>110</h>
     </coordinates>
@@ -22,8 +22,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>650</y>
+      <x>170</x>
+      <y>580</y>
       <w>130</w>
       <h>70</h>
     </coordinates>
@@ -38,8 +38,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>650</y>
+      <x>320</x>
+      <y>580</y>
       <w>130</w>
       <h>90</h>
     </coordinates>
@@ -55,8 +55,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>660</y>
+      <x>470</x>
+      <y>590</y>
       <w>130</w>
       <h>70</h>
     </coordinates>
@@ -71,8 +71,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>540</y>
+      <x>360</x>
+      <y>470</y>
       <w>50</w>
       <h>130</h>
     </coordinates>
@@ -82,8 +82,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>230</x>
-      <y>540</y>
+      <x>200</x>
+      <y>470</y>
       <w>170</w>
       <h>130</h>
     </coordinates>
@@ -93,8 +93,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>540</y>
+      <x>420</x>
+      <y>470</y>
       <w>110</w>
       <h>140</h>
     </coordinates>
@@ -104,19 +104,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>150</x>
-      <y>430</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>ChangeTester</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>560</x>
-      <y>480</y>
+      <x>530</x>
+      <y>410</y>
       <w>100</w>
       <h>100</h>
     </coordinates>
