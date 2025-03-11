@@ -1,15 +1,17 @@
 package changes;
 
 public abstract class Change {
-    protected String filePath;
-    protected int firstLine;
-    protected TypeChange type;
+    protected final String filePath;
+    protected final int firstLine;
+    protected final TypeChange type;
 
     public Change(String filePath, int firstLine, TypeChange type) {
         this.filePath = filePath;
         this.firstLine = firstLine;
         this.type = type;
     }
+
+    public abstract int getNumberOfLines();
 
     @Override
     public abstract String toString();
