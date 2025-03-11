@@ -2,7 +2,7 @@ Métodos necesarios pero que no estan implementados:
 - Change:
     -
 - Commit:
-    -
+    - cambiar generateUserName y generateDescription por setUserName y setDescription
 - Branch:
     -
 - Repository:
