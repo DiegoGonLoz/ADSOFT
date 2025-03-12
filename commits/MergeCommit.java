@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.Date;
 
 public class MergeCommit extends Commit{
-    private List<ChangeCommit> changeCommits;
-    private List<MergeCommit> mergeCommits;
-    public MergeCommit(String userName, Date date, String description) {
-        super(userName, date, description);
+    private List<Commit> commits;
+
+    public MergeCommit(List<Commit> commits) {
+        this.commits = commits;
     }
 
 
     @Override
-    public String printCommit() {
+    public String toString() {
         return "";
     }
 
