@@ -8,6 +8,7 @@ import java.util.List;
 public class ChangeCommit extends Commit {
     private List<Change> changes;
 
+
     public ChangeCommit(String userName, String description, List<Change> changes) {
         super(userName, description);
         this.changes = changes;
