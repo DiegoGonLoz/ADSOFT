@@ -33,11 +33,24 @@ public class Repository {
     }
 
     public Branch getBranch(String name){
+        for(Branch branch: branches){
+            if(branch.getName().equals(name)){
+                return branch;
+            }
+        }
 
+        System.out.println("Branch '"+name+"' does not exist\n");
     }
 
-    public void changeActiveBranch(Branch branch){
+    public void changeActiveBranch(String name){
+        for(Branch branch: branches){
+            if(branch.getName().equals(name)){
+                activeBranch = branch;
+                return;
+            }
+        }
 
+        System.out.println("Not a valid branch name\n");
     }
 
     public void mergeBranch(
