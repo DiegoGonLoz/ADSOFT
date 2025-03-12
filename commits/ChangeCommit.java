@@ -15,16 +15,29 @@ public class ChangeCommit extends Commit {
 
     @Override
     public String toString() {
-        return  "{\nuserName="+this.userName+
-                "\nid="+this.id+
-                "\ndate="+this.date+
-                "\ndescription="+ Arrays.toString(this.description.split(",")) +
-                "\nchanges="+this.changes.toString()+
+        String aux = "";
+        for (Change change :  changes){
+            aux = aux + change.printForCommit();
+        }
+        return  "{\ncommit "+this.id+
+                "\nAuthor: "+this.userName+
+                "\nDate: "+this.date+
+                "\nDescription: "+ Arrays.toString(this.description.split(",")) +
+                "\n"+ aux +
                 "\n}\n";
     }
 
     @Override
+    public List<Change> changes(){
+        return changes;
+    }
+
+    @Override
     public int totalLinesMoved() {
-        return 0;
+        int totalLines = 0;
+        for (Change change :  changes){
+            totalLines = totalLines + change.getNumberOfLines();
+        }
+        return totalLines;
     }
 }

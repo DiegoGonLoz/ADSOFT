@@ -15,4 +15,13 @@ public abstract class Change {
 
     @Override
     public abstract String toString();
+
+    public String printForCommit(){
+        return "\n"+this.type.toString()+
+                ": "+this.filePath +
+                " ("+this.getNumberOfLines()+
+                ")"+
+                "\n\n";
+    }
+
 }

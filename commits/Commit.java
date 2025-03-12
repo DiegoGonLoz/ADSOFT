@@ -43,6 +43,10 @@ public abstract class Commit {
         return uuid.substring(0, 15);
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setUserName(String userName) {
         this.userName = (userName != null && !userName.isEmpty()) ? userName : defaultUserName;
     }
@@ -51,9 +55,7 @@ public abstract class Commit {
         this.description = (description != null && !description.isEmpty()) ? description : defaultDescription;
     }
 
-    public String printChange(Change c){
-        return c.toString();
-    }
+    public abstract List<Change> changes();
     @Override
     public abstract String toString();
 
