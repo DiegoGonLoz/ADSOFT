@@ -1,0 +1,5 @@
+Como se calcula el numero de lineas en modify changes
+Conflictos
+Usuarios
+Forma correcta de copiar commits
+Forma correcta de devolver commits
