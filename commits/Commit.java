@@ -5,38 +5,29 @@ import java.util.UUID;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import changes.Change;
 
 public abstract class Commit {
     private static int lastId = 0;
     private static String defaultUserName = "defaultUser";
     private static String defaultDescription = "No description provided";
 
-    private String userName;
-    private Date date;
-    private String description;
-    private int id;
-    private String code;
-    private List<Change> changes;
+    protected String userName;
+    protected Date date;
+    protected String description;
+    protected int id;
+    protected String code;
 
-    public Commit(String userName, String description, List <Change> changes) {
+    public Commit(String userName, String description) {
         this.userName = (userName != null && !userName.isEmpty()) ? userName : defaultUserName;
         this.date = new Date();
         this.description = (description != null && !description.isEmpty()) ? description : defaultDescription;
         this.id = generateId();
         this.code = generateCode();
-        this.changes = (changes != null) ? changes : new ArrayList<>();
-    }
-
-    public Commit(List<Change> changes) {
-        this(null, null, changes);
-    }
-
-    public Commit(String userName, String description) {
-        this(userName, description, new ArrayList<>());
     }
 
     public Commit() {
-        this(null, null, new ArrayList<>());
+        this(null, null);
     }
 
     private synchronized int generateId() {
@@ -61,8 +52,10 @@ public abstract class Commit {
     }
 
     public String printChange(Change c){
-        return "";
+        return c.toString();
     }
-    public abstract String printCommit();
+    @Override
+    public abstract String toString();
+
     public abstract int totalLinesMoved();
 }
