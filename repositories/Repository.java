@@ -40,12 +40,10 @@ public class Repository {
 
     }
 
-    public void mergeBranch(
-            String origin,
-            String target,
-            Strategy strategy){
+    public void mergeBranch(String origin, String target, Strategy strategy){
 
     }
+
 
     @Override
     public String toString() {

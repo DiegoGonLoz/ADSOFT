@@ -12,11 +12,11 @@ public abstract class Commit {
     private static String defaultUserName = "defaultUser";
     private static String defaultDescription = "No description provided";
 
-    protected String userName;
-    protected Date date;
-    protected String description;
-    protected int id;
-    protected String code;
+    protected final String userName;
+    protected final Date date;
+    protected final String description;
+    protected final int id;
+    protected final String code;
 
     public Commit(String userName, String description) {
         this.userName = (userName != null && !userName.isEmpty()) ? userName : defaultUserName;
@@ -47,12 +47,14 @@ public abstract class Commit {
         return id;
     }
 
-    public void setUserName(String userName) {
-        this.userName = (userName != null && !userName.isEmpty()) ? userName : defaultUserName;
+    public String getDescription() { return description; }
+
+    public void setDefaultUserName(String userName) {
+        defaultUserName = userName;
     }
 
-    public void setDescription(String description) {
-        this.description = (description != null && !description.isEmpty()) ? description : defaultDescription;
+    public void setDefaultDescription(String description) {
+        defaultDescription = description;
     }
 
     public abstract List<Change> changes();

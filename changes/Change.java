@@ -17,14 +17,14 @@ public abstract class Change {
     public abstract String toString();
 
     public String printForCommit(){
-        String symbol = "";
+        String sign = "";
         if(getNumberOfLines() >= 0){
-            symbol = "+";
+            sign = "+";
         }
 
         return "\n"+this.type.toString()+
                 ": "+this.filePath +
-                " ("+symbol+this.getNumberOfLines()+
+                " ("+sign+this.getNumberOfLines()+
                 ")"+
                 "\n\n";
     }
