@@ -53,12 +53,10 @@ public class Repository {
         System.out.println("Not a valid branch name\n");
     }
 
-    public void mergeBranch(
-            String origin,
-            String target,
-            Strategy strategy){
+    public void mergeBranch(String origin, String target, Strategy strategy){
 
     }
+
 
     @Override
     public String toString() {

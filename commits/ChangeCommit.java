@@ -16,14 +16,14 @@ public class ChangeCommit extends Commit {
 
     @Override
     public String toString() {
-        String aux = "";
+        StringBuilder aux = new StringBuilder();
         for (Change change :  changes){
-            aux = aux + change.printForCommit();
+            aux.append(change.printForCommit());
         }
         return  "{\ncommit "+this.id+
                 "\nAuthor: "+this.userName+
                 "\nDate: "+this.date+
-                "\nDescription: "+ Arrays.toString(this.description.split(",")) +
+                "\nDescription: "+ Arrays.toString(this.description.split("\n")) +
                 "\n"+ aux +
                 "\n}\n";
     }
