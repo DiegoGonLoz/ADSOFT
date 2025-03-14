@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Date;
 
 public class MergeCommit extends Commit{
-    private List<Commit> commits;
+    private final List<Commit> commits;
 
     public MergeCommit(List<Commit> commits) {
         this.commits = commits;
@@ -19,7 +19,7 @@ public class MergeCommit extends Commit{
     public String toString() {
         String aux = "";
         for (Commit commit :  commits){
-            aux = aux + String.valueOf(commit.getId())+" on "+commit.date.toString()+"\n";
+            aux = aux + commit.getId() +" on "+commit.date.toString()+"\n";
         }
         return  "{\ncommit "+this.id+
                 "\nAuthor: "+this.userName+

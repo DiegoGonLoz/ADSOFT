@@ -5,7 +5,7 @@ public enum TypeChange {
     REMOVE('-'),
     MODIFY('/');
 
-    private char symbol;
+    private final char symbol;
 
     TypeChange(char ch) {
         this.symbol = ch;

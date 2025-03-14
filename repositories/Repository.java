@@ -8,9 +8,9 @@ import java.util.List;
 public class Repository {
     private final String name;
     private Strategy defaultStrategy;
-    private List<Branch> branches;
+    private final List<Branch> branches;
     private Branch activeBranch;
-    private List<User> users;
+    private final List<User> users;
 
     public Repository(String name, Strategy defaultStrategy, User admin) {
         this.name = name;

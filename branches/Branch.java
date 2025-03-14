@@ -8,7 +8,7 @@ import java.util.List;
 public class Branch {
     private final String name;
     private final String fromBranch;
-    private List<Commit> commits;
+    private final List<Commit> commits;
 
     public Branch(String name){
         this.name = name;

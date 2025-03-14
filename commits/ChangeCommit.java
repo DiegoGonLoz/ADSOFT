@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ChangeCommit extends Commit {
-    private List<Change> changes;
+    private final List<Change> changes;
 
 
     public ChangeCommit(String userName, String description, List<Change> changes) {
