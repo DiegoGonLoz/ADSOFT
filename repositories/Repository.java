@@ -24,6 +24,10 @@ public class Repository {
         this.users.add(admin);
     }
 
+    public void setStrategy(Strategy strategy) {
+        this.defaultStrategy = strategy;
+    }
+
     public void newBranch(String name){
         for(Branch b: branches){
             if(b.getName().equals(name)){
@@ -68,6 +72,10 @@ public class Repository {
         System.out.println("Not a valid branch name\n");
     }
 
+    public void addUser(User user){
+        this.users.add(user);
+    }
+
     public void mergeBranch(String origin, String target, Strategy strategy){
 
     }
@@ -75,6 +83,19 @@ public class Repository {
 
     @Override
     public String toString() {
+        String output = "Repository: " + this.name +
+                "\nBranches:";
 
+        for (Branch branch : branches) {
+            output += "\n- " + branch.getName();
+
+            if(branch.equals(this.activeBranch)){
+                output += " (active)";
+            }
+        }
+
+        output += this.activeBranch.toString();
+
+        return output;
     }
 }

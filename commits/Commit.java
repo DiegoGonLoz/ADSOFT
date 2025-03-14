@@ -2,8 +2,6 @@ package commits;
 
 import java.util.Date;
 import java.util.UUID;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import changes.Change;
 
