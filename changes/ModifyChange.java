@@ -12,7 +12,8 @@ public class ModifyChange  extends Change{
 
     @Override
     public int getNumberOfLines(){
-        return (endLine - firstLine + 1);
+        String[] lines = this.content.split("\n");
+        return (lines.length - (endLine - firstLine + 1));
     }
 
     @Override
