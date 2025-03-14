@@ -25,10 +25,23 @@ public class Repository {
     }
 
     public void newBranch(String name){
+        for(Branch b: branches){
+            if(b.getName().equals(name)){
+                System.out.println("Branch already exists");
+                return;
+            }
+        }
 
+        this.branches.add(new Branch(name));
     }
 
     public void newBranch(String name, Branch branch){
+        for(Branch b: branches){
+            if(b.getName().equals(name)){
+                System.out.println("Branch already exists");
+                return;
+            }
+        }
         this.branches.add(new Branch(name, branch));
     }
 

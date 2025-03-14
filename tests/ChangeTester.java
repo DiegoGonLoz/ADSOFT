@@ -1,4 +1,6 @@
-package changes;
+package tests;
+
+import changes.*;
 
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class ChangeTester {
             System.out.println(change);
     }
     public static List<Change> createChanges () {
-        Change c1 = new AddChange (0, "/src/main/NuevaClase.java", // adds in line 0 (i.e.,before line 1)
+        Change c1 = new AddChange(0, "/src/main/NuevaClase.java", // adds in line 0 (i.e.,before line 1)
                 "import java.util.*;\nimport java.io.*;");
         Change c2 = new ModifyChange(10, 10, "/src/main/ClaseExistente.java", // replaces line 10
                 "// Modificación en la clase existente");
