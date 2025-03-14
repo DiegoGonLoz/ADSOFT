@@ -28,8 +28,8 @@ public class Repository {
 
     }
 
-    public void newBranch(Branch branch){
-
+    public void newBranch(String name, Branch branch){
+        this.branches.add(new Branch(name, branch));
     }
 
     public Branch getBranch(String name){
@@ -40,6 +40,8 @@ public class Repository {
         }
 
         System.out.println("Branch '"+name+"' does not exist\n");
+
+        return null;
     }
 
     public void changeActiveBranch(String name){

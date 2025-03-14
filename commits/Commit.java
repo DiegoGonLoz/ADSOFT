@@ -49,6 +49,10 @@ public abstract class Commit {
 
     public String getDescription() { return description; }
 
+    public Date getDate() {
+        return date;
+    }
+
     public void setDefaultUserName(String userName) {
         defaultUserName = userName;
     }

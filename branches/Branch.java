@@ -30,7 +30,9 @@ public class Branch {
         return this.commits;
     }
 
-    public String getName(){ return this.name; }
+    public String getName(){
+        return this.name;
+    }
 
     @Override
     public String toString(){
@@ -38,8 +40,8 @@ public class Branch {
 
         for(Commit c : this.commits){
             history += String.format("%05d", c.getId()) + " - "
-                    + c.getDescription().subString(0,Math.min(c.getDescription().length(), 30)) +
-                    " at " + c.getDate().toString +"\n";
+                    + c.getDescription().substring(0,Math.min(c.getDescription().length(), 30)) +
+                    " at " + c.getDate() +"\n";
         }
 
         String from = null;
