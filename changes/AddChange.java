@@ -15,6 +15,11 @@ public class AddChange  extends Change{
     }
 
     @Override
+    public String getFilePath() {
+        return filePath;
+    }
+
+    @Override
     public String toString(){
         return "{\ntype="+this.type.toString()+
                 "\nstart line="+this.firstLine+

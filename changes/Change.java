@@ -13,6 +13,8 @@ public abstract class Change {
 
     public abstract int getNumberOfLines();
 
+    public abstract String getFilePath();
+
     @Override
     public abstract String toString();
 
