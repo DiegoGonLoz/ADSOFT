@@ -89,25 +89,8 @@ public class Repository {
         List<Commit> originCommits = originBranch.getCommits();
         List<Commit> targetCommits = targetBranch.getCommits();
 
-        // Encontrar el último commit común
-        Commit lastCommonCommit = null;
-        for (Commit originCommit : originCommits) {
-            for (Commit targetCommit : targetCommits) {
-                if (originCommit.getId() == targetCommit.getId()) {
-                    lastCommonCommit = originCommit;
-                    break;
-                }
-            }
-            if (lastCommonCommit != null) {
-                break;
-            }
-        }
+        Commit lastCommonCommit = getLastCommonCommit(originCommits, targetCommits);
 
-        if (lastCommonCommit == null) {
-            throw new IllegalStateException("Las ramas no tienen commits en común.");
-        }
-
-        // Encontrar los commits posteriores al último commit común en ambas ramas
         List<Commit> originCommitsToMerge = new ArrayList<>();
         List<Commit> targetCommitsAfterCommon = new ArrayList<>();
 
@@ -131,24 +114,41 @@ public class Repository {
             }
         }
 
-        // Detectar conflictos
         List<String> conflicts = detectConflicts(originCommitsToMerge, targetCommitsAfterCommon);
 
         if (!conflicts.isEmpty() && (strategy == null || strategy == Strategy.NONE)) {
-            return conflicts; // No se puede fusionar si hay conflictos y la estrategia es nula
+            return conflicts;
         }
 
-        // Resolver conflictos según la estrategia
         resolveConflicts(originCommitsToMerge, targetCommitsAfterCommon, strategy != null ? strategy : defaultStrategy);
 
-        // Crear un MergeCommit con los commits fusionados
+
         MergeCommit mergeCommit = new MergeCommit(originCommitsToMerge);
         mergeCommit.setDefaultDescription("Merge branches " + origin + " into " + target);
 
-        // Añadir el MergeCommit a la rama destino
         targetBranch.addCommit(mergeCommit);
 
-        return conflicts; // Devuelve la lista de conflictos (vacía si no hubo conflictos)
+        return conflicts;
+    }
+
+    private static Commit getLastCommonCommit(List<Commit> originCommits, List<Commit> targetCommits) {
+        Commit lastCommonCommit = null;
+        for (Commit originCommit : originCommits) {
+            for (Commit targetCommit : targetCommits) {
+                if (originCommit.getId() == targetCommit.getId()) {
+                    lastCommonCommit = originCommit;
+                    break;
+                }
+            }
+            if (lastCommonCommit != null) {
+                break;
+            }
+        }
+
+        if (lastCommonCommit == null) {
+            throw new IllegalStateException("Las ramas no tienen commits en común.");
+        }
+        return lastCommonCommit;
     }
 
     private List<String> detectConflicts(List<Commit> originCommits, List<Commit> targetCommits) {
@@ -179,10 +179,10 @@ public class Repository {
                         if (originChange.getFilePath().equals(targetChange.getFilePath())) {
                             switch (strategy) {
                                 case ORIGIN:
-                                    targetChanges.remove(targetChange); // Descartar cambio de destino
+                                    targetChanges.remove(targetChange);
                                     break;
                                 case DESTINY:
-                                    originChanges.remove(originChange); // Descartar cambio de origen
+                                    originChanges.remove(originChange);
                                     break;
                                 case NONE:
                                     throw new IllegalStateException("Conflicto no resuelto en el archivo: " + originChange.getFilePath());
