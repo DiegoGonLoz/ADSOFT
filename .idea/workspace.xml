@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Putito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/branches/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/branches/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commits/ChangeCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/ChangeCommit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commits/Commit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/Commit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commits/MergeCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/MergeCommit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BranchTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BranchTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/RepositoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RepositoryTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +46,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BranchTester.executor": "Run",
-    "Application.CommitTester.executor": "Run",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Practica3",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/diego_gonzalez/Documentos/Github",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Practica3&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Documentos/Github&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -129,39 +122,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741945034960</updated>
     </task>
-    <task id="LOCAL-00006" summary="Putito">
-      <option name="closed" value="true" />
-      <created>1742045411090</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742045411090</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Putito">
-      <option name="closed" value="true" />
-      <created>1742046630106</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1742046630106</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Putito">
-      <option name="closed" value="true" />
-      <created>1742117398632</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1742117398632</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Putito">
-      <option name="closed" value="true" />
-      <created>1742228681281</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1742228681281</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

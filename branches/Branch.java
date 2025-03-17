@@ -18,7 +18,7 @@ public class Branch {
     }
 
     public Branch(String name, Branch branch){
-        this.name = name + " (from "+branch.name+")";
+        this.name = name;
         this.commits = branch.commits;
         this.fromBranch = branch.name;
     }
