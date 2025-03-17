@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Putito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changes/Change.java" beforeDir="false" afterPath="$PROJECT_DIR$/changes/Change.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/branches/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/branches/Branch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commits/ChangeCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/ChangeCommit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commits/Commit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/Commit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commits/MergeCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/MergeCommit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CommitTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommitTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BranchTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BranchTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/RepositoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RepositoryTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BranchTester.executor": "Run",
     "Application.CommitTester.executor": "Run",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Practica3",
@@ -153,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742117398632</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Putito">
+      <option name="closed" value="true" />
+      <created>1742228681281</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742228681281</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

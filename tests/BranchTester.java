@@ -1,22 +1,34 @@
 package tests;
 
 import branches.*;
-import changes.Change;
+import changes.*;
+import commits.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class BranchTester {
     public static void main (String[] args) {
-        //create branch
-
+        Branch branch1 = new Branch("branch1");
+        Change change = new AddChange(3, "c/:", "This is the content");
+        List<Change> changes = List.of(change);
+        Commit commit1 = new ChangeCommit("Pepe", "Description", changes);
+        List<Commit> commits = List.of(commit1);
+        Commit commit2 = new MergeCommit("Alberto", "Description", commits);
         //add commits
+        branch1.addCommit(commit1);
+        branch1.addCommit(commit2);
 
-        //imprimir
+        System.out.println(branch1);
 
-        //create branch from branch
+        Branch branch2 = new Branch("branch2", branch1);
 
-        //add commits
+        System.out.println(branch2);
 
-        //imprimir
 
-        //imprimir
+        branch2.addCommit(commit1);
+
+        System.out.println(branch2);
     }
 }

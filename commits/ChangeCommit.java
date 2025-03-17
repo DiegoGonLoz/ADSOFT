@@ -17,6 +17,7 @@ public class ChangeCommit extends Commit {
     @Override
     public String toString() {
         StringBuilder aux = new StringBuilder();
+
         for (Change change :  changes){
             aux.append(change.printForCommit());
         }

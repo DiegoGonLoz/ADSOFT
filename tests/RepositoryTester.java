@@ -1,5 +1,6 @@
 package tests;
 
+import branches.Branch;
 import changes.Change;
 import repositories.*;
 
@@ -14,20 +15,20 @@ public class RepositoryTester {
         repository.addUser(U2);
         repository.addUser(U3);
 
-        //new branch
+        repository.newBranch("branch1");
+        repository.newBranch("branch2", repository.getBranch("branch1"));
 
-        //new branch from branch
+        repository.getBranch("branch2");
+        repository.getBranch(null);
 
-        //get existing branch
+        repository.newBranch("branch1");
 
-        //get non existing branch
+        repository.changeActiveBranch("branch1");
 
-        //add existing branch
+        System.out.println(repository);
 
-        //change active branch
+        repository.mergeBranch("branch1","branch2", Strategy.ORIGIN);
 
-        //merge
-
-        //imprimir
+        System.out.println(repository);
     }
 }

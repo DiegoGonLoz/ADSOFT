@@ -2,6 +2,7 @@ package branches;
 
 import commits.Commit;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,20 +38,19 @@ public class Branch {
     @Override
     public String toString(){
         String history = "";
-
+        String from = "";
         for(Commit c : this.commits){
             history += String.format("%05d", c.getId()) + " - "
                     + c.getDescription().substring(0,Math.min(c.getDescription().length(), 30)) +
                     " at " + c.getDate() +"\n";
         }
 
-        String from = null;
-
-        if (this.fromBranch != null){{
-            from = " (from "+this.fromBranch+")";}
+        if (this.fromBranch != null){
+            from = " (from "+this.fromBranch+")";
         }
+
         return "Branch: "+this.name+from+
-                "\n"+this.commits.size()+"commits:"+
+                "\n"+this.commits.size()+" commits:"+
                 "\n"+history;
 
     }

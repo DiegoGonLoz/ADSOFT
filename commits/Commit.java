@@ -1,6 +1,6 @@
 package commits;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 import java.util.List;
 import changes.Change;
@@ -11,14 +11,14 @@ public abstract class Commit {
     private static String defaultDescription = "No description provided";
 
     protected final String userName;
-    protected final Date date;
+    protected final LocalDate date;
     protected final String description;
     protected final int id;
     protected final String code;
 
     public Commit(String userName, String description) {
         this.userName = (userName != null && !userName.isEmpty()) ? userName : defaultUserName;
-        this.date = new Date();
+        this.date = LocalDate.now();
         this.description = (description != null && !description.isEmpty()) ? description : defaultDescription;
         this.id = generateId();
         this.code = generateCode();
@@ -51,7 +51,7 @@ public abstract class Commit {
 
     public String getDescription() { return description; }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
@@ -66,6 +66,7 @@ public abstract class Commit {
     public abstract List<Change> changes();
     @Override
     public abstract String toString();
+
 
     public abstract int totalLinesMoved();
 
