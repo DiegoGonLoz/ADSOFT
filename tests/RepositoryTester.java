@@ -1,8 +1,13 @@
 package tests;
 
-import branches.Branch;
+import branches.*;
+import changes.AddChange;
 import changes.Change;
+import commits.ChangeCommit;
+import commits.Commit;
 import repositories.*;
+
+import java.util.List;
 
 public class RepositoryTester {
     public static void main (String[] args) {
@@ -11,6 +16,9 @@ public class RepositoryTester {
 
         User U2 = new User("test2");
         User U3 = new User("test3");
+        Change change = new AddChange(3, "c/:", "This is the content");
+        List<Change> changes = List.of(change);
+        Commit commit1 = new ChangeCommit("Pepe", "Description", changes);
 
         repository.addUser(U2);
         repository.addUser(U3);
@@ -25,10 +33,12 @@ public class RepositoryTester {
 
         repository.changeActiveBranch("branch1");
 
-        System.out.println(repository);
-
-        repository.mergeBranch("branch1","branch2", Strategy.ORIGIN);
+        repository.getBranch("branch1").addCommit(commit1);
 
         System.out.println(repository);
+
+        //repository.mergeBranch("branch1","branch2", Strategy.ORIGIN);
+
+        //System.out.println(repository);
     }
 }

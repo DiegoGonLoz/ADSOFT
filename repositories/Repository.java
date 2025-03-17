@@ -206,7 +206,7 @@ public class Repository {
             }
         }
 
-        output += this.activeBranch.toString();
+        output += "\n"+this.activeBranch.toString();
 
         return output;
     }

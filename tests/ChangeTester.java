@@ -9,9 +9,12 @@ public class ChangeTester {
         for (Change change : createChanges())
             System.out.println(change);
 
-        //Comprobar longitud correcta
 
-        //Print for commit
+        for (Change change : createChanges())
+            System.out.println(change.getNumberOfLines());
+
+        for (Change change : createChanges())
+            System.out.println(change.printForCommit());
     }
     public static List<Change> createChanges () {
         Change c1 = new AddChange(0, "/src/main/NuevaClase.java", // adds in line 0 (i.e.,before line 1)
