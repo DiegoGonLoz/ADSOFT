@@ -176,9 +176,9 @@ public class Repository {
                         if (originChange.getFilePath().equals(targetChange.getFilePath())) {
                             switch (strategy) {
                                 case ORIGIN:
-                                    targetChanges.remove(targetChange);
                                     break;
                                 case DESTINY:
+                                    originChanges.add(targetChange);
                                     originChanges.remove(originChange);
                                     break;
                                 case NONE:
