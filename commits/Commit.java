@@ -45,6 +45,10 @@ public abstract class Commit {
         return id;
     }
 
+    public String getCode() {
+        return code;
+    }
+
     public String getDescription() { return description; }
 
     public Date getDate() {
@@ -64,4 +68,5 @@ public abstract class Commit {
     public abstract String toString();
 
     public abstract int totalLinesMoved();
+
 }

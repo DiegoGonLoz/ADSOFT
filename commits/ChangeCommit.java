@@ -20,7 +20,7 @@ public class ChangeCommit extends Commit {
         for (Change change :  changes){
             aux.append(change.printForCommit());
         }
-        return  "{\ncommit "+this.id+
+        return  "{\ncommit "+this.code+
                 "\nAuthor: "+this.userName+
                 "\nDate: "+this.date+
                 "\nDescription: "+ Arrays.toString(this.description.split("\n")) +

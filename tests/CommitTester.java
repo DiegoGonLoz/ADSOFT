@@ -14,9 +14,16 @@ public class CommitTester {
 
         ChangeCommit changeCommit1 = new ChangeCommit("Pepe", "First Commit", createChanges());
         ChangeCommit changeCommit2 = new ChangeCommit("Fernando", "Second Commit", createChanges());
-        List<Commit> commits = Arrays.asList(changeCommit1, changeCommit2);
-        MergeCommit mergeCommit = new MergeCommit(commits);
+        List<Commit> commits1 = Arrays.asList(changeCommit1, changeCommit2);
+        MergeCommit mergeCommit1 = new MergeCommit(null, null, commits1);
 
-        mergeCommit.toString();
+        System.out.println(changeCommit1);
+        System.out.println(changeCommit2);
+        System.out.println(mergeCommit1);
+
+        List<Commit> commits2 = Arrays.asList(changeCommit1, changeCommit2, mergeCommit1);
+        MergeCommit mergeCommit2 = new MergeCommit("Pepe", null, commits2);
+
+        System.out.println(mergeCommit2);
     }
 }

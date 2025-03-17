@@ -24,11 +24,11 @@ public abstract class Change {
             sign = "+";
         }
 
-        return "\n"+this.type.toString()+
+        return this.type.toString()+
                 ": "+this.filePath +
                 " ("+sign+this.getNumberOfLines()+
                 ")"+
-                "\n\n";
+                "\n";
     }
 
 }

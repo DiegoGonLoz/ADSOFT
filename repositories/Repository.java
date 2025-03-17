@@ -81,20 +81,17 @@ public class Repository {
     public List<String> mergeBranch(String origin, String target, Strategy strategy){
         Branch originBranch = getBranch(origin);
         Branch targetBranch = getBranch(target);
-
-        if (originBranch == null || targetBranch == null) {
-            throw new IllegalArgumentException("Una de las ramas no existe.");
-        }
-
         List<Commit> originCommits = originBranch.getCommits();
         List<Commit> targetCommits = targetBranch.getCommits();
+        List<Commit> originCommitsToMerge = new ArrayList<>();
+        List<Commit> targetCommitsAfterCommon = new ArrayList<>();
+        boolean foundLastCommonCommit = false;
+        List<String> conflicts;
+        MergeCommit mergeCommit;
+
 
         Commit lastCommonCommit = getLastCommonCommit(originCommits, targetCommits);
 
-        List<Commit> originCommitsToMerge = new ArrayList<>();
-        List<Commit> targetCommitsAfterCommon = new ArrayList<>();
-
-        boolean foundLastCommonCommit = false;
         for (Commit commit : originCommits) {
             if (foundLastCommonCommit) {
                 originCommitsToMerge.add(commit);
@@ -114,7 +111,7 @@ public class Repository {
             }
         }
 
-        List<String> conflicts = detectConflicts(originCommitsToMerge, targetCommitsAfterCommon);
+        conflicts = detectConflicts(originCommitsToMerge, targetCommitsAfterCommon);
 
         if (!conflicts.isEmpty() && (strategy == null || strategy == Strategy.NONE)) {
             return conflicts;
@@ -123,7 +120,7 @@ public class Repository {
         resolveConflicts(originCommitsToMerge, targetCommitsAfterCommon, strategy != null ? strategy : defaultStrategy);
 
 
-        MergeCommit mergeCommit = new MergeCommit(originCommitsToMerge);
+        mergeCommit = new MergeCommit(null, null, originCommitsToMerge);
         mergeCommit.setDefaultDescription("Merge branches " + origin + " into " + target);
 
         targetBranch.addCommit(mergeCommit);
