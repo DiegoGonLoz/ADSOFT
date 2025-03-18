@@ -9,7 +9,16 @@ import repositories.*;
 
 import java.util.List;
 
+/**
+ * Pruebas para la clase Repository.
+ * Autor: Diego González y Diego Lesma
+ */
 public class RepositoryTester {
+    /**
+     * Metodo principal para ejecutar las pruebas de la clase Repository.
+     *
+     * @param args Argumentos de la línea de comandos (no se utilizan).
+     */
     public static void main (String[] args) {
         User U1 = new User("test1");
         Repository repository = new Repository("Repository", Strategy.ORIGIN, U1);
@@ -57,6 +66,10 @@ public class RepositoryTester {
         System.out.println(repository);
 
         repository.mergeBranch("Solving Issue","main", Strategy.DESTINY);
+
+        repository.setStrategy(Strategy.DESTINY);
+
+
 
         repository.changeActiveBranch("main");
 

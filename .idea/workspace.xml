@@ -7,7 +7,20 @@
     <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Putito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/branches/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/branches/Branch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changes/AddChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/changes/AddChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changes/Change.java" beforeDir="false" afterPath="$PROJECT_DIR$/changes/Change.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changes/ModifyChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/changes/ModifyChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changes/RemoveChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/changes/RemoveChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changes/TypeChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/changes/TypeChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commits/ChangeCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/ChangeCommit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commits/Commit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/Commit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commits/MergeCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/MergeCommit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BranchTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BranchTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ChangeTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ChangeTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CommitTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommitTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/RepositoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RepositoryTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +44,12 @@
     &quot;assignee&quot;: &quot;DiegoGonLoz&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DiegoGonLoz/ADSOFT.git",
-    "accountId": "0d2b716f-bd8d-4d1c-ae7e-595ecc901773"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DiegoGonLoz/ADSOFT.git&quot;,
+    &quot;accountId&quot;: &quot;0d2b716f-bd8d-4d1c-ae7e-595ecc901773&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -48,28 +61,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BranchTester.executor": "Run",
-    "Application.ChangeTester.executor": "Run",
-    "Application.CommitTester.executor": "Run",
-    "Application.RepositoryTester.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Practica3",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/diego_gonzalez/Documentos/Github",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BranchTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChangeTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CommitTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RepositoryTester.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Practica3&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Documentos/Github&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -96,7 +109,8 @@
       <updated>1741943123631</updated>
       <workItem from="1741943125979" duration="2057000" />
       <workItem from="1741951821363" duration="418000" />
-      <workItem from="1742233207454" duration="6417000" />
+      <workItem from="1742233207454" duration="7839000" />
+      <workItem from="1742306101091" duration="3204000" />
     </task>
     <task id="LOCAL-00002" summary="putero">
       <option name="closed" value="true" />
@@ -146,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742236410053</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Putito">
+      <option name="closed" value="true" />
+      <created>1742291328856</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742291328856</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,16 +178,5 @@
     <MESSAGE value="putero" />
     <MESSAGE value="Putito" />
     <option name="LAST_COMMIT_MESSAGE" value="Putito" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/repositories/Repository.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

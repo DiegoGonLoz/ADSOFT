@@ -8,8 +8,16 @@ import java.util.List;
 
 import static tests.ChangeTester.createChanges;
 
-
+/**
+ * Pruebas para la clase Commit.
+ * Autor: Diego González y Diego Lesma
+ */
 public class CommitTester {
+    /**
+     * Metodo principal para ejecutar las pruebas de la clase Commit.
+     *
+     * @param args Argumentos de la línea de comandos (no se utilizan).
+     */
     public static void main (String[] args) {
 
         ChangeCommit changeCommit1 = new ChangeCommit("Pepe", "First Commit", createChanges());
@@ -22,7 +30,8 @@ public class CommitTester {
         System.out.println(mergeCommit1);
 
         List<Commit> commits2 = Arrays.asList(changeCommit1, changeCommit2, mergeCommit1);
-        MergeCommit mergeCommit2 = new MergeCommit("Pepe", null, commits2);
+        changeCommit1.setDefaultUserName("defaultUser2");
+        MergeCommit mergeCommit2 = new MergeCommit(null, null, commits2);
 
         System.out.println(mergeCommit2);
     }

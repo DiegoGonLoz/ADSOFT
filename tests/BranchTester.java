@@ -8,7 +8,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Pruebas para la clase Branch.
+ * Autor: Diego González y Diego Lesma
+ */
 public class BranchTester {
+    /**
+     * Metodo principal para ejecutar las pruebas de la clase Branch.
+     *
+     * @param args Argumentos de la línea de comandos (no se utilizan).
+     */
     public static void main (String[] args) {
         Branch branch1 = new Branch("branch1");
         Change change = new AddChange(3, "c/:", "This is the content");
