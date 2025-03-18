@@ -124,7 +124,7 @@ public abstract class Commit {
     public abstract String toString();
 
     /**
-     * Método abstracto para obtener el número total de líneas afectadas por los cambios.
+     * Metodo abstracto para obtener el número total de líneas afectadas por los cambios.
      * @return Número total de líneas afectadas.
      */
     public abstract int totalLinesMoved();
