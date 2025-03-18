@@ -18,9 +18,11 @@ public class Branch {
     }
 
     public Branch(String name, Branch branch){
+        List<Commit> commits = new ArrayList<>(branch.getCommits());
+
         this.name = name;
-        this.commits = branch.commits;
-        this.fromBranch = branch.name;
+        this.commits = commits;
+        this.fromBranch = branch.getName();
     }
 
     public void addCommit(Commit c){

@@ -85,6 +85,7 @@ public class Repository {
         List<Commit> targetCommits = targetBranch.getCommits();
         List<Commit> originCommitsToMerge = new ArrayList<>();
         List<Commit> targetCommitsAfterCommon = new ArrayList<>();
+        List<Commit> finalCommits;
         boolean foundLastCommonCommit = false;
         List<String> conflicts;
         MergeCommit mergeCommit;
@@ -117,10 +118,10 @@ public class Repository {
             return conflicts;
         }
 
-        resolveConflicts(originCommitsToMerge, targetCommitsAfterCommon, strategy != null ? strategy : defaultStrategy);
+        finalCommits = resolveConflicts(originCommitsToMerge, targetCommitsAfterCommon, strategy != null ? strategy : defaultStrategy);
 
 
-        mergeCommit = new MergeCommit(null, null, originCommitsToMerge);
+        mergeCommit = new MergeCommit(null, null, finalCommits);
         mergeCommit.setDefaultDescription("Merge branches " + origin + " into " + target);
 
         targetBranch.addCommit(mergeCommit);
@@ -134,11 +135,7 @@ public class Repository {
             for (Commit targetCommit : targetCommits) {
                 if (originCommit.getId() == targetCommit.getId()) {
                     lastCommonCommit = originCommit;
-                    break;
                 }
-            }
-            if (lastCommonCommit != null) {
-                break;
             }
         }
 
@@ -165,7 +162,8 @@ public class Repository {
         return conflicts;
     }
 
-    private void resolveConflicts(List<Commit> originCommits, List<Commit> targetCommits, Strategy strategy) {
+    private List<Commit> resolveConflicts(List<Commit> originCommits, List<Commit> targetCommits, Strategy strategy) {
+        List<Commit> finalCommits = new ArrayList<>();
         for (Commit originCommit : originCommits) {
             for (Commit targetCommit : targetCommits) {
                 List<Change> originChanges = originCommit.changes();
@@ -176,10 +174,10 @@ public class Repository {
                         if (originChange.getFilePath().equals(targetChange.getFilePath())) {
                             switch (strategy) {
                                 case ORIGIN:
+                                    finalCommits.add(originCommit);
                                     break;
                                 case DESTINY:
-                                    originChanges.add(targetChange);
-                                    originChanges.remove(originChange);
+                                    finalCommits.add(targetCommit);
                                     break;
                                 case NONE:
                                     throw new IllegalStateException("Conflicto no resuelto en el archivo: " + originChange.getFilePath());
@@ -189,6 +187,7 @@ public class Repository {
                 }
             }
         }
+        return finalCommits;
     }
 
 
