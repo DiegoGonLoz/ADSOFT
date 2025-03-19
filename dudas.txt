@@ -1,6 +1,0 @@
-Como se calcula el numero de lineas en modify changes
-Como representar correctamente el 'from'
-Conflictos
-Usuarios
-Forma correcta de copiar commits
-Forma correcta de devolver commits
