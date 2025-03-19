@@ -54,6 +54,7 @@
     "Application.ChangeTester.executor": "Run",
     "Application.CommitTester.executor": "Run",
     "Application.RepositoryTester.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Practica4",
@@ -107,6 +108,7 @@
       <workItem from="1742393830385" duration="1000" />
       <workItem from="1742394396710" duration="2816000" />
       <workItem from="1742404741495" duration="320000" />
+      <workItem from="1742405064370" duration="60000" />
     </task>
     <task id="LOCAL-00002" summary="putero">
       <option name="closed" value="true" />
@@ -164,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742404801000</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Putito">
+      <option name="closed" value="true" />
+      <created>1742405107207</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742405107207</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
