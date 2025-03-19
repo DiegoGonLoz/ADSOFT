@@ -5,7 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Putito">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FullDiagram.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/FullDiagram.uxf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commits/Commit.java" beforeDir="false" afterPath="$PROJECT_DIR$/commits/Commit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/branches/Branch.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/branches/Branch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/branches/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/branches/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/branches/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/branches/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/AddChange.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/AddChange.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/Change.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/Change.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/ModifyChange.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/ModifyChange.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/RemoveChange.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/RemoveChange.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/TypeChange.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/TypeChange.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/changes/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/changes/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/commits/ChangeCommit.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/commits/ChangeCommit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/commits/Commit.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/commits/Commit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/commits/MergeCommit.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/commits/MergeCommit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/commits/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/commits/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/commits/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/commits/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/repositories/Repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/repositories/Repository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/repositories/Strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/repositories/Strategy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/repositories/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/repositories/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/repositories/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/repositories/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/repositories/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/repositories/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tests/BranchTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/tests/BranchTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tests/ChangeTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/tests/ChangeTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tests/CommitTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/tests/CommitTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tests/RepositoryTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/tests/RepositoryTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tests/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/tests/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tests/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/tests/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BranchTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BranchTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RepositoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RepositoryTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +61,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -45,24 +91,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ChangeTester.executor": "Run",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Practica3",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/diego_gonzalez/Documentos/Github",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BranchTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChangeTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CommitTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RepositoryTester.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Practica3&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Documentos/Github&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,6 +140,10 @@
       <updated>1741943123631</updated>
       <workItem from="1741943125979" duration="2057000" />
       <workItem from="1741951821363" duration="418000" />
+      <workItem from="1742392482153" duration="197000" />
+      <workItem from="1742392697190" duration="1041000" />
+      <workItem from="1742393830385" duration="1000" />
+      <workItem from="1742394396710" duration="605000" />
     </task>
     <task id="LOCAL-00002" summary="putero">
       <option name="closed" value="true" />
@@ -122,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741945034960</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Putito">
+      <option name="closed" value="true" />
+      <created>1742391586284</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742391586284</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,10 +201,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/repositories/Repository.java</url>
-          <line>240</line>
+          <line>252</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

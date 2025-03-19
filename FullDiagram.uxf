@@ -1,62 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
-      <y>320</y>
-      <w>260</w>
-      <h>150</h>
+      <x>564</x>
+      <y>348</y>
+      <w>174</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Branch
 --
++ Branch(name: String)
++ Branch(name: String, branch: Branch)
+--
 -name:String
+-fromBranch: String
 --
 +toString(): String
-+addCommit(c: Commit): void
-+getCommits(): Commit[*]</panel_attributes>
++addCommit(c: Commit): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
-      <y>380</y>
-      <w>140</w>
-      <h>50</h>
+      <x>648</x>
+      <y>432</y>
+      <w>54</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
 m1=commits
 r1=*</panel_attributes>
-    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1820</x>
-      <y>300</y>
-      <w>170</w>
-      <h>120</h>
+      <x>1092</x>
+      <y>600</y>
+      <w>120</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>/Change/
 --
--filePath: String
--firstLine: int
--type: TypeChange
+_#filePath: String_
+_#firstLine: int_
+_#type: TypeChange_
 --
 /+getNumberOfLines(): int/
 /+toString(): String/
++printForCommit(): String
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1690</x>
-      <y>510</y>
-      <w>130</w>
-      <h>110</h>
+      <x>990</x>
+      <y>744</y>
+      <w>108</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>AddChange
 --
@@ -70,10 +74,10 @@ r1=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1840</x>
-      <y>510</y>
-      <w>130</w>
-      <h>110</h>
+      <x>1104</x>
+      <y>744</y>
+      <w>114</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>ModifyChange
 --
@@ -88,16 +92,16 @@ r1=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1980</x>
-      <y>510</y>
-      <w>170</w>
-      <h>110</h>
+      <x>1224</x>
+      <y>744</y>
+      <w>120</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>RemoveChange
 --
 -endLine: int
 --
-+getNumberOfLines: int
++getNumberOfLines(): int
 +toString(): String
 </panel_attributes>
     <additional_attributes/>
@@ -105,43 +109,43 @@ r1=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1890</x>
-      <y>410</y>
-      <w>30</w>
-      <h>120</h>
+      <x>1152</x>
+      <y>678</y>
+      <w>18</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1740</x>
-      <y>410</y>
-      <w>140</w>
-      <h>120</h>
+      <x>1038</x>
+      <y>678</y>
+      <w>108</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;120.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+    <additional_attributes>160.0;10.0;160.0;60.0;50.0;60.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1930</x>
-      <y>410</y>
-      <w>140</w>
-      <h>120</h>
+      <x>1176</x>
+      <y>678</y>
+      <w>126</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;120.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;190.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2010</x>
-      <y>290</y>
-      <w>130</w>
-      <h>140</h>
+      <x>1230</x>
+      <y>600</y>
+      <w>78</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumerate&gt;&gt;
 TypeChange
@@ -152,16 +156,16 @@ TypeChange
 --
 -symbol: char
 --
--toString(): String</panel_attributes>
++toString(): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>310</y>
-      <w>300</w>
-      <h>170</h>
+      <x>564</x>
+      <y>168</y>
+      <w>180</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes>Repository
 --
@@ -179,35 +183,35 @@ TypeChange
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>390</y>
-      <w>190</w>
-      <h>50</h>
+      <x>690</x>
+      <y>264</y>
+      <w>54</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 r2=1..*
 m2=branches</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>330</y>
-      <w>190</w>
-      <h>40</h>
+      <x>606</x>
+      <y>264</y>
+      <w>66</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m2=activeBranch</panel_attributes>
-    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>150</y>
-      <w>160</w>
-      <h>70</h>
+      <x>846</x>
+      <y>192</y>
+      <w>96</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Users
 --
@@ -217,77 +221,68 @@ m2=activeBranch</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>210</y>
-      <w>60</w>
-      <h>120</h>
+      <x>738</x>
+      <y>204</y>
+      <w>120</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
 r2=1..*
 m2=users</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>500</y>
-      <w>100</w>
-      <h>100</h>
+      <x>1002</x>
+      <y>180</y>
+      <w>60</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 Strategy
 --
 + NONE
 + ORIGIN
-+ DESTINY</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>920</x>
-      <y>0</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Conflictos?</panel_attributes>
++ DESTINY
++ ADDMERGE</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>50</x>
-      <y>60</y>
-      <w>140</w>
-      <h>70</h>
+      <x>474</x>
+      <y>114</y>
+      <w>936</w>
+      <h>750</h>
     </coordinates>
     <panel_attributes>repositories
 --
-bg=white</panel_attributes>
+bg=white
+layer=-2</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>520</x>
-      <y>120</y>
-      <w>1690</w>
-      <h>550</h>
+      <x>504</x>
+      <y>300</y>
+      <w>888</w>
+      <h>546</h>
     </coordinates>
     <panel_attributes>branches
 --
 bg=white
-layer=-1</panel_attributes>
+layer=-2</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>900</x>
-      <y>170</y>
-      <w>1290</w>
-      <h>480</h>
+      <x>528</x>
+      <y>516</y>
+      <w>846</w>
+      <h>318</h>
     </coordinates>
     <panel_attributes>commits
 --
@@ -298,10 +293,10 @@ layer=-1</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1650</x>
-      <y>230</y>
-      <w>510</w>
-      <h>400</h>
+      <x>978</x>
+      <y>558</y>
+      <w>384</w>
+      <h>264</h>
     </coordinates>
     <panel_attributes>changes
 --
@@ -311,40 +306,44 @@ bg=white</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>940</x>
-      <y>280</y>
-      <w>310</w>
-      <h>260</h>
+      <x>558</x>
+      <y>546</y>
+      <w>198</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>/Commit/
 --
-- userName: String
-- date: Date
-- description: String
-- id: int
-- code: String
++Commit()
++Commit(Username: String, Description: String)
+--
+# userName: String
+# date: Date
+# description: String
+# id: int
+# code: String
+
+-DEFAULTUSERNAME: String
+-DEFAULTDESCRIPTION: String
+-LASTID: int
 --
 - generateId(): int
 - generateCode(): String
 
-- generateUserName(): String
-- generateDescription(): String
-+ printCommit(): String
-+ printChange(c:Change): String
-+ totalLinesMoved(): int</panel_attributes>
+/+ toString(): String/
+/+ totalLinesMoved(): int/</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1400</x>
-      <y>440</y>
-      <w>210</w>
-      <h>80</h>
+      <x>816</x>
+      <y>696</y>
+      <w>126</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>MergeCommit
 --
-+ printCommit(): String
++ toString(): String
 + totalLinesMoved(): int
 
 </panel_attributes>
@@ -353,14 +352,14 @@ bg=white</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1380</x>
-      <y>300</y>
-      <w>230</w>
-      <h>80</h>
+      <x>804</x>
+      <y>612</y>
+      <w>138</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>ChangeCommit
 --
-+ printCommit(): String
++ toString(): String
 + totalLinesMoved(): int
 
 </panel_attributes>
@@ -369,49 +368,50 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1240</x>
-      <y>330</y>
-      <w>160</w>
-      <h>30</h>
+      <x>750</x>
+      <y>630</y>
+      <w>66</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1240</x>
-      <y>480</y>
-      <w>180</w>
-      <h>30</h>
+      <x>750</x>
+      <y>720</y>
+      <w>78</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1080</x>
-      <y>510</y>
-      <w>470</w>
-      <h>110</h>
+      <x>642</x>
+      <y>738</y>
+      <w>264</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
 m1=commits
-r1=*
+r1=1..*
 r2=0,1</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;90.0;430.0;90.0;430.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;10.0;90.0;400.0;90.0;400.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1600</x>
-      <y>330</y>
-      <w>240</w>
-      <h>40</h>
+      <x>936</x>
+      <y>624</y>
+      <w>168</w>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=change</panel_attributes>
-    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=changes
+r1=1..*</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>

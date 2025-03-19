@@ -45,6 +45,8 @@ public class BranchTester {
 
     /**
      * Metodo para generar commits para las pruebas de la clase Branch.
+     *
+     * @return Lista con los commits para testear
      */
     public static List<Commit> generateCommits(){
         Change change = new AddChange(3, "c/:", "This is the content");

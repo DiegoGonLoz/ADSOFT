@@ -31,7 +31,7 @@ public class MergeCommit extends Commit {
     public String toString() {
         String aux = "";
         for (Commit commit : commits) {
-            aux = aux + commit.getCode() + " on " + commit.date.toString() + "\n";
+            aux = aux + String.format("%05d", commit.getId()) + commit.getCode() + " on " + commit.date.toString() + "\n";
         }
         return "{\ncommit " + String.format("%05d", this.id) + this.code +
                 "\nAuthor: " + this.userName +

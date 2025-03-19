@@ -11,9 +11,9 @@ import java.util.UUID;
  * @author Diego González y Diego Lesma
  */
 public abstract class Commit {
-    private static int lastId = 0;
-    private static String defaultUserName = "defaultUser";
-    private static String defaultDescription = "No description provided";
+    private static int LASTID = 0;
+    private static String DEFAULTUSERNAME = "defaultUser";
+    private static String DEFAULTDESCRIPTION = "No description provided";
 
     /**
      * Atributo que guarda el username del usuario que realizo el commit
@@ -42,9 +42,9 @@ public abstract class Commit {
      * @param description Descripción del commit.
      */
     public Commit(String userName, String description) {
-        this.userName = (userName != null && !userName.isEmpty()) ? userName : defaultUserName;
+        this.userName = (userName != null && !userName.isEmpty()) ? userName : DEFAULTUSERNAME;
         this.date = LocalDate.now();
-        this.description = (description != null && !description.isEmpty()) ? description : defaultDescription;
+        this.description = (description != null && !description.isEmpty()) ? description : DEFAULTDESCRIPTION;
         this.id = generateId();
         this.code = generateCode();
     }
@@ -61,18 +61,18 @@ public abstract class Commit {
      * @return ID único.
      */
     private synchronized int generateId() {
-        lastId++;
-        if (lastId > 99999) {
+        LASTID++;
+        if (LASTID > 99999) {
             throw new IllegalStateException("Se ha alcanzado el límite de IDs únicos (99999).");
         }
-        return lastId;
+        return LASTID;
     }
 
     /**
      * Genera un código único para el commit.
      * @return Código único.
      */
-    public String generateCode() {
+    private String generateCode() {
         String uuid = UUID.randomUUID().toString().replace("-", "");
         return uuid.substring(0, 15);
     }
@@ -114,7 +114,7 @@ public abstract class Commit {
      * @param userName Nombre de usuario predeterminado.
      */
     public void setDefaultUserName(String userName) {
-        defaultUserName = userName;
+        DEFAULTUSERNAME = userName;
     }
 
     /**
@@ -122,7 +122,7 @@ public abstract class Commit {
      * @param description Descripción predeterminada.
      */
     public void setDefaultDescription(String description) {
-        defaultDescription = description;
+        DEFAULTDESCRIPTION = description;
     }
 
     /**

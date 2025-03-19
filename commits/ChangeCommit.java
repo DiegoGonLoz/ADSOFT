@@ -32,7 +32,7 @@ public class ChangeCommit extends Commit {
         StringBuilder aux = new StringBuilder();
 
         for (Change change : changes) {
-            aux.append(change.printForCommit());
+            aux.append(change.printForCommit()+"\n");
         }
         return "{\ncommit " + String.format("%05d", this.id) + this.code +
                 "\nAuthor: " + this.userName +

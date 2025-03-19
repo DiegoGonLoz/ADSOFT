@@ -128,6 +128,8 @@ public class Repository {
 
     /**
      * Devuelve la lista de usuarios
+     *
+     * @return Lista con todos los usuarios del repositorio
      */
     public List<User> getUsers(){
         return this.users;

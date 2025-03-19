@@ -80,6 +80,8 @@ public class RepositoryTester {
 
     /**
      * Metodo para generar commits para las pruebas de la clase Repository.
+     *
+     * @return Lista con los commits para testear
      */
     public static List<Commit> generateCommits(){
         Change change1 = new AddChange(3, "c/:", "This is the content");
