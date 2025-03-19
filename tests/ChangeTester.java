@@ -33,6 +33,7 @@ public class ChangeTester {
         Change c1 = new AddChange(0, "/src/main/NuevaClase.java", "import java.util.*;\nimport java.io.*;");
         Change c2 = new ModifyChange(10, 10, "/src/main/ClaseExistente.java", "// Modificación en la clase existente");
         Change c3 = new RemoveChange(1, 2, "/src/main/ClaseObsoleta.java");
-        return List.of(c1,c2,c3);
+        Change c4 = new ModifyChange(12, 14, "/src/main/ClaseExistente.java", "// Modificación en la clase existente");
+        return List.of(c1,c2,c3,c4);
     }
 }
