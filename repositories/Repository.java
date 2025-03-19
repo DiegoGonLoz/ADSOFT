@@ -120,7 +120,17 @@ public class Repository {
      * @param user Usuario a añadir.
      */
     public void addUser(User user){
+        if(users.contains(user) || user == null){
+            return;
+        }
         this.users.add(user);
+    }
+
+    /**
+     * Devuelve la lista de usuarios
+     */
+    public List<User> getUsers(){
+        return this.users;
     }
 
     /**

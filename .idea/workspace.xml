@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Putito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/repositories/Repository$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/repositories/Repository$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/repositories/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/repositories/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/tests/BranchTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/tests/BranchTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/tests/CommitTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/tests/CommitTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/tests/RepositoryTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/tests/RepositoryTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BranchTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BranchTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CommitTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CommitTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RepositoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RepositoryTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -47,7 +61,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BranchTester.executor": "Run",
     "Application.ChangeTester.executor": "Run",
+    "Application.CommitTester.executor": "Run",
+    "Application.RepositoryTester.executor": "Run",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Practica3",
     "kotlin-language-version-configured": "true",
@@ -138,7 +155,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/repositories/Repository.java</url>
-          <line>240</line>
+          <line>250</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
