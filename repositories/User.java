@@ -2,7 +2,7 @@ package repositories;
 
 /**
  * Clase que representa un usuario en el sistema.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 
 public class User {
@@ -16,6 +16,10 @@ public class User {
         this.username = username;
     }
 
+    /**
+     * Metodo para obtener el Username de un usuario
+     * @return el username del usuario
+     */
     public String getUsername() {
         return this.username;
     }

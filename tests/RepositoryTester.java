@@ -11,9 +11,16 @@ import java.util.List;
 
 /**
  * Pruebas para la clase Repository.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class RepositoryTester {
+    /**
+     * Constructor por defecto de la clase RepositoryTester.
+     * Crea una instancia de RepositoryTester para realizar pruebas.
+     */
+    public RepositoryTester() {
+        // Constructor por defecto
+    }
     /**
      * Metodo principal para ejecutar las pruebas de la clase Repository.
      *

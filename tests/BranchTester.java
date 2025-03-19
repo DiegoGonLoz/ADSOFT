@@ -10,9 +10,16 @@ import java.util.List;
 
 /**
  * Pruebas para la clase Branch.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class BranchTester {
+    /**
+     * Constructor por defecto de la clase BranchTester.
+     * Crea una instancia de BranchTester para realizar pruebas.
+     */
+    public BranchTester() {
+        // Constructor por defecto
+    }
     /**
      * Metodo principal para ejecutar las pruebas de la clase Branch.
      *

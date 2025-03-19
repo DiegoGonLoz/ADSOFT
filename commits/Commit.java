@@ -8,17 +8,32 @@ import java.util.UUID;
 
 /**
  * Clase abstracta que representa un commit en un sistema de control de versiones.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public abstract class Commit {
     private static int lastId = 0;
     private static String defaultUserName = "defaultUser";
     private static String defaultDescription = "No description provided";
 
+    /**
+     * Atributo que guarda el username del usuario que realizo el commit
+     */
     protected final String userName;
+    /**
+     * Atributo que guarda la fecha en que fue realizado el commit
+     */
     protected final LocalDate date;
+    /**
+     * Atributo que guarda la descripcion proporcionada para el commit
+     */
     protected final String description;
+    /**
+     * Atributo que identifica de manera unica el commit
+     */
     protected final int id;
+    /**
+     * Atributo que guarda un codigo unico para cada commit
+     */
     protected final String code;
 
     /**

@@ -5,9 +5,17 @@ import changes.*;
 import java.util.List;
 /**
  * Pruebas para la clase Change.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class ChangeTester {
+    /**
+     * Constructor por defecto de la clase ChangeTester.
+     * Crea una instancia de ChangeTester para realizar pruebas.
+     */
+    public ChangeTester() {
+        // Constructor por defecto
+    }
+
     /**
      * Metodo principal para ejecutar las pruebas de la clase Change.
      *

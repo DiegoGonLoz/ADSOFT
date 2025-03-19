@@ -2,11 +2,20 @@ package changes;
 
 /**
  * Enumeración que representa los tipos de cambios posibles en un archivo.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public enum TypeChange {
+    /**
+     * Tipo para ADD changes
+     */
     ADD('+'),
+    /**
+     * Tipo para REMOVE changes
+     */
     REMOVE('-'),
+    /**
+     * Tipo para MODIFY changes
+     */
     MODIFY('/');
 
     private final char symbol;

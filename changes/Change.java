@@ -2,11 +2,20 @@ package changes;
 
 /**
  * Clase abstracta que representa un cambio en un archivo.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public abstract class Change {
+    /**
+     * Atributo que almacena la ruta del archivo modificado
+     */
     protected final String filePath;
+    /**
+     * Atributo que indica la primera linea que se vio afectada por el cambio
+     */
     protected final int firstLine;
+    /**
+     * Atributo que indica el tipo de cambio realizado en el archivo
+     */
     protected final TypeChange type;
 
     /**

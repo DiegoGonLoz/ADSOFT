@@ -10,9 +10,17 @@ import static tests.ChangeTester.createChanges;
 
 /**
  * Pruebas para la clase Commit.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class CommitTester {
+    /**
+     * Constructor por defecto de la clase CommitTester.
+     * Crea una instancia de CommitTester para realizar pruebas.
+     */
+    public CommitTester() {
+        // Constructor por defecto
+    }
+
     /**
      * Metodo principal para ejecutar las pruebas de la clase Commit.
      *

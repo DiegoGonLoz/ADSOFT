@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 /**
  * Clase que representa un commit de fusión (merge) en un sistema de control de versiones.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class MergeCommit extends Commit {
     private final List<Commit> commits;

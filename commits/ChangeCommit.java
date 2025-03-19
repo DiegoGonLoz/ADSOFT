@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Clase que representa un commit con cambios específicos.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class ChangeCommit extends Commit {
     private final List<Change> changes;

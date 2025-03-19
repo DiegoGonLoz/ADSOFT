@@ -2,7 +2,7 @@ package changes;
 
 /**
  * Clase que representa un cambio de tipo "añadir" en un archivo.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class AddChange extends Change {
     private final String content;

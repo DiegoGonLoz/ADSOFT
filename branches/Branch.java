@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Clase que representa una rama en un sistema de control de versiones.
- * Autor: Diego González y Diego Lesma
+ * @author Diego González y Diego Lesma
  */
 public class Branch {
     private final String name;
