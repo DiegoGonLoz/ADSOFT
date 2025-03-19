@@ -5,5 +5,5 @@ package repositories;
  * @author Diego González y Diego Lesma
  */
 public enum Strategy {
-    NONE, ORIGIN, DESTINY
+    NONE, ORIGIN, DESTINY, ADDMERGE
 }

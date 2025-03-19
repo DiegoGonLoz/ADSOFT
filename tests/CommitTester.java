@@ -26,13 +26,25 @@ public class CommitTester {
         MergeCommit mergeCommit1 = new MergeCommit(null, null, commits1);
 
         System.out.println(changeCommit1);
+        System.out.println(changeCommit1.changes().size());
+        System.out.println(changeCommit1.totalLinesMoved());
+
         System.out.println(changeCommit2);
+        System.out.println(changeCommit2.changes().size());
+        System.out.println(changeCommit2.totalLinesMoved());
+
         System.out.println(mergeCommit1);
+        System.out.println(mergeCommit1.changes().size());
+        System.out.println(mergeCommit1.totalLinesMoved());
+
 
         List<Commit> commits2 = Arrays.asList(changeCommit1, changeCommit2, mergeCommit1);
         changeCommit1.setDefaultUserName("defaultUser2");
         MergeCommit mergeCommit2 = new MergeCommit(null, null, commits2);
 
         System.out.println(mergeCommit2);
+        System.out.println(mergeCommit2.changes().size());
+        System.out.println(mergeCommit2.totalLinesMoved());
+
     }
 }

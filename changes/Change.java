@@ -34,6 +34,15 @@ public abstract class Change {
     public abstract String getFilePath();
 
     /**
+     * Metodo abstracto para obtener el tipo de cambio.
+     *
+     * @return Ruta del archivo.
+     */
+    public TypeChange getType() {
+        return this.type;
+    }
+
+    /**
      * Representación en cadena del cambio.
      * @return Cadena que describe el cambio.
      */

@@ -5,6 +5,7 @@ import commits.*;
 import changes.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -170,10 +171,10 @@ public class Repository {
             return conflicts;
         }
 
-        finalCommits = resolveConflicts(originCommitsToMerge, targetCommitsAfterCommon, strategy != null ? strategy : defaultStrategy);
+        resolveConflicts(originCommitsToMerge, targetCommitsAfterCommon, strategy != null ? strategy : defaultStrategy);
 
 
-        mergeCommit = new MergeCommit(null, null, finalCommits);
+        mergeCommit = new MergeCommit(null, null, originCommitsToMerge);
         mergeCommit.setDefaultDescription("Merge branches " + origin + " into " + target);
 
         targetBranch.addCommit(mergeCommit);
@@ -235,10 +236,11 @@ public class Repository {
      * @param originCommits Lista de commits de la rama de origen.
      * @param targetCommits Lista de commits de la rama de destino.
      * @param strategy      Estrategia de resolución de conflictos.
-     * @return Lista de commits finales después de resolver los conflictos.
      */
-    private List<Commit> resolveConflicts(List<Commit> originCommits, List<Commit> targetCommits, Strategy strategy) {
-        List<Commit> finalCommits = new ArrayList<>();
+    private void resolveConflicts(List<Commit> originCommits, List<Commit> targetCommits, Strategy strategy) {
+        List<Commit> auxOriginCommits = new ArrayList<>(originCommits);
+        List<Commit> auxTargetCommits = new ArrayList<>(targetCommits);
+
         for (Commit originCommit : originCommits) {
             for (Commit targetCommit : targetCommits) {
                 List<Change> originChanges = originCommit.changes();
@@ -249,11 +251,20 @@ public class Repository {
                         if (originChange.getFilePath().equals(targetChange.getFilePath())) {
                             switch (strategy) {
                                 case ORIGIN:
-                                    finalCommits.add(originCommit);
+                                    auxTargetCommits.remove(targetCommit);
                                     break;
                                 case DESTINY:
-                                    finalCommits.add(targetCommit);
+                                    auxOriginCommits.remove(originCommit);
+                                    auxOriginCommits.add(targetCommit);
                                     break;
+                                case ADDMERGE:
+                                    if(originChange.getType().equals(TypeChange.ADD) && targetChange.getType().equals(TypeChange.ADD)){
+                                        auxOriginCommits.add(targetCommit);
+                                        auxTargetCommits.remove(targetCommit);
+                                        break;
+                                    } else {
+                                        throw new IllegalStateException("Conflicto encontrado con cambios no tipo add: " + originChange.getFilePath());
+                                    }
                                 case NONE:
                                     throw new IllegalStateException("Conflicto no resuelto en el archivo: " + originChange.getFilePath());
                             }
@@ -262,7 +273,10 @@ public class Repository {
                 }
             }
         }
-        return finalCommits;
+        originCommits.clear();
+        originCommits.addAll(auxOriginCommits);
+        targetCommits.clear();
+        targetCommits.addAll(auxTargetCommits);
     }
 
 
