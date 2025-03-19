@@ -7,6 +7,7 @@ import commits.ChangeCommit;
 import commits.Commit;
 import repositories.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,40 +29,27 @@ public class RepositoryTester {
      */
     public static void main (String[] args) {
         User U1 = new User("test1");
-        User U2 = new User("test2");
-        User U3 = new User("test3");
         Repository repository = new Repository("Repository", Strategy.ORIGIN, U1);
-        Change change1 = new AddChange(3, "c/:", "This is the content");
-        Change change2 = new AddChange(3, "c/:a", "This is the content");
-        Change change3 = new AddChange(3, "c/:b", "This is the content");
-        Change change4 = new AddChange(3, "c/:c", "This is the content");
 
-        Commit commit1 = new ChangeCommit("Pepe", "no comment", List.of(change1));
-        Commit commit2 = new ChangeCommit("Pepe", "Decorator interface", List.of(change2));
-        Commit commit3 = new ChangeCommit("Pepe", "Merging previous commits", List.of(change3));
-        Commit commit4 = new ChangeCommit("Pepe", "Solving the issue", List.of(change4));
+        List<Commit> commits = generateCommits();
 
-        repository.addUser(U2);
-        repository.addUser(U3);
-
-        repository.newBranch("main");
+        testAddUser(repository);
 
         repository.newBranch("main");
 
         repository.changeActiveBranch("main");
 
-        repository.getBranch("main").addCommit(commit1);
-        repository.getBranch("main").addCommit(commit2);
-        repository.getBranch("main").addCommit(commit3);
+        repository.getBranch("main").addCommit(commits.get(0));
+        repository.getBranch("main").addCommit(commits.get(1));
+        repository.getBranch("main").addCommit(commits.get(2));
 
         System.out.println(repository);
 
         repository.newBranch("Solving Issue", repository.getBranch("main"));
 
-        repository.getBranch("branch");
-        repository.getBranch(null);
+        testBranchErrors(repository);
 
-        repository.getBranch("Solving Issue").addCommit(commit4);
+        repository.getBranch("Solving Issue").addCommit(commits.get(3));
 
         repository.changeActiveBranch("Solving Issue");
 
@@ -70,8 +58,6 @@ public class RepositoryTester {
         repository.mergeBranch("Solving Issue","main", Strategy.DESTINY);
 
         repository.setStrategy(Strategy.DESTINY);
-
-
 
         repository.changeActiveBranch("main");
 
@@ -90,5 +76,46 @@ public class RepositoryTester {
         System.out.println(repository);
 
         System.out.println(repository.getBranch("main").getCommits().get(4));
+    }
+
+    /**
+     * Metodo para generar commits para las pruebas de la clase Repository.
+     */
+    public static List<Commit> generateCommits(){
+        Change change1 = new AddChange(3, "c/:", "This is the content");
+        Change change2 = new AddChange(3, "c/:a", "This is the content");
+        Change change3 = new AddChange(3, "c/:b", "This is the content");
+        Change change4 = new AddChange(3, "c/:c", "This is the content");
+
+        Commit commit1 = new ChangeCommit("Pepe", "no comment", List.of(change1));
+        Commit commit2 = new ChangeCommit("Pepe", "Decorator interface", List.of(change2));
+        Commit commit3 = new ChangeCommit("Pepe", "Merging previous commits", List.of(change3));
+        Commit commit4 = new ChangeCommit("Pepe", "Solving the issue", List.of(change4));
+
+        return List.of(commit1, commit2, commit3, commit4);
+    }
+
+    /**
+     * Metodo para probar el metodo addUser().
+     *
+     * @param repository Objeto repositorio
+     */
+    public static void testAddUser(Repository repository) {
+        User U2 = new User("test2");
+
+        repository.addUser(U2);
+        repository.addUser(null);
+        System.out.println(repository.getUsers());
+    }
+
+    /**
+     * Metodo para probar que no se puedan hacer tareas prohibidas
+     *
+     * @param repository Objeto repositorio
+     */
+    public static void testBranchErrors(Repository repository) {
+        repository.newBranch("main");
+        repository.getBranch("branch");
+        repository.getBranch(null);
     }
 }

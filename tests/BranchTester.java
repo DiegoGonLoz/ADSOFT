@@ -27,14 +27,10 @@ public class BranchTester {
      */
     public static void main (String[] args) {
         Branch branch1 = new Branch("branch1");
-        Change change = new AddChange(3, "c/:", "This is the content");
-        List<Change> changes = List.of(change);
-        Commit commit1 = new ChangeCommit("Pepe", "Description", changes);
-        List<Commit> commits = List.of(commit1);
-        Commit commit2 = new MergeCommit("Alberto", "Description", commits);
-        //add commits
-        branch1.addCommit(commit1);
-        branch1.addCommit(commit2);
+        List<Commit> commits = generateCommits();
+
+        branch1.addCommit(commits.get(0));
+        branch1.addCommit(commits.get(1));
 
         System.out.println(branch1);
 
@@ -42,9 +38,20 @@ public class BranchTester {
 
         System.out.println(branch2);
 
-
-        branch2.addCommit(commit1);
+        branch2.addCommit(commits.getFirst());
 
         System.out.println(branch2);
+    }
+
+    /**
+     * Metodo para generar commits para las pruebas de la clase Branch.
+     */
+    public static List<Commit> generateCommits(){
+        Change change = new AddChange(3, "c/:", "This is the content");
+        List<Change> changes = List.of(change);
+        Commit commit1 = new ChangeCommit("Pepe", "Description", changes);
+        List<Commit> commits = List.of(commit1);
+        Commit commit2 = new MergeCommit("Alberto", "Description", commits);
+        return List.of(commit1, commit2);
     }
 }
