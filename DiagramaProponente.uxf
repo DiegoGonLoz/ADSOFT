@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>490</x>
       <y>440</y>
       <w>310</w>
       <h>180</h>
@@ -23,7 +23,7 @@ _-DNI: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
+      <x>410</x>
       <y>200</y>
       <w>180</w>
       <h>130</h>
@@ -37,7 +37,7 @@ _#contraseña: String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
+      <x>0</x>
       <y>210</y>
       <w>230</w>
       <h>130</h>
@@ -54,7 +54,7 @@ _-CIF: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
+      <x>0</x>
       <y>480</y>
       <w>320</w>
       <h>130</h>
@@ -73,7 +73,7 @@ _-CIF: String_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
+      <x>310</x>
       <y>520</y>
       <w>200</w>
       <h>40</h>
@@ -85,7 +85,7 @@ m1=representante</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>360</x>
       <y>40</y>
       <w>290</w>
       <h>90</h>
@@ -101,7 +101,7 @@ m1=representante</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
+      <x>310</x>
       <y>550</y>
       <w>200</w>
       <h>50</h>
@@ -116,7 +116,7 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>510</x>
       <y>320</y>
       <w>170</w>
       <h>140</h>
@@ -127,7 +127,7 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>230</x>
+      <x>150</x>
       <y>320</y>
       <w>350</w>
       <h>180</h>
@@ -138,7 +138,7 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>220</x>
       <y>250</y>
       <w>210</w>
       <h>30</h>
@@ -149,7 +149,7 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>480</x>
       <y>120</y>
       <w>30</w>
       <h>100</h>
