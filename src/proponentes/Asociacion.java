@@ -2,7 +2,7 @@ package proponentes;
 
 import java.util.List;
 
-public class Asociacion {
+public class Asociacion extends EnteCiudadano implements FollowedEntity{
     private final Ciudadano representante;
     private List<Ciudadano> miembros;
 

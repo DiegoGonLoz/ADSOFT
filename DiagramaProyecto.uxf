@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>279</y>
+      <w>189</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from proponentes&gt;&gt;
+/Proponente/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>243</y>
+      <w>360</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>ProyectoParticipativo
+--
+_- codigo: int_
+_- fecha: Date_
+_- hora: Time_
+- titulo: String
+- descripcion: String
+--
++ apoyar(enteCiudadano: EnteCiudadano): void 
++ toString(): String
++ obtenerVotos(): int
+
+- apoyoPosible(enteCiudadano: EnteCiudadano): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>288</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=Proponente</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>369</x>
+      <y>495</y>
+      <w>234</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>ProyectoFundacion
+--
+- presupuestoEstimado: double
+- porcentajeAsumeFundacion: int
+--
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>423</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>36</y>
+      <w>531</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Sistema
+--
++ proyectosRegistrados(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-31-03-2025
++ proyectoParcipativo(titulo: String): ProyectoParticipativo
++ proyectoParcipativo(codigo: int): ProyectoParticipativo
++ obtenerMapaProyectoApoyos(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-31-03-2025
++ obtenerMapaProyectoCiudadanos(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>126</y>
+      <w>81</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=*
+r2=proyectos</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>342</y>
+      <w>189</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from proponentes&gt;&gt;
+/EnteCiudadano/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>315</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=*
+r2=Apoyos</panel_attributes>
+    <additional_attributes>140.0;10.0;80.0;10.0;80.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>846</x>
+      <y>288</y>
+      <w>423</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025&gt;&gt;
+FollowedEntity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>315</y>
+      <w>207</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..
+implements</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

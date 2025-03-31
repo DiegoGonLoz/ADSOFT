@@ -1,1 +1,18 @@
+- Interpretar representante como miembro (cual es la asociacion vacia)
+- Evitar CIF y NIF repetidos
+- Crear excepciones personalizadas
+- Quienes son los usuarios
+- Los proponentes proponen
+- Nivel de detalle de las excepciones
+- En proponer llamar a apoyar
+- Si implementa Comparable o clases de java, hace falta indicarlo en el diagrama
+
 tener cuidado con excepciones e interfaces
+
+ADSOFT
+Leer con atención los requisitos para manejar con exito las excepciones
+
+Apartado3:
+Tiene relación con algo de Teoría
+
+Apartado4:

@@ -1,26 +1,26 @@
 package proponentes;
 
-public class Ciudadano {
-    private final String DNI;
+public class Ciudadano extends EnteCiudadano{
+    private final String NIF;
 
     public Ciudadano(){
 
     }
 
-    private boolean validarDni(String dni) {
+    private boolean validarNIF(String nif) {
         String LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
 
 
-        if (dni == null ||  dni.isEmpty()){
+        if (nif == null ||  nif.isEmpty()){
             return false;
         }
 
-        if (!dni.matches("^\\d{8}[A-Z]$")) {
+        if (!nif.matches("^\\d{8}[A-Z]$")) {
             return false;
         }
 
-        int numero = Integer.parseInt(dni.substring(0, 8));
-        char letra = dni.charAt(8);
+        int numero = Integer.parseInt(nif.substring(0, 8));
+        char letra = nif.charAt(8);
 
         return letra == LETRAS.charAt(numero % 23);
     }

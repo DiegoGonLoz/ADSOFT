@@ -8,4 +8,6 @@ public abstract class Proponente {
         this.name = name;
         this.contrasena = contrasena;
     }
+
+    public abstract void proponer(Proponente proponente);
 }

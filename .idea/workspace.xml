@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Putito">
+      <change afterPath="$PROJECT_DIR$/src/announcements/Announcement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/announcements/FollowedEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/announcements/Follower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proponentes/EnteCiudadano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ADSOFT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ADSOFT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ADSOFT- hints.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ADSOFT- hints.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiagramaAdsoft4.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/DiagramaProyecto.uxf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiagramaProponente.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/DiagramaProponente.uxf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importante.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importante.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proponentes/Asociacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Asociacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proponentes/Ciudadano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Ciudadano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proponentes/Fundacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Fundacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proponentes/Proponente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Proponente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -119,7 +132,8 @@
       <workItem from="1743437553925" duration="608000" />
       <workItem from="1743452697354" duration="652000" />
       <workItem from="1743453550024" duration="161000" />
-      <workItem from="1743453718114" duration="934000" />
+      <workItem from="1743453718114" duration="4924000" />
+      <workItem from="1743460970542" duration="39000" />
     </task>
     <task id="LOCAL-00002" summary="putero">
       <option name="closed" value="true" />
@@ -201,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743453897784</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Putito">
+      <option name="closed" value="true" />
+      <created>1743455241893</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743455241893</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
