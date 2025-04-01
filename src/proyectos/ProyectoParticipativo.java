@@ -4,6 +4,7 @@ import announcements.FollowedEntity;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -29,14 +30,37 @@ public class ProyectoParticipativo implements FollowedEntity {
     }
 
     public void apoyar(EnteCiudadano ente) {
-
+        if(apoyoPosible(ente)){
+            apoyos.removeIf(ente2 -> ente.esMiembro(ente2));
+            apoyos.add(ente);
+        } else {
+            throw Exception
+        }
     }
 
     public int obtenerVotos(){
-        return 0;
+        int votos = 0;
+        for(EnteCiudadano ente : apoyos){
+            votos += ente.cantidadMiembros();
+        }
+        return votos;
     }
 
     private boolean apoyoPosible(EnteCiudadano ente) {
-        return false;
+        if(proponente.equals(ente)){
+            return false;
+        }
+
+        if(apoyos.contains(ente)){
+            return false;
+        }
+
+        for(EnteCiudadano ente2 : apoyos){
+            if(ente2.esMiembro(ente)){
+                return false;
+            }
+        }
+
+        return Duration.between(LocalDate.now(), fecha).toDays() <= 60;
     }
 }
