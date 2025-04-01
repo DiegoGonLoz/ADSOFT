@@ -1,12 +1,18 @@
 package proponentes;
 
 public abstract class Proponente {
-    protected final String name;
+    protected final String nombre;
     protected final String contrasena;
 
-    Proponente(String name, String contrasena){
-        this.name = name;
-        this.contrasena = contrasena;
+    Proponente(String nombre, String contraseña){
+        if(nombre == null){
+            throw Exception
+        }
+        if(contraseña == null){
+            throw Exception
+        }
+        this.nombre = nombre;
+        this.contrasena = contraseña;
     }
 
     public abstract String toString();

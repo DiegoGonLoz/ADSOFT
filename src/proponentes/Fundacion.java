@@ -55,8 +55,8 @@ public class Fundacion extends Proponente implements FollowedEntity{
         }
     }
 
-    public void proponer(Fundacion fundacion){
-
+    public void proponer(ProyectoFundacion proyecto) {
+        -En proponer llamar a apoyar
     }
 
 }

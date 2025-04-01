@@ -1,9 +1,20 @@
 package proponentes;
 
+import announcements.Announcement;
+import proyectos.ProyectoParticipativo;
+
+import java.util.LinkedList;
+
 public class Ciudadano extends EnteCiudadano{
     private final String NIF;
+    private final LinkedList<Announcement> mensajes = new LinkedList<>();
 
-    public Ciudadano(){
+    public Ciudadano(String name, String contraseña, String nif) {
+        super(name, contraseña);
+        if(!this.validarNIF(nif)){
+            throw Exception;
+        }
+        this.NIF = nif;
 
     }
 
@@ -25,5 +36,45 @@ public class Ciudadano extends EnteCiudadano{
         return letra == LETRAS.charAt(numero % 23);
     }
 
+    public void proponer(ProyectoParticipativo proyecto){
+        - Añadir proyecto al sistema
+        - En proponer llamar a apoyar
+    }
 
+    public void incribirse(Asociacion asociacion){
+        if(asociacion.inscribir(this)){
+            inscrito.add(asociacion);
+        }
+    }
+
+    public boolean esMiembro(EnteCiudadano enteCiudadano){
+        return this==enteCiudadano;
+    }
+
+    public int cantidadMiembros(){
+        return 1;
+    }
+
+    public void receives(Announcement t) {
+        if(t != null){
+            mensajes.add(t);
+        }
+    }
+
+    public void darseDeBaja(Asociacion asociacion){
+        if(asociacion.darDeBaja(this)){
+            inscrito.remove(asociacion);
+        }
+    }
+
+    public void darseDeBaja(){
+        for(Asociacion asociacion : inscrito){
+            this.darseDeBaja(asociacion);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return this.nombre + " NIF (" +this.NIF + ") <usuario>";
+    }
 }

@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>686</x>
-      <y>539</y>
+      <x>700</x>
+      <y>532</y>
       <w>217</w>
       <h>126</h>
     </coordinates>
@@ -22,8 +22,8 @@ _-NIF: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>245</y>
+      <x>574</x>
+      <y>238</y>
       <w>238</w>
       <h>91</h>
     </coordinates>
@@ -38,8 +38,8 @@ _#contraseña: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>196</x>
-      <y>252</y>
+      <x>210</x>
+      <y>245</y>
       <w>238</w>
       <h>91</h>
     </coordinates>
@@ -57,15 +57,15 @@ _-CIF: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>287</x>
-      <y>553</y>
+      <x>301</x>
+      <y>546</y>
       <w>238</w>
       <h>91</h>
     </coordinates>
     <panel_attributes>Asociacion
 --
 --
-+inscribir(enteCiudadano: EnteCiudadano): void
++inscribir(enteCiudadano: EnteCiudadano): boolean
 +darDeBaja(ciudadano: Ciudadano): void
 +toString(): String
 
@@ -76,8 +76,8 @@ _-CIF: String_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>518</x>
-      <y>595</y>
+      <x>532</x>
+      <y>588</y>
       <w>182</w>
       <h>28</h>
     </coordinates>
@@ -88,8 +88,8 @@ m1=representante</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>553</x>
-      <y>112</y>
+      <x>567</x>
+      <y>105</y>
       <w>392</w>
       <h>84</h>
     </coordinates>
@@ -105,13 +105,13 @@ m1=representante</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>378</y>
+      <x>406</x>
+      <y>371</y>
       <w>210</w>
       <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;
-m1=asociado
+m1=inscrito
 r1=*
 m2=miembros
 r2=1..*</panel_attributes>
@@ -120,8 +120,8 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>714</x>
-      <y>434</y>
+      <x>728</x>
+      <y>427</y>
       <w>105</w>
       <h>119</h>
     </coordinates>
@@ -131,8 +131,8 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>462</x>
-      <y>434</y>
+      <x>476</x>
+      <y>427</y>
       <w>196</w>
       <h>133</h>
     </coordinates>
@@ -142,8 +142,8 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
-      <y>287</y>
+      <x>441</x>
+      <y>280</y>
       <w>147</w>
       <h>21</h>
     </coordinates>
@@ -153,8 +153,8 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>189</y>
+      <x>686</x>
+      <y>182</y>
       <w>21</w>
       <h>70</h>
     </coordinates>
@@ -164,9 +164,9 @@ r2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>588</x>
-      <y>371</y>
-      <w>224</w>
+      <x>602</x>
+      <y>364</y>
+      <w>252</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>/EnteCiudadano/
@@ -174,15 +174,15 @@ r2=1..*</panel_attributes>
 --
 /+proponer(proyecto: ProyectoParticipativo): void/
 /+incribirse(asociacion: Asociacion): void/
-/+esMiembro(ciudadano: Ciudadano): boolean/
+/+esMiembro(enteCiudadano: EnteCiudadano): boolean/
 /+cantidadMiembros(): int/</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>679</x>
-      <y>329</y>
+      <x>693</x>
+      <y>322</y>
       <w>21</w>
       <h>56</h>
     </coordinates>
@@ -192,8 +192,8 @@ r2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>560</y>
+      <x>1022</x>
+      <y>553</y>
       <w>329</w>
       <h>70</h>
     </coordinates>
@@ -204,8 +204,8 @@ Announcement</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
-      <y>574</y>
+      <x>910</x>
+      <y>567</y>
       <w>126</w>
       <h>35</h>
     </coordinates>
@@ -217,8 +217,8 @@ r1=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>987</x>
-      <y>371</y>
+      <x>1001</x>
+      <y>364</y>
       <w>329</w>
       <h>70</h>
     </coordinates>
@@ -229,20 +229,20 @@ Follower</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>805</x>
-      <y>399</y>
-      <w>196</w>
+      <x>847</x>
+      <y>392</y>
+      <w>168</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;..
 implements</panel_attributes>
-    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>378</y>
+      <x>14</x>
+      <y>371</y>
       <w>329</w>
       <h>70</h>
     </coordinates>
@@ -253,8 +253,8 @@ FollowedEntity</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>175</x>
-      <y>441</y>
+      <x>189</x>
+      <y>434</y>
       <w>126</w>
       <h>175</h>
     </coordinates>
@@ -265,8 +265,8 @@ implements</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>154</x>
-      <y>315</y>
+      <x>168</x>
+      <y>308</y>
       <w>77</w>
       <h>77</h>
     </coordinates>
