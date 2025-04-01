@@ -3,8 +3,19 @@ import proyectos.*;
 import announcements.*;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Sistema {
+    List<Proponente> proponentes;
+    List<ProyectoParticipativo> proyectos;
+    List<Announcement> anuncios;
+
+    public Sistema(List<Proponente> proponentes, List<ProyectoParticipativo> proyectos, List<Announcement> anuncios) {
+        this.proponentes = proponentes;
+        this.proyectos = proyectos;
+        this.anuncios = anuncios;
+    }
+
     public boolean existeCiudadano(String nif){
         return false;
     }
@@ -22,14 +33,26 @@ public class Sistema {
     }
 
     public List<ProyectoParticipativo> proyectosRegistrados(){
-        return null;
+        return this.proyectos;
     }
 
     public ProyectoParticipativo obtenerProyecto(String nombre){
-        return null;
+        for(ProyectoParticipativo p : proyectos){
+            if(Objects.equals(p.getTitulo(), nombre)){
+                return p;
+            }
+        }
+        throw new IllegalArgumentException("El proyecto no existe");
     }
 
     public ProyectoParticipativo obtenerProyecto(int id){
-        return null;
+        for(ProyectoParticipativo p : proyectos){
+            if(Objects.equals(p.getCodigo(), id)){
+                return p;
+            }
+        }
+        throw new IllegalArgumentException("El proyecto no existe");
     }
+
+
 }

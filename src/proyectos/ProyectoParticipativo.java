@@ -29,9 +29,17 @@ public class ProyectoParticipativo implements FollowedEntity {
         this.apoyos = apoyos;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
     public void apoyar(EnteCiudadano ente) {
         if(apoyoPosible(ente)){
-            apoyos.removeIf(ente2 -> ente.esMiembro(ente2));
+            apoyos.removeIf(ente::esMiembro);
             apoyos.add(ente);
         } else {
             throw Exception
