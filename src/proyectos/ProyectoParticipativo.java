@@ -19,6 +19,7 @@ public class ProyectoParticipativo implements FollowedEntity {
     private String descripcion;
     private Proponente proponente;
     private List<EnteCiudadano> apoyos;
+    private List<Follower> followers;
     private static int contador_id=0;
 
     public ProyectoParticipativo(String titulo, String descripcion, Proponente proponente, List<EnteCiudadano> apoyos) {
@@ -48,12 +49,12 @@ public class ProyectoParticipativo implements FollowedEntity {
         }
     }
 
-    public int obtenerVotos(){
-        int votos = 0;
+    public int obtenerApoyos(){
+        int numApoyos = 0;
         for(EnteCiudadano ente : apoyos){
-            votos += ente.cantidadMiembros();
+            numApoyos += ente.cantidadMiembros();
         }
-        return votos;
+        return numApoyos;
     }
 
     private boolean apoyoPosible(EnteCiudadano ente) {
@@ -72,7 +73,7 @@ public class ProyectoParticipativo implements FollowedEntity {
 
     @Override
     public boolean follow(Follower f) {
-
+        followers.add(f);
     }
 
     @Override
