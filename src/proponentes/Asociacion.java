@@ -1,13 +1,17 @@
 package proponentes;
 
+import announcements.Announcement;
 import announcements.FollowedEntity;
+import announcements.Follower;
 import proyectos.ProyectoParticipativo;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Asociacion extends EnteCiudadano implements FollowedEntity {
     private final Ciudadano representante;
-    private List<Ciudadano> miembros;
+    private final List<EnteCiudadano> miembros = new LinkedList<EnteCiudadano>();
+    private final List<Follower> followers = new LinkedList<Follower>();
 
     public Asociacion(String nombre, String contraseña, Ciudadano representante){
         super(nombre, contraseña);
@@ -19,12 +23,12 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         this.representante = representante;
     }
 
-    public boolean inscribir(Ciudadano ciudadano){
-        if(this.esMiembro(ciudadano)){
+    public boolean inscribir(EnteCiudadano ente){
+        if(this.esMiembro(ente)){
             return false;
         }
 
-        return miembros.add(ciudadano);
+        return miembros.add(ente);
     }
 
     public boolean darDeBaja(Ciudadano ciudadano){
@@ -36,15 +40,22 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     public void incribirse(Asociacion asociacion){
-
+        if(asociacion == null){
+            return;
+        }
+        if(this.representante == asociacion.representante && this.miembros.size() == 0){
+            if(asociacion.inscribir(this)){
+                inscrito.add(asociacion);
+            }
+        }
     }
 
-    public boolean esMiembro(Ciudadano ciudadano){
-        if(ciudadano == null){
-            return false;
+    public boolean esMiembro(EnteCiudadano enteCiudadano){
+        if(this.equals(enteCiudadano)){
+            return true;
         }
         for(EnteCiudadano ente : miembros){
-            if(ente.esMiembro(ciudadano)){
+            if(ente.esMiembro(enteCiudadano)){
                 return true;
             }
         }
@@ -61,9 +72,48 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         return total;
     }
 
-    @Override
-    public String toString() {
-        return
+    public void receives(Announcement t) {
+        for(EnteCiudadano ente : miembros){
+            ente.receives(t);
+        }
     }
 
+    @Override
+    public String toString() {
+        return this.nombre + " <asociacion con "+this.cantidadMiembros()+" ciudadanos>";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Asociacion) {
+            return this.nombre.equals(((Asociacion)obj).nombre);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean follow(Follower f) {
+        return followers.add(f);
+    }
+
+    @Override
+    public boolean unfollow(Follower f) {
+        return followers.remove(f);
+    }
+
+    @Override
+    public void announce(Announcement t) {
+        for(Follower follower : followers){
+            follower.receives(t);
+        }
+    }
+
+    @Override
+    public void follow(Follower f, AnnouncementStrategy ns) {
+
+    }
 }

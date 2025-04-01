@@ -48,7 +48,7 @@ public class Ciudadano extends EnteCiudadano{
     }
 
     public boolean esMiembro(EnteCiudadano enteCiudadano){
-        return this==enteCiudadano;
+        return this.equals(enteCiudadano);
     }
 
     public int cantidadMiembros(){
@@ -76,5 +76,17 @@ public class Ciudadano extends EnteCiudadano{
     @Override
     public String toString() {
         return this.nombre + " NIF (" +this.NIF + ") <usuario>";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Ciudadano) {
+            return this.NIF.equals(((Ciudadano)obj).NIF);
+        }
+        return false;
     }
 }
