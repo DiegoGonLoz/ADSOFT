@@ -9,5 +9,5 @@ public abstract class Proponente {
         this.contrasena = contrasena;
     }
 
-    public abstract void proponer(Proponente proponente);
+    public abstract String toString();
 }
