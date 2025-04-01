@@ -1,10 +1,19 @@
 package proponentes;
 
 import announcements.Follower;
-import announcements.FollowedEntity;
+import proyectos.ProyectoParticipativo;
 
-import java.util.List;
+import java.util.LinkedList;
 
 public abstract class EnteCiudadano extends Proponente implements Follower {
+    protected LinkedList<Asociacion> inscrito = new LinkedList<>();
+    public EnteCiudadano(String nombre, String contraseña){
+        super(nombre, contraseña);
+    }
 
+    public abstract void proponer(ProyectoParticipativo proyecto);
+
+    public abstract boolean esMiembro(EnteCiudadano enteCiudadano);
+
+    public abstract int cantidadMiembros();
 }

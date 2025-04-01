@@ -60,7 +60,7 @@ m1=Proponente</panel_attributes>
     <panel_attributes>ProyectoFundacion
 --
 - presupuestoEstimado: double
-- porcentajeAsumeFundacion: int
+- porcentajeAsumeFundacion: double
 --
 + toString(): String
 </panel_attributes>
