@@ -15,5 +15,9 @@ public abstract class Proponente {
         this.contrasena = contraseña;
     }
 
+    public String getNombre(){
+        return this.nombre;
+    }
+
     public abstract String toString();
 }
