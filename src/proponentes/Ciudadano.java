@@ -37,13 +37,15 @@ public class Ciudadano extends EnteCiudadano{
     }
 
     public void proponer(ProyectoParticipativo proyecto){
-        - Añadir proyecto al sistema
-        - En proponer llamar a apoyar
+        if(Sistema.getInstance().proponerProyecto(proyecto)){
+            proyecto.apoyar(this);
+        }
     }
 
-    public void incribirse(Asociacion asociacion){
+    public void inscribirse(Asociacion asociacion){
         if(asociacion.inscribir(this)){
             inscrito.add(asociacion);
+            asociacion.follow(this);
         }
     }
 

@@ -1,8 +1,11 @@
 package proponentes;
 
+import announcements.Announcement;
+import announcements.FollowedEntity;
+import announcements.Follower;
 import proyectos.ProyectoFundacion;
 
-public class Fundacion extends Proponente implements FollowedEntity{
+public class Fundacion extends Proponente implements FollowedEntity {
     private final String CIF;
 
     public Fundacion(String name, String contrasena, String cif) {
@@ -56,7 +59,31 @@ public class Fundacion extends Proponente implements FollowedEntity{
     }
 
     public void proponer(ProyectoFundacion proyecto) {
-        -En proponer llamar a apoyar
+        Sistema.getInstance().proponerProyecto(proyecto);
     }
 
+    @Override
+    public String toString() {
+        return this.nombre + " CIF (" +this.CIF + ") <fundacion>";
+    }
+
+    @Override
+    public boolean follow(Follower f) {
+
+    }
+
+    @Override
+    public boolean unfollow(Follower f) {
+
+    }
+
+    @Override
+    public void announce(Announcement t) {
+a
+    }
+
+    @Override
+    public void follow(Follower f, AnnouncementStrategy ns) {
+
+    }
 }

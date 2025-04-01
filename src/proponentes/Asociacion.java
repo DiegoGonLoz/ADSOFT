@@ -36,14 +36,16 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     public void proponer(ProyectoParticipativo proyecto){
-        - En proponer llamar a apoyar;
+        if(Sistema.getInstance().proponerProyecto(proyecto)){
+            proyecto.apoyar(this);
+        }
     }
 
-    public void incribirse(Asociacion asociacion){
+    public void inscribirse(Asociacion asociacion){
         if(asociacion == null){
             return;
         }
-        if(this.representante == asociacion.representante && this.miembros.size() == 0){
+        if(this.representante == asociacion.representante && this.miembros.isEmpty()){
             if(asociacion.inscribir(this)){
                 inscrito.add(asociacion);
             }

@@ -3,6 +3,7 @@ package proyectos;
 import announcements.Announcement;
 import announcements.FollowedEntity;
 import announcements.Follower;
+import proponentes.Asociacion;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;
 
@@ -44,6 +45,9 @@ public class ProyectoParticipativo implements FollowedEntity {
         if(apoyoPosible(ente)){
             apoyos.removeIf(ente::esMiembro);
             apoyos.add(ente);
+            if(ente instanceof Asociacion){
+                ((Asociacion)ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos()+" apoyos)"));
+            }
         } else {
             throw Exception
         }
