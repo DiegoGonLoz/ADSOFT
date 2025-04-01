@@ -1,6 +1,8 @@
 package proyectos;
 
+import announcements.Announcement;
 import announcements.FollowedEntity;
+import announcements.Follower;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;
 
@@ -51,10 +53,6 @@ public class ProyectoParticipativo implements FollowedEntity {
             return false;
         }
 
-        if(apoyos.contains(ente)){
-            return false;
-        }
-
         for(EnteCiudadano ente2 : apoyos){
             if(ente2.esMiembro(ente)){
                 return false;
@@ -62,5 +60,25 @@ public class ProyectoParticipativo implements FollowedEntity {
         }
 
         return Duration.between(LocalDate.now(), fecha).toDays() <= 60;
+    }
+
+    @Override
+    public boolean follow(Follower f) {
+
+    }
+
+    @Override
+    public boolean unfollow(Follower f) {
+
+    }
+
+    @Override
+    public void announce(Announcement t) {
+a
+    }
+
+    @Override
+    public void follow(Follower f, AnnouncementStrategy ns) {
+
     }
 }
