@@ -5,6 +5,7 @@ import announcements.AnnouncementStrategy;
 import announcements.FollowedEntity;
 import announcements.Follower;
 import myExceptions.enteCiudadanoEsMiembro;
+import myExceptions.errorApoyandoProyecto;
 import myExceptions.proyectoMasDe60Dias;
 import myExceptions.proyectoPropuestoPorSiMismo;
 import proponentes.Asociacion;
@@ -48,14 +49,16 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     }
 
     public void apoyar(EnteCiudadano ente) {
-        if(apoyoPosible(ente)){
-            apoyos.removeIf(ente::esMiembro);
-            apoyos.add(ente);
-            if(ente instanceof Asociacion){
-                ((Asociacion)ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos()+" apoyos)"));
+        try {
+            if (apoyoPosible(ente)) {
+                apoyos.removeIf(ente::esMiembro);
+                apoyos.add(ente);
+                if (ente instanceof Asociacion) {
+                    ((Asociacion) ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos() + " apoyos)"));
+                }
             }
-        } else {
-            throw Exception
+        } catch (proyectoPropuestoPorSiMismo | enteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
+            throw new errorApoyandoProyecto("Error en metodo apoyar:"+ e);
         }
     }
 
@@ -75,19 +78,19 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return ciudadanos;
     }
 
-    private boolean apoyoPosible(EnteCiudadano ente) {
+    private boolean apoyoPosible(EnteCiudadano ente) throws proyectoPropuestoPorSiMismo, enteCiudadanoEsMiembro, proyectoMasDe60Dias {
         if(proponente.equals(ente)) {
-            throw new proyectoPropuestoPorSiMismo("Error en ApoyoPosible: ");
+            throw new proyectoPropuestoPorSiMismo("\nError en ApoyoPosible: ");
         }
 
         for(EnteCiudadano ente2 : apoyos){
             if(ente2.esMiembro(ente)){
-                throw new enteCiudadanoEsMiembro("Error en ApoyoPosible: ");
+                throw new enteCiudadanoEsMiembro("\nError en ApoyoPosible: ");
             }
         }
 
         if(Duration.between(LocalDate.now(), fecha).toDays() > 60){
-            throw new proyectoMasDe60Dias("Error en ApoyoPosible: ", Duration.between(LocalDate.now(), fecha).toDays());
+            throw new proyectoMasDe60Dias("\nError en ApoyoPosible: ", Duration.between(LocalDate.now(), fecha).toDays());
         }
 
         return true;
