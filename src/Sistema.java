@@ -15,20 +15,43 @@ public class Sistema {
         this.anuncios = anuncios;
     }
 
-    public boolean existeCiudadano(String nif){
+    public boolean existeCiudadano(Ciudadano ciudadano){
+        for(Proponente p : proponentes) {
+            if (p.equals(ciudadano)) {
+                return true;
+            }
+        }
         return false;
     }
 
-    public boolean existeFundacion(String cif){
+    public boolean existeFundacion(Fundacion fundacion){
+        for(Proponente p : proponentes) {
+            if (p.equals(fundacion)) {
+                return true;
+            }
+        }
         return false;
     }
 
     public Ciudadano obtenerCiudadano(String nombre){
+        for(Proponente p : proponentes) {
+            if(p instanceof Ciudadano) {
+                if (p.getNombre().equals(nombre)) {
+                    return (Ciudadano) p;
+                }
+            }
+        }
         return null;
     }
 
     public List<Ciudadano> todosLosCiudadanos(){
-        return null;
+        List<Ciudadano> ciudadanos = new ArrayList<>();
+        for(Proponente p : proponentes) {
+            if(p instanceof Ciudadano) {
+                ciudadanos.add((Ciudadano) p);
+            }
+        }
+        return ciudadanos;
     }
 
     public boolean proponerProyecto(ProyectoParticipativo p){
@@ -41,33 +64,37 @@ public class Sistema {
 
     public ProyectoParticipativo obtenerProyecto(String nombre){
         for(ProyectoParticipativo p : proyectos){
-            if(Objects.equals(p.getTitulo(), nombre)){
+            if(nombre.equals(p.getTitulo())){
                 return p;
             }
         }
-        throw new IllegalArgumentException("El proyecto no existe");
+        throw
     }
 
     public ProyectoParticipativo obtenerProyecto(int id){
         for(ProyectoParticipativo p : proyectos){
-            if(Objects.equals(p.getCodigo(), id)){
+            if(id == p.getCodigo()){
                 return p;
             }
         }
-        throw new IllegalArgumentException("El proyecto no existe");
+        throw
     }
 
     public SortedMap<Integer,ProyectoParticipativo> obtenerMapaProyectoApoyos(){
-        Comparator<Integer> comparador = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer s1, Integer s2) {
-                return s2-s1;
-            }
-        };
         SortedMap<Integer,ProyectoParticipativo> mapa = new TreeMap<>(Comparator.reverseOrder());
 
         for(ProyectoParticipativo p : proyectos){
             mapa.put(p.obtenerApoyos(), p);
+        }
+
+        return mapa;
+    }
+
+    public Map<ProyectoParticipativo, List<Ciudadano>> obtenerMapaProyectoCiudadanos(){
+        Map<ProyectoParticipativo, List<Ciudadano>> mapa = new HashMap<>();
+
+        for(ProyectoParticipativo p : proyectos){
+            mapa.put(p, p.todosLosCiudadanos());
         }
 
         return mapa;
