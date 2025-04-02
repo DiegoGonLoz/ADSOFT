@@ -3,12 +3,14 @@ package proponentes;
 import announcements.*;
 import proyectos.ProyectoFundacion;
 
+import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
-import java.util.List;
+import java.util.*;
 
 public class Fundacion extends Proponente implements FollowedEntity {
     private final String CIF;
+    private final Set<FollowerManager> followers = new HashSet<FollowerManager>();
 
     public Fundacion(String name, String contrasena, String cif) {
         super(name, contrasena);
@@ -86,22 +88,42 @@ public class Fundacion extends Proponente implements FollowedEntity {
     }
 
     @Override
-    public boolean follow(Follower f) {
+    public int hashCode() {
+        return Objects.hash(this.CIF);
+    }
 
+    @Override
+    public boolean follow(Follower f) {
+        return followers.add(new FollowerManagerAllMessages(f));
     }
 
     @Override
     public boolean unfollow(Follower f) {
-
+        return followers.remove(f);
     }
 
     @Override
     public void announce(Announcement t) {
-a
+        for(FollowerManager follower : followers){
+            follower.announce(t);
+        }
     }
 
     @Override
     public boolean follow(Follower f, AnnouncementStrategy ns) {
+        return switch (ns) {
+            case AnnouncementStrategy.ONE_IN_N_MESSAGES -> followers.add(new FollowerManagerFrecuency(f));
+            default -> followers.add(new FollowerManagerAllMessages(f));
+        };
+    }
 
+    public boolean changeUmbral(Follower f, int umbral){
+        for(FollowerManager follower : followers){
+            if(follower.getFollower().equals(f)){
+                follower.setUmbral(umbral);
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -1,6 +1,6 @@
 package announcements;
 
-public abstract class FollowerManager implements Comparable<FollowerManager> {
+public abstract class FollowerManager{
     protected final Follower follower;
     protected int umbral = 1;
 
@@ -12,9 +12,17 @@ public abstract class FollowerManager implements Comparable<FollowerManager> {
 
     public abstract void announce(Announcement t);
 
-    public void setUmbral(int n){
-        throw
-        this.umbral = n;
+    public Follower getFollower(){
+        return this.follower;
+    }
+
+    public boolean setUmbral(int n){
+        if(n >= 1){
+            this.umbral = n;
+            return true;
+        }
+
+        return false;
     }
 
     @Override
@@ -30,7 +38,7 @@ public abstract class FollowerManager implements Comparable<FollowerManager> {
     }
 
     @Override
-    public int compareTo(FollowerManager o){
-        return this.follower.compareTo(o.follower);
+    public int hashCode(){
+        return follower.hashCode();
     }
 }

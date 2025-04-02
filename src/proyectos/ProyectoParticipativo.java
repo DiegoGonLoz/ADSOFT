@@ -3,34 +3,31 @@ package proyectos;
 import announcements.*;
 import proponentes.*;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.time.*;
+import java.util.*;
+import myExceptions.*;
 
 public class ProyectoParticipativo implements FollowedEntity, Comparable<ProyectoParticipativo> {
     private final int codigo;
     private final LocalDate fecha;
     private final LocalTime hora;
-    private String titulo;
-    private String descripcion;
-    private Proponente proponente;
+    private final String titulo;
+    private final String descripcion;
+    private final Proponente proponente;
     private final Set<EnteCiudadano> apoyos;
     private final Set<FollowerManager> followers;
     private static int contador_id=0;
 
     public ProyectoParticipativo(String titulo, String descripcion, Proponente proponente) {
-        this.codigo = contador_id++;
+        this.codigo = contador_id;
+        contador_id++;
         this.fecha = LocalDate.now();
         this.hora = LocalTime.now();
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.proponente = proponente;
-        this.apoyos = new TreeSet<EnteCiudadano>();
-        this.followers = new TreeSet<FollowerManager>();
+        this.apoyos = new HashSet<EnteCiudadano>();
+        this.followers = new HashSet<FollowerManager>();
     }
 
     public String getTitulo() {
@@ -100,6 +97,11 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     }
 
     @Override
+    public int hashCode() {
+        return this.codigo;
+    }
+
+    @Override
     public boolean follow(Follower f) {
         return followers.add(new FollowerManagerAllMessages(f));
     }
@@ -111,14 +113,29 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
 
     @Override
     public void announce(Announcement t) {
-        for(Follower follower : followers){
-            follower.receives(t);
+        for(FollowerManager follower : followers){
+            follower.announce(t);
         }
     }
 
     @Override
     public boolean follow(Follower f, AnnouncementStrategy ns) {
+        return switch (ns) {
+            case AnnouncementStrategy.ONE_IN_N_MESSAGES -> followers.add(new FollowerManagerFrecuency(f));
+            case AnnouncementStrategy.WHEN_N_SUPPORTS_ACHIEVED ->
+                    followers.add(new FollowerManagerProjectSupport(f, this));
+            default -> followers.add(new FollowerManagerAllMessages(f));
+        };
+    }
 
+    public boolean changeUmbral(Follower f, int umbral){
+        for(FollowerManager follower : followers){
+            if(follower.getFollower().equals(f)){
+                follower.setUmbral(umbral);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

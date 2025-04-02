@@ -96,4 +96,9 @@ public class Ciudadano extends EnteCiudadano{
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.NIF);
+    }
 }

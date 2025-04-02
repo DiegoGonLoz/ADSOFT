@@ -8,8 +8,8 @@ import java.util.*;
 
 public class Asociacion extends EnteCiudadano implements FollowedEntity {
     private final Ciudadano representante;
-    private final List<EnteCiudadano> miembros = new LinkedList<EnteCiudadano>();
-    private final List<Follower> followers = new LinkedList<Follower>();
+    private final Set<EnteCiudadano> miembros = new HashSet<EnteCiudadano>();
+    private final Set<FollowerManager> followers = new HashSet<FollowerManager>();
 
     public Asociacion(String nombre, String contraseña, Ciudadano representante){
         super(nombre, contraseña);
@@ -105,8 +105,13 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     @Override
+    public int hashCode(){
+        return Objects.hash(this.nombre);
+    }
+
+    @Override
     public boolean follow(Follower f) {
-        return followers.add(f);
+        return followers.add(new FollowerManagerAllMessages(f));
     }
 
     @Override
@@ -116,19 +121,26 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
 
     @Override
     public void announce(Announcement t) {
-        for(Follower follower : followers){
-            follower.receives(t);
+        for(FollowerManager follower : followers){
+            follower.announce(t);
         }
     }
 
     @Override
     public boolean follow(Follower f, AnnouncementStrategy ns) {
-        switch(ns){
-            case ONE_IN_N_MESSAGES:
+        return switch (ns) {
+            case AnnouncementStrategy.ONE_IN_N_MESSAGES -> followers.add(new FollowerManagerFrecuency(f));
+            default -> followers.add(new FollowerManagerAllMessages(f));
+        };
+    }
 
+    public boolean changeUmbral(Follower f, int umbral){
+        for(FollowerManager follower : followers){
+            if(follower.getFollower().equals(f)){
+                follower.setUmbral(umbral);
+                return true;
+            }
         }
-
         return false;
-
     }
 }

@@ -21,8 +21,11 @@ public class FollowerManagerProjectSupport extends FollowerManager {
     }
 
     @Override
-    public void setUmbral(int n){
-        super.setUmbral(n);
-        this.avisado = false;
+    public boolean setUmbral(int n){
+        if(super.setUmbral(n)){
+            this.avisado = false;
+            return true;
+        }
+        return false;
     }
 }
