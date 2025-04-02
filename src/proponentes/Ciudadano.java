@@ -4,6 +4,7 @@ import announcements.Announcement;
 import proyectos.ProyectoParticipativo;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Ciudadano extends EnteCiudadano{
     private final String NIF;
@@ -55,6 +56,10 @@ public class Ciudadano extends EnteCiudadano{
 
     public int cantidadMiembros(){
         return 1;
+    }
+
+    public List<Ciudadano> todosLosCiudadanos() {
+        return List.of(this);
     }
 
     public void receives(Announcement t) {

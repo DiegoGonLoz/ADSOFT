@@ -74,6 +74,15 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         return total;
     }
 
+    public List<Ciudadano> todosLosCiudadanos() {
+        List<Ciudadano> ciudadanos = new LinkedList<Ciudadano>();
+        for(EnteCiudadano ente : miembros){
+            ciudadanos.addAll(ente.todosLosCiudadanos());
+        }
+
+        return ciudadanos;
+    }
+
     public void receives(Announcement t) {
         for(EnteCiudadano ente : miembros){
             ente.receives(t);
