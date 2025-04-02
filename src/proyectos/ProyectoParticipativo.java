@@ -42,14 +42,16 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     }
 
     public void apoyar(EnteCiudadano ente) {
-        if(apoyoPosible(ente)){
-            apoyos.removeIf(ente::esMiembro);
-            apoyos.add(ente);
-            if(ente instanceof Asociacion){
-                ((Asociacion)ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos()+" apoyos)"));
+        try {
+            if (apoyoPosible(ente)) {
+                apoyos.removeIf(ente::esMiembro);
+                apoyos.add(ente);
+                if (ente instanceof Asociacion) {
+                    ((Asociacion) ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos() + " apoyos)"));
+                }
             }
-        } else {
-            throw Exception
+        } catch (proyectoPropuestoPorSiMismo | enteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
+            throw new errorApoyandoProyecto("Error en metodo apoyar:"+ e);
         }
     }
 
@@ -69,18 +71,22 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return ciudadanos;
     }
 
-    private boolean apoyoPosible(EnteCiudadano ente) {
-        if(proponente.equals(ente)){
-            return false;
+    private boolean apoyoPosible(EnteCiudadano ente) throws proyectoPropuestoPorSiMismo, enteCiudadanoEsMiembro, proyectoMasDe60Dias {
+        if(proponente.equals(ente)) {
+            throw new proyectoPropuestoPorSiMismo("\nError en ApoyoPosible: ");
         }
 
         for(EnteCiudadano ente2 : apoyos){
             if(ente2.esMiembro(ente)){
-                return false;
+                throw new enteCiudadanoEsMiembro("\nError en ApoyoPosible: ");
             }
         }
 
-        return Duration.between(LocalDate.now(), fecha).toDays() <= 60;
+        if(Duration.between(LocalDate.now(), fecha).toDays() > 60){
+            throw new proyectoMasDe60Dias("\nError en ApoyoPosible: ", Duration.between(LocalDate.now(), fecha).toDays());
+        }
+
+        return true;
     }
 
     @Override
@@ -105,7 +111,9 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
 
     @Override
     public void announce(Announcement t) {
-
+        for(Follower follower : followers){
+            follower.receives(t);
+        }
     }
 
     @Override
