@@ -95,7 +95,7 @@ public class Sistema {
                 return p;
             }
         }
-        throw
+        return null;
     }
 
     public ProyectoParticipativo obtenerProyecto(int id){
@@ -104,7 +104,7 @@ public class Sistema {
                 return p;
             }
         }
-        throw
+        return null;
     }
 
     public SortedMap<Integer,ProyectoParticipativo> obtenerMapaProyectoApoyos(){
