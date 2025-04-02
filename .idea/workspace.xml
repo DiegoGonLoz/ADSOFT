@@ -5,17 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen Adsoft">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myExceptions/errorAnadiendoCiudadanoExistente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myExceptions/errorAnadiendoFundacionExistente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myExceptions/formatoCifIncorrecto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myExceptions/formatoNifIncorrecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/enteCiudadanoEsMiembro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/enteCiudadanoEsMiembro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proponentes/Asociacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Asociacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proponentes/Ciudadano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Ciudadano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proponentes/Fundacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proponentes/Fundacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sistemas/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sistemas/Sistema.java" afterDir="false" />
+    </list>
+    <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+        <option value="Exception" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="7" end1="9" start2="7" end2="14" changelist="a82cd155-8e0e-41c7-9e1a-d30e56829cef" />
+        <range start1="10" end1="10" start2="15" end2="19" changelist="a82cd155-8e0e-41c7-9e1a-d30e56829cef" />
+        <range start1="15" end1="15" start2="24" end2="33" changelist="a82cd155-8e0e-41c7-9e1a-d30e56829cef" />
+        <range start1="18" end1="18" start2="36" end2="48" changelist="a82cd155-8e0e-41c7-9e1a-d30e56829cef" />
+        <range start1="28" end1="28" start2="58" end2="63" changelist="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" />
+        <range start1="29" end1="29" start2="64" end2="137" changelist="a82cd155-8e0e-41c7-9e1a-d30e56829cef" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -27,6 +59,79 @@
   }
 }]]></component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743538277389</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743538277389</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743542037080</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743542037080</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743543628988</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743543628988</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743546751553</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743546751553</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743610909400</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743610909400</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743614369799</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743614369799</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743615817072</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743615817072</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743628259442</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743628259442</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Bombardeen Adsoft">
+      <option name="closed" value="true" />
+      <created>1743628994544</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743628994544</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

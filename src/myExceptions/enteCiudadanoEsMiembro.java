@@ -8,6 +8,6 @@ public class enteCiudadanoEsMiembro extends IllegalArgumentException {
     @Override
     public String toString() {
         return this.getMessage()+
-                "\nError al intentar apoyar proyecto que contiene a ciudadanos y/o asociaciones apoyando al proyecto";
+                "\nError, contiene a ciudadanos y/o asociaciones apoyando al proyecto";
     }
 }

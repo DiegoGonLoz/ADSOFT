@@ -48,7 +48,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return codigo;
     }
 
-    public void apoyar(EnteCiudadano ente) {
+    public void apoyar(EnteCiudadano ente) throws errorApoyandoProyecto {
         try {
             if (apoyoPosible(ente)) {
                 apoyos.removeIf(ente::esMiembro);
