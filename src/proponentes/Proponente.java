@@ -1,5 +1,7 @@
 package proponentes;
 
+import java.util.List;
+
 public abstract class Proponente {
     protected final String nombre;
     protected final String contrasena;
@@ -20,4 +22,9 @@ public abstract class Proponente {
     }
 
     public abstract String toString();
+
+    public abstract List<Ciudadano> todosLosCiudadanos();
+
+    @Override
+    public abstract boolean equals(Object obj);
 }

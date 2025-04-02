@@ -1,9 +1,12 @@
 package proponentes;
 
 import announcements.Announcement;
+import announcements.AnnouncementStrategy;
 import announcements.FollowedEntity;
 import announcements.Follower;
 import proyectos.ProyectoFundacion;
+
+import java.util.List;
 
 public class Fundacion extends Proponente implements FollowedEntity {
     private final String CIF;
@@ -67,6 +70,22 @@ public class Fundacion extends Proponente implements FollowedEntity {
         return this.nombre + " CIF (" +this.CIF + ") <fundacion>";
     }
 
+    public List<Ciudadano> todosLosCiudadanos() {
+        return null;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Fundacion) {
+            return this.CIF.equals(((Fundacion)obj).CIF);
+        }
+        return false;
+    }
+
     @Override
     public boolean follow(Follower f) {
 
@@ -83,7 +102,7 @@ a
     }
 
     @Override
-    public void follow(Follower f, AnnouncementStrategy ns) {
+    public boolean follow(Follower f, AnnouncementStrategy ns) {
 
     }
 }

@@ -1,9 +1,8 @@
 package proponentes;
 
-import announcements.Announcement;
-import announcements.FollowedEntity;
-import announcements.Follower;
+import announcements.*;
 import proyectos.ProyectoParticipativo;
+import sistemas.Sistema;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -124,7 +123,12 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     @Override
-    public void follow(Follower f, AnnouncementStrategy ns) {
+    public boolean follow(Follower f, AnnouncementStrategy ns) {
+        switch(ns){
+            case
+        }
+
+        return false;
 
     }
 }

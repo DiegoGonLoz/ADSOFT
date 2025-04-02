@@ -20,6 +20,4 @@ public abstract class EnteCiudadano extends Proponente implements Follower {
     public abstract boolean esMiembro(EnteCiudadano enteCiudadano);
 
     public abstract int cantidadMiembros();
-
-    public abstract List<Ciudadano> todosLosCiudadanos();
 }
