@@ -5,6 +5,7 @@ import announcements.Follower;
 import proyectos.ProyectoParticipativo;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public abstract class EnteCiudadano extends Proponente implements Follower {
     protected LinkedList<Asociacion> inscrito = new LinkedList<Asociacion>();

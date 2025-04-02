@@ -1,5 +1,6 @@
 package announcements;
 
 public enum AnnouncementStrategy {
-    STRATEGY1, STRATEGY2
+    ONE_IN_N_MESSAGES,
+    WHEN_N_SUPPORTS_ACHIEVED
 }

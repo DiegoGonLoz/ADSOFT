@@ -3,11 +3,13 @@ package proponentes;
 import announcements.Announcement;
 import proyectos.ProyectoParticipativo;
 
-import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Ciudadano extends EnteCiudadano{
     private final String NIF;
-    private final LinkedList<Announcement> mensajes = new LinkedList<>();
+    private final Set<Announcement> mensajes = new TreeSet<Announcement>();
 
     public Ciudadano(String name, String contraseña, String nif) {
         super(name, contraseña);
@@ -55,6 +57,10 @@ public class Ciudadano extends EnteCiudadano{
 
     public int cantidadMiembros(){
         return 1;
+    }
+
+    public List<Ciudadano> todosLosCiudadanos() {
+        return List.of(this);
     }
 
     public void receives(Announcement t) {

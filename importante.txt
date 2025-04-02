@@ -1,9 +1,5 @@
-- Interpretar representante como miembro (cual es la asociacion vacia)
-- Evitar CIF y NIF repetidos o nombres
 - Crear excepciones personalizadas
-- Quienes son los usuarios
 - Nivel de detalle de las excepciones
-- Si implementa Comparable o clases de java, hace falta indicarlo en el diagrama
 
 tener cuidado con excepciones e interfaces
 

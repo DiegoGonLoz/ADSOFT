@@ -1,9 +1,8 @@
 package proponentes;
 
-import announcements.Announcement;
-import announcements.FollowedEntity;
-import announcements.Follower;
+import announcements.*;
 import proyectos.ProyectoParticipativo;
+import sistemas.Sistema;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -74,6 +73,15 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         return total;
     }
 
+    public List<Ciudadano> todosLosCiudadanos() {
+        List<Ciudadano> ciudadanos = new LinkedList<Ciudadano>();
+        for(EnteCiudadano ente : miembros){
+            ciudadanos.addAll(ente.todosLosCiudadanos());
+        }
+
+        return ciudadanos;
+    }
+
     public void receives(Announcement t) {
         for(EnteCiudadano ente : miembros){
             ente.receives(t);
@@ -115,7 +123,12 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     @Override
-    public void follow(Follower f, AnnouncementStrategy ns) {
+    public boolean follow(Follower f, AnnouncementStrategy ns) {
+        switch(ns){
+            case
+        }
+
+        return false;
 
     }
 }
