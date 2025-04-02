@@ -2,6 +2,7 @@ package proponentes;
 
 import announcements.FollowedEntity;
 import announcements.Follower;
+import myExceptions.formatoCifIncorrecto;
 import proyectos.ProyectoParticipativo;
 
 import java.util.LinkedList;
@@ -11,7 +12,7 @@ public abstract class EnteCiudadano extends Proponente implements Follower {
     protected LinkedList<Asociacion> inscrito = new LinkedList<Asociacion>();
     protected LinkedList<FollowedEntity> seguidos = new LinkedList<FollowedEntity>();
 
-    public EnteCiudadano(String nombre, String contraseña){
+    public EnteCiudadano(String nombre, String contraseña) throws NullPointerException{
         super(nombre, contraseña);
     }
 

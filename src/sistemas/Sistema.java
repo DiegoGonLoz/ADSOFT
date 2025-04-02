@@ -1,5 +1,8 @@
 package sistemas;
 
+import myExceptions.errorAnadiendoCiudadanoExistente;
+import myExceptions.errorAnadiendoFundacionExistente;
+import myExceptions.errorApoyandoProyecto;
 import proponentes.*;
 import proyectos.*;
 import announcements.*;
@@ -43,6 +46,20 @@ public class Sistema {
         return false;
     }
 
+    public void addCiudadano(Ciudadano ciudadano) throws errorAnadiendoCiudadanoExistente {
+        if(existeCiudadano(ciudadano)){
+            throw new errorAnadiendoCiudadanoExistente("Error en addCiudadano");
+        }
+        proponentes.add(ciudadano);
+    }
+
+    public void addFundacion(Fundacion fundacion) throws errorAnadiendoFundacionExistente {
+        if(existeFundacion(fundacion)){
+            throw new errorAnadiendoFundacionExistente("Error en addFundacion");
+        }
+        proponentes.add(fundacion);
+    }
+
     public Ciudadano obtenerCiudadano(String nombre){
         for(Proponente p : proponentes) {
             if(p instanceof Ciudadano) {
@@ -68,7 +85,7 @@ public class Sistema {
         return this.proyectos.add(p);
     }
 
-    public List<ProyectoParticipativo> proyectosRegistrados(){
+    public Set<ProyectoParticipativo> proyectosRegistrados(){
         return this.proyectos;
     }
 

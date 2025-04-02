@@ -1,6 +1,9 @@
 package proponentes;
 
 import announcements.*;
+import myExceptions.enteCiudadanoEsMiembro;
+import myExceptions.errorAnadiendoCiudadanoExistente;
+import myExceptions.inscripcionInviable;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
@@ -11,19 +14,19 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     private final Set<EnteCiudadano> miembros = new HashSet<EnteCiudadano>();
     private final Set<FollowerManager> followers = new HashSet<FollowerManager>();
 
-    public Asociacion(String nombre, String contraseña, Ciudadano representante){
+    public Asociacion(String nombre, String contraseña, Ciudadano representante) throws NullPointerException {
         super(nombre, contraseña);
 
         if(representante == null){
-            throw Exception;
+            throw new NullPointerException("Error en el constructor Asociacion: \nRepresentante null");
         }
 
         this.representante = representante;
     }
 
-    public boolean inscribir(EnteCiudadano ente){
+    public boolean inscribir(EnteCiudadano ente) throws enteCiudadanoEsMiembro {
         if(this.esMiembro(ente)){
-            return false;
+            throw new enteCiudadanoEsMiembro("Error en el metodo inscribir: ");
         }
 
         return miembros.add(ente);
@@ -39,7 +42,7 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         }
     }
 
-    public void inscribirse(Asociacion asociacion){
+    public void inscribirse(Asociacion asociacion) throws inscripcionInviable, enteCiudadanoEsMiembro {
         if(asociacion == null){
             return;
         }
@@ -47,6 +50,8 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
             if(asociacion.inscribir(this)){
                 inscrito.add(asociacion);
             }
+        } else {
+            throw new inscripcionInviable("Error en metodo inscribirse: ");
         }
     }
 

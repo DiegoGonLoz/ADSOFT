@@ -1,6 +1,9 @@
 package proponentes;
 
 import announcements.Announcement;
+import myExceptions.errorAnadiendoCiudadanoExistente;
+import myExceptions.errorAnadiendoFundacionExistente;
+import myExceptions.formatoNifIncorrecto;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
@@ -10,10 +13,10 @@ public class Ciudadano extends EnteCiudadano{
     private final String NIF;
     private final Set<Announcement> mensajes = new TreeSet<Announcement>();
 
-    public Ciudadano(String name, String contraseña, String nif) {
+    public Ciudadano(String name, String contraseña, String nif) throws NullPointerException, formatoNifIncorrecto {
         super(name, contraseña);
         if(!this.validarNIF(nif)){
-            throw Exception;
+            throw new formatoNifIncorrecto("Error en el constructor Ciudadano: ");
         }
         this.NIF = nif;
 
@@ -43,7 +46,7 @@ public class Ciudadano extends EnteCiudadano{
         }
     }
 
-    public void inscribirse(Asociacion asociacion){
+    public void inscribirse(Asociacion asociacion) throws errorAnadiendoCiudadanoExistente {
         if(asociacion.inscribir(this)){
             inscrito.add(asociacion);
             asociacion.follow(this);
