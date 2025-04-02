@@ -1,0 +1,369 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"a82cd155-8e0e-41c7-9e1a-d30e56829cef\" name=\"Changes\" comment=\"Bombardeen Adsoft\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"git-widget-placeholder\": \"Practica4\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\"\n  }\n}]]></component>\n  <component name=\"TaskManager\">\n    <servers />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Bombardeen Adsoft\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Bombardeen Adsoft\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision dd3755f781511b6c72e7333b71d5fd67d1391d7d)
++++ b/.idea/workspace.xml	(date 1743629012684)
+@@ -4,33 +4,347 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen Adsoft">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyectos/ProyectoFundacion.java" afterDir="false" />
++    <list default="true" id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="Lesma.guisantada()">
++      <change beforePath="$PROJECT_DIR$/src/announcements/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/Follower.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/announcements/FollowerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/FollowerManager.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" afterDir="false" />
++    </list>
++    <list id="bf74bdd4-f6db-4180-a43d-6cbe72cfa427" name="ignore" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Interface" />
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="Practica3" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;DiegoGonLoz&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/DiegoGonLoz/ADSOFT.git&quot;,
++    &quot;accountId&quot;: &quot;abc1697a-d23e-4b86-b582-0ffe9e30938f&quot;
++  }
++}</component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 2
++}</component>
++  <component name="ProjectId" id="2uDzcxxXFhlW42fRgib7v9GHot8" />
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="2" id="Add" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "git-widget-placeholder": "Practica4",
+-    "node.js.selected.package.tslint": "(autodetect)"
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.BranchTester.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ChangeTester.executor&quot;: &quot;Run&quot;,
++    &quot;Application.CommitTester.executor&quot;: &quot;Run&quot;,
++    &quot;Application.RepositoryTester.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Practica4&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Documentos/Github/ADSOFT&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  },
++  &quot;keyToStringList&quot;: {
++    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
++      &quot;AiIgnore&quot;
++    ]
+   }
+-}]]></component>
++}</component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
++        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
++    <task id="LOCAL-00001" summary="putero">
++      <option name="closed" value="true" />
++      <created>1741800765506</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1741800765506</updated>
++    </task>
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="871d4dc1-2fe2-44a3-9697-856d297b9e21" name="Changes" comment="putero" />
++      <changelist id="bf74bdd4-f6db-4180-a43d-6cbe72cfa427" name="ignore" comment="" />
++      <created>1741943123631</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1741943123631</updated>
++      <workItem from="1741943125979" duration="2057000" />
++      <workItem from="1741951821363" duration="418000" />
++      <workItem from="1742392482153" duration="197000" />
++      <workItem from="1742392697190" duration="1041000" />
++      <workItem from="1742393830385" duration="1000" />
++      <workItem from="1742394396710" duration="2816000" />
++      <workItem from="1742404741495" duration="320000" />
++      <workItem from="1742405064370" duration="60000" />
++      <workItem from="1742405126752" duration="1807000" />
++      <workItem from="1742467517599" duration="10000" />
++      <workItem from="1743437553925" duration="608000" />
++      <workItem from="1743452697354" duration="652000" />
++      <workItem from="1743453550024" duration="161000" />
++      <workItem from="1743453718114" duration="4924000" />
++      <workItem from="1743460970542" duration="39000" />
++      <workItem from="1743461042700" duration="268000" />
++      <workItem from="1743506871744" duration="862000" />
++      <workItem from="1743520652712" duration="663000" />
++      <workItem from="1743538174568" duration="8209000" />
++      <workItem from="1743610318362" duration="5315000" />
++      <workItem from="1743624867734" duration="3759000" />
++    </task>
++    <task id="LOCAL-00002" summary="putero">
++      <option name="closed" value="true" />
++      <created>1741943166752</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1741943166752</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1741943611250</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1741943611250</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1741944440080</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1741944440080</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1741945034960</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1741945034960</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1742391586284</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1742391586284</updated>
++    </task>
++    <task id="LOCAL-00007" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1742397591455</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1742397591455</updated>
++    </task>
++    <task id="LOCAL-00008" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1742404801000</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1742404801000</updated>
++    </task>
++    <task id="LOCAL-00009" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1742405107207</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1742405107207</updated>
++    </task>
++    <task id="LOCAL-00010" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1742408488809</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1742408488809</updated>
++    </task>
++    <task id="LOCAL-00011" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1743453897784</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1743453897784</updated>
++    </task>
++    <task id="LOCAL-00012" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1743455241893</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1743455241893</updated>
++    </task>
++    <task id="LOCAL-00013" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1743461277005</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1743461277005</updated>
++    </task>
++    <task id="LOCAL-00014" summary="Putito">
++      <option name="closed" value="true" />
++      <created>1743520677862</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1743520677862</updated>
++    </task>
++    <task id="LOCAL-00015" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743541944144</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1743541944144</updated>
++    </task>
++    <task id="LOCAL-00016" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743543588073</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1743543588073</updated>
++    </task>
++    <task id="LOCAL-00017" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743546275417</created>
++      <option name="number" value="00017" />
++      <option name="presentableId" value="LOCAL-00017" />
++      <option name="project" value="LOCAL" />
++      <updated>1743546275417</updated>
++    </task>
++    <task id="LOCAL-00018" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743611552916</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1743611552916</updated>
++    </task>
++    <task id="LOCAL-00019" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743614331988</created>
++      <option name="number" value="00019" />
++      <option name="presentableId" value="LOCAL-00019" />
++      <option name="project" value="LOCAL" />
++      <updated>1743614331988</updated>
++    </task>
++    <task id="LOCAL-00020" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743615836582</created>
++      <option name="number" value="00020" />
++      <option name="presentableId" value="LOCAL-00020" />
++      <option name="project" value="LOCAL" />
++      <updated>1743615836582</updated>
++    </task>
++    <task id="LOCAL-00021" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743615959169</created>
++      <option name="number" value="00021" />
++      <option name="presentableId" value="LOCAL-00021" />
++      <option name="project" value="LOCAL" />
++      <updated>1743615959169</updated>
++    </task>
++    <task id="LOCAL-00022" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743628149754</created>
++      <option name="number" value="00022" />
++      <option name="presentableId" value="LOCAL-00022" />
++      <option name="project" value="LOCAL" />
++      <updated>1743628149754</updated>
++    </task>
++    <task id="LOCAL-00023" summary="Lesma.guisantada()">
++      <option name="closed" value="true" />
++      <created>1743629012368</created>
++      <option name="number" value="00023" />
++      <option name="presentableId" value="LOCAL-00023" />
++      <option name="project" value="LOCAL" />
++      <updated>1743629012368</updated>
++    </task>
++    <option name="localTasksCounter" value="24" />
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Bombardeen Adsoft" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Bombardeen Adsoft" />
++    <MESSAGE value="putero" />
++    <MESSAGE value="Putito" />
++    <MESSAGE value="Lesma.guisantada()" />
++    <option name="LAST_COMMIT_MESSAGE" value="Lesma.guisantada()" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/repositories/Repository.java</url>
++          <line>252</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
+   </component>
+ </project>
+\ No newline at end of file
