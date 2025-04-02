@@ -93,7 +93,7 @@ m1=representante</panel_attributes>
       <w>392</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>Sistema
+    <panel_attributes>sistemas.Sistema
 --
 --
 +existeCiudadano(dni: String): boolean

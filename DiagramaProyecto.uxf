@@ -85,7 +85,7 @@ m1=Proponente</panel_attributes>
       <w>531</w>
       <h>99</h>
     </coordinates>
-    <panel_attributes>Sistema
+    <panel_attributes>sistemas.Sistema
 --
 + proyectosRegistrados(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-31-03-2025
 + proyectoParcipativo(titulo: String): ProyectoParticipativo

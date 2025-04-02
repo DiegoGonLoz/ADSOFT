@@ -4,8 +4,7 @@ import announcements.*;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Asociacion extends EnteCiudadano implements FollowedEntity {
     private final Ciudadano representante;

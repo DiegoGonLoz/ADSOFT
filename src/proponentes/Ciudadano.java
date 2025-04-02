@@ -2,10 +2,9 @@ package proponentes;
 
 import announcements.Announcement;
 import proyectos.ProyectoParticipativo;
+import sistemas.Sistema;
 
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Ciudadano extends EnteCiudadano{
     private final String NIF;

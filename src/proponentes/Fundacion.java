@@ -1,10 +1,9 @@
 package proponentes;
 
-import announcements.Announcement;
-import announcements.AnnouncementStrategy;
-import announcements.FollowedEntity;
-import announcements.Follower;
+import announcements.*;
 import proyectos.ProyectoFundacion;
+
+import sistemas.Sistema;
 
 import java.util.List;
 
