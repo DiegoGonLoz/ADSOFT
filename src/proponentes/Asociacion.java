@@ -125,7 +125,8 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     @Override
     public boolean follow(Follower f, AnnouncementStrategy ns) {
         switch(ns){
-            case
+            case ONE_IN_N_MESSAGES:
+
         }
 
         return false;
