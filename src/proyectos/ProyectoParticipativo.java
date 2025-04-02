@@ -1,18 +1,21 @@
 package proyectos;
 
 import announcements.Announcement;
+import announcements.AnnouncementStrategy;
 import announcements.FollowedEntity;
 import announcements.Follower;
 import proponentes.Asociacion;
+import proponentes.Ciudadano;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;
 
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
-public class ProyectoParticipativo implements FollowedEntity {
+public class ProyectoParticipativo implements FollowedEntity, Comparable<ProyectoParticipativo> {
     private final int codigo;
     private final LocalDate fecha;
     private final LocalTime hora;
@@ -61,6 +64,14 @@ public class ProyectoParticipativo implements FollowedEntity {
         return numApoyos;
     }
 
+    public List<Ciudadano> todosLosCiudadanos(){
+        List<Ciudadano> ciudadanos = new ArrayList<Ciudadano>();
+        for(EnteCiudadano ente : apoyos){
+            ciudadanos.addAll(ente.todosLosCiudadanos());
+        }
+        return ciudadanos;
+    }
+
     private boolean apoyoPosible(EnteCiudadano ente) {
         if(proponente.equals(ente)){
             return false;
@@ -76,22 +87,37 @@ public class ProyectoParticipativo implements FollowedEntity {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(obj instanceof ProyectoParticipativo){
+            ProyectoParticipativo p = (ProyectoParticipativo) obj;
+            return p.codigo == this.codigo;
+        }
+        return false;
+    }
+
+    @Override
     public boolean follow(Follower f) {
-        followers.add(f);
+        return followers.add(f);
     }
 
     @Override
     public boolean unfollow(Follower f) {
-
+        return followers.remove(f);
     }
 
     @Override
     public void announce(Announcement t) {
-a
+
     }
 
     @Override
-    public void follow(Follower f, AnnouncementStrategy ns) {
+    public boolean follow(Follower f, AnnouncementStrategy ns) {
 
+    }
+
+    @Override
+    public int compareTo(ProyectoParticipativo o) {
+        return this.codigo - o.codigo;
     }
 }
