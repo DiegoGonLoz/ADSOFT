@@ -7,5 +7,5 @@ public interface FollowedEntity {
 
     public void announce(Announcement t);
 
-    public void follow(Follower f, AnnouncementStrategy ns);
+    //public void follow(Follower f, AnnouncementStrategy ns);
 }
