@@ -64,11 +64,13 @@ public class Sistema {
                 return s2-s1;
             }
         };
-        SortedMap<Integer,ProyectoParticipativo> mapa = new TreeMap<>(comparador);
+        SortedMap<Integer,ProyectoParticipativo> mapa = new TreeMap<>(Comparator.reverseOrder());
 
         for(ProyectoParticipativo p : proyectos){
             mapa.put(p.obtenerApoyos(), p);
         }
+
+        return mapa;
     }
 
 }
