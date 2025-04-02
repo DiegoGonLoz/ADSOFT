@@ -4,6 +4,9 @@ import announcements.Announcement;
 import announcements.AnnouncementStrategy;
 import announcements.FollowedEntity;
 import announcements.Follower;
+import myExceptions.enteCiudadanoEsMiembro;
+import myExceptions.proyectoMasDe60Dias;
+import myExceptions.proyectoPropuestoPorSiMismo;
 import proponentes.Asociacion;
 import proponentes.Ciudadano;
 import proponentes.EnteCiudadano;
@@ -73,17 +76,21 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     }
 
     private boolean apoyoPosible(EnteCiudadano ente) {
-        if(proponente.equals(ente)){
-            return false;
+        if(proponente.equals(ente)) {
+            throw new proyectoPropuestoPorSiMismo("Error en ApoyoPosible: ");
         }
 
         for(EnteCiudadano ente2 : apoyos){
             if(ente2.esMiembro(ente)){
-                return false;
+                throw new enteCiudadanoEsMiembro("Error en ApoyoPosible: ");
             }
         }
 
-        return Duration.between(LocalDate.now(), fecha).toDays() <= 60;
+        if(Duration.between(LocalDate.now(), fecha).toDays() > 60){
+            throw new proyectoMasDe60Dias("Error en ApoyoPosible: ", Duration.between(LocalDate.now(), fecha).toDays());
+        }
+
+        return true;
     }
 
     @Override
@@ -108,7 +115,9 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
 
     @Override
     public void announce(Announcement t) {
-
+        for(Follower follower : followers){
+            follower.receives(t);
+        }
     }
 
     @Override
