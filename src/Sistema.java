@@ -5,14 +5,22 @@ import announcements.*;
 import java.util.*;
 
 public class Sistema {
-    List<Proponente> proponentes;
-    List<ProyectoParticipativo> proyectos;
-    List<Announcement> anuncios;
+    private static Sistema sistema;
+    Set<Proponente> proponentes;
+    Set<ProyectoParticipativo> proyectos;
+    Set<Announcement> anuncios;
 
-    public Sistema(List<Proponente> proponentes, List<ProyectoParticipativo> proyectos, List<Announcement> anuncios) {
-        this.proponentes = proponentes;
-        this.proyectos = proyectos;
-        this.anuncios = anuncios;
+    private Sistema() {
+        this.proponentes = new TreeSet<>();
+        this.proyectos = new TreeSet<>();
+        this.anuncios = new TreeSet<>();
+    }
+
+    public static Sistema getInstance() {
+        if (sistema == null) {
+            sistema = new Sistema();
+        }
+        return sistema;
     }
 
     public boolean existeCiudadano(Ciudadano ciudadano){
@@ -91,7 +99,7 @@ public class Sistema {
     }
 
     public Map<ProyectoParticipativo, List<Ciudadano>> obtenerMapaProyectoCiudadanos(){
-        Map<ProyectoParticipativo, List<Ciudadano>> mapa = new HashMap<>();
+        Map<ProyectoParticipativo, List<Ciudadano>> mapa = new TreeMap<>();
 
         for(ProyectoParticipativo p : proyectos){
             mapa.put(p, p.todosLosCiudadanos());

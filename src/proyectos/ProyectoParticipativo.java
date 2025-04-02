@@ -1,6 +1,7 @@
 package proyectos;
 
 import announcements.Announcement;
+import announcements.AnnouncementStrategy;
 import announcements.FollowedEntity;
 import announcements.Follower;
 import proponentes.Asociacion;
@@ -14,7 +15,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProyectoParticipativo implements FollowedEntity {
+public class ProyectoParticipativo implements FollowedEntity, Comparable<ProyectoParticipativo> {
     private final int codigo;
     private final LocalDate fecha;
     private final LocalTime hora;
@@ -111,7 +112,12 @@ public class ProyectoParticipativo implements FollowedEntity {
     }
 
     @Override
-    public void follow(Follower f, AnnouncementStrategy ns) {
+    public boolean follow(Follower f, AnnouncementStrategy ns) {
 
+    }
+
+    @Override
+    public int compareTo(ProyectoParticipativo o) {
+        return this.codigo - o.codigo;
     }
 }
