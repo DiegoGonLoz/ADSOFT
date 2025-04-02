@@ -1,19 +1,15 @@
 package proyectos;
 
-import announcements.Announcement;
-import announcements.AnnouncementStrategy;
-import announcements.FollowedEntity;
-import announcements.Follower;
-import proponentes.Asociacion;
-import proponentes.Ciudadano;
-import proponentes.EnteCiudadano;
-import proponentes.Proponente;
+import announcements.*;
+import proponentes.*;
 
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class ProyectoParticipativo implements FollowedEntity, Comparable<ProyectoParticipativo> {
     private final int codigo;
@@ -22,18 +18,19 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     private String titulo;
     private String descripcion;
     private Proponente proponente;
-    private List<EnteCiudadano> apoyos;
-    private List<Follower> followers;
+    private final Set<EnteCiudadano> apoyos;
+    private final Set<FollowerManager> followers;
     private static int contador_id=0;
 
-    public ProyectoParticipativo(String titulo, String descripcion, Proponente proponente, List<EnteCiudadano> apoyos) {
+    public ProyectoParticipativo(String titulo, String descripcion, Proponente proponente) {
         this.codigo = contador_id++;
         this.fecha = LocalDate.now();
         this.hora = LocalTime.now();
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.proponente = proponente;
-        this.apoyos = apoyos;
+        this.apoyos = new TreeSet<EnteCiudadano>();
+        this.followers = new TreeSet<FollowerManager>();
     }
 
     public String getTitulo() {
@@ -98,7 +95,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
 
     @Override
     public boolean follow(Follower f) {
-        return followers.add(f);
+        return followers.add(new FollowerManagerAllMessages(f));
     }
 
     @Override

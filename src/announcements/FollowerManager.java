@@ -1,6 +1,6 @@
 package announcements;
 
-public abstract class FollowerManager {
+public abstract class FollowerManager implements Comparable<FollowerManager> {
     protected final Follower follower;
     protected int umbral = 1;
 
@@ -27,5 +27,10 @@ public abstract class FollowerManager {
             return this.follower.equals(((FollowerManager)obj).follower);
         }
         return false;
+    }
+
+    @Override
+    public int compareTo(FollowerManager o){
+        return this.follower.compareTo(o.follower);
     }
 }

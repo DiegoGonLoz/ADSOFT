@@ -1,5 +1,5 @@
 package announcements;
 
-public interface Follower {
+public interface Follower extends Comparable<Follower> {
     public void receives(Announcement t);
 }
