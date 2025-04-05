@@ -142,4 +142,22 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     public int compareTo(ProyectoParticipativo o) {
         return this.codigo - o.codigo;
     }
+
+    @Override
+    public String toString() {
+        return titulo + ". " +
+                "Proponente: " + proponente;
+    }
+
+    public LocalDate getFecha() {
+        return this.fecha;
+    }
+
+    public LocalTime getHora() {
+        return this.hora;
+    }
+
+    public Proponente getProponente() {
+        return this.proponente;
+    }
 }
