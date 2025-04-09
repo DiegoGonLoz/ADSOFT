@@ -6,9 +6,11 @@ public class FollowerManagerProjectSupport extends FollowerManager {
     private final ProyectoParticipativo proyecto;
     private boolean avisado = false;
 
-    public FollowerManagerProjectSupport(Follower follower, ProyectoParticipativo proyecto) {
+    public FollowerManagerProjectSupport(Follower follower, ProyectoParticipativo proyecto) throws NullPointerException{
         super(follower);
-        throw
+        if(proyecto == null){
+            throw new NullPointerException("Error en el constructor FollowerManagerProjectSupport: Proyecto null");
+        }
         this.proyecto = proyecto;
     }
 

@@ -19,7 +19,7 @@ public class ProyectosTests {
 
         try {
             Ciudadano ciudadano1 = new Ciudadano("Juan Pérez", "contraseña123", "12345678Z");
-            Fundacion fundacion1 = new Fundacion("Fundación Solidaria", "fundacion123", "A12345678");
+            Fundacion fundacion1 = new Fundacion("Fundación Solidaria", "fundacion123", "A12345674");
 
             System.out.println("=== TEST 1: Creación de proyectos ===");
             testCreacionProyectos(ciudadano1, fundacion1);
@@ -61,6 +61,7 @@ public class ProyectosTests {
         );
 
 
+        Hacer un print del set de proyectos en lugar de esto
         System.out.println("[0: ");
         System.out.println(proyectoPart);
         System.out.println(", 1: ");
@@ -71,6 +72,7 @@ public class ProyectosTests {
 
     private static void testFuncionesMapa(Sistema sistema) {
         SortedMap<Integer, ProyectoParticipativo> mapaApoyos = sistema.obtenerMapaProyectoApoyos();
+        Si no introduces nada no se muestra nada
         System.out.println(mapaApoyos);
 
         System.out.println("\n");

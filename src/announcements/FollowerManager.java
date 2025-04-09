@@ -4,8 +4,10 @@ public abstract class FollowerManager{
     protected final Follower follower;
     protected int umbral = 1;
 
-    public FollowerManager(Follower follower){
-        throw
+    public FollowerManager(Follower follower) throws NullPointerException{
+        if(follower == null){
+            throw new NullPointerException("Error en el constructor FollowerManager: Follower null");
+        }
 
         this.follower = follower;
     }

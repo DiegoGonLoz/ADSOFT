@@ -3,7 +3,7 @@ package announcements;
 public class FollowerManagerFrecuency extends FollowerManager{
     private int contador = 1;
 
-    public FollowerManagerFrecuency(Follower follower) {
+    public FollowerManagerFrecuency(Follower follower) throws NullPointerException{
         super(follower);
     }
 
