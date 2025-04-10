@@ -1,7 +1,9 @@
 import myExceptions.porcentajeInvalido;
 import myExceptions.presupuestoMenorIgualCero;
+import proponentes.Asociacion;
 import proponentes.Ciudadano;
 import proponentes.Fundacion;
+import proponentes.Proponente;
 import proyectos.ProyectoFundacion;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
@@ -17,18 +19,17 @@ public class Apartado2Tests {
     public static void main(String[] args) {
 
         try {
-            List<Ciudadano> ciudadanos = createCiudadanos();
-            Fundacion fundacion1 = new Fundacion("Fundación Solidaria", "fundacion123", "A12345674");
+            List<Proponente> proponentes = Apartado1Tests.obtenerProponentesTests();
 
             System.out.println("=== TEST 1: Creación de proyectos ===");
-            testCreacionProyectos(ciudadanos.getFirst(), fundacion1);
+            testCreacionProyectos(proponentes);
 
             System.out.println("=== TEST 2: ProyectoParticipativo ===");
-            testProyectoParticipativo(ciudadanos.getFirst());
+            testProyectoParticipativo((Ciudadano) proponentes.getFirst());
             System.out.println();
 
             System.out.println("=== TEST 3: ProyectoFundacion ===");
-            testProyectoFundacion(fundacion1);
+            testProyectoFundacion((Fundacion) proponentes.get(5));
             System.out.println();
 
         } catch (Exception e) {
@@ -37,30 +38,36 @@ public class Apartado2Tests {
     }
 
 
-    private static void testCreacionProyectos(Ciudadano ciudadano, Fundacion fundacion)
+
+    private static void testCreacionProyectos(List<Proponente> proponentes)
             throws porcentajeInvalido, presupuestoMenorIgualCero {
 
+        List<ProyectoParticipativo> proyectos = obtenerProyectosTest(proponentes);
+
+        Sistema sistema = Sistema.getInstance();
+
+        sistema.proponerProyecto(proyectos.get(0));
+        sistema.proponerProyecto(proyectos.get(1));
+
+        System.out.println(sistema.proyectosRegistrados());
+    }
+
+    public static List<ProyectoParticipativo> obtenerProyectosTest(List<Proponente> proponentes) {
         ProyectoParticipativo proyectoPart = new ProyectoParticipativo(
-                "Parque Central",
-                "Creación de un parque en el centro de la ciudad",
-                ciudadano
+                "Limpieza del Manzanares",
+                "Propuesta para limpiar el manzanares",
+                proponentes.get(3)
         );
 
 
         ProyectoFundacion proyectoFund = new ProyectoFundacion(
-                "Escuela Rural",
-                "Construcción de una escuela en zona rural",
-                fundacion,
-                50000.0,
+                "Gastemos menos agua",
+                "Propuesta para gastar menos agua",
+                proponentes.get(5),
+                1000000.0,
                 80.0
         );
-
-        Sistema sistema = Sistema.getInstance();
-
-        sistema.proponerProyecto(proyectoPart);
-        sistema.proponerProyecto(proyectoFund);
-
-        System.out.println(sistema.proyectosRegistrados());
+        return List.of(proyectoPart, proyectoFund);
     }
 
     private static void testProyectoParticipativo(Ciudadano ciudadano) {

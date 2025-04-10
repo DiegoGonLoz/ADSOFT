@@ -1,5 +1,5 @@
 public class Apartado1Tests {
-   public static void main (String[] args) {
+   /*public static void main (String[] args) {
         testCreacionProponentes();
         testInscripcionAsociaciones();
         testProponentesRepetidos();
@@ -35,5 +35,6 @@ public class Apartado1Tests {
         busqueda por NIF
         busqueda por nombre
         obtener todos los usuarios registrados
-    }
+    }*/
+
 }

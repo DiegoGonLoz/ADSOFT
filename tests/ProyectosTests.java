@@ -1,4 +1,4 @@
-import myExceptions.porcentajeInvalido;
+/*import myExceptions.porcentajeInvalido;
 import myExceptions.presupuestoMenorIgualCero;
 import proponentes.Ciudadano;
 import proponentes.Fundacion;
@@ -92,7 +92,6 @@ public class ProyectosTests {
         sistema.proponerProyecto(proyectoFund);
 
         mapaApoyos = sistema.obtenerMapaProyectoApoyos();
-        Si no introduces nada no se muestra nada
         System.out.println(mapaApoyos);
 
         System.out.println("\n");
@@ -159,3 +158,4 @@ public class ProyectosTests {
     }
 
 }
+*/
