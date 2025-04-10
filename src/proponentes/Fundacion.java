@@ -72,7 +72,7 @@ public class Fundacion extends Proponente implements FollowedEntity {
         return this.nombre + " CIF (" +this.CIF + ") <fundacion>";
     }
 
-    public List<Ciudadano> todosLosCiudadanos() {
+    public Set<Ciudadano> todosLosCiudadanos() {
         return null;
     }
 

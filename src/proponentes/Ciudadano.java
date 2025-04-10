@@ -60,8 +60,8 @@ public class Ciudadano extends EnteCiudadano{
         return 1;
     }
 
-    public List<Ciudadano> todosLosCiudadanos() {
-        return List.of(this);
+    public Set<Ciudadano> todosLosCiudadanos() {
+        return Set.of(this);
     }
 
     @Override
