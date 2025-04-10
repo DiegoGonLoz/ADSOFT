@@ -19,7 +19,10 @@ public class Apartado1Tests {
             System.out.println("\n=== TEST 4: Busqueda de proponentes ===");
             testBusquedaProponentes();
         } catch (Exception e){
-            System.out.println("Error durante las pruebas: " + e);
+            System.out.println("Error durante las pruebas: \n" + e);
+            for(StackTraceElement error : e.getStackTrace()){
+                System.out.println(error+"\n");
+            }
         }
     }
 
@@ -29,12 +32,12 @@ public class Apartado1Tests {
        proponentes.add(new Ciudadano("Juan Bravo", "12345", "01234567L"));
        proponentes.add(new Ciudadano("Ana López", "12345", "01234568C"));
        proponentes.add(new Ciudadano("Luisa Gómez", "12345", "01234569K"));
-       proponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano)proponentes.getFirst()));
-       proponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano)proponentes.get(1)));
-       proponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567C"));
+       proponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano)proponentes.get(2)));
+       proponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano)proponentes.get(2)));
+       proponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567B"));
 
-       ((Ciudadano)proponentes.get(0)).inscribirse((Asociacion)proponentes.get(4));
-       ((Ciudadano)proponentes.get(1)).inscribirse((Asociacion)proponentes.get(5));
+       ((Ciudadano)proponentes.get(0)).inscribirse((Asociacion)proponentes.get(3));
+       ((Ciudadano)proponentes.get(1)).inscribirse((Asociacion)proponentes.get(4));
        ((Asociacion)proponentes.get(4)).inscribirse((Asociacion)proponentes.get(3));
 
        return proponentes;
@@ -73,12 +76,12 @@ public class Apartado1Tests {
     }
 
     public static void testInscripcionAsociaciones() {
-        ciudadano a asociacion
+        /*ciudadano a asociacion
         asociacion a asociacion
         asociacion no vacia a asociacion
         asociacion con distinto representante a asociacion
         ciudadano ya perteneciente
-        darse de baja
+        darse de baja*/
 
     }
 
@@ -105,8 +108,10 @@ public class Apartado1Tests {
     }
 
     public static void testBusquedaProponentes() {
-        if(obtenerProponentesTest().get(0).equals(Sistema.getInstance().obtenerCiudadano(obtenerProponentesTest().get(0).getNombre())))
+        if(!obtenerProponentesTest().get(0).equals(Sistema.getInstance().obtenerCiudadano(obtenerProponentesTest().get(0).getNombre())))
             throw new RuntimeException("Error en la busqueda de ciudadanos");
+        else
+            System.out.println("Ciudadano encontrado correctamente: " + Sistema.getInstance().obtenerCiudadano(obtenerProponentesTest().get(0).getNombre()));
 
         System.out.println(Sistema.getInstance().todosLosUsuarios());
     }

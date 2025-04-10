@@ -8,6 +8,6 @@ public class formatoCifIncorrecto extends IllegalArgumentException {
     @Override
     public String toString() {
         return this.getMessage()+
-                "\nError en el formato del cif del ciudadano";
+                "\nError en el formato del cif de la fundacion";
     }
 }

@@ -1,8 +1,8 @@
 public class Apartado4Tests {
     public void main(String[] args) {
-        testFollow();
+        /*testFollow();
         testFollowAutomatico();
         testUnfollow();
-        testAnnounce();
+        testAnnounce();*/
     }
 }
