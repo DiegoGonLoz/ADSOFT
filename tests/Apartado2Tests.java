@@ -15,24 +15,19 @@ public class Apartado2Tests {
     public Apartado2Tests() {}
 
     public static void main(String[] args) {
-        Sistema sistema = Sistema.getInstance();
 
         try {
-            Ciudadano ciudadano1 = new Ciudadano("Juan Pérez", "contraseña123", "12345678Z");
+            List<Ciudadano> ciudadanos = createCiudadanos();
             Fundacion fundacion1 = new Fundacion("Fundación Solidaria", "fundacion123", "A12345674");
 
             System.out.println("=== TEST 1: Creación de proyectos ===");
-            testCreacionProyectos(ciudadano1, fundacion1);
+            testCreacionProyectos(ciudadanos.getFirst(), fundacion1);
 
-
-            System.out.println("\n=== TEST 2: Funciones de mapa ===");
-            testFuncionesMapa(ciudadano1, fundacion1);
-
-            System.out.println("=== TEST 3: ProyectoParticipativo ===");
-            testProyectoParticipativo(ciudadano1);
+            System.out.println("=== TEST 2: ProyectoParticipativo ===");
+            testProyectoParticipativo(ciudadanos.getFirst());
             System.out.println();
 
-            System.out.println("=== TEST 4: ProyectoFundacion ===");
+            System.out.println("=== TEST 3: ProyectoFundacion ===");
             testProyectoFundacion(fundacion1);
             System.out.println();
 
@@ -66,40 +61,6 @@ public class Apartado2Tests {
         sistema.proponerProyecto(proyectoFund);
 
         System.out.println(sistema.proyectosRegistrados());
-    }
-
-
-    private static void testFuncionesMapa(Ciudadano ciudadano, Fundacion fundacion) {
-        Sistema sistema = Sistema.getInstance();
-        SortedMap<Integer, ProyectoParticipativo> mapaApoyos;
-
-        ProyectoParticipativo proyectoPart = new ProyectoParticipativo(
-                "Parque Central",
-                "Creación de un parque en el centro de la ciudad",
-                ciudadano
-        );
-
-
-        ProyectoFundacion proyectoFund = new ProyectoFundacion(
-                "Escuela Rural",
-                "Construcción de una escuela en zona rural",
-                fundacion,
-                50000.0,
-                80.0
-        );
-
-        sistema.proponerProyecto(proyectoPart);
-        sistema.proponerProyecto(proyectoFund);
-
-        mapaApoyos = sistema.obtenerMapaProyectoApoyos();
-        Si no introduces nada no se muestra nada
-        System.out.println(mapaApoyos);
-
-        System.out.println("\n");
-
-        Map<ProyectoParticipativo, List<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
-        System.out.println(mapaCiudadanos);
-
     }
 
     private static void testProyectoParticipativo(Ciudadano ciudadano) {
