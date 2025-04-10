@@ -14,6 +14,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     private final String titulo;
     private final String descripcion;
     private final Proponente proponente;
+    private LocalDateTime lastApoyo;
     private final Set<EnteCiudadano> apoyos;
     private final Set<FollowerManager> followers;
     private static int contador_id=0;
@@ -38,6 +39,10 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return codigo;
     }
 
+    public LocalDateTime getLastApoyo() {
+        return lastApoyo;
+    }
+
     public void apoyar(EnteCiudadano ente) throws errorApoyandoProyecto {
         try {
             if (apoyoPosible(ente)) {
@@ -46,6 +51,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
                 if (ente instanceof Asociacion) {
                     ((Asociacion) ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos() + " apoyos)"));
                 }
+                lastApoyo = LocalDateTime.now();
             }
         } catch (proyectoPropuestoPorSiMismo | enteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
             throw new errorApoyandoProyecto("Error en metodo apoyar:"+ e);

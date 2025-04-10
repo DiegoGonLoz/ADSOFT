@@ -7,6 +7,7 @@ import proponentes.*;
 import proyectos.*;
 import announcements.*;
 
+import java.time.Duration;
 import java.util.*;
 
 public class Sistema {
@@ -108,7 +109,13 @@ public class Sistema {
     }
 
     public SortedMap<ProyectoParticipativo, Integer> obtenerMapaProyectoApoyos(){
-        SortedMap<ProyectoParticipativo, Integer> mapa = new TreeMap<>((o1, o2) -> o2.obtenerApoyos() - o1.obtenerApoyos());
+        SortedMap<ProyectoParticipativo, Integer> mapa = new TreeMap<>((o1, o2) -> {
+            int diff = o2.obtenerApoyos() - o1.obtenerApoyos();
+            if(diff == 0){
+                return o2.getLastApoyo().compareTo(o1.getLastApoyo());
+            }
+            return diff;
+        });
 
         for(ProyectoParticipativo p : proyectos){
             mapa.put(p, p.obtenerApoyos());
