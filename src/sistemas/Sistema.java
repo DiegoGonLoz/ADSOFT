@@ -107,11 +107,11 @@ public class Sistema {
         return null;
     }
 
-    public SortedMap<Integer,ProyectoParticipativo> obtenerMapaProyectoApoyos(){
-        SortedMap<Integer,ProyectoParticipativo> mapa = new TreeMap<>(Comparator.reverseOrder());
+    public SortedMap<ProyectoParticipativo, Integer> obtenerMapaProyectoApoyos(){
+        SortedMap<ProyectoParticipativo, Integer> mapa = new TreeMap<>((o1, o2) -> o2.obtenerApoyos() - o1.obtenerApoyos());
 
         for(ProyectoParticipativo p : proyectos){
-            mapa.put(p.obtenerApoyos(), p);
+            mapa.put(p, p.obtenerApoyos());
         }
 
         return mapa;

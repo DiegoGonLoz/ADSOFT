@@ -4,32 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen Adsoft">
-      <change afterPath="$PROJECT_DIR$/src/myExceptions/estrategiaNoCompatible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Apartado1Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Apartado2Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Apartado3Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Apartado4Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Apartado5Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_31_03_2025_22_37_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_31_03_2025_22_37__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2025_12_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2025_12_14__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_03_2025_22_38_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_03_2025_22_38__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_03_2025_22_45_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_03_2025_22_45__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/announcements/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/Announcement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/announcements/AnnouncementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/AnnouncementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/announcements/FollowerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/FollowerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/announcements/FollowerManagerAllMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/FollowerManagerAllMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/announcements/FollowerManagerFrecuency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/FollowerManagerFrecuency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/announcements/FollowerManagerProjectSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/announcements/FollowerManagerProjectSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ProponentesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ProponentesTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ProyectosTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ProyectosTests.java" afterDir="false" />
+    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_25__23_12__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_25,_0_20_[ignore]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_25__0_20__ignore_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sistemas/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sistemas/Sistema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado1Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado1Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado4Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado4Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ProponentesTests.java" beforeDir="false" />
     </list>
-    <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
+    <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,6 +173,8 @@
       <workItem from="1743869089613" duration="5074000" />
       <workItem from="1743938477756" duration="1273000" />
       <workItem from="1744128752703" duration="684000" />
+      <workItem from="1744217085961" duration="1090000" />
+      <workItem from="1744302917151" duration="801000" />
     </task>
     <task id="LOCAL-00011" summary="Bombardeen Adsoft">
       <option name="closed" value="true" />
@@ -205,8 +193,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesma.guisantada()" />
     <MESSAGE value="Bombardeen Adsoft" />
-    <MESSAGE value="Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <MESSAGE value="Bombardeen ADSOFT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bombardeen ADSOFT" />
   </component>
 </project>
