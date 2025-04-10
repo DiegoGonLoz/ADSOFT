@@ -1,9 +1,7 @@
 package proponentes;
 
 import announcements.*;
-import myExceptions.enteCiudadanoEsMiembro;
-import myExceptions.errorAnadiendoCiudadanoExistente;
-import myExceptions.inscripcionInviable;
+import myExceptions.*;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
@@ -38,8 +36,18 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
 
     public void proponer(ProyectoParticipativo proyecto){
         if(Sistema.getInstance().proponerProyecto(proyecto)){
-            proyecto.apoyar(this);
+            this.apoyar(proyecto);
         }
+    }
+
+    @Override
+    public boolean apoyar(ProyectoParticipativo proyecto){
+        if(super.apoyar(proyecto)){
+            announce(new Announcement(this.getNombre() + " da apoyo al proyecto " + proyecto.getTitulo() + " (" + proyecto.obtenerApoyos() + " apoyos)"));
+            return true;
+        }
+
+        return false;
     }
 
     public void inscribirse(Asociacion asociacion) throws inscripcionInviable, enteCiudadanoEsMiembro {
@@ -59,6 +67,11 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         if(this.equals(enteCiudadano)){
             return true;
         }
+
+        if(this.representante.equals(enteCiudadano)){
+            return true;
+        }
+
         for(EnteCiudadano ente : miembros){
             if(ente.esMiembro(enteCiudadano)){
                 return true;
@@ -69,21 +82,29 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     public int cantidadMiembros(){
-        int total = 0;
+        int total = 1;
         for(EnteCiudadano ente : miembros){
             total += ente.cantidadMiembros();
+            if(ente instanceof Asociacion){
+                total -= 1;
+            }
         }
 
         return total;
     }
 
-    public List<Ciudadano> todosLosCiudadanos() {
-        List<Ciudadano> ciudadanos = new LinkedList<Ciudadano>();
+    public Set<Ciudadano> todosLosCiudadanos() {
+        Set<Ciudadano> ciudadanos = new HashSet<Ciudadano>(List.of(this.representante));
         for(EnteCiudadano ente : miembros){
             ciudadanos.addAll(ente.todosLosCiudadanos());
         }
 
         return ciudadanos;
+    }
+
+    @Override
+    public errorAnadiendoAsociacionExistente repetido() {
+        return new errorAnadiendoAsociacionExistente("Asociacion " +this.getNombre()+" ya existente");
     }
 
     public void receives(Announcement t) {

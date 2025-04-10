@@ -43,19 +43,19 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return lastApoyo;
     }
 
-    public void apoyar(EnteCiudadano ente) throws errorApoyandoProyecto {
+    public boolean sumarApoyo(EnteCiudadano ente) throws errorApoyandoProyecto {
         try {
             if (apoyoPosible(ente)) {
                 apoyos.removeIf(ente::esMiembro);
                 apoyos.add(ente);
-                if (ente instanceof Asociacion) {
-                    ((Asociacion) ente).announce(new Announcement(ente.getNombre() + " da apoyo al proyecto " + this.titulo + " (" + this.obtenerApoyos() + " apoyos)"));
-                }
                 lastApoyo = LocalDateTime.now();
+                return true;
             }
         } catch (proyectoPropuestoPorSiMismo | enteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
             throw new errorApoyandoProyecto("Error en metodo apoyar:"+ e);
         }
+
+        return false;
     }
 
     public int obtenerApoyos(){
@@ -66,8 +66,8 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return numApoyos;
     }
 
-    public List<Ciudadano> todosLosCiudadanos(){
-        List<Ciudadano> ciudadanos = new ArrayList<Ciudadano>();
+    public Set<Ciudadano> todosLosCiudadanos(){
+        Set<Ciudadano> ciudadanos = new HashSet<Ciudadano>();
         for(EnteCiudadano ente : apoyos){
             ciudadanos.addAll(ente.todosLosCiudadanos());
         }

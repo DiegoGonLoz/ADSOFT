@@ -29,36 +29,20 @@ public class Sistema {
         return sistema;
     }
 
-    public boolean existeCiudadano(Ciudadano ciudadano){
+    public boolean existeProponente(Proponente proponente){
         for(Proponente p : proponentes) {
-            if (p.equals(ciudadano)) {
+            if (p.equals(proponente)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean existeFundacion(Fundacion fundacion){
-        for(Proponente p : proponentes) {
-            if (p.equals(fundacion)) {
-                return true;
-            }
+    public void addProponente(Proponente proponente) throws errorAnadiendoProponente {
+        if(existeProponente(proponente)){
+            throw proponente.repetido();
         }
-        return false;
-    }
-
-    public void addCiudadano(Ciudadano ciudadano) throws errorAnadiendoCiudadanoExistente {
-        if(existeCiudadano(ciudadano)){
-            throw new errorAnadiendoCiudadanoExistente("Error en addCiudadano");
-        }
-        proponentes.add(ciudadano);
-    }
-
-    public void addFundacion(Fundacion fundacion) throws errorAnadiendoFundacionExistente {
-        if(existeFundacion(fundacion)){
-            throw new errorAnadiendoFundacionExistente("Error en addFundacion");
-        }
-        proponentes.add(fundacion);
+        proponentes.add(proponente);
     }
 
     public Ciudadano obtenerCiudadano(String nombre){
@@ -124,8 +108,8 @@ public class Sistema {
         return mapa;
     }
 
-    public Map<ProyectoParticipativo, List<Ciudadano>> obtenerMapaProyectoCiudadanos(){
-        Map<ProyectoParticipativo, List<Ciudadano>> mapa = new TreeMap<>();
+    public Map<ProyectoParticipativo, Set<Ciudadano>> obtenerMapaProyectoCiudadanos(){
+        Map<ProyectoParticipativo, Set<Ciudadano>> mapa = new TreeMap<>();
 
         for(ProyectoParticipativo p : proyectos){
             mapa.put(p, p.todosLosCiudadanos());

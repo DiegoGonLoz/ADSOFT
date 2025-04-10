@@ -18,6 +18,10 @@ public abstract class EnteCiudadano extends Proponente implements Follower {
 
     public abstract void proponer(ProyectoParticipativo proyecto);
 
+    public boolean apoyar(ProyectoParticipativo proyecto){
+        return proyecto.sumarApoyo(this);
+    }
+
     public abstract boolean esMiembro(EnteCiudadano enteCiudadano);
 
     public abstract int cantidadMiembros();

@@ -3,6 +3,7 @@ package proponentes;
 import announcements.Announcement;
 import myExceptions.errorAnadiendoCiudadanoExistente;
 import myExceptions.errorAnadiendoFundacionExistente;
+import myExceptions.errorAnadiendoProponente;
 import myExceptions.formatoNifIncorrecto;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
@@ -15,6 +16,9 @@ public class Ciudadano extends EnteCiudadano{
 
     public Ciudadano(String name, String contraseña, String nif) throws NullPointerException, formatoNifIncorrecto {
         super(name, contraseña);
+        if(nif == null){
+            throw new NullPointerException("Error en el constructor Ciudadano: NIF es null");
+        }
         if(!this.validarNIF(nif)){
             throw new formatoNifIncorrecto("Error en el constructor Ciudadano: ");
         }
@@ -24,11 +28,6 @@ public class Ciudadano extends EnteCiudadano{
 
     private boolean validarNIF(String nif) {
         String LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
-
-
-        if (nif == null ||  nif.isEmpty()){
-            return false;
-        }
 
         if (!nif.matches("^\\d{8}[A-Z]$")) {
             return false;
@@ -42,7 +41,7 @@ public class Ciudadano extends EnteCiudadano{
 
     public void proponer(ProyectoParticipativo proyecto){
         if(Sistema.getInstance().proponerProyecto(proyecto)){
-            proyecto.apoyar(this);
+            this.apoyar(proyecto);
         }
     }
 
@@ -63,6 +62,11 @@ public class Ciudadano extends EnteCiudadano{
 
     public List<Ciudadano> todosLosCiudadanos() {
         return List.of(this);
+    }
+
+    @Override
+    public errorAnadiendoCiudadanoExistente repetido() {
+        return new errorAnadiendoCiudadanoExistente("Ciudadano " +this.getNombre()+" con nif "+this.NIF+" ya existente");
     }
 
     public void receives(Announcement t) {

@@ -8,6 +8,7 @@ import sistemas.Sistema;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.SortedMap;
 
 
@@ -97,7 +98,7 @@ public class ProyectosTests {
 
         System.out.println("\n");
 
-        Map<ProyectoParticipativo, List<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
+        Map<ProyectoParticipativo, Set<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
         System.out.println(mapaCiudadanos);
 
     }

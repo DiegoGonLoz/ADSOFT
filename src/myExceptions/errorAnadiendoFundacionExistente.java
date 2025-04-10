@@ -1,6 +1,6 @@
 package myExceptions;
 
-public class errorAnadiendoFundacionExistente extends IllegalArgumentException {
+public class errorAnadiendoFundacionExistente extends errorAnadiendoProponente {
     public errorAnadiendoFundacionExistente(String message) {
         super(message);
     }

@@ -1,10 +1,10 @@
 package proponentes;
 
 import announcements.*;
+import myExceptions.errorAnadiendoFundacionExistente;
 import myExceptions.formatoCifIncorrecto;
 import proyectos.ProyectoFundacion;
 
-import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
 import java.util.*;
@@ -74,6 +74,11 @@ public class Fundacion extends Proponente implements FollowedEntity {
 
     public List<Ciudadano> todosLosCiudadanos() {
         return null;
+    }
+
+    @Override
+    public errorAnadiendoFundacionExistente repetido() {
+        return new errorAnadiendoFundacionExistente("Fundacion " +this.getNombre()+" con cif "+this.CIF+" ya existente");
     }
 
     @Override

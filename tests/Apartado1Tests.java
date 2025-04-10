@@ -1,18 +1,80 @@
+import myExceptions.*;
+import proponentes.*;
+import sistemas.Sistema;
+
+import java.util.*;
+
 public class Apartado1Tests {
    public static void main (String[] args) {
-        testCreacionProponentes();
-        testInscripcionAsociaciones();
-        testProponentesRepetidos();
-        testBusquedaProponentes();
+        try{
+            System.out.println("=== TEST 1: Creación de proponentes ===");
+            testCreacionProponentes();
+
+            System.out.println("\n=== TEST 2: Inscripcion en asociaciones ===");
+            testInscripcionAsociaciones();
+
+            System.out.println("\n=== TEST 3: Proponentes repetidos ===");
+            testProponentesRepetidos();
+
+            System.out.println("\n=== TEST 4: Busqueda de proponentes ===");
+            testBusquedaProponentes();
+        } catch (Exception e){
+            System.out.println("Error durante las pruebas: " + e);
+        }
+    }
+
+    public static List<Proponente> obtenerProponentesTest(){
+       int i;
+       List<Proponente> proponentes = new LinkedList<Proponente>();
+
+       proponentes.add(new Ciudadano("Juan Bravo", "12345", "01234567L"));
+       proponentes.add(new Ciudadano("Ana López", "12345", "01234568C"));
+       proponentes.add(new Ciudadano("Luisa Gómez", "12345", "01234569K"));
+       proponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano)proponentes.getFirst()));
+       proponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano)proponentes.get(1)));
+       proponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567C"));
+
+        for(i=0; i<3; i++){
+            ((Ciudadano)proponentes.get(i)).inscribirse((Asociacion)proponentes.get(3));
+        }
+
+        for(i=0; i<2; i++){
+            ((Ciudadano)proponentes.get(i)).inscribirse((Asociacion)proponentes.get(4));
+        }
+
+       return proponentes;
     }
 
     public static void testCreacionProponentes() {
-        nombre a null
-        contraseña a null
-        nif a null
-        formato incorrecto
-        representante a null
+        try{
+            new Ciudadano(null, "12345", "01234567L");
+        } catch (NullPointerException e) {
+            System.out.println("Error capturado correctamente: " + e);
+        }
 
+        try{
+            new Ciudadano("Juan Bravo", null, "01234567L");
+        } catch (NullPointerException e) {
+            System.out.println("Error capturado correctamente: " + e);
+        }
+
+        try{
+            new Ciudadano("Juan Bravo", "12345", null);
+        } catch (NullPointerException e) {
+            System.out.println("Error capturado correctamente: " + e);
+        }
+
+        try{
+            new Ciudadano("Juan Bravo", "12345", "01234567H");
+        } catch (formatoNifIncorrecto e) {
+            System.out.println("Error capturado correctamente: " + e);
+        }
+
+        try{
+            new Asociacion("conservemos el manzanares", "12345", null);
+        } catch (NullPointerException e) {
+            System.out.println("Error capturado correctamente: " + e);
+        }
     }
 
     public static void testInscripcionAsociaciones() {
@@ -26,9 +88,25 @@ public class Apartado1Tests {
     }
 
     public static void testProponentesRepetidos() {
-        ciudadano repetido
-        asociacion repetida
-        fundacion repetida
+       for(Proponente proponente : obtenerProponentesTest()){
+           Sistema.getInstance().addProponente(proponente);
+       }
+
+       try{
+           Sistema.getInstance().addProponente((Ciudadano)obtenerProponentesTest().get(0));
+       } catch(errorAnadiendoCiudadanoExistente e){
+           System.out.println("Error capturado correctamente: " + e);
+       }
+       try{
+           Sistema.getInstance().addProponente((Asociacion)obtenerProponentesTest().get(3));
+       } catch(errorAnadiendoAsociacionExistente e){
+           System.out.println("Error capturado correctamente: " + e);
+       }
+       try{
+           Sistema.getInstance().addProponente((Fundacion)obtenerProponentesTest().get(5));
+       } catch(errorAnadiendoFundacionExistente e){
+           System.out.println("Error capturado correctamente: " + e);
+       }
     }
 
     public static void testBusquedaProponentes() {
