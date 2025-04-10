@@ -5,7 +5,7 @@ import sistemas.Sistema;
 import java.util.*;
 
 public class Apartado1Tests {
-   /*public static void main (String[] args) {
+   public static void main (String[] args) {
         try{
             System.out.println("=== TEST 1: Creación de proponentes ===");
             testCreacionProponentes();
@@ -21,11 +21,10 @@ public class Apartado1Tests {
         } catch (Exception e){
             System.out.println("Error durante las pruebas: " + e);
         }
-    }*/
+    }
 
     public static List<Proponente> obtenerProponentesTest(){
-       int i;
-       List<Proponente> proponentes = new LinkedList<Proponente>();
+       List<Proponente> proponentes = new ArrayList<Proponente>();
 
        proponentes.add(new Ciudadano("Juan Bravo", "12345", "01234567L"));
        proponentes.add(new Ciudadano("Ana López", "12345", "01234568C"));
@@ -34,17 +33,13 @@ public class Apartado1Tests {
        proponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano)proponentes.get(1)));
        proponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567C"));
 
-        for(i=0; i<3; i++){
-            ((Ciudadano)proponentes.get(i)).inscribirse((Asociacion)proponentes.get(3));
-        }
-
-        for(i=0; i<2; i++){
-            ((Ciudadano)proponentes.get(i)).inscribirse((Asociacion)proponentes.get(4));
-        }
+       ((Ciudadano)proponentes.get(0)).inscribirse((Asociacion)proponentes.get(4));
+       ((Ciudadano)proponentes.get(1)).inscribirse((Asociacion)proponentes.get(5));
+       ((Asociacion)proponentes.get(4)).inscribirse((Asociacion)proponentes.get(3));
 
        return proponentes;
     }
-    /*
+
     public static void testCreacionProponentes() {
         try{
             new Ciudadano(null, "12345", "01234567L");
@@ -110,8 +105,9 @@ public class Apartado1Tests {
     }
 
     public static void testBusquedaProponentes() {
-        busqueda por NIF
-        busqueda por nombre
-        obtener todos los usuarios registrados
-    }*/
+        if(obtenerProponentesTest().get(0).equals(Sistema.getInstance().obtenerCiudadano(obtenerProponentesTest().get(0).getNombre())))
+            throw new RuntimeException("Error en la busqueda de ciudadanos");
+
+        System.out.println(Sistema.getInstance().todosLosUsuarios());
+    }
 }
