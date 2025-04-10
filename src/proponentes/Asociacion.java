@@ -23,8 +23,13 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     public boolean inscribir(EnteCiudadano ente) throws enteCiudadanoEsMiembro {
+        if(ente instanceof Asociacion){
+            if(((Asociacion) ente).representante == this.representante && ((Asociacion) ente).miembros.size() == 1){
+                return this.miembros.add(ente);
+            }
+        }
         if(this.esMiembro(ente)){
-            throw new enteCiudadanoEsMiembro("Error en el metodo inscribir: ");
+            throw new enteCiudadanoEsMiembro("Error al inscribir a "+ente.getNombre()+" en la asociacion "+this.getNombre()+": ");
         }
 
         return miembros.add(ente);
@@ -48,19 +53,6 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         }
 
         return false;
-    }
-
-    public void inscribirse(Asociacion asociacion) throws inscripcionInviable, enteCiudadanoEsMiembro {
-        if(asociacion == null){
-            return;
-        }
-        if(this.representante == asociacion.representante && this.miembros.isEmpty()){
-            if(asociacion.inscribir(this)){
-                inscrito.add(asociacion);
-            }
-        } else {
-            throw new inscripcionInviable("Error en metodo inscribirse: ");
-        }
     }
 
     public boolean esMiembro(EnteCiudadano enteCiudadano){

@@ -45,13 +45,6 @@ public class Ciudadano extends EnteCiudadano{
         }
     }
 
-    public void inscribirse(Asociacion asociacion) throws errorAnadiendoCiudadanoExistente {
-        if(asociacion.inscribir(this)){
-            inscrito.add(asociacion);
-            asociacion.follow(this);
-        }
-    }
-
     public boolean esMiembro(EnteCiudadano enteCiudadano){
         return this.equals(enteCiudadano);
     }

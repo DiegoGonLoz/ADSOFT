@@ -22,11 +22,12 @@ public class Fundacion extends Proponente implements FollowedEntity {
         }
     }
 
-    private boolean validarCIF(String cif) {
-        if (cif == null || cif.isEmpty()) {
+    public boolean validarCIF(String cif) {
+        if (cif == null || cif.length() != 9) {
             return false;
         }
 
+        // Patrón que incluye todos los tipos válidos de CIF
         if (!cif.matches("^[ABCDEFGHJKLMNPQRSUVW]\\d{7}[0-9A-J]$")) {
             return false;
         }
@@ -35,31 +36,34 @@ public class Fundacion extends Proponente implements FollowedEntity {
         String numeroStr = cif.substring(1, 8);
         char digitoControl = cif.charAt(8);
 
+        // Algoritmo oficial para CIF
         int sumaPares = 0;
         int sumaImpares = 0;
 
-        for (int i = 0; i < numeroStr.length(); i++) {
+        for (int i = 0; i < 7; i++) {
             int digito = Character.getNumericValue(numeroStr.charAt(i));
 
+            // Sumar posiciones pares (2, 4, 6 - considerando índice base 1)
             if ((i + 1) % 2 == 0) {
                 sumaPares += digito;
-            } else {
-                int doble = digito * 2;
-                sumaImpares += (doble > 9) ? (doble - 9) : doble;
+            }
+            // Sumar posiciones impares (1, 3, 5, 7)
+            else {
+                sumaImpares += digito;
             }
         }
 
         int sumaTotal = sumaPares + sumaImpares;
+        int resto = sumaTotal % 10;
+        int digitoCalculado = resto == 0 ? 0 : 10 - resto;
 
-        int digitoCalculado = (10 - (sumaTotal % 10)) % 10;
+        // Tabla de conversión oficial
+        String letrasControl = "JABCDEFGHI"; // 0=J, 1=A, 2=B,..., 9=I
 
         if (Character.isLetter(digitoControl)) {
-            String letrasControl = "JABCDEFGHI";
-            char letraCalculada = letrasControl.charAt(digitoCalculado);
-            return digitoControl == letraCalculada;
+            return digitoControl == letrasControl.charAt(digitoCalculado);
         } else {
-            int digitoControlNum = Character.getNumericValue(digitoControl);
-            return digitoCalculado == digitoControlNum;
+            return digitoCalculado == Character.getNumericValue(digitoControl);
         }
     }
 

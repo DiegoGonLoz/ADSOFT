@@ -2,6 +2,7 @@ package proponentes;
 
 import announcements.FollowedEntity;
 import announcements.Follower;
+import myExceptions.errorAnadiendoCiudadanoExistente;
 import myExceptions.formatoCifIncorrecto;
 import proyectos.ProyectoParticipativo;
 
@@ -20,6 +21,13 @@ public abstract class EnteCiudadano extends Proponente implements Follower {
 
     public boolean apoyar(ProyectoParticipativo proyecto){
         return proyecto.sumarApoyo(this);
+    }
+
+    public void inscribirse(Asociacion asociacion) throws errorAnadiendoCiudadanoExistente {
+        if(asociacion.inscribir(this)){
+            inscrito.add(asociacion);
+            asociacion.follow(this);
+        }
     }
 
     public abstract boolean esMiembro(EnteCiudadano enteCiudadano);

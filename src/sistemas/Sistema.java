@@ -18,7 +18,7 @@ public class Sistema {
     Set<Announcement> anuncios;
 
     private Sistema() {
-        this.proponentes = new TreeSet<>();
+        this.proponentes = new LinkedHashSet<>();
         this.proyectos = new TreeSet<>();
         this.anuncios = new TreeSet<>();
     }
