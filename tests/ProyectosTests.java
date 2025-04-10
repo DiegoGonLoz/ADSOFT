@@ -26,7 +26,7 @@ public class ProyectosTests {
 
 
             System.out.println("\n=== TEST 2: Funciones de mapa ===");
-            testFuncionesMapa(sistema);
+            testFuncionesMapa(ciudadano1, fundacion1);
 
             System.out.println("=== TEST 3: ProyectoParticipativo ===");
             testProyectoParticipativo(ciudadano1);
@@ -60,18 +60,38 @@ public class ProyectosTests {
                 80.0
         );
 
+        Sistema sistema = Sistema.getInstance();
 
-        Hacer un print del set de proyectos en lugar de esto
-        System.out.println("[0: ");
-        System.out.println(proyectoPart);
-        System.out.println(", 1: ");
-        System.out.println(proyectoFund);
-        System.out.println("]");
+        sistema.proponerProyecto(proyectoPart);
+        sistema.proponerProyecto(proyectoFund);
+
+        System.out.println(sistema.proyectosRegistrados());
     }
 
 
-    private static void testFuncionesMapa(Sistema sistema) {
-        SortedMap<Integer, ProyectoParticipativo> mapaApoyos = sistema.obtenerMapaProyectoApoyos();
+    private static void testFuncionesMapa(Ciudadano ciudadano, Fundacion fundacion) {
+        Sistema sistema = Sistema.getInstance();
+        SortedMap<Integer, ProyectoParticipativo> mapaApoyos;
+
+        ProyectoParticipativo proyectoPart = new ProyectoParticipativo(
+                "Parque Central",
+                "Creación de un parque en el centro de la ciudad",
+                ciudadano
+        );
+
+
+        ProyectoFundacion proyectoFund = new ProyectoFundacion(
+                "Escuela Rural",
+                "Construcción de una escuela en zona rural",
+                fundacion,
+                50000.0,
+                80.0
+        );
+
+        sistema.proponerProyecto(proyectoPart);
+        sistema.proponerProyecto(proyectoFund);
+
+        mapaApoyos = sistema.obtenerMapaProyectoApoyos();
         Si no introduces nada no se muestra nada
         System.out.println(mapaApoyos);
 
