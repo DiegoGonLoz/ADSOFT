@@ -151,7 +151,8 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
 
     @Override
     public String toString() {
-        return titulo + ". " +
+        return this.codigo+ ": " +
+                this.titulo + ". " +
                 "Proponente: " + proponente;
     }
 

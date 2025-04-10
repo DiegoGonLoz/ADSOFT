@@ -34,6 +34,9 @@ public class Apartado2Tests {
 
         } catch (Exception e) {
             System.err.println("Error durante las pruebas: " + e);
+            for(StackTraceElement error : e.getStackTrace()){
+                System.out.println(error);
+            }
         }
     }
 

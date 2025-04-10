@@ -38,6 +38,9 @@ public class Apartado3Tests {
 
         } catch (Exception e) {
             System.err.println("Error durante las pruebas: " + e);
+            for(StackTraceElement error : e.getStackTrace()){
+                System.out.println(error);
+            }
         }
     }
 
@@ -48,8 +51,12 @@ public class Apartado3Tests {
 
         List<ProyectoParticipativo> proyectos = Apartado2Tests.obtenerProyectosTest(proponentes);
 
-        sistema.proponerProyecto(proyectos.get(0));
-        sistema.proponerProyecto(proyectos.get(1));
+        if(!sistema.proponerProyecto(proyectos.get(0))){
+            throw new RuntimeException("Error de proponerProyecto");
+        }
+        if(!sistema.proponerProyecto(proyectos.get(1))){
+            throw new RuntimeException("Error de proponerProyecto");
+        }
 
         mapaApoyos = sistema.obtenerMapaProyectoApoyos();
         System.out.println(mapaApoyos);
