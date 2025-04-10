@@ -5,7 +5,7 @@ import sistemas.Sistema;
 import java.util.*;
 
 public class Apartado1Tests {
-   public static void main (String[] args) {
+   /*public static void main (String[] args) {
         try{
             System.out.println("=== TEST 1: Creación de proponentes ===");
             testCreacionProponentes();
@@ -21,7 +21,7 @@ public class Apartado1Tests {
         } catch (Exception e){
             System.out.println("Error durante las pruebas: " + e);
         }
-    }
+    }*/
 
     public static List<Proponente> obtenerProponentesTest(){
        int i;
@@ -44,7 +44,7 @@ public class Apartado1Tests {
 
        return proponentes;
     }
-
+    /*
     public static void testCreacionProponentes() {
         try{
             new Ciudadano(null, "12345", "01234567L");
@@ -113,5 +113,5 @@ public class Apartado1Tests {
         busqueda por NIF
         busqueda por nombre
         obtener todos los usuarios registrados
-    }
+    }*/
 }

@@ -11,6 +11,7 @@ import sistemas.Sistema;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.SortedMap;
 
 
@@ -20,7 +21,7 @@ public class Apartado3Tests {
     public static void main(String[] args) {
 
         try {
-            List<Proponente> proponentes = Apartado1Tests.obtenerProponentesTests();
+            List<Proponente> proponentes = Apartado1Tests.obtenerProponentesTest();
 
             System.out.println("\n=== TEST 1: Funciones de mapa ===");
             testFuncionesMapa(proponentes);
@@ -28,7 +29,11 @@ public class Apartado3Tests {
             System.out.println("\n=== TEST 2: Apoyar proyectos - Casos normales ===\"");
             testApoyarProyectosNormales(proponentes);
 
+            System.out.println("\n=== TEST 3: Apoyar proyectos - Excepciones ===");
+            testApoyarProyectosExcepciones(proponentes);
 
+            System.out.println("\n=== TEST 4: ProyectoFundacion - Validaciones ===");
+            testValidacionesProyectoFundacion(proponentes);
 
 
         } catch (Exception e) {
@@ -51,7 +56,7 @@ public class Apartado3Tests {
 
         System.out.println("\n");
 
-        Map<ProyectoParticipativo, List<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
+        Map<ProyectoParticipativo, Set<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
         System.out.println(mapaCiudadanos);
 
     }
@@ -67,8 +72,8 @@ public class Apartado3Tests {
         sistema.proponerProyecto(proyecto);
 
 
-        proyecto.apoyar(ciudadano2);
-        proyecto.apoyar(asociacion);
+        ciudadano2.apoyar(proyecto);
+        asociacion.apoyar(proyecto);
 
         System.out.println("Apoyos después de añadir ciudadano2 y fundación: " + proyecto.obtenerApoyos());
         System.out.println("Ciudadanos asociados: " + proyecto.todosLosCiudadanos());
@@ -83,7 +88,7 @@ public class Apartado3Tests {
             // Proyecto propuesto por sí mismo
             ProyectoParticipativo proyecto1 = new ProyectoParticipativo("Proyecto Autoapoyo", "Descripción", ciudadano1);
             sistema.proponerProyecto(proyecto1);
-            proyecto1.apoyar(ciudadano1); // Debería lanzar excepción
+            ciudadano1.apoyar(proyecto1); // Debería lanzar excepción
             System.out.println("ERROR: No se lanzó la excepción proyectoPropuestoPorSiMismo");
         } catch (Exception e) {
             System.out.println("Excepción correcta al apoyar proyecto propio: " + e.getClass().getSimpleName());
@@ -98,7 +103,7 @@ public class Apartado3Tests {
                 }
             };
             sistema.proponerProyecto(proyecto2);
-            proyecto2.apoyar(ciudadano2); // Debería lanzar excepción
+            ciudadano1.apoyar(proyecto2); // Debería lanzar excepción
             System.out.println("ERROR: No se lanzó la excepción proyectoMasDe60Dias");
         } catch (Exception e) {
             System.out.println("Excepción correcta al apoyar proyecto antiguo: " + e.getClass().getSimpleName());
@@ -107,18 +112,54 @@ public class Apartado3Tests {
         try {
             // Proponente es miembro de una asociación que ya apoya el proyecto
             Asociacion asociacion = new Asociacion("Asociación Test", "pass", ciudadano1);
-            sistema.addCiudadano(ciudadano1);
-            sistema.addCiudadano(ciudadano2);
+            sistema.addProponente(ciudadano1);
+            sistema.addProponente(ciudadano2);
             asociacion.inscribir(ciudadano2); // ciudadano2 es miembro de la asociación
 
             ProyectoParticipativo proyecto3 = new ProyectoParticipativo("Proyecto Asociación", "Descripción", ciudadano1);
             sistema.proponerProyecto(proyecto3);
-            proyecto3.apoyar(asociacion); // Primero la asociación apoya
-            proyecto3.apoyar(ciudadano2); // Después ciudadano2 (miembro) intenta apoyar - debería lanzar excepción
+            asociacion.apoyar(proyecto3); // Primero la asociación apoya
+            ciudadano2.apoyar(proyecto3); // Después ciudadano2 (miembro) intenta apoyar - debería lanzar excepción
 
             System.out.println("ERROR: No se lanzó la excepción enteCiudadanoEsMiembro");
         } catch (Exception e) {
             System.out.println("Excepción correcta al apoyar siendo miembro: " + e.getClass().getSimpleName());
+        }
+    }
+
+    private static void testValidacionesProyectoFundacion(List<Proponente> proponentes) {
+        Fundacion fundacion = (Fundacion) proponentes.get(2);
+
+        try {
+            // Presupuesto inválido (<= 0)
+            new ProyectoFundacion("Proyecto Inválido", "Descripción", fundacion, 0, 50);
+            System.out.println("ERROR: No se lanzó la excepción presupuestoMenorIgualCero");
+        } catch (Exception e) {
+            System.out.println("Excepción correcta por presupuesto inválido: " + e.getClass().getSimpleName());
+        }
+
+        try {
+            // Porcentaje inválido (<1)
+            new ProyectoFundacion("Proyecto Inválido", "Descripción", fundacion, 1000, 0);
+            System.out.println("ERROR: No se lanzó la excepción porcentajeInvalido");
+        } catch (Exception e) {
+            System.out.println("Excepción correcta por porcentaje <1: " + e.getClass().getSimpleName());
+        }
+
+        try {
+            // Porcentaje inválido (>100)
+            new ProyectoFundacion("Proyecto Inválido", "Descripción", fundacion, 1000, 101);
+            System.out.println("ERROR: No se lanzó la excepción porcentajeInvalido");
+        } catch (Exception e) {
+            System.out.println("Excepción correcta por porcentaje >100: " + e.getClass().getSimpleName());
+        }
+
+        try {
+            // Proyecto válido
+            ProyectoFundacion proyectoValido = new ProyectoFundacion("Proyecto Válido", "Descripción", fundacion, 1000, 50);
+            System.out.println("ProyectoFundacion creado correctamente: " + proyectoValido);
+        } catch (Exception e) {
+            System.out.println("ERROR: Excepción inesperada al crear proyecto válido: " + e.getClass().getSimpleName());
         }
     }
 }

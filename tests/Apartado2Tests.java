@@ -19,7 +19,7 @@ public class Apartado2Tests {
     public static void main(String[] args) {
 
         try {
-            List<Proponente> proponentes = Apartado1Tests.obtenerProponentesTests();
+            List<Proponente> proponentes = Apartado1Tests.obtenerProponentesTest();
 
             System.out.println("=== TEST 1: Creación de proyectos ===");
             testCreacionProyectos(proponentes);
