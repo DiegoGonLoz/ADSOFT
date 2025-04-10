@@ -2,6 +2,7 @@ package sistemas;
 
 import myExceptions.errorAnadiendoCiudadanoExistente;
 import myExceptions.errorAnadiendoFundacionExistente;
+import myExceptions.errorAnadiendoProponente;
 import myExceptions.errorApoyandoProyecto;
 import proponentes.*;
 import proyectos.*;
@@ -56,14 +57,8 @@ public class Sistema {
         return null;
     }
 
-    public List<Ciudadano> todosLosCiudadanos(){
-        List<Ciudadano> ciudadanos = new ArrayList<>();
-        for(Proponente p : proponentes) {
-            if(p instanceof Ciudadano) {
-                ciudadanos.add((Ciudadano) p);
-            }
-        }
-        return ciudadanos;
+    public List<Proponente> todosLosUsuarios(){
+        return new LinkedList<>(proponentes);
     }
 
     public boolean proponerProyecto(ProyectoParticipativo p){

@@ -2,7 +2,7 @@ package proponentes;
 
 import myExceptions.errorAnadiendoProponente;
 
-import java.util.List;
+import java.util.Set;
 
 public abstract class Proponente {
     protected final String nombre;
@@ -25,7 +25,7 @@ public abstract class Proponente {
 
     public abstract String toString();
 
-    public abstract List<Ciudadano> todosLosCiudadanos();
+    public abstract Set<Ciudadano> todosLosCiudadanos();
 
     public abstract errorAnadiendoProponente repetido();
 
