@@ -9,10 +9,25 @@ import sistemas.Sistema;
 
 import java.util.*;
 
+/**
+ * Clase que representa a un ciudadano
+ *
+ * @author Diego Gonzalez
+ */
 public class Ciudadano extends EnteCiudadano{
+    /**Nif del ciudadano*/
     private final String NIF;
+    /**Set de announcements*/
     private final Set<Announcement> mensajes = new TreeSet<Announcement>();
 
+    /**
+     * Constructor de Ciudadano
+     * @param name nombre
+     * @param contraseña contraseña
+     * @param nif nif único
+     * @throws NullPointerException no objetos null
+     * @throws FormatoNifIncorrecto nif incorrecto
+     */
     public Ciudadano(String name, String contraseña, String nif) throws NullPointerException, FormatoNifIncorrecto {
         super(name, contraseña);
         if(nif == null){
@@ -25,6 +40,11 @@ public class Ciudadano extends EnteCiudadano{
 
     }
 
+    /**
+     * Metodo para validar un nif
+     * @param nif nif a validar
+     * @return true o false
+     */
     private boolean validarNIF(String nif) {
         String LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
 
@@ -38,41 +58,73 @@ public class Ciudadano extends EnteCiudadano{
         return letra == LETRAS.charAt(numero % 23);
     }
 
+    /**
+     * Metodo para proponer un proyecto
+     * @param proyecto proyecto a proponer
+     */
     public void proponer(ProyectoParticipativo proyecto){
         if(Sistema.getInstance().proponerProyecto(proyecto)){
             this.apoyar(proyecto);
         }
     }
 
+    /**
+     * Metodo para saber si un enteCiudadano es miembro
+     * @param enteCiudadano ente a comparar
+     * @return true o false
+     */
     public boolean esMiembro(EnteCiudadano enteCiudadano){
         return this.equals(enteCiudadano);
     }
 
+    /**
+     * Metodo para obtener la cantidad de miembros
+     * @return cantidad de miembros
+     */
     public int cantidadMiembros(){
         return 1;
     }
 
+    /**
+     * Metodo para obtener a todos loc ciudadanos
+     * @return set de ciudadanos
+     */
     public Set<Ciudadano> todosLosCiudadanos() {
         return Set.of(this);
     }
 
+    /**
+     * Metodo toString
+     * @return String con la información del ciudadano
+     */
     @Override
     public ErrorAnadiendoCiudadanoExistente repetido() {
         return new ErrorAnadiendoCiudadanoExistente("Ciudadano " +this.getNombre()+" con nif "+this.NIF+" ya existente");
     }
 
+    /**
+     * Metodo receives
+     * @param t anuncio a recibir
+     */
     public void receives(Announcement t) {
         if(t != null){
             mensajes.add(t);
         }
     }
 
+    /**
+     * Metodo para darse de baja
+     * @param asociacion a la que darse de baja
+     */
     public void darseDeBaja(Asociacion asociacion){
         if(asociacion.darDeBaja(this)){
             inscrito.remove(asociacion);
         }
     }
 
+    /**
+     * Metodo para darse de baja de todas las asociaciones
+     */
     public void darseDeBaja() {
         Iterator<Asociacion> iterator = inscrito.iterator();
         while (iterator.hasNext()) {
@@ -82,11 +134,20 @@ public class Ciudadano extends EnteCiudadano{
         }
     }
 
+    /**
+     * Metodo toString
+     * @return string con la información del ciudadano
+     */
     @Override
     public String toString() {
         return this.nombre + " NIF (" +this.NIF + ") <usuario>";
     }
 
+    /**
+     * Metodo equals
+     * @param obj objeto a comparar
+     * @return true o false
+     */
     @Override
     public boolean equals(Object obj) {
         if(obj == null) return false;
@@ -99,6 +160,10 @@ public class Ciudadano extends EnteCiudadano{
         return false;
     }
 
+    /**
+     * Metodo hashCode
+     * @return hashCode asignado al ciudadano
+     */
     @Override
     public int hashCode() {
         return Objects.hash(this.NIF);
