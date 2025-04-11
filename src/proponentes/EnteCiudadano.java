@@ -3,11 +3,9 @@ package proponentes;
 import announcements.FollowedEntity;
 import announcements.Follower;
 import myExceptions.errorAnadiendoCiudadanoExistente;
-import myExceptions.formatoCifIncorrecto;
-import proyectos.ProyectoParticipativo;
+import proyectos.ProyectoCiudadano;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public abstract class EnteCiudadano extends Proponente implements Follower {
     protected LinkedList<Asociacion> inscrito = new LinkedList<Asociacion>();
@@ -17,9 +15,9 @@ public abstract class EnteCiudadano extends Proponente implements Follower {
         super(nombre, contraseña);
     }
 
-    public abstract void proponer(ProyectoParticipativo proyecto);
+    public abstract void proponer(ProyectoCiudadano proyecto);
 
-    public boolean apoyar(ProyectoParticipativo proyecto){
+    public boolean apoyar(ProyectoCiudadano proyecto){
         return proyecto.sumarApoyo(this);
     }
 

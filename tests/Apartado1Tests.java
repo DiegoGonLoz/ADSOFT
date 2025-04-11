@@ -7,7 +7,7 @@ import java.util.*;
 public class Apartado1Tests {
    public static void main (String[] args) {
         try{
-            System.out.println("=== TEST 1: Creación de proponentes ===");
+            System.out.println("\n\n=== TEST 1: Creación de proponentes ===");
             testCreacionProponentes();
 
             System.out.println("\n=== TEST 2: Inscripcion en asociaciones ===");
@@ -21,9 +21,11 @@ public class Apartado1Tests {
         } catch (Exception e){
             System.out.println("Error durante las pruebas: \n" + e);
             for(StackTraceElement error : e.getStackTrace()){
-                System.out.println(error+"\n");
+                System.out.println(error);
             }
         }
+
+        System.out.println("\n=== FIN DE LAS PRUEBAS DEL APARTADO 1===");
     }
 
     public static List<Proponente> obtenerProponentesTest(){
@@ -71,6 +73,12 @@ public class Apartado1Tests {
         try{
             new Asociacion("conservemos el manzanares", "12345", null);
         } catch (NullPointerException e) {
+            System.out.println("Error capturado correctamente: " + e);
+        }
+
+        try{
+            new Fundacion("Fundación Canal", "12345", "A12345678");
+        } catch (formatoCifIncorrecto e) {
             System.out.println("Error capturado correctamente: " + e);
         }
     }

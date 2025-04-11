@@ -1,14 +1,10 @@
 package sistemas;
 
-import myExceptions.errorAnadiendoCiudadanoExistente;
-import myExceptions.errorAnadiendoFundacionExistente;
 import myExceptions.errorAnadiendoProponente;
-import myExceptions.errorApoyandoProyecto;
 import proponentes.*;
 import proyectos.*;
 import announcements.*;
 
-import java.time.Duration;
 import java.util.*;
 
 public class Sistema {

@@ -5,6 +5,7 @@ import myExceptions.errorAnadiendoFundacionExistente;
 import myExceptions.formatoCifIncorrecto;
 import proyectos.ProyectoFundacion;
 
+import proyectos.ProyectoCiudadano;
 import sistemas.Sistema;
 
 import java.util.*;

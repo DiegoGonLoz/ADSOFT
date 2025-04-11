@@ -1,6 +1,7 @@
 package proponentes;
 
 import myExceptions.errorAnadiendoProponente;
+import proyectos.ProyectoCiudadano;
 
 import java.util.Set;
 
