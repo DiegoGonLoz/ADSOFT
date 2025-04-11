@@ -57,6 +57,15 @@ public class Apartado4Tests {
     }
 
     private static void testUnfollow() {
+        int i;
 
+        List<Proponente> proponentes = Sistema.getInstance().todosLosUsuarios();
+
+        Sistema.getInstance().obtenerProyecto("Limpieza del Manzanares").unfollow((EnteCiudadano)proponentes.getFirst());
+        new Ciudadano("Julia", "12345", "72831371P").apoyar(Sistema.getInstance().obtenerProyecto("Limpieza del Manzanares"));
+
+        for(i=0; i<3; i++){
+            System.out.println("Anuncios para "+ proponentes.get(i).getNombre() +": \n" + ((Ciudadano)proponentes.get(i)).todosLosMensajes());
+        }
     }
 }
