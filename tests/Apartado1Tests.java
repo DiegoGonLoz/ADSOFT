@@ -131,11 +131,13 @@ public class Apartado1Tests {
             System.out.println("Error capturado correctamente: \n" + e);
         }
 
-        System.out.println(asociacion1.todosLosCiudadanos());
-        System.out.println(asociacion3.todosLosCiudadanos());
+        System.out.println("\nAsociaciones antes de la baja de Ana López:");
+        System.out.println(asociacion1 + " : " + asociacion1.todosLosCiudadanos());
+        System.out.println(asociacion3 + " : " + asociacion3.todosLosCiudadanos());
         ciudadano2.darseDeBaja();
-        System.out.println(asociacion1.todosLosCiudadanos());
-        System.out.println(asociacion3.todosLosCiudadanos());
+        System.out.println("\nAsociaciones despues de la baja de Ana López:");
+        System.out.println(asociacion1 + " : " + asociacion1.todosLosCiudadanos());
+        System.out.println(asociacion3 + " : " + asociacion3.todosLosCiudadanos());
 
     }
 

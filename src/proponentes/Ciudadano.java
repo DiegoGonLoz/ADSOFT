@@ -113,7 +113,15 @@ public class Ciudadano extends EnteCiudadano{
     }
 
     /**
-     * Metodo para darse de baja
+     * Metodo todosLosMensajes
+     * @return set con todos los mensajes recibidos
+     */
+    public Set<Announcement> todosLosMensajes() {
+        return new HashSet<>(mensajes);
+    }
+
+    /**
+     * Metodo para darse de baja de una asociacion
      * @param asociacion a la que darse de baja
      */
     public void darseDeBaja(Asociacion asociacion){
