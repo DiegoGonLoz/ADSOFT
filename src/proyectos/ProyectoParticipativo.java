@@ -65,7 +65,7 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
         return false;
     }
 
-    public void actualizarApoyo(){
+    private void actualizarApoyo(){
         this.lastApoyo = LocalDateTime.now();
     }
 

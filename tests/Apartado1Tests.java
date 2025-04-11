@@ -5,6 +5,7 @@ import sistemas.Sistema;
 import java.util.*;
 
 public class Apartado1Tests {
+    private static List<Proponente> proponentes = new ArrayList<Proponente>();
    public static void main (String[] args) {
         try{
             System.out.println("\n\n=== TEST 1: Creación de proponentes ===");
@@ -29,20 +30,24 @@ public class Apartado1Tests {
     }
 
     public static List<Proponente> obtenerProponentesTest(){
-       List<Proponente> proponentes = new ArrayList<Proponente>();
+       if(!proponentes.isEmpty()) return new ArrayList<>(proponentes);
 
-       proponentes.add(new Ciudadano("Juan Bravo", "12345", "01234567L"));
-       proponentes.add(new Ciudadano("Ana López", "12345", "01234568C"));
-       proponentes.add(new Ciudadano("Luisa Gómez", "12345", "01234569K"));
-       proponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano)proponentes.get(2)));
-       proponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano)proponentes.get(2)));
-       proponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567B"));
+       List<Proponente> nuevosProponentes = new ArrayList<Proponente>();
 
-       ((Ciudadano)proponentes.get(0)).inscribirse((Asociacion)proponentes.get(3));
-       ((Ciudadano)proponentes.get(1)).inscribirse((Asociacion)proponentes.get(4));
-       ((Asociacion)proponentes.get(4)).inscribirse((Asociacion)proponentes.get(3));
+       nuevosProponentes.add(new Ciudadano("Juan Bravo", "12345", "01234567L"));
+       nuevosProponentes.add(new Ciudadano("Ana López", "12345", "01234568C"));
+       nuevosProponentes.add(new Ciudadano("Luisa Gómez", "12345", "01234569K"));
+       nuevosProponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano) nuevosProponentes.get(2)));
+       nuevosProponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano) nuevosProponentes.get(2)));
+       nuevosProponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567B"));
 
-       return proponentes;
+       ((Ciudadano) nuevosProponentes.get(0)).inscribirse((Asociacion) nuevosProponentes.get(3));
+       ((Ciudadano) nuevosProponentes.get(1)).inscribirse((Asociacion) nuevosProponentes.get(4));
+       ((Asociacion) nuevosProponentes.get(4)).inscribirse((Asociacion) nuevosProponentes.get(3));
+
+       proponentes = nuevosProponentes;
+
+       return new ArrayList<>(nuevosProponentes);
     }
 
     public static void testCreacionProponentes() {
@@ -84,12 +89,12 @@ public class Apartado1Tests {
     }
 
     public static void testInscripcionAsociaciones() {
-        /*ciudadano a asociacion
+        ciudadano a asociacion
         asociacion a asociacion
         asociacion no vacia a asociacion
         asociacion con distinto representante a asociacion
         ciudadano ya perteneciente
-        darse de baja*/
+        darse de baja
 
     }
 

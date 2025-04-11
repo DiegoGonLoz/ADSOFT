@@ -54,16 +54,14 @@ public class Apartado3Tests {
             throw new RuntimeException("Error de proponerProyecto");
         }
 
-        mapaApoyos = sistema.obtenerMapaProyectoApoyos();
-
         System.out.println("Mapa Proyecto-NumMiembros(Antes):");
-        System.out.println(mapaApoyos);
+        System.out.println(sistema.obtenerMapaProyectoApoyos());
 
         ((EnteCiudadano)proponentes.get(1)).apoyar(proyectos.get(1));
         ((EnteCiudadano)proponentes.get(2)).apoyar(proyectos.get(1));
 
         System.out.println("Mapa Proyecto-NumMiembros(Después):");
-        System.out.println(mapaApoyos);
+        System.out.println(sistema.obtenerMapaProyectoApoyos());
 
 
         System.out.println("\nMapa Proyecto-Ciudadanos:");
