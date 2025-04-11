@@ -65,7 +65,7 @@ public class Apartado3Tests {
 
         System.out.println("\nMapa Proyecto-Ciudadanos:");
 
-        Map<ProyectoParticipativo, Set<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
+        Map<ProyectoParticipativo, Set<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoParticipativos();
         System.out.println(mapaCiudadanos);
 
     }

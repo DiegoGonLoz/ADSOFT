@@ -18,7 +18,7 @@ public class Ciudadano extends EnteCiudadano{
     /**Nif del ciudadano*/
     private final String NIF;
     /**Set de announcements*/
-    private final Set<Announcement> mensajes = new TreeSet<Announcement>();
+    private final Set<Announcement> mensajes = new LinkedHashSet<Announcement>();
 
     /**
      * Constructor de Ciudadano
@@ -56,16 +56,6 @@ public class Ciudadano extends EnteCiudadano{
         char letra = nif.charAt(8);
 
         return letra == LETRAS.charAt(numero % 23);
-    }
-
-    /**
-     * Metodo para proponer un proyecto
-     * @param proyecto proyecto a proponer
-     */
-    public void proponer(ProyectoParticipativo proyecto){
-        if(Sistema.getInstance().proponerProyecto(proyecto)){
-            this.apoyar(proyecto);
-        }
     }
 
     /**
@@ -117,7 +107,7 @@ public class Ciudadano extends EnteCiudadano{
      * @return set con todos los mensajes recibidos
      */
     public Set<Announcement> todosLosMensajes() {
-        return new HashSet<>(mensajes);
+        return new LinkedHashSet<Announcement>(mensajes);
     }
 
     /**

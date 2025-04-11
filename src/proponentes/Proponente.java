@@ -1,6 +1,8 @@
 package proponentes;
 
 import myExceptions.ErrorAnadiendoProponente;
+import proyectos.ProyectoParticipativo;
+import sistemas.Sistema;
 
 import java.util.Set;
 
@@ -57,6 +59,10 @@ public abstract class Proponente {
      * @return excepcion error añadiendo proponente
      */
     public abstract ErrorAnadiendoProponente repetido();
+
+    public boolean proponer(ProyectoParticipativo proyecto){
+        return Sistema.getInstance().proponerProyecto(proyecto);
+    }
 
     /**
      * Metodo equals

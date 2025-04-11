@@ -31,4 +31,39 @@ public class Announcement implements Comparable<Announcement> {
     public int compareTo(Announcement o) {
         return this.message.compareTo(o.message);
     }
+
+    /**
+     * Metodo equals
+     * @param obj objeto a comparar
+     * @return true o false
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Announcement) {
+            return this.message.equals(((Announcement)obj).message);
+        }
+        return false;
+    }
+
+    /**
+     * Metodo hashCode
+     * @return hashcode
+     */
+    @Override
+    public int hashCode() {
+        return this.message.hashCode();
+    }
+
+    /**
+     * Metodo toString
+     * @return string con el mensaje
+     */
+    @Override
+    public String toString() {
+        return this.message;
+    }
 }

@@ -24,7 +24,7 @@ public class Apartado2Tests {
 
             System.out.println("\n=== TEST 3: ProyectoFundacion ===");
             testProyectoFundacion(proponentes);
-            System.out.println();
+            System.out.println(Sistema.getInstance().obtenerMapaProyectoParticipativos());
 
             System.out.println("\n=== FIN DE LAS PRUEBAS DEL APARTADO 2===");
 

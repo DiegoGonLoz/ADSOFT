@@ -5,6 +5,7 @@ import myExceptions.ErrorAnadiendoFundacionExistente;
 import myExceptions.FormatoCifIncorrecto;
 import proyectos.ProyectoFundacion;
 
+import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
 import java.util.*;
@@ -86,8 +87,13 @@ public class Fundacion extends Proponente implements FollowedEntity {
      * Metodo para proponer proyectos
      * @param proyecto proyecto a proponer
      */
-    public void proponer(ProyectoFundacion proyecto) {
-        Sistema.getInstance().proponerProyecto(proyecto);
+    @Override
+    public boolean proponer(ProyectoParticipativo proyecto) {
+        if(super.proponer(proyecto)){
+            this.announce(new Announcement(this.getNombre() + " propone el proyecto " + proyecto.getTitulo()));
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -104,7 +110,7 @@ public class Fundacion extends Proponente implements FollowedEntity {
      * @return set de ciudadanos
      */
     public Set<Ciudadano> todosLosCiudadanos() {
-        return null;
+        return Collections.emptySet();
     }
 
     /**
@@ -114,32 +120,6 @@ public class Fundacion extends Proponente implements FollowedEntity {
     @Override
     public ErrorAnadiendoFundacionExistente repetido() {
         return new ErrorAnadiendoFundacionExistente("Fundacion " +this.getNombre()+" con cif "+this.CIF+" ya existente");
-    }
-
-    /**
-     * Metodo equals
-     * @param obj objeto a comparar
-     * @return true o false
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if(obj == null) return false;
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof Fundacion) {
-            return this.CIF.equals(((Fundacion)obj).CIF);
-        }
-        return false;
-    }
-
-    /**
-     * Metodo hashCode
-     * @return hashCOde del objeto
-     */
-    @Override
-    public int hashCode() {
-        return Objects.hash(this.CIF);
     }
 
     /**
@@ -159,7 +139,7 @@ public class Fundacion extends Proponente implements FollowedEntity {
      */
     @Override
     public boolean unfollow(Follower f) {
-        return followers.remove(f);
+        return followers.remove(new FollowerManagerAllMessages(f));
     }
 
     /**
@@ -201,5 +181,31 @@ public class Fundacion extends Proponente implements FollowedEntity {
             }
         }
         return false;
+    }
+
+    /**
+     * Metodo equals
+     * @param obj objeto a comparar
+     * @return true o false
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Fundacion) {
+            return this.CIF.equals(((Fundacion)obj).CIF);
+        }
+        return false;
+    }
+
+    /**
+     * Metodo hashCode
+     * @return hashCOde del objeto
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.CIF);
     }
 }

@@ -36,6 +36,20 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         }
 
         this.representante = representante;
+        this.follow(representante);
+    }
+
+    /**
+     * Metodo para proponer un proyecto
+     * @param proyecto proyecto a proponer
+     */
+    @Override
+    public boolean proponer(ProyectoParticipativo proyecto) {
+        if(super.proponer(proyecto)){
+            this.announce(new Announcement(this.getNombre() + " da apoyo al proyecto " + proyecto.getTitulo() + " (" + proyecto.obtenerApoyos() + " apoyos)"));
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -47,7 +61,7 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     public boolean inscribir(EnteCiudadano ente) throws EnteCiudadanoEsMiembro {
         if(ente instanceof Asociacion){
             if(((Asociacion) ente).representante == this.representante && ((Asociacion) ente).cantidadMiembros() == 1){
-                if(miembros.add(ente)){
+                if(miembros.add(ente) && this.follow(ente)) {
                     this.announce(new Announcement("Alta de " + ente.getNombre() + " en "+this.getNombre() + " (" + this.cantidadMiembros() + " miembros)"));
                     return true;
                 }
@@ -60,7 +74,7 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
             throw new EnteCiudadanoEsMiembro("Error al inscribir a "+ente.getNombre()+" en la asociacion "+this.getNombre()+": ");
         }
 
-        if(miembros.add(ente)){
+        if(miembros.add(ente) && this.follow(ente)){
             this.announce(new Announcement("Alta de " + ente.getNombre() + " en "+this.getNombre() + " (" + this.cantidadMiembros() + " miembros)"));
             return true;
         }
@@ -75,16 +89,6 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
      */
     public boolean darDeBaja(Ciudadano ciudadano){
         return miembros.remove(ciudadano);
-    }
-
-    /**
-     * Metodo para proponer proyectos
-     * @param proyecto proyecto a proponer
-     */
-    public void proponer(ProyectoParticipativo proyecto){
-        if(Sistema.getInstance().proponerProyecto(proyecto)){
-            this.apoyar(proyecto);
-        }
     }
 
     /**

@@ -161,7 +161,7 @@ public class Sistema {
      * Metodo para obtener un mapa proyecto-ciudadanos
      * @return mapa pedido
      */
-    public Map<ProyectoParticipativo, Set<Ciudadano>> obtenerMapaProyectoCiudadanos(){
+    public Map<ProyectoParticipativo, Set<Ciudadano>> obtenerMapaProyectoParticipativos(){
         Map<ProyectoParticipativo, Set<Ciudadano>> mapa = new TreeMap<>();
 
         for(ProyectoParticipativo p : proyectos){

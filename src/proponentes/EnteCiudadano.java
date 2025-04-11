@@ -29,12 +29,6 @@ public abstract class EnteCiudadano extends Proponente implements Follower {
     }
 
     /**
-     * Metodo para proponer un proyecto
-     * @param proyecto proyecto a proponer
-     */
-    public abstract void proponer(ProyectoParticipativo proyecto);
-
-    /**
      * Metodo para apoyar un proyecto
      * @param proyecto proyecto a apoyar
      * @return true o false

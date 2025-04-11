@@ -34,16 +34,18 @@ public class Apartado1Tests {
 
        List<Proponente> nuevosProponentes = new ArrayList<Proponente>();
 
+       Ciudadano representante = new Ciudadano("Gran Hermano", "12345", "82882837Z");
+
        nuevosProponentes.add(new Ciudadano("Juan Bravo", "12345", "01234567L"));
        nuevosProponentes.add(new Ciudadano("Ana López", "12345", "01234568C"));
        nuevosProponentes.add(new Ciudadano("Luisa Gómez", "12345", "01234569K"));
-       nuevosProponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano) nuevosProponentes.get(2)));
-       nuevosProponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano) nuevosProponentes.get(2)));
+       nuevosProponentes.add(new Asociacion("conservemos el manzanares", "12345", (Ciudadano) nuevosProponentes.get(0)));
+       nuevosProponentes.add(new Asociacion("amigos de los pajaros", "12345", (Ciudadano) nuevosProponentes.get(0)));
        nuevosProponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567B"));
 
-       ((Ciudadano) nuevosProponentes.get(0)).inscribirse((Asociacion) nuevosProponentes.get(3));
        ((Asociacion) nuevosProponentes.get(4)).inscribirse((Asociacion) nuevosProponentes.get(3));
-        ((Ciudadano) nuevosProponentes.get(1)).inscribirse((Asociacion) nuevosProponentes.get(4));
+       ((Ciudadano) nuevosProponentes.get(1)).inscribirse((Asociacion) nuevosProponentes.get(4));
+       ((Ciudadano) nuevosProponentes.get(2)).inscribirse((Asociacion) nuevosProponentes.get(4));
 
        proponentes = nuevosProponentes;
 

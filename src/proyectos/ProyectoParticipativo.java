@@ -53,10 +53,30 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
         this.hora = LocalTime.now();
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.proponente = proponente;
         this.lastApoyo = LocalDateTime.now();
         this.apoyos = new HashSet<EnteCiudadano>();
         this.followers = new HashSet<FollowerManager>();
+        this.proponente = proponente;
+    }
+
+    /**
+     * Constructor de la clase ProyectoParticipativo
+     * @param titulo título del proyecto
+     * @param descripcion descripción del proyecto
+     * @param proponente proponente del proyecto
+     */
+    public ProyectoParticipativo(String titulo, String descripcion, EnteCiudadano proponente) {
+        this.codigo = contador_id;
+        contador_id++;
+        this.fecha = LocalDate.now();
+        this.hora = LocalTime.now();
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.lastApoyo = LocalDateTime.now();
+        this.apoyos = new HashSet<EnteCiudadano>(Set.of(proponente));
+        this.followers = new HashSet<FollowerManager>();
+        this.follow(proponente);
+        this.proponente = proponente;
     }
 
     /**
@@ -95,6 +115,7 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
                 apoyos.removeIf(ente::esMiembro);
                 apoyos.add(ente);
                 this.actualizarApoyo();
+                this.announce(new Announcement("El proyecto "+this.titulo+" ha recibido un apoyo de "+ente.getNombre()+" ("+this.obtenerApoyos()+" apoyos)"));
                 return true;
             }
         } catch (ProyectoPropuestoPorSiMismo | EnteCiudadanoEsMiembro | ProyectoMasDe60Dias e) {
@@ -143,8 +164,11 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
      * @throws EnteCiudadanoEsMiembro error el ente es o tiene un ciudadano miembro
      * @throws ProyectoMasDe60Dias error el proyecto lleva más de 60 días en alta
      */
-    private boolean apoyoPosible(EnteCiudadano ente) throws ProyectoPropuestoPorSiMismo, EnteCiudadanoEsMiembro, ProyectoMasDe60Dias {
-        if(proponente.equals(ente)) {
+    private boolean apoyoPosible(EnteCiudadano ente) throws ProyectoPropuestoPorSiMismo, EnteCiudadanoEsMiembro, ProyectoMasDe60Dias, NullPointerException {
+        if(ente == null){
+            throw new NullPointerException("\nError en ApoyoPosible: ");
+        }
+        if(ente.equals(this.proponente)) {
             throw new ProyectoPropuestoPorSiMismo("\nError en ApoyoPosible: ");
         }
 
