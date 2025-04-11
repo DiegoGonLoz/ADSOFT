@@ -5,22 +5,22 @@ package myExceptions;
  *
  * @author Diego Lesma
  */
-public class porcentajeInvalido extends IllegalArgumentException {
+public class PorcentajeInvalido extends IllegalArgumentException {
     /** Porcentaje erroneo*/
     double porcentajeErroneo;
 
     /**
-     * Constructor de la clase porcentajeInvalido
+     * Constructor de la clase PorcentajeInvalido
      * @param message mensaje de error
      * @param porcentajeErroneo double con el porcentaje
      */
-    public porcentajeInvalido(String message, double porcentajeErroneo) {
+    public PorcentajeInvalido(String message, double porcentajeErroneo) {
         super(message);
         this.porcentajeErroneo = porcentajeErroneo;
     }
 
     /**
-     * Metodo toString de porcentajeInvalido
+     * Metodo toString de PorcentajeInvalido
      * @return String con la información de error
      */
     @Override

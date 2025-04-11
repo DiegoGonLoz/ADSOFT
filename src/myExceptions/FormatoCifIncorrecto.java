@@ -5,17 +5,17 @@ package myExceptions;
  *
  * @author Diego Lesma
  */
-public class formatoCifIncorrecto extends IllegalArgumentException {
+public class FormatoCifIncorrecto extends IllegalArgumentException {
     /**
-     * Constructor de formatoCifIncorrecto
+     * Constructor de FormatoCifIncorrecto
      * @param message mensaje de error
      */
-    public formatoCifIncorrecto(String message) {
+    public FormatoCifIncorrecto(String message) {
         super(message);
     }
 
     /**
-     * Metodo toString de formatoCifIncorrecto
+     * Metodo toString de FormatoCifIncorrecto
      * @return string con la información de error
      */
     @Override

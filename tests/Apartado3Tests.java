@@ -95,7 +95,7 @@ public class Apartado3Tests {
             ProyectoCiudadano proyecto1 = new ProyectoCiudadano("Proyecto Autoapoyo", "Descripción", ciudadano1);
             sistema.proponerProyecto(proyecto1);
             ciudadano1.apoyar(proyecto1); // Debería lanzar excepción
-            System.out.println("ERROR: No se lanzó la excepción proyectoPropuestoPorSiMismo");
+            System.out.println("ERROR: No se lanzó la excepción ProyectoPropuestoPorSiMismo");
         } catch (Exception e) {
             System.out.println("Excepción correcta al apoyar proyecto propio: " + e.getClass().getSimpleName());
         }
@@ -110,7 +110,7 @@ public class Apartado3Tests {
             };
             sistema.proponerProyecto(proyecto2);
             ciudadano1.apoyar(proyecto2); // Debería lanzar excepción
-            System.out.println("ERROR: No se lanzó la excepción proyectoMasDe60Dias");
+            System.out.println("ERROR: No se lanzó la excepción ProyectoMasDe60Dias");
         } catch (Exception e) {
             System.out.println("Excepción correcta al apoyar proyecto antiguo: " + e.getClass().getSimpleName());
         }
@@ -127,7 +127,7 @@ public class Apartado3Tests {
             asociacion.apoyar(proyecto3); // Primero la asociación apoya
             ciudadano2.apoyar(proyecto3); // Después ciudadano2 (miembro) intenta apoyar - debería lanzar excepción
 
-            System.out.println("ERROR: No se lanzó la excepción enteCiudadanoEsMiembro");
+            System.out.println("ERROR: No se lanzó la excepción EnteCiudadanoEsMiembro");
         } catch (Exception e) {
             System.out.println("Excepción correcta al apoyar siendo miembro: " + e.getClass().getSimpleName());
         }
@@ -139,7 +139,7 @@ public class Apartado3Tests {
         try {
             // Presupuesto inválido (<= 0)
             new ProyectoFundacion("Proyecto Inválido", "Descripción", fundacion, 0, 50);
-            System.out.println("ERROR: No se lanzó la excepción presupuestoMenorIgualCero");
+            System.out.println("ERROR: No se lanzó la excepción PresupuestoMenorIgualCero");
         } catch (Exception e) {
             System.out.println("Excepción correcta por presupuesto inválido: " + e.getClass().getSimpleName());
         }
@@ -147,7 +147,7 @@ public class Apartado3Tests {
         try {
             // Porcentaje inválido (<1)
             new ProyectoFundacion("Proyecto Inválido", "Descripción", fundacion, 1000, 0);
-            System.out.println("ERROR: No se lanzó la excepción porcentajeInvalido");
+            System.out.println("ERROR: No se lanzó la excepción PorcentajeInvalido");
         } catch (Exception e) {
             System.out.println("Excepción correcta por porcentaje <1: " + e.getClass().getSimpleName());
         }
@@ -155,7 +155,7 @@ public class Apartado3Tests {
         try {
             // Porcentaje inválido (>100)
             new ProyectoFundacion("Proyecto Inválido", "Descripción", fundacion, 1000, 101);
-            System.out.println("ERROR: No se lanzó la excepción porcentajeInvalido");
+            System.out.println("ERROR: No se lanzó la excepción PorcentajeInvalido");
         } catch (Exception e) {
             System.out.println("Excepción correcta por porcentaje >100: " + e.getClass().getSimpleName());
         }

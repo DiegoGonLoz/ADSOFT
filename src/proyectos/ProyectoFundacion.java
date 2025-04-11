@@ -1,7 +1,7 @@
 package proyectos;
 
-import myExceptions.porcentajeInvalido;
-import myExceptions.presupuestoMenorIgualCero;
+import myExceptions.PorcentajeInvalido;
+import myExceptions.PresupuestoMenorIgualCero;
 import proponentes.Fundacion;
 
 public class ProyectoFundacion extends ProyectoParticipativo {
@@ -10,17 +10,17 @@ public class ProyectoFundacion extends ProyectoParticipativo {
 
     public ProyectoFundacion(String titulo, String descripcion, Fundacion proponente,
                              double presupuestoEstimado, double porcentajeAsumeFundacion)
-    throws porcentajeInvalido, presupuestoMenorIgualCero {
+    throws PorcentajeInvalido, PresupuestoMenorIgualCero {
 
         super(titulo, descripcion, proponente);
 
         if (presupuestoEstimado <= 0) {
-            throw new presupuestoMenorIgualCero("Error en el parámetro PresupuestoEstimado " +
+            throw new PresupuestoMenorIgualCero("Error en el parámetro PresupuestoEstimado " +
                     "en el constructor ProyectoFundacion", presupuestoEstimado);
         }
 
         if (porcentajeAsumeFundacion < 1 || porcentajeAsumeFundacion > 100) {
-            throw new porcentajeInvalido("Error en el parámetro porcentajeAsumeFundacion " +
+            throw new PorcentajeInvalido("Error en el parámetro porcentajeAsumeFundacion " +
                     "en el constructor ProyectoFundacion", porcentajeAsumeFundacion);
         }
 

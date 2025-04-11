@@ -1,5 +1,5 @@
-import myExceptions.porcentajeInvalido;
-import myExceptions.presupuestoMenorIgualCero;
+import myExceptions.PorcentajeInvalido;
+import myExceptions.PresupuestoMenorIgualCero;
 import proponentes.*;
 import proyectos.*;
 import sistemas.Sistema;
@@ -37,7 +37,7 @@ public class Apartado2Tests {
 
 
     private static void testCreacionProyectos(List<Proponente> proponentes)
-            throws porcentajeInvalido, presupuestoMenorIgualCero {
+            throws PorcentajeInvalido, PresupuestoMenorIgualCero {
 
         List<ProyectoParticipativo> proyectos = obtenerProyectosTest(proponentes);
 
@@ -102,7 +102,7 @@ public class Apartado2Tests {
                         -100.0,
                         50.0
                 );
-            } catch (presupuestoMenorIgualCero e) {
+            } catch (PresupuestoMenorIgualCero e) {
                 System.out.println("Error capturado correctamente: " + e);
             }
 
@@ -114,7 +114,7 @@ public class Apartado2Tests {
                         10000.0,
                         0.0
                 );
-            } catch (porcentajeInvalido e) {
+            } catch (PorcentajeInvalido e) {
                 System.out.println("Error capturado correctamente: " + e);
             }
 

@@ -7,23 +7,23 @@ import announcements.AnnouncementStrategy;
  *
  * @author Diego Gonzalez
  */
-public class estrategiaNoCompatible extends IllegalArgumentException {
+public class EstrategiaNoCompatible extends IllegalArgumentException {
     /** Objeto AnnounceStrategy*/
     private AnnouncementStrategy ns;
 
     /**
-     * Constructor de estrategiaNoCompatible
+     * Constructor de EstrategiaNoCompatible
      * @param message mensaje de error
      * @param ns tipo de estrategia
      */
-    public estrategiaNoCompatible(String message, AnnouncementStrategy ns) {
+    public EstrategiaNoCompatible(String message, AnnouncementStrategy ns) {
         super(message);
 
         this.ns = ns;
     }
 
     /**
-     * Metodo toString de estrategiaNoCompatible
+     * Metodo toString de EstrategiaNoCompatible
      * @return string con la información de error
      */
     @Override

@@ -66,7 +66,7 @@ public class Apartado1Tests {
 
         try{
             new Ciudadano("Juan Bravo", "12345", "01234567H");
-        } catch (formatoNifIncorrecto e) {
+        } catch (FormatoNifIncorrecto e) {
             System.out.println("Error capturado correctamente: " + e);
         }
 
@@ -78,7 +78,7 @@ public class Apartado1Tests {
 
         try{
             new Fundacion("Fundación Canal", "12345", "A12345678");
-        } catch (formatoCifIncorrecto e) {
+        } catch (FormatoCifIncorrecto e) {
             System.out.println("Error capturado correctamente: " + e);
         }
     }

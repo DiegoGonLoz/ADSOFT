@@ -5,22 +5,22 @@ package myExceptions;
  *
  * @author Diego Lesma
  */
-public class presupuestoMenorIgualCero extends IllegalArgumentException {
+public class PresupuestoMenorIgualCero extends IllegalArgumentException {
     /**Presupuesto erroneo*/
     double presupuestoErroneo;
 
     /**
-     * Constructor de la clase presupuestoMenorIgualCero
+     * Constructor de la clase PresupuestoMenorIgualCero
      * @param message mensaje de error
      * @param presupuestoErroneo double con el presupuesto erroneo
      */
-    public presupuestoMenorIgualCero(String message, double presupuestoErroneo) {
+    public PresupuestoMenorIgualCero(String message, double presupuestoErroneo) {
         super(message);
         this.presupuestoErroneo = presupuestoErroneo;
     }
 
     /**
-     * Metodo toString de la clase presupuestoMenorIgualCero
+     * Metodo toString de la clase PresupuestoMenorIgualCero
      * @return string con la información de error
      */
     @Override

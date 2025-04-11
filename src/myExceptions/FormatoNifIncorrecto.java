@@ -5,17 +5,17 @@ package myExceptions;
  *
  * @author Diego Lesma
  */
-public class formatoNifIncorrecto extends IllegalArgumentException {
+public class FormatoNifIncorrecto extends IllegalArgumentException {
     /**
-     * Constructor de la clase formatoNifIncorrecto
+     * Constructor de la clase FormatoNifIncorrecto
      * @param message mensaje de error
      */
-    public formatoNifIncorrecto(String message) {
+    public FormatoNifIncorrecto(String message) {
         super(message);
     }
 
     /**
-     * Metodo toString de formatoNifIncorrecto
+     * Metodo toString de FormatoNifIncorrecto
      * @return string con la información de error
      */
     @Override

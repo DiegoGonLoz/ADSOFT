@@ -5,17 +5,17 @@ package myExceptions;
  *
  * @author Diego Lesma
  */
-public class proyectoPropuestoPorSiMismo extends IllegalArgumentException {
+public class ProyectoPropuestoPorSiMismo extends IllegalArgumentException {
     /**
-     * Constructor de la clase proyectoPropuestoPorSiMismo
+     * Constructor de la clase ProyectoPropuestoPorSiMismo
      * @param message mensaje de error
      */
-    public proyectoPropuestoPorSiMismo(String message) {
+    public ProyectoPropuestoPorSiMismo(String message) {
         super(message);
     }
 
     /**
-     * Metodo toString de la clase proyectoPropuestoPorSiMismo
+     * Metodo toString de la clase ProyectoPropuestoPorSiMismo
      * @return String con la información de error
      */
     @Override

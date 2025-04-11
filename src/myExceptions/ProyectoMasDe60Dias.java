@@ -5,22 +5,22 @@ package myExceptions;
  *
  * @author Diego Lesma
  */
-public class proyectoMasDe60Dias extends IllegalArgumentException {
+public class ProyectoMasDe60Dias extends IllegalArgumentException {
     /**Dias transcurridos*/
     long diasTranscurridos;
 
     /**
-     * Constructor de la clase proyectoMasDe60Dias
+     * Constructor de la clase ProyectoMasDe60Dias
      * @param message mensaje de error
      * @param diasTranscurridos long con los dias transcurridos
      */
-    public proyectoMasDe60Dias(String message, long diasTranscurridos) {
+    public ProyectoMasDe60Dias(String message, long diasTranscurridos) {
         super(message);
         this.diasTranscurridos = diasTranscurridos;
     }
 
     /**
-     * Metodo toString de la clase proyectoMasDe60Dias
+     * Metodo toString de la clase ProyectoMasDe60Dias
      * @return string con la información de error
      */
     @Override

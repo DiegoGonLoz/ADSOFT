@@ -1,15 +1,13 @@
 package proyectos;
 
 import announcements.*;
-import myExceptions.enteCiudadanoEsMiembro;
-import myExceptions.errorApoyandoProyecto;
-import myExceptions.proyectoMasDe60Dias;
-import myExceptions.proyectoPropuestoPorSiMismo;
+import myExceptions.ErrorApoyandoProyecto;
+import myExceptions.ProyectoMasDe60Dias;
+import myExceptions.ProyectoPropuestoPorSiMismo;
 import proponentes.Ciudadano;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -54,7 +52,7 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
         return lastApoyo;
     }
 
-    public boolean sumarApoyo(EnteCiudadano ente) throws errorApoyandoProyecto {
+    public boolean sumarApoyo(EnteCiudadano ente) throws ErrorApoyandoProyecto {
         try {
             if (apoyoPosible(ente)) {
                 apoyos.removeIf(ente::esMiembro);
@@ -62,8 +60,8 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
                 this.actualizarApoyo();
                 return true;
             }
-        } catch (proyectoPropuestoPorSiMismo | EnteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
-            throw new errorApoyandoProyecto("Error en metodo apoyar:"+ e);
+        } catch (ProyectoPropuestoPorSiMismo | EnteCiudadanoEsMiembro | ProyectoMasDe60Dias e) {
+            throw new ErrorApoyandoProyecto("Error en metodo apoyar:"+ e);
         }
 
         return false;
@@ -89,9 +87,9 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
         return ciudadanos;
     }
 
-    private boolean apoyoPosible(EnteCiudadano ente) throws proyectoPropuestoPorSiMismo, EnteCiudadanoEsMiembro, proyectoMasDe60Dias {
+    private boolean apoyoPosible(EnteCiudadano ente) throws ProyectoPropuestoPorSiMismo, EnteCiudadanoEsMiembro, ProyectoMasDe60Dias {
         if(proponente.equals(ente)) {
-            throw new proyectoPropuestoPorSiMismo("\nError en ApoyoPosible: ");
+            throw new ProyectoPropuestoPorSiMismo("\nError en ApoyoPosible: ");
         }
 
         for(EnteCiudadano ente2 : apoyos){
@@ -101,7 +99,7 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
         }
 
         if(ChronoUnit.DAYS.between(LocalDate.now(), fecha) > 60){
-            throw new proyectoMasDe60Dias("\nError en ApoyoPosible: ", ChronoUnit.DAYS.between(LocalDate.now(), fecha));
+            throw new ProyectoMasDe60Dias("\nError en ApoyoPosible: ", ChronoUnit.DAYS.between(LocalDate.now(), fecha));
         }
 
         return true;

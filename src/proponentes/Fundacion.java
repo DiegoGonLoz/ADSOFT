@@ -2,10 +2,9 @@ package proponentes;
 
 import announcements.*;
 import myExceptions.ErrorAnadiendoFundacionExistente;
-import myExceptions.formatoCifIncorrecto;
+import myExceptions.FormatoCifIncorrecto;
 import proyectos.ProyectoFundacion;
 
-import proyectos.ProyectoCiudadano;
 import sistemas.Sistema;
 
 import java.util.*;
@@ -14,12 +13,12 @@ public class Fundacion extends Proponente implements FollowedEntity {
     private final String CIF;
     private final Set<FollowerManager> followers = new HashSet<FollowerManager>();
 
-    public Fundacion(String name, String contrasena, String cif) throws NullPointerException, formatoCifIncorrecto {
+    public Fundacion(String name, String contrasena, String cif) throws NullPointerException, FormatoCifIncorrecto {
         super(name, contrasena);
         if(this.validarCIF(cif)){
             this.CIF = cif;
         } else {
-            throw new formatoCifIncorrecto("Error en el constructor Fundacion: ");
+            throw new FormatoCifIncorrecto("Error en el constructor Fundacion: ");
         }
     }
 
