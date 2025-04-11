@@ -64,6 +64,7 @@ public class Apartado2Tests {
                 1000000.0,
                 80.0
         );
+        ((EnteCiudadano)proponentes.getFirst()).apoyar(proyectoFund);
         return List.of(proyectoPart, proyectoFund);
     }
 

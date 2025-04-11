@@ -1,7 +1,4 @@
-import proponentes.Asociacion;
-import proponentes.Ciudadano;
-import proponentes.Fundacion;
-import proponentes.Proponente;
+import proponentes.*;
 import proyectos.ProyectoFundacion;
 import proyectos.ProyectoCiudadano;
 import proyectos.ProyectoParticipativo;
@@ -50,17 +47,26 @@ public class Apartado3Tests {
 
         List<ProyectoParticipativo> proyectos = Apartado2Tests.obtenerProyectosTest(proponentes);
 
-        if(!sistema.proponerProyecto(proyectos.get(0))){
+        if(!sistema.proponerProyecto(proyectos.get(1))){
             throw new RuntimeException("Error de proponerProyecto");
         }
-        if(!sistema.proponerProyecto(proyectos.get(1))){
+        if(!sistema.proponerProyecto(proyectos.get(0))){
             throw new RuntimeException("Error de proponerProyecto");
         }
 
         mapaApoyos = sistema.obtenerMapaProyectoApoyos();
+
+        System.out.println("Mapa Proyecto-NumMiembros(Antes):");
         System.out.println(mapaApoyos);
 
-        System.out.println("\n");
+        ((EnteCiudadano)proponentes.get(1)).apoyar(proyectos.get(1));
+        ((EnteCiudadano)proponentes.get(2)).apoyar(proyectos.get(1));
+
+        System.out.println("Mapa Proyecto-NumMiembros(Después):");
+        System.out.println(mapaApoyos);
+
+
+        System.out.println("\nMapa Proyecto-Ciudadanos:");
 
         Map<ProyectoParticipativo, Set<Ciudadano>> mapaCiudadanos = sistema.obtenerMapaProyectoCiudadanos();
         System.out.println(mapaCiudadanos);
