@@ -1,9 +1,7 @@
 package proyectos;
 
 import announcements.*;
-import myExceptions.ErrorApoyandoProyecto;
-import myExceptions.ProyectoMasDe60Dias;
-import myExceptions.ProyectoPropuestoPorSiMismo;
+import myExceptions.*;
 import proponentes.Ciudadano;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;

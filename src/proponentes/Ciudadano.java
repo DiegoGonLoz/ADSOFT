@@ -4,6 +4,7 @@ import announcements.Announcement;
 import myExceptions.ErrorAnadiendoCiudadanoExistente;
 import myExceptions.FormatoNifIncorrecto;
 import proyectos.ProyectoCiudadano;
+import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
 import java.util.*;
@@ -37,7 +38,7 @@ public class Ciudadano extends EnteCiudadano{
         return letra == LETRAS.charAt(numero % 23);
     }
 
-    public void proponer(ProyectoCiudadano proyecto){
+    public void proponer(ProyectoParticipativo proyecto){
         if(Sistema.getInstance().proponerProyecto(proyecto)){
             this.apoyar(proyecto);
         }
