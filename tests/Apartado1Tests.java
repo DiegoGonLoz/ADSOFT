@@ -92,17 +92,17 @@ public class Apartado1Tests {
 
        try{
            Sistema.getInstance().addProponente((Ciudadano)obtenerProponentesTest().get(0));
-       } catch(errorAnadiendoCiudadanoExistente e){
+       } catch(ErrorAnadiendoCiudadanoExistente e){
            System.out.println("Error capturado correctamente: " + e);
        }
        try{
            Sistema.getInstance().addProponente((Asociacion)obtenerProponentesTest().get(3));
-       } catch(errorAnadiendoAsociacionExistente e){
+       } catch(ErrorAnadiendoAsociacionExistente e){
            System.out.println("Error capturado correctamente: " + e);
        }
        try{
            Sistema.getInstance().addProponente((Fundacion)obtenerProponentesTest().get(5));
-       } catch(errorAnadiendoFundacionExistente e){
+       } catch(ErrorAnadiendoFundacionExistente e){
            System.out.println("Error capturado correctamente: " + e);
        }
     }

@@ -1,19 +1,21 @@
 package myExceptions;
 
 /**
- * Clase tipo excepcion que ocurre al intentar anadir un miembro ya existente
+ * Clase tipo excepción que ocurre cuando un EnteCiudadano es miembro ya existente
+ *
+ * @author Diego Lesma
  */
-public class enteCiudadanoEsMiembro extends IllegalArgumentException {
+public class EnteCiudadanoEsMiembro extends IllegalArgumentException {
     /**
-     * Constructor de enteCiudadanoEsMiembro
+     * Constructor de EnteCiudadanoEsMiembro
      * @param message mensaje que se le pasa al constructor
      */
-    public enteCiudadanoEsMiembro(String message) {
+    public EnteCiudadanoEsMiembro(String message) {
         super(message);
     }
 
     /**
-     * Metodo toString de la clase enteCiudadanoEsMiembro
+     * Metodo toString de la clase EnteCiudadanoEsMiembro
      * @return string con la información de error
      */
     @Override

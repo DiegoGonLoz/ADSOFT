@@ -1,9 +1,7 @@
 package proponentes;
 
 import announcements.Announcement;
-import myExceptions.errorAnadiendoCiudadanoExistente;
-import myExceptions.errorAnadiendoFundacionExistente;
-import myExceptions.errorAnadiendoProponente;
+import myExceptions.ErrorAnadiendoCiudadanoExistente;
 import myExceptions.formatoNifIncorrecto;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
@@ -58,8 +56,8 @@ public class Ciudadano extends EnteCiudadano{
     }
 
     @Override
-    public errorAnadiendoCiudadanoExistente repetido() {
-        return new errorAnadiendoCiudadanoExistente("Ciudadano " +this.getNombre()+" con nif "+this.NIF+" ya existente");
+    public ErrorAnadiendoCiudadanoExistente repetido() {
+        return new ErrorAnadiendoCiudadanoExistente("Ciudadano " +this.getNombre()+" con nif "+this.NIF+" ya existente");
     }
 
     public void receives(Announcement t) {

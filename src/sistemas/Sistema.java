@@ -1,14 +1,10 @@
 package sistemas;
 
-import myExceptions.errorAnadiendoCiudadanoExistente;
-import myExceptions.errorAnadiendoFundacionExistente;
-import myExceptions.errorAnadiendoProponente;
-import myExceptions.errorApoyandoProyecto;
+import myExceptions.ErrorAnadiendoProponente;
 import proponentes.*;
 import proyectos.*;
 import announcements.*;
 
-import java.time.Duration;
 import java.util.*;
 
 public class Sistema {
@@ -39,7 +35,7 @@ public class Sistema {
         return false;
     }
 
-    public void addProponente(Proponente proponente) throws errorAnadiendoProponente {
+    public void addProponente(Proponente proponente) throws ErrorAnadiendoProponente {
         if(existeProponente(proponente)){
             throw proponente.repetido();
         }

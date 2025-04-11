@@ -1,6 +1,6 @@
 package proponentes;
 
-import myExceptions.errorAnadiendoProponente;
+import myExceptions.ErrorAnadiendoProponente;
 
 import java.util.Set;
 
@@ -27,7 +27,7 @@ public abstract class Proponente {
 
     public abstract Set<Ciudadano> todosLosCiudadanos();
 
-    public abstract errorAnadiendoProponente repetido();
+    public abstract ErrorAnadiendoProponente repetido();
 
     @Override
     public abstract boolean equals(Object obj);

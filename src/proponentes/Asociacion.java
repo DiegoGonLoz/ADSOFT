@@ -22,14 +22,14 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         this.representante = representante;
     }
 
-    public boolean inscribir(EnteCiudadano ente) throws enteCiudadanoEsMiembro {
+    public boolean inscribir(EnteCiudadano ente) throws EnteCiudadanoEsMiembro {
         if(ente instanceof Asociacion){
             if(((Asociacion) ente).representante == this.representante && ((Asociacion) ente).miembros.size() == 1){
                 return this.miembros.add(ente);
             }
         }
         if(this.esMiembro(ente)){
-            throw new enteCiudadanoEsMiembro("Error al inscribir a "+ente.getNombre()+" en la asociacion "+this.getNombre()+": ");
+            throw new EnteCiudadanoEsMiembro("Error al inscribir a "+ente.getNombre()+" en la asociacion "+this.getNombre()+": ");
         }
 
         return miembros.add(ente);
@@ -95,8 +95,8 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     }
 
     @Override
-    public errorAnadiendoAsociacionExistente repetido() {
-        return new errorAnadiendoAsociacionExistente("Asociacion " +this.getNombre()+" ya existente");
+    public ErrorAnadiendoAsociacionExistente repetido() {
+        return new ErrorAnadiendoAsociacionExistente("Asociacion " +this.getNombre()+" ya existente");
     }
 
     public void receives(Announcement t) {

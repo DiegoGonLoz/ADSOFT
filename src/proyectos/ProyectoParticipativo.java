@@ -51,7 +51,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
                 lastApoyo = LocalDateTime.now();
                 return true;
             }
-        } catch (proyectoPropuestoPorSiMismo | enteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
+        } catch (proyectoPropuestoPorSiMismo | EnteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
             throw new errorApoyandoProyecto("Error en metodo apoyar:"+ e);
         }
 
@@ -74,14 +74,14 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         return ciudadanos;
     }
 
-    private boolean apoyoPosible(EnteCiudadano ente) throws proyectoPropuestoPorSiMismo, enteCiudadanoEsMiembro, proyectoMasDe60Dias {
+    private boolean apoyoPosible(EnteCiudadano ente) throws proyectoPropuestoPorSiMismo, EnteCiudadanoEsMiembro, proyectoMasDe60Dias {
         if(proponente.equals(ente)) {
             throw new proyectoPropuestoPorSiMismo("\nError en ApoyoPosible: ");
         }
 
         for(EnteCiudadano ente2 : apoyos){
             if(ente2.esMiembro(ente)){
-                throw new enteCiudadanoEsMiembro("\nError en ApoyoPosible: ");
+                throw new EnteCiudadanoEsMiembro("\nError en ApoyoPosible: ");
             }
         }
 
