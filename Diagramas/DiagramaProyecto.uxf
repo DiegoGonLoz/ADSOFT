@@ -36,7 +36,7 @@ _- hora: Time_
 + SumarApoyar(enteCiudadano: EnteCiudadano): boolean 
 + toString(): String
 + obtenerApoyos(): int
-+ todosLosCiudadanos(): ciudadano[*]
++ todosLosCiudadanos(): List&lt;Ciudadano&gt;
 
 - actualizarApoyo():void
 - apoyoPosible(enteCiudadano: EnteCiudadano): boolean</panel_attributes>
@@ -81,38 +81,6 @@ m1=Proponente</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>156</x>
-      <y>102</y>
-      <w>354</w>
-      <h>78</h>
-    </coordinates>
-    <panel_attributes>sistemas.Sistema
---
-+ proponerProyecto(p : ProyectoParticipativo): boolean
-+ proyectosRegistrados(): set&lt;ProyectoParticipativo&gt;
-+ obtenerProyecto(titulo: String): ProyectoParticipativo
-+ obtenerProyecto(codigo: int): ProyectoParticipativo
-+ obtenerMapaProyectoApoyos(): SortedMap&lt;ProyectoParticipativo, int&gt;
-+ obtenerMapaProyectoCiudadanos(): Map&lt;ProyectoParticipativo, Set&lt;Ciudadano&gt; &gt;
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>312</x>
-      <y>174</y>
-      <w>54</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
-m2=*
-r2=proyectos</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>

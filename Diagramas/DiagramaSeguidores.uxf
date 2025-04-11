@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>84</x>
-      <y>217</y>
+      <y>238</y>
       <w>175</w>
       <h>49</h>
     </coordinates>
@@ -18,8 +18,8 @@ Follower
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>343</x>
-      <y>196</y>
+      <x>553</x>
+      <y>273</y>
       <w>273</w>
       <h>84</h>
     </coordinates>
@@ -35,8 +35,8 @@ FollowedEntity
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>259</x>
-      <y>322</y>
+      <x>343</x>
+      <y>336</y>
       <w>112</w>
       <h>35</h>
     </coordinates>
@@ -48,24 +48,25 @@ _- mensaje: String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
-      <y>308</y>
-      <w>126</w>
-      <h>63</h>
+      <x>98</x>
+      <y>371</y>
+      <w>175</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>FollowerManager
 -
 - follower: Follower
 - umbral: int
 --
-</panel_attributes>
+/+ announce(t: Announcement): void/
++ setUmbral(n: int): boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>196</x>
-      <y>434</y>
+      <y>511</y>
       <w>161</w>
       <h>42</h>
     </coordinates>
@@ -79,7 +80,7 @@ _- mensaje: String_</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>434</y>
+      <y>511</y>
       <w>154</w>
       <h>21</h>
     </coordinates>
@@ -90,7 +91,7 @@ _- mensaje: String_</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>91</x>
-      <y>483</y>
+      <y>560</y>
       <w>154</w>
       <h>42</h>
     </coordinates>
@@ -103,58 +104,45 @@ _- mensaje: String_</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>196</x>
-      <y>364</y>
+      <y>462</y>
       <w>21</w>
-      <h>84</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>168</x>
-      <y>364</y>
+      <y>462</y>
       <w>21</w>
-      <h>133</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>133</x>
-      <y>364</y>
+      <y>462</y>
       <w>21</w>
-      <h>84</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>238</x>
-      <y>56</y>
-      <w>154</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>sistemas.Sistema
---</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>294</x>
-      <y>105</y>
+      <x>168</x>
+      <y>280</y>
       <w>56</w>
-      <h>231</h>
+      <h>105</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
-m2=*
-r2=anuncios</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+    <panel_attributes>lt=&lt;-
+m1=follower</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>

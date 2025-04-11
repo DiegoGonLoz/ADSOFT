@@ -19,8 +19,6 @@ public class Sistema {
     Set<Proponente> proponentes;
     /**Set de proyectos*/
     Set<ProyectoParticipativo> proyectos;
-    /**Set de anuncios*/
-    Set<Announcement> anuncios;
 
     /**
      * Constructor de la clase Sistema
@@ -28,7 +26,6 @@ public class Sistema {
     private Sistema() {
         this.proponentes = new LinkedHashSet<>();
         this.proyectos = new TreeSet<>();
-        this.anuncios = new TreeSet<>();
     }
 
     /**

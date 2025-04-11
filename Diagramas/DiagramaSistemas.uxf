@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>120</y>
+      <w>590</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>sistemas.Sistema
+--
++existeProponente(prop: Proponente): boolean
++addProponente(prop: Proponente): void
++obtenerCiudadano(nombre: String): Ciudadano
++todosLosUsuarios(): List&lt;Proponente&gt;
+
++ proponerProyecto(p : ProyectoParticipativo): boolean
++ proyectosRegistrados(): Set&lt;ProyectoParticipativo&gt;
++ obtenerProyecto(titulo: String): ProyectoParticipativo
++ obtenerProyecto(codigo: int): ProyectoParticipativo
++ obtenerMapaProyectoApoyos(): SortedMap&lt;ProyectoParticipativo, int&gt;
++ obtenerMapaProyectoCiudadanos(): Map&lt;ProyectoParticipativo, Set&lt;Ciudadano&gt; &gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>340</y>
+      <w>110</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=proponentes
+r2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>520</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from proponentes&gt;&gt;
+/Proponente/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>520</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from proyectos&gt;&gt;
+/ProyectoParticipativo/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>340</y>
+      <w>90</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m2=proyectos
+r2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+</diagram>
