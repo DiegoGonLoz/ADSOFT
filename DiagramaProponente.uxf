@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>7</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>532</y>
-      <w>217</w>
-      <h>126</h>
+      <x>624</x>
+      <y>462</y>
+      <w>186</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Ciudadano
 --
@@ -22,26 +22,29 @@ _-NIF: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>574</x>
-      <y>238</y>
-      <w>238</w>
-      <h>91</h>
+      <x>516</x>
+      <y>210</y>
+      <w>204</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>/Proponente/
 --
 _#nombre: String_
 _#contraseña: String_
 --
-/+toString(): String/</panel_attributes>
+/+toString(): String/
+/+ todosLosCiudadanos: Set&lt;Ciudadano&gt;/
+/+ repetido: ErrorAnadiendoProponente/
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>245</y>
-      <w>238</w>
-      <h>91</h>
+      <x>204</x>
+      <y>216</y>
+      <w>204</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>Fundaciones
 --
@@ -57,10 +60,10 @@ _-CIF: String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>301</x>
-      <y>546</y>
-      <w>238</w>
-      <h>91</h>
+      <x>282</x>
+      <y>474</y>
+      <w>204</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>Asociacion
 --
@@ -76,10 +79,10 @@ _-CIF: String_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>532</x>
-      <y>588</y>
-      <w>182</w>
-      <h>28</h>
+      <x>480</x>
+      <y>510</y>
+      <w>156</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=representante</panel_attributes>
@@ -88,27 +91,29 @@ m1=representante</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>567</x>
-      <y>105</y>
-      <w>392</w>
-      <h>84</h>
+      <x>510</x>
+      <y>96</y>
+      <w>336</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>sistemas.Sistema
 --
 --
-+existeCiudadano(dni: String): boolean
-+existeFundacion(cfi: String): boolean
++existeProponente(prop: Proponente): boolean
++addProponente(prop: Proponente): void
 +obtenerCiudadano(nombre: String): Ciudadano
-+todosLosCiudanos(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-31-03-2025</panel_attributes>
++todosLosUsuarios(): Proponente[*]
+
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>406</x>
-      <y>371</y>
-      <w>210</w>
-      <h>189</h>
+      <x>372</x>
+      <y>324</y>
+      <w>180</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;
 m1=inscrito
@@ -120,32 +125,32 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>427</y>
-      <w>105</w>
-      <h>119</h>
+      <x>648</x>
+      <y>384</y>
+      <w>90</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>427</y>
-      <w>196</w>
-      <h>133</h>
+      <x>432</x>
+      <y>384</y>
+      <w>168</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>260.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>260.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>441</x>
-      <y>280</y>
-      <w>147</w>
-      <h>21</h>
+      <x>402</x>
+      <y>246</y>
+      <w>126</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
@@ -153,10 +158,10 @@ r2=1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>686</x>
-      <y>182</y>
-      <w>21</w>
-      <h>70</h>
+      <x>612</x>
+      <y>162</y>
+      <w>18</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
@@ -164,27 +169,28 @@ r2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
-      <y>364</y>
-      <w>252</w>
-      <h>70</h>
+      <x>540</x>
+      <y>318</y>
+      <w>216</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>/EnteCiudadano/
 --
 --
 /+proponer(proyecto: ProyectoParticipativo): void/
-/+incribirse(asociacion: Asociacion): void/
++incribirse(asociacion: Asociacion): void
 /+esMiembro(enteCiudadano: EnteCiudadano): boolean/
-/+cantidadMiembros(): int/</panel_attributes>
+/+cantidadMiembros(): int/
++ apoyar(proyecto : ProyectoPaticipativo): boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>693</x>
-      <y>322</y>
-      <w>21</w>
-      <h>56</h>
+      <x>618</x>
+      <y>282</y>
+      <w>18</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -192,22 +198,22 @@ r2=1..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1022</x>
-      <y>553</y>
-      <w>329</w>
-      <h>70</h>
+      <x>900</x>
+      <y>486</y>
+      <w>132</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;import from AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025&gt;&gt;
+    <panel_attributes>&lt;&lt;import from anouncements&gt;&gt;
 Announcement</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>567</y>
-      <w>126</w>
-      <h>35</h>
+      <x>804</x>
+      <y>492</y>
+      <w>108</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=anuncios
@@ -217,22 +223,22 @@ r1=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1001</x>
-      <y>364</y>
-      <w>329</w>
-      <h>70</h>
+      <x>882</x>
+      <y>336</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;import from AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025&gt;&gt;
+    <panel_attributes>&lt;&lt;import from anouncements&gt;&gt;
 Follower</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>847</x>
-      <y>392</y>
-      <w>168</w>
-      <h>28</h>
+      <x>750</x>
+      <y>342</y>
+      <w>144</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;..
 implements</panel_attributes>
@@ -241,37 +247,101 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>14</x>
-      <y>371</y>
-      <w>329</w>
-      <h>70</h>
+      <x>132</x>
+      <y>324</y>
+      <w>132</w>
+      <h>42</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;import from AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025&gt;&gt;
+    <panel_attributes>&lt;&lt;import from anouncements&gt;&gt;
 FollowedEntity</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>189</x>
-      <y>434</y>
-      <w>126</w>
-      <h>175</h>
+      <x>186</x>
+      <y>360</y>
+      <w>108</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;..
 implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;230.0;160.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0;160.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>168</x>
-      <y>308</y>
-      <w>77</w>
-      <h>77</h>
+      <y>270</y>
+      <w>60</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;..
 implements</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>54</x>
+      <y>162</y>
+      <w>258</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=followers</panel_attributes>
+    <additional_attributes>10.0;370.0;10.0;10.0;410.0;10.0;410.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>384</y>
+      <w>114</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>FollowerManager
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>888</x>
+      <y>222</y>
+      <w>144</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from anouncement&gt;&gt;
+FollowedEntity
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>222</y>
+      <w>168</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=seguidos</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>54</x>
+      <y>402</y>
+      <w>240</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=followers</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0;380.0;230.0</additional_attributes>
   </element>
 </diagram>
