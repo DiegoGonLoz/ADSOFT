@@ -25,9 +25,10 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
 
     public boolean inscribir(EnteCiudadano ente) throws EnteCiudadanoEsMiembro {
         if(ente instanceof Asociacion){
-            if(((Asociacion) ente).representante == this.representante && ((Asociacion) ente).miembros.size() == 1){
+            if(((Asociacion) ente).representante == this.representante && ((Asociacion) ente).cantidadMiembros() == 1){
                 return this.miembros.add(ente);
             }
+            throw new InscripcionInviable("Error al inscribir a "+ente.getNombre()+" en la asociacion "+this.getNombre()+": ");
         }
         if(this.esMiembro(ente)){
             throw new EnteCiudadanoEsMiembro("Error al inscribir a "+ente.getNombre()+" en la asociacion "+this.getNombre()+": ");

@@ -19,14 +19,14 @@ public class Apartado1Tests {
 
             System.out.println("\n=== TEST 4: Busqueda de proponentes ===");
             testBusquedaProponentes();
+
+            System.out.println("\n=== FIN DE LAS PRUEBAS DEL APARTADO 1===");
         } catch (Exception e){
             System.out.println("Error durante las pruebas: \n" + e);
             for(StackTraceElement error : e.getStackTrace()){
                 System.out.println(error);
             }
         }
-
-        System.out.println("\n=== FIN DE LAS PRUEBAS DEL APARTADO 1===");
     }
 
     public static List<Proponente> obtenerProponentesTest(){
@@ -42,8 +42,8 @@ public class Apartado1Tests {
        nuevosProponentes.add(new Fundacion("Fundación Canal", "12345", "A1234567B"));
 
        ((Ciudadano) nuevosProponentes.get(0)).inscribirse((Asociacion) nuevosProponentes.get(3));
-       ((Ciudadano) nuevosProponentes.get(1)).inscribirse((Asociacion) nuevosProponentes.get(4));
        ((Asociacion) nuevosProponentes.get(4)).inscribirse((Asociacion) nuevosProponentes.get(3));
+        ((Ciudadano) nuevosProponentes.get(1)).inscribirse((Asociacion) nuevosProponentes.get(4));
 
        proponentes = nuevosProponentes;
 
@@ -53,48 +53,89 @@ public class Apartado1Tests {
     public static void testCreacionProponentes() {
         try{
             new Ciudadano(null, "12345", "01234567L");
+            throw new RuntimeException("Error no detectado al crear ciudadano sin nombre");
         } catch (NullPointerException e) {
-            System.out.println("Error capturado correctamente: " + e);
+            System.out.println("Error capturado correctamente: \n" + e);
         }
 
         try{
             new Ciudadano("Juan Bravo", null, "01234567L");
+            throw new RuntimeException("Error no detectado al crear ciudadano sin contraseña");
         } catch (NullPointerException e) {
-            System.out.println("Error capturado correctamente: " + e);
+            System.out.println("Error capturado correctamente: \n" + e);
         }
 
         try{
             new Ciudadano("Juan Bravo", "12345", null);
+            throw new RuntimeException("Error no detectado al crear ciudadano sin NIF");
         } catch (NullPointerException e) {
-            System.out.println("Error capturado correctamente: " + e);
+            System.out.println("Error capturado correctamente: \n" + e);
         }
 
         try{
             new Ciudadano("Juan Bravo", "12345", "01234567H");
+            throw new RuntimeException("Error no detectado al introducir un numero de DNI incorrecto");
         } catch (FormatoNifIncorrecto e) {
-            System.out.println("Error capturado correctamente: " + e);
+            System.out.println("Error capturado correctamente: \n" + e);
         }
 
         try{
             new Asociacion("conservemos el manzanares", "12345", null);
+            throw new RuntimeException("Error no detectado al crear asociacion sin representante");
         } catch (NullPointerException e) {
-            System.out.println("Error capturado correctamente: " + e);
+            System.out.println("Error capturado correctamente: \n" + e);
         }
 
         try{
             new Fundacion("Fundación Canal", "12345", "A12345678");
+            throw new RuntimeException("Error no detectado al crear fundacion con CIF incorrecto");
         } catch (FormatoCifIncorrecto e) {
-            System.out.println("Error capturado correctamente: " + e);
+            System.out.println("Error capturado correctamente: \n" + e);
         }
     }
 
     public static void testInscripcionAsociaciones() {
-        ciudadano a asociacion
-        asociacion a asociacion
-        asociacion no vacia a asociacion
-        asociacion con distinto representante a asociacion
-        ciudadano ya perteneciente
-        darse de baja
+        Ciudadano ciudadano1 = new Ciudadano("Juan Bravo", "12345", "01234567L");
+        Ciudadano ciudadano2 = new Ciudadano("Ana López", "12345", "01234568C");
+
+        Asociacion asociacion1 = new Asociacion("conservemos el manzanares", "12345", ciudadano1);
+        Asociacion asociacion2 = new Asociacion("amigos de los pajaros", "12345", ciudadano1);
+        Asociacion asociacion3 = new Asociacion("amigos del agua", "12345", ciudadano1);
+        Asociacion asociacion4 = new Asociacion("amigos del bosque", "12345", ciudadano2);
+
+        /*Probamos inscripciones que no deberían dar problemas*/
+        ciudadano2.inscribirse(asociacion1);
+        asociacion2.inscribirse(asociacion1);
+        System.out.println(asociacion1);
+
+        /*Intentamos inscribir una asociacion no vacia*/
+        ciudadano2.inscribirse(asociacion3);
+        try{
+            asociacion3.inscribirse(asociacion1);
+            throw new RuntimeException("Error no detectado al inscribir asociacion no vacia");
+        } catch (InscripcionInviable e){
+            System.out.println("Error capturado correctamente: \n" + e);
+        }
+
+        try{
+            asociacion4.inscribirse(asociacion1);
+            throw new RuntimeException("Error no detectado al inscribir asociacion con distinto representante");
+        } catch (InscripcionInviable e){
+            System.out.println("Error capturado correctamente: \n" + e);
+        }
+
+        try{
+            ciudadano1.inscribirse(asociacion1);
+            throw new RuntimeException("Error no detectado al inscribir ciudadano perteneciente a la asociacion");
+        } catch (EnteCiudadanoEsMiembro e){
+            System.out.println("Error capturado correctamente: \n" + e);
+        }
+
+        System.out.println(asociacion1.todosLosCiudadanos());
+        System.out.println(asociacion3.todosLosCiudadanos());
+        ciudadano2.darseDeBaja();
+        System.out.println(asociacion1.todosLosCiudadanos());
+        System.out.println(asociacion3.todosLosCiudadanos());
 
     }
 
@@ -105,18 +146,21 @@ public class Apartado1Tests {
 
        try{
            Sistema.getInstance().addProponente((Ciudadano)obtenerProponentesTest().get(0));
+           throw new RuntimeException("Error no detectado al añadir un ciudadano existente al sistema");
        } catch(ErrorAnadiendoCiudadanoExistente e){
-           System.out.println("Error capturado correctamente: " + e);
+           System.out.println("Error capturado correctamente: \n" + e);
        }
        try{
            Sistema.getInstance().addProponente((Asociacion)obtenerProponentesTest().get(3));
+           throw new RuntimeException("Error no detectado al añadir una asociacion existente al sistema");
        } catch(ErrorAnadiendoAsociacionExistente e){
-           System.out.println("Error capturado correctamente: " + e);
+           System.out.println("Error capturado correctamente: \n" + e);
        }
        try{
            Sistema.getInstance().addProponente((Fundacion)obtenerProponentesTest().get(5));
+           throw new RuntimeException("Error no detectado al añadir una fundacion existente al sistema");
        } catch(ErrorAnadiendoFundacionExistente e){
-           System.out.println("Error capturado correctamente: " + e);
+           System.out.println("Error capturado correctamente: \n" + e);
        }
     }
 

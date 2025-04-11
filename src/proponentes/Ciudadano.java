@@ -73,8 +73,11 @@ public class Ciudadano extends EnteCiudadano{
         }
     }
 
-    public void darseDeBaja(){
-        for(Asociacion asociacion : inscrito){
+    public void darseDeBaja() {
+        Iterator<Asociacion> iterator = inscrito.iterator();
+        while (iterator.hasNext()) {
+            Asociacion asociacion = iterator.next();
+            iterator.remove();
             this.darseDeBaja(asociacion);
         }
     }

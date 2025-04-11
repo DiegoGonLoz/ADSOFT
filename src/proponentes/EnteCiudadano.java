@@ -4,13 +4,12 @@ import announcements.FollowedEntity;
 import announcements.Follower;
 import myExceptions.ErrorAnadiendoCiudadanoExistente;
 import proyectos.ProyectoParticipativo;
-import proyectos.ProyectoCiudadano;
 
-import java.util.LinkedList;
+import java.util.*;
 
 public abstract class EnteCiudadano extends Proponente implements Follower {
-    protected LinkedList<Asociacion> inscrito = new LinkedList<Asociacion>();
-    protected LinkedList<FollowedEntity> seguidos = new LinkedList<FollowedEntity>();
+    protected Set<Asociacion> inscrito = new HashSet<Asociacion>();
+    protected Set<FollowedEntity> seguidos = new HashSet<FollowedEntity>();
 
     public EnteCiudadano(String nombre, String contraseña) throws NullPointerException{
         super(nombre, contraseña);
