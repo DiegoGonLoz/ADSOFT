@@ -4,7 +4,14 @@ import sistemas.Sistema;
 
 import java.util.List;
 
+/**
+ * Clase encargada de los tests del apartado 4
+ */
 public class Apartado4Tests {
+    /**
+     * Metodo main donde se ejecutan los tests
+     * @param args vacío
+     */
     public static void main(String[] args) {
         prepararFollowers();
 
@@ -24,6 +31,9 @@ public class Apartado4Tests {
         }
     }
 
+    /**
+     * Metodo encargado de cargar followers en el sistema
+     */
     public static void prepararFollowers(){
         List<Proponente> proponentes = Apartado1Tests.obtenerProponentesTest();
         Sistema sistema = Sistema.getInstance();
@@ -44,6 +54,9 @@ public class Apartado4Tests {
         proponentes.get(5).proponer(proyectos.get(1));
     }
 
+    /**
+     * Metodo de prueba del metodo follow
+     */
     private static void testFollow() {
         int i;
 
@@ -56,6 +69,9 @@ public class Apartado4Tests {
         System.out.println("Anuncios para "+ proponentes.getLast().getNombre() +": \n" + ((Ciudadano)proponentes.getLast()).todosLosMensajes());
     }
 
+    /**
+     * Metodo de prueba del metodo unfollow
+     */
     private static void testUnfollow() {
         int i;
 
