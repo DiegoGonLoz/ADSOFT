@@ -15,7 +15,7 @@ import java.util.*;
 public abstract class EnteCiudadano extends Proponente implements Follower {
     /**Set de inscritos*/
     protected Set<Asociacion> inscrito = new HashSet<Asociacion>();
-    /*Set de seguidos*/
+    /**Set de seguidos*/
     protected Set<FollowedEntity> seguidos = new HashSet<FollowedEntity>();
 
     /**

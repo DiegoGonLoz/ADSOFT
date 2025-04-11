@@ -46,7 +46,7 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
     @Override
     public boolean proponer(ProyectoParticipativo proyecto) {
         if(super.proponer(proyecto)){
-            this.announce(new Announcement(this.getNombre() + " da apoyo al proyecto " + proyecto.getTitulo() + " (" + proyecto.obtenerApoyos() + " apoyos)"));
+            this.announce(new Announcement(this.getNombre() + " propone el proyecto " + proyecto.getTitulo() + " (" + proyecto.obtenerApoyos() + " apoyos)"));
             return true;
         }
         return false;

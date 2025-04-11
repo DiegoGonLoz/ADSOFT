@@ -46,12 +46,12 @@ public class Apartado4Tests {
 
         List<ProyectoParticipativo> proyectos = Apartado2Tests.obtenerProyectosTest(proponentes);
 
+        proponentes.get(3).proponer(proyectos.getFirst());
+        proponentes.get(5).proponer(proyectos.get(1));
+
         ((Fundacion)proponentes.get(5)).follow((EnteCiudadano)proponentes.getFirst());
         proyectos.getFirst().follow((EnteCiudadano)proponentes.getLast());
         new Ciudadano("Winston Smith", "12345", "40208197B").apoyar(proyectos.getFirst());
-
-        proponentes.get(3).proponer(proyectos.getFirst());
-        proponentes.get(5).proponer(proyectos.get(1));
     }
 
     /**

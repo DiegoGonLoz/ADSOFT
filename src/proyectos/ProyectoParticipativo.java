@@ -33,7 +33,7 @@ public abstract class ProyectoParticipativo implements FollowedEntity, Comparabl
     private final Proponente proponente;
     /**Fecha y hora del último apoyo*/
     private LocalDateTime lastApoyo;
-    /*Set de los apoyos*/
+    /**Set de los apoyos*/
     protected final Set<EnteCiudadano> apoyos;
     /**Set de los followers*/
     private final Set<FollowerManager> followers;

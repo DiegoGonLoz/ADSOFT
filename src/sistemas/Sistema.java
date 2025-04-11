@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * Clase que representa el sistema central del ejercicio
  *
- * @athor Diego Gonzalez y Diego Lesma
+ * @author Diego Gonzalez y Diego Lesma
  */
 public class Sistema {
     /**Variable estática sistema*/

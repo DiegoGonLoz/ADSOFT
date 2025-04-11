@@ -55,11 +55,16 @@ public abstract class Proponente {
     public abstract Set<Ciudadano> todosLosCiudadanos();
 
     /**
-     * Metodo repetido
+     * Metodo que se invoca si el proponente esta repetido
      * @return excepcion error añadiendo proponente
      */
     public abstract ErrorAnadiendoProponente repetido();
 
+    /**
+     * Metodo para proponer un proyecto
+     * @param proyecto proyecto a proponer
+     * @return true si se completa con exito y false si no
+     */
     public boolean proponer(ProyectoParticipativo proyecto){
         return Sistema.getInstance().proponerProyecto(proyecto);
     }

@@ -6,10 +6,18 @@ package myExceptions;
  * @author Diego Lesma
  */
 public class ErrorAnadiendoCiudadanoExistente extends ErrorAnadiendoProponente {
+    /**
+     * Constructor de ErrorAnadiendoCiudadanoExistente
+     * @param message mensaje de error
+     */
     public ErrorAnadiendoCiudadanoExistente(String message) {
         super(message);
     }
 
+    /**
+     * Metodo toString de la clase ErrorAnadiendoCiudadanoExistente
+     * @return string con la información de error
+     */
     @Override
     public String toString() {
         return this.getMessage()+
