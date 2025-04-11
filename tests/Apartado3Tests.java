@@ -1,10 +1,9 @@
-import myExceptions.porcentajeInvalido;
-import myExceptions.presupuestoMenorIgualCero;
 import proponentes.Asociacion;
 import proponentes.Ciudadano;
 import proponentes.Fundacion;
 import proponentes.Proponente;
 import proyectos.ProyectoFundacion;
+import proyectos.ProyectoCiudadano;
 import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
@@ -75,14 +74,14 @@ public class Apartado3Tests {
         Asociacion asociacion = (Asociacion) proponentes.get(3);
 
 
-        ProyectoParticipativo proyecto = new ProyectoParticipativo("Proyecto Test", "Descripción test", ciudadano1);
+        ProyectoCiudadano proyecto = new ProyectoCiudadano("Proyecto Test", "Descripción test", ciudadano1);
         sistema.proponerProyecto(proyecto);
 
 
         ciudadano2.apoyar(proyecto);
         asociacion.apoyar(proyecto);
 
-        System.out.println("Apoyos después de añadir ciudadano2 y fundación: " + proyecto.obtenerApoyos());
+        System.out.println("Apoyos después de añadir ciudadano2 y asociación: " + proyecto.obtenerApoyos());
         System.out.println("Ciudadanos asociados: " + proyecto.todosLosCiudadanos());
     }
 
@@ -93,7 +92,7 @@ public class Apartado3Tests {
 
         try {
             // Proyecto propuesto por sí mismo
-            ProyectoParticipativo proyecto1 = new ProyectoParticipativo("Proyecto Autoapoyo", "Descripción", ciudadano1);
+            ProyectoCiudadano proyecto1 = new ProyectoCiudadano("Proyecto Autoapoyo", "Descripción", ciudadano1);
             sistema.proponerProyecto(proyecto1);
             ciudadano1.apoyar(proyecto1); // Debería lanzar excepción
             System.out.println("ERROR: No se lanzó la excepción proyectoPropuestoPorSiMismo");
@@ -103,7 +102,7 @@ public class Apartado3Tests {
 
         try {
             // Proyecto con más de 60 días
-            ProyectoParticipativo proyecto2 = new ProyectoParticipativo("Proyecto Antiguo", "Descripción", ciudadano1) {
+            ProyectoCiudadano proyecto2 = new ProyectoCiudadano("Proyecto Antiguo", "Descripción", ciudadano1) {
                 @Override
                 public LocalDate getFecha() {
                     return LocalDate.now().minusDays(61); // Simular proyecto antiguo
@@ -123,7 +122,7 @@ public class Apartado3Tests {
             sistema.addProponente(ciudadano2);
             asociacion.inscribir(ciudadano2); // ciudadano2 es miembro de la asociación
 
-            ProyectoParticipativo proyecto3 = new ProyectoParticipativo("Proyecto Asociación", "Descripción", ciudadano1);
+            ProyectoCiudadano proyecto3 = new ProyectoCiudadano("Proyecto Asociación", "Descripción", ciudadano1);
             sistema.proponerProyecto(proyecto3);
             asociacion.apoyar(proyecto3); // Primero la asociación apoya
             ciudadano2.apoyar(proyecto3); // Después ciudadano2 (miembro) intenta apoyar - debería lanzar excepción
@@ -135,7 +134,7 @@ public class Apartado3Tests {
     }
 
     private static void testValidacionesProyectoFundacion(List<Proponente> proponentes) {
-        Fundacion fundacion = (Fundacion) proponentes.get(2);
+        Fundacion fundacion = (Fundacion) proponentes.get(5);
 
         try {
             // Presupuesto inválido (<= 0)

@@ -3,7 +3,7 @@ package proponentes;
 import announcements.Announcement;
 import myExceptions.ErrorAnadiendoCiudadanoExistente;
 import myExceptions.formatoNifIncorrecto;
-import proyectos.ProyectoParticipativo;
+import proyectos.ProyectoCiudadano;
 import sistemas.Sistema;
 
 import java.util.*;
@@ -15,10 +15,10 @@ public class Ciudadano extends EnteCiudadano{
     public Ciudadano(String name, String contraseña, String nif) throws NullPointerException, formatoNifIncorrecto {
         super(name, contraseña);
         if(nif == null){
-            throw new NullPointerException("Error en el constructor Ciudadano: NIF es null");
+            throw new NullPointerException("Error en el constructor Ciudadano: \nNIF es null");
         }
         if(!this.validarNIF(nif)){
-            throw new formatoNifIncorrecto("Error en el constructor Ciudadano: ");
+            throw new formatoNifIncorrecto("Error en el constructor Ciudadano: \n");
         }
         this.NIF = nif;
 
@@ -37,7 +37,7 @@ public class Ciudadano extends EnteCiudadano{
         return letra == LETRAS.charAt(numero % 23);
     }
 
-    public void proponer(ProyectoParticipativo proyecto){
+    public void proponer(ProyectoCiudadano proyecto){
         if(Sistema.getInstance().proponerProyecto(proyecto)){
             this.apoyar(proyecto);
         }

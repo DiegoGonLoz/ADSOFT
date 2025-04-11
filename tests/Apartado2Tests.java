@@ -1,16 +1,10 @@
 import myExceptions.porcentajeInvalido;
 import myExceptions.presupuestoMenorIgualCero;
-import proponentes.Asociacion;
-import proponentes.Ciudadano;
-import proponentes.Fundacion;
-import proponentes.Proponente;
-import proyectos.ProyectoFundacion;
-import proyectos.ProyectoParticipativo;
+import proponentes.*;
+import proyectos.*;
 import sistemas.Sistema;
 
 import java.util.List;
-import java.util.Map;
-import java.util.SortedMap;
 
 
 public class Apartado2Tests {
@@ -56,17 +50,17 @@ public class Apartado2Tests {
     }
 
     public static List<ProyectoParticipativo> obtenerProyectosTest(List<Proponente> proponentes) {
-        ProyectoParticipativo proyectoPart = new ProyectoParticipativo(
+        ProyectoCiudadano proyectoPart = new ProyectoCiudadano(
                 "Limpieza del Manzanares",
                 "Propuesta para limpiar el manzanares",
-                proponentes.get(3)
+                (EnteCiudadano)proponentes.get(3)
         );
 
 
         ProyectoFundacion proyectoFund = new ProyectoFundacion(
                 "Gastemos menos agua",
                 "Propuesta para gastar menos agua",
-                proponentes.get(5),
+                (Fundacion)proponentes.get(5),
                 1000000.0,
                 80.0
         );
@@ -74,7 +68,7 @@ public class Apartado2Tests {
     }
 
     private static void testProyectoParticipativo(Ciudadano ciudadano) {
-        ProyectoParticipativo proyecto = new ProyectoParticipativo(
+        ProyectoCiudadano proyecto = new ProyectoCiudadano(
                 "Biblioteca Municipal",
                 "Nueva biblioteca para el barrio norte",
                 ciudadano

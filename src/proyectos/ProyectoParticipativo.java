@@ -1,13 +1,23 @@
 package proyectos;
 
 import announcements.*;
-import proponentes.*;
+import myExceptions.enteCiudadanoEsMiembro;
+import myExceptions.errorApoyandoProyecto;
+import myExceptions.proyectoMasDe60Dias;
+import myExceptions.proyectoPropuestoPorSiMismo;
+import proponentes.Ciudadano;
+import proponentes.EnteCiudadano;
+import proponentes.Proponente;
 
-import java.time.*;
-import java.util.*;
-import myExceptions.*;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.Set;
 
-public class ProyectoParticipativo implements FollowedEntity, Comparable<ProyectoParticipativo> {
+public abstract class ProyectoParticipativo implements FollowedEntity, Comparable<ProyectoParticipativo> {
     private final int codigo;
     private final LocalDate fecha;
     private final LocalTime hora;
@@ -15,7 +25,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     private final String descripcion;
     private final Proponente proponente;
     private LocalDateTime lastApoyo;
-    private final Set<EnteCiudadano> apoyos;
+    protected final Set<EnteCiudadano> apoyos;
     private final Set<FollowerManager> followers;
     private static int contador_id=0;
 
@@ -27,6 +37,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.proponente = proponente;
+        this.lastApoyo = LocalDateTime.now();
         this.apoyos = new HashSet<EnteCiudadano>();
         this.followers = new HashSet<FollowerManager>();
     }
@@ -48,7 +59,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
             if (apoyoPosible(ente)) {
                 apoyos.removeIf(ente::esMiembro);
                 apoyos.add(ente);
-                lastApoyo = LocalDateTime.now();
+                this.actualizarApoyo();
                 return true;
             }
         } catch (proyectoPropuestoPorSiMismo | EnteCiudadanoEsMiembro | proyectoMasDe60Dias e) {
@@ -56,6 +67,10 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
         }
 
         return false;
+    }
+
+    public void actualizarApoyo(){
+        this.lastApoyo = LocalDateTime.now();
     }
 
     public int obtenerApoyos(){
@@ -85,8 +100,8 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
             }
         }
 
-        if(Duration.between(LocalDate.now(), fecha).toDays() > 60){
-            throw new proyectoMasDe60Dias("\nError en ApoyoPosible: ", Duration.between(LocalDate.now(), fecha).toDays());
+        if(ChronoUnit.DAYS.between(LocalDate.now(), fecha) > 60){
+            throw new proyectoMasDe60Dias("\nError en ApoyoPosible: ", ChronoUnit.DAYS.between(LocalDate.now(), fecha));
         }
 
         return true;
@@ -95,7 +110,7 @@ public class ProyectoParticipativo implements FollowedEntity, Comparable<Proyect
     @Override
     public boolean equals(Object obj) {
         if(obj == null) return false;
-        if(obj instanceof ProyectoParticipativo){
+        if(obj instanceof ProyectoCiudadano){
             ProyectoParticipativo p = (ProyectoParticipativo) obj;
             return p.codigo == this.codigo;
         }

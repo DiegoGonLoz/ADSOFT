@@ -4,6 +4,7 @@ import announcements.FollowedEntity;
 import announcements.Follower;
 import myExceptions.ErrorAnadiendoCiudadanoExistente;
 import proyectos.ProyectoParticipativo;
+import proyectos.ProyectoCiudadano;
 
 import java.util.LinkedList;
 

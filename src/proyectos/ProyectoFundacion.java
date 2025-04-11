@@ -2,17 +2,13 @@ package proyectos;
 
 import myExceptions.porcentajeInvalido;
 import myExceptions.presupuestoMenorIgualCero;
-import proponentes.EnteCiudadano;
-import proponentes.Proponente;
+import proponentes.Fundacion;
 
-import java.util.List;
-import java.util.Set;
-
-public class ProyectoFundacion extends ProyectoParticipativo{
+public class ProyectoFundacion extends ProyectoParticipativo {
     private double presupuestoEstimado;
     private double porcentajeAsumeFundacion;
 
-    public ProyectoFundacion(String titulo, String descripcion, Proponente proponente,
+    public ProyectoFundacion(String titulo, String descripcion, Fundacion proponente,
                              double presupuestoEstimado, double porcentajeAsumeFundacion)
     throws porcentajeInvalido, presupuestoMenorIgualCero {
 

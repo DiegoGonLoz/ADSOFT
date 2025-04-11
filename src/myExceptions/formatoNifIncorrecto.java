@@ -21,6 +21,6 @@ public class formatoNifIncorrecto extends IllegalArgumentException {
     @Override
     public String toString() {
         return this.getMessage()+
-                "\nError en el formato del nif del ciudadano";
+                "Error en el formato del nif del ciudadano";
     }
 }
