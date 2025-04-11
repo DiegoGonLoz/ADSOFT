@@ -3,6 +3,7 @@ package proponentes;
 import announcements.*;
 import myExceptions.*;
 import proyectos.ProyectoCiudadano;
+import proyectos.ProyectoParticipativo;
 import sistemas.Sistema;
 
 import java.util.*;
@@ -39,14 +40,14 @@ public class Asociacion extends EnteCiudadano implements FollowedEntity {
         return miembros.remove(ciudadano);
     }
 
-    public void proponer(ProyectoCiudadano proyecto){
+    public void proponer(ProyectoParticipativo proyecto){
         if(Sistema.getInstance().proponerProyecto(proyecto)){
             this.apoyar(proyecto);
         }
     }
 
     @Override
-    public boolean apoyar(ProyectoCiudadano proyecto){
+    public boolean apoyar(ProyectoParticipativo proyecto){
         if(super.apoyar(proyecto)){
             announce(new Announcement(this.getNombre() + " da apoyo al proyecto " + proyecto.getTitulo() + " (" + proyecto.obtenerApoyos() + " apoyos)"));
             return true;

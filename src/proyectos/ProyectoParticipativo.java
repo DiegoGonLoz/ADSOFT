@@ -1,15 +1,11 @@
 package proyectos;
 
 import announcements.*;
-import myExceptions.enteCiudadanoEsMiembro;
-import myExceptions.errorApoyandoProyecto;
-import myExceptions.proyectoMasDe60Dias;
-import myExceptions.proyectoPropuestoPorSiMismo;
+import myExceptions.*;
 import proponentes.Ciudadano;
 import proponentes.EnteCiudadano;
 import proponentes.Proponente;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
