@@ -4,8 +4,15 @@ import sistemas.Sistema;
 
 import java.util.*;
 
+/**
+ * Clase que hace tests del apartado 1 de la práctica
+ *
+ * @author Diego Gonzales
+ */
 public class Apartado1Tests {
+    /**Lista de proponentes para las pruebas*/
     private static List<Proponente> proponentes = new ArrayList<Proponente>();
+    /**Función main del test*/
    public static void main (String[] args) {
         try{
             System.out.println("\n\n=== TEST 1: Creación de proponentes ===");
@@ -29,6 +36,10 @@ public class Apartado1Tests {
         }
     }
 
+    /**
+     * Metodo para obtener los proponentes para diversos tests
+     * @return Lista de proponentes
+     */
     public static List<Proponente> obtenerProponentesTest(){
        if(!proponentes.isEmpty()) return new ArrayList<>(proponentes);
 
@@ -50,6 +61,9 @@ public class Apartado1Tests {
        return new ArrayList<>(nuevosProponentes);
     }
 
+    /**
+     * Metodo para crear proponentes
+     */
     public static void testCreacionProponentes() {
         try{
             new Ciudadano(null, "12345", "01234567L");
@@ -94,6 +108,9 @@ public class Apartado1Tests {
         }
     }
 
+    /**
+     * Metodo para probar las inscripciones de asociaciones
+     */
     public static void testInscripcionAsociaciones() {
         Ciudadano ciudadano1 = new Ciudadano("Juan Bravo", "12345", "01234567L");
         Ciudadano ciudadano2 = new Ciudadano("Ana López", "12345", "01234568C");
@@ -103,12 +120,10 @@ public class Apartado1Tests {
         Asociacion asociacion3 = new Asociacion("amigos del agua", "12345", ciudadano1);
         Asociacion asociacion4 = new Asociacion("amigos del bosque", "12345", ciudadano2);
 
-        /*Probamos inscripciones que no deberían dar problemas*/
         ciudadano2.inscribirse(asociacion1);
         asociacion2.inscribirse(asociacion1);
         System.out.println(asociacion1);
 
-        /*Intentamos inscribir una asociacion no vacia*/
         ciudadano2.inscribirse(asociacion3);
         try{
             asociacion3.inscribirse(asociacion1);
@@ -141,6 +156,9 @@ public class Apartado1Tests {
 
     }
 
+    /**
+     * Metodo para probar casos como proponentes repetidos
+     */
     public static void testProponentesRepetidos() {
        for(Proponente proponente : obtenerProponentesTest()){
            Sistema.getInstance().addProponente(proponente);
