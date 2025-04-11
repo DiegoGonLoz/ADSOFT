@@ -2,10 +2,23 @@ package announcements;
 
 import proyectos.ProyectoParticipativo;
 
+/**
+ * Clase que representa a FollowerManagerAllMessages
+ *
+ * @author Diego Gonzalez
+ */
 public class FollowerManagerProjectSupport extends FollowerManager {
+    /**Proyecto participativo*/
     private final ProyectoParticipativo proyecto;
+    /**Booleano con la información de avisado o no*/
     private boolean avisado = false;
 
+    /**
+     * Constructor de la clase FollowerManagerFrecuency
+     * @param follower follower
+     * @param proyecto proyecto participativo
+     * @throws NullPointerException no se admiten nulls
+     */
     public FollowerManagerProjectSupport(Follower follower, ProyectoParticipativo proyecto) throws NullPointerException{
         super(follower);
         if(proyecto == null){
@@ -14,6 +27,10 @@ public class FollowerManagerProjectSupport extends FollowerManager {
         this.proyecto = proyecto;
     }
 
+    /**
+     * Metodo announce
+     * @param t objeto a anunciar
+     */
     @Override
     public void announce(Announcement t) {
         if(!this.avisado && proyecto.obtenerApoyos() > this.umbral){
@@ -22,6 +39,11 @@ public class FollowerManagerProjectSupport extends FollowerManager {
         }
     }
 
+    /**
+     * Setter de umbral
+     * @param n nuevo umbral
+     * @return true o false
+     */
     @Override
     public boolean setUmbral(int n){
         if(super.setUmbral(n)){

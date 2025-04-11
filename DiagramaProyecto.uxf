@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>9</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>279</y>
-      <w>189</w>
-      <h>45</h>
+      <y>276</y>
+      <w>126</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>&lt;&lt;import from proponentes&gt;&gt;
 /Proponente/
@@ -17,33 +17,38 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>306</x>
-      <y>243</y>
-      <w>360</w>
-      <h>189</h>
+      <x>204</x>
+      <y>252</y>
+      <w>240</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>ProyectoParticipativo
+--
+- contador_id = (int) 0
 --
 _- codigo: int_
 _- fecha: Date_
 _- hora: Time_
 - titulo: String
 - descripcion: String
+- lastApoyo: DateTime
 --
-+ apoyar(enteCiudadano: EnteCiudadano): void 
++ SumarApoyar(enteCiudadano: EnteCiudadano): boolean 
 + toString(): String
-+ obtenerVotos(): int
++ obtenerApoyos(): int
++ todosLosCiudadanos(): ciudadano[*]
 
+- actualizarApoyo():void
 - apoyoPosible(enteCiudadano: EnteCiudadano): boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>288</y>
-      <w>144</w>
-      <h>36</h>
+      <x>120</x>
+      <y>282</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=Proponente</panel_attributes>
@@ -52,10 +57,10 @@ m1=Proponente</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>369</x>
-      <y>495</y>
-      <w>234</w>
-      <h>81</h>
+      <x>288</x>
+      <y>486</y>
+      <w>156</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>ProyectoFundacion
 --
@@ -69,39 +74,40 @@ m1=Proponente</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>423</y>
-      <w>27</w>
-      <h>90</h>
+      <x>330</x>
+      <y>414</y>
+      <w>18</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>234</x>
-      <y>36</y>
-      <w>531</w>
-      <h>99</h>
+      <x>156</x>
+      <y>102</y>
+      <w>354</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>sistemas.Sistema
 --
-+ proyectosRegistrados(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-31-03-2025
-+ proyectoParcipativo(titulo: String): ProyectoParticipativo
-+ proyectoParcipativo(codigo: int): ProyectoParticipativo
-+ obtenerMapaProyectoApoyos(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-31-03-2025
-+ obtenerMapaProyectoCiudadanos(): AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025
++ proponerProyecto(p : ProyectoParticipativo): boolean
++ proyectosRegistrados(): set&lt;ProyectoParticipativo&gt;
++ obtenerProyecto(titulo: String): ProyectoParticipativo
++ obtenerProyecto(codigo: int): ProyectoParticipativo
++ obtenerMapaProyectoApoyos(): SortedMap&lt;ProyectoParticipativo, int&gt;
++ obtenerMapaProyectoCiudadanos(): Map&lt;ProyectoParticipativo, Set&lt;Ciudadano&gt; &gt;
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>126</y>
-      <w>81</w>
-      <h>135</h>
+      <x>312</x>
+      <y>174</y>
+      <w>54</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
 m2=*
@@ -112,9 +118,9 @@ r2=proyectos</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>342</y>
-      <w>189</w>
-      <h>45</h>
+      <y>318</y>
+      <w>126</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>&lt;&lt;import from proponentes&gt;&gt;
 /EnteCiudadano/</panel_attributes>
@@ -123,10 +129,10 @@ r2=proyectos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>315</y>
-      <w>144</w>
-      <h>72</h>
+      <x>120</x>
+      <y>300</y>
+      <w>96</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m2=*
@@ -136,25 +142,74 @@ r2=Apoyos</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>846</x>
-      <y>288</y>
-      <w>423</w>
-      <h>90</h>
+      <x>564</x>
+      <y>294</y>
+      <w>132</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;import from AQUIVAUNAGILIPOLLEZ-DIEGOLESMA-01-04-2025&gt;&gt;
+    <panel_attributes>&lt;&lt;import from anouncements&gt;&gt;
 FollowedEntity</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>657</x>
-      <y>315</y>
-      <w>207</w>
-      <h>36</h>
+      <x>438</x>
+      <y>300</y>
+      <w>138</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;..
 implements</panel_attributes>
     <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>114</x>
+      <y>498</y>
+      <w>156</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>ProyectoCiudadano
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>414</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>366</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;import from anouncement&gt;&gt;
+FollowerManager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>438</x>
+      <y>366</y>
+      <w>126</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=*
+r2=followers</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
 </diagram>

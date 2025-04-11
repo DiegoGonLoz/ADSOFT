@@ -6,10 +6,16 @@ import sistemas.Sistema;
 
 import java.util.List;
 
-
+/**
+ * Clase para hacer tests del apartado dos de la práctica
+ *
+ * @author Diego Lesma
+ */
 public class Apartado2Tests {
-    public Apartado2Tests() {}
-
+    /**
+     * Metodo main de los tests
+     * @param args ninguno
+     */
     public static void main(String[] args) {
 
         try {
@@ -36,6 +42,12 @@ public class Apartado2Tests {
         }
     }
 
+    /**
+     * Metodo para probar la creacion proyectos para los tester
+     * @param proponentes Lista de proponentes
+     * @throws PorcentajeInvalido error porcentaje debe ser >0 y <100
+     * @throws PresupuestoMenorIgualCero presupuesto debe ser >=0
+     */
     private static void testCreacionProyectos(List<Proponente> proponentes)
             throws PorcentajeInvalido, PresupuestoMenorIgualCero {
 
@@ -49,6 +61,11 @@ public class Apartado2Tests {
         System.out.println(sistema.proyectosRegistrados());
     }
 
+    /**
+     * Metodo para generar proyectos para el tester
+     * @param proponentes Lista de proponentes
+     * @return Lista de proyectos
+     */
     public static List<ProyectoParticipativo> obtenerProyectosTest(List<Proponente> proponentes) {
         ProyectoCiudadano proyectoPart = new ProyectoCiudadano(
                 "Limpieza del Manzanares",
@@ -68,6 +85,10 @@ public class Apartado2Tests {
         return List.of(proyectoPart, proyectoFund);
     }
 
+    /**
+     * Metodo para probar los proyectos participativos
+     * @param ciudadano objeto ciudadano
+     */
     private static void testProyectoParticipativo(Ciudadano ciudadano) {
         ProyectoCiudadano proyecto = new ProyectoCiudadano(
                 "Biblioteca Municipal",
@@ -82,6 +103,10 @@ public class Apartado2Tests {
         System.out.println("Hora creación: " + proyecto.getHora());
     }
 
+    /**
+     * Metodo para probar los proyectos de fundación
+     * @param proponentes lista de proponentes
+     */
     private static void testProyectoFundacion(List<Proponente> proponentes) {
         Fundacion fundacion = (Fundacion) proponentes.get(5);
 

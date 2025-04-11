@@ -11,10 +11,16 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedMap;
 
-
+/**
+ * Clase encargada de los test del apartado 3
+ *
+ * @author Diego Lesma
+ */
 public class Apartado3Tests {
-    public Apartado3Tests() {}
-
+    /**
+     * Metodo principal del tester
+     * @param args vacío
+     */
     public static void main(String[] args) {
 
         try {
@@ -39,7 +45,10 @@ public class Apartado3Tests {
         }
     }
 
-
+    /**
+     * Metodo que prueba los mapas
+     * @param proponentes lista de proponentes
+     */
     private static void testFuncionesMapa(List<Proponente> proponentes) {
         Sistema sistema = Sistema.getInstance();
         SortedMap<ProyectoParticipativo, Integer> mapaApoyos;
@@ -70,6 +79,10 @@ public class Apartado3Tests {
 
     }
 
+    /**
+     * Metodo para probar que funciona en casos normales
+     * @param proponentes Lista de proponentes
+     */
     private static void testApoyarProyectosNormales(List<Proponente> proponentes){
         Ciudadano ciudadano1 = (Ciudadano) proponentes.get(0);
         Ciudadano ciudadano2 = (Ciudadano) proponentes.get(1);
@@ -84,6 +97,10 @@ public class Apartado3Tests {
         System.out.println("Ciudadanos asociados: \n" + proyecto.todosLosCiudadanos());
     }
 
+    /**
+     * Metodo para probar que funcionan las excepciones solicitadas
+     * @param proponentes Lista de proponentes
+     */
     private static void testApoyarProyectosExcepciones(List<Proponente> proponentes) {
         Ciudadano ciudadano1 = (Ciudadano) proponentes.get(0);
         Ciudadano ciudadano2 = (Ciudadano) proponentes.get(1);
