@@ -1,0 +1,11 @@
+En esta practica: genericidad, expresiones lambda y patrones de diseño
+
+Mirar teoria para las interfaces funcionales
+
+Mapa: nombres->funciones
+
+Apartado 3:
+- Guardar la expresion lambda en una estructura y usarla cuando toque
+
+Apartado 4:
+- Guardar los estados en una lista
