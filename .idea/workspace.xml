@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Apartado1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/NumericData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/proyectos/ProyectoParticipativo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sistemas/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sistemas/Sistema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importante.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importante.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/enteCiudadanoEsMiembro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/errorAnadiendoCiudadanoExistente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/errorAnadiendoFundacionExistente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/errorApoyandoProyecto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/estrategiaNoCompatible.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/formatoCifIncorrecto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/formatoNifIncorrecto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/inscripcionInviable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/porcentajeInvalido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/presupuestoMenorIgualCero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/proyectoMasDe60Dias.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/proyectoPropuestoPorSiMismo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/Edge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
     </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,16 +36,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Exception" />
         <option value="Enum" />
+        <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Practica5" />
+        <entry key="$PROJECT_DIR$" value="Practica4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,12 +79,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Apartado1Test.executor": "Run",
     "Application.ProyectosTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "Practica4",
+    "git-widget-placeholder": "Practica5",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/diego_gonzalez/Descargas/PADSOF_2/src/GUI/logIn/logInMainView.java",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -77,6 +96,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="myExceptions" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -180,6 +204,10 @@
       <workItem from="1744128752703" duration="684000" />
       <workItem from="1744217085961" duration="1090000" />
       <workItem from="1744302917151" duration="2172000" />
+      <workItem from="1745427856310" duration="598000" />
+      <workItem from="1745511053246" duration="34000" />
+      <workItem from="1746029671179" duration="5000" />
+      <workItem from="1746029682683" duration="3878000" />
     </task>
     <task id="LOCAL-00011" summary="Bombardeen Adsoft">
       <option name="closed" value="true" />
@@ -229,7 +257,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744303984077</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1745425647860</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1745425647860</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1745511077061</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1745511077061</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,8 +293,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesma.guisantada()" />
     <MESSAGE value="Bombardeen Adsoft" />
-    <MESSAGE value="Bombardeen ADSOFT" />
     <MESSAGE value="Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore" />
+    <MESSAGE value="Bombardeen ADSOFT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bombardeen ADSOFT" />
   </component>
 </project>

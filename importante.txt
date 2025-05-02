@@ -9,3 +9,6 @@ Apartado 3:
 
 Apartado 4:
 - Guardar los estados en una lista
+
+Apartado 5:
+- Decorar grafos y nodos (diagrama duplicado)
