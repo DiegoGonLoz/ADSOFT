@@ -10,7 +10,7 @@ public class Apartado1Test {
         System.out.println("result = " + output);
     }
 
-    private static StateGraph<NumericData> buildWorkflow(){
+    public static StateGraph<NumericData> buildWorkflow(){
         StateGraph<NumericData> sg = new StateGraph<>("math2", "Add tow numbers, and then square");
 
         sg.addNode("sum", (NumericData no) -> no.put("result", no.get("op1")+no.get("op2")));

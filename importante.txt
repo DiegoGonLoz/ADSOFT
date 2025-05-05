@@ -2,7 +2,7 @@ En esta practica: genericidad, expresiones lambda y patrones de diseño
 
 Mirar teoria para las interfaces funcionales
 
-Mapa: nombres->funciones
+Si el nodo no se ejecuta, hay que ir por otro o seguir
 
 Apartado 3:
 - Guardar la expresion lambda en una estructura y usarla cuando toque

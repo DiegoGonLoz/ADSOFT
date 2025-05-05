@@ -3,10 +3,9 @@ package workflows;
 import myExceptions.AlreadyExistingNode;
 import myExceptions.NonExistingNode;
 
-import java.util.LinkedList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class StateGraph<T>{
     private final String name;
@@ -15,7 +14,7 @@ public class StateGraph<T>{
     private String last = null;
 
     private final HashMap<String, Node<T>> nodes = new HashMap<>();
-    private final HashMap<String, List<String>> edges = new HashMap<>();
+    private final HashMap<String, LinkedHashMap<String, Predicate<T>>> edges = new HashMap<>();
 
     public StateGraph(String name, String description){
         this.name = name;
@@ -33,6 +32,10 @@ public class StateGraph<T>{
     }
 
     public StateGraph addEdge(String origin, String destination){
+        return addConditionalEdge(origin, destination, (T input) -> true);
+    }
+
+    public StateGraph addConditionalEdge(String origin, String destination, Predicate<T> condition){
         if(!existNode(origin)){
             throw new NonExistingNode("Node " + origin + " does not exist in graph " + name);
         }
@@ -41,8 +44,8 @@ public class StateGraph<T>{
             throw new NonExistingNode("Node " + destination + " does not exist in graph " + name);
         }
 
-        edges.computeIfAbsent(origin, k -> new LinkedList<>());
-        edges.get(origin).add(destination);
+        edges.computeIfAbsent(origin, k -> new LinkedHashMap<>());
+        edges.get(origin).put(destination, condition);
 
         return this;
     }
@@ -76,29 +79,37 @@ public class StateGraph<T>{
             /*TODO - Completar*/
         }
 
-        return runSubtree(input, debug, this.initial);
+        return runSubtree(input, debug, this.initial, true);
     }
 
     private boolean existNode(String node){
         return nodes.containsKey(node);
     }
 
-    private T runSubtree(T input, boolean debug, String node){
+    private T runSubtree(T input, boolean debug, String node, boolean runnable){
         T result = null;
         /*TODO - Hacer debug*/
-        nodes.get(node).run(input);
+        if(runnable){
+            nodes.get(node).run(input);
+        }
+
         if(this.last.equals(node)){
             return input;
         }
 
-        List<String> childs = edges.get(node);
+        LinkedHashMap<String, Predicate<T>> predicates = edges.get(node);
+
+        Set<String> childs = predicates.keySet();
         for(String child : childs){
-            result = runSubtree(input, debug, child);
+            result = runSubtree(input, debug, child, predicates.get(child).test(input));
             if(result != null){
                 return result;
             }
         }
 
         return result;
+    }
+
+    public T addwfNode(String calculate, StateGraph<NumericData> wfNumeric) {
     }
 }
