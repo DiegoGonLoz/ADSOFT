@@ -7,13 +7,13 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class StateGraph<T>{
+public class StateGraph<T> implements Consumer<T>{
     private final String name;
     private final String description;
     private String initial = null;
     private String last = null;
 
-    private final HashMap<String, Node<T>> nodes = new HashMap<>();
+    private final HashMap<String, Consumer<T>> nodes = new HashMap<>();
     private final HashMap<String, LinkedHashMap<String, Predicate<T>>> edges = new HashMap<>();
 
     public StateGraph(String name, String description){
@@ -21,21 +21,36 @@ public class StateGraph<T>{
         this.description = description;
     }
 
-    public StateGraph addNode(String node, Consumer<T> operator) throws AlreadyExistingNode {
+    public StateGraph<T> addNode(String node, Consumer<T> operator) throws AlreadyExistingNode {
         if(existNode(node)){
-            throw new AlreadyExistingNode("Node " + node + " already exists in graph " + name);
+            throw new AlreadyExistingNode(node, name);
         }
 
-        nodes.put(node, new Node<T>(operator));
+        Node<T> newNode = new Node<T>();
+        newNode.setOperator(operator);
+
+        nodes.put(node, newNode);
 
         return this;
     }
 
-    public StateGraph addEdge(String origin, String destination){
+    public <S> WfNode<T, S> addWfNode(String node, StateGraph<S> wf) {
+        if(existNode(node)){
+            throw new AlreadyExistingNode(node, name);
+        }
+
+        WfNode<T, S>wfNode = new WfNode<>(wf);
+
+        nodes.put(node, wfNode);
+
+        return wfNode;
+    }
+
+    public StateGraph<T> addEdge(String origin, String destination){
         return addConditionalEdge(origin, destination, (T input) -> true);
     }
 
-    public StateGraph addConditionalEdge(String origin, String destination, Predicate<T> condition){
+    public StateGraph<T> addConditionalEdge(String origin, String destination, Predicate<T> condition){
         if(!existNode(origin)){
             throw new NonExistingNode("Node " + origin + " does not exist in graph " + name);
         }
@@ -66,12 +81,13 @@ public class StateGraph<T>{
         this.last = node;
     }
 
+    public void accept(T input){
+        run(input, false);
+    }
+
     public T run(T input, boolean debug){
         if(this.initial == null){
             throw new NonExistingNode("Initial node does not exist in graph " + name);
-        }
-        if(this.last == null){
-            throw new NonExistingNode("Last node does not exist in graph " + name);
         }
 
         if(debug){
@@ -79,21 +95,21 @@ public class StateGraph<T>{
             /*TODO - Completar*/
         }
 
-        return runSubtree(input, debug, this.initial, true);
+        return runSubtree(input, debug, this.initial);
     }
 
     private boolean existNode(String node){
         return nodes.containsKey(node);
     }
 
-    private T runSubtree(T input, boolean debug, String node, boolean runnable){
+    private T runSubtree(T input, boolean debug, String node){
         T result = null;
         /*TODO - Hacer debug*/
-        if(runnable){
-            nodes.get(node).run(input);
-        }
 
-        if(this.last.equals(node)){
+        nodes.get(node).accept(input);
+
+
+        if(this.last != null &&this.last.equals(node)){
             return input;
         }
 
@@ -101,15 +117,14 @@ public class StateGraph<T>{
 
         Set<String> childs = predicates.keySet();
         for(String child : childs){
-            result = runSubtree(input, debug, child, predicates.get(child).test(input));
-            if(result != null){
-                return result;
+            if( predicates.get(child).test(input)){
+                result = runSubtree(input, debug, child);
+                if(result != null){
+                    return result;
+                }
             }
         }
 
         return result;
-    }
-
-    public T addwfNode(String calculate, StateGraph<NumericData> wfNumeric) {
     }
 }

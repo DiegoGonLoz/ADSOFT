@@ -13,8 +13,8 @@ public class Apartado1Test {
     public static StateGraph<NumericData> buildWorkflow(){
         StateGraph<NumericData> sg = new StateGraph<>("math2", "Add tow numbers, and then square");
 
-        sg.addNode("sum", (NumericData no) -> no.put("result", no.get("op1")+no.get("op2")));
-        sg.addNode("square", (NumericData no) -> no.put("result", no.get("result")*no.get("result")));
+        sg.addNode("sum", (NumericData no) -> no.put("result", no.get("op1")+no.get("op2")))
+                .addNode("square", (NumericData no) -> no.put("result", no.get("result")*no.get("result")));
 
         sg.addEdge("sum", "square");
 

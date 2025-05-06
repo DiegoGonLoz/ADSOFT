@@ -2,14 +2,14 @@ package workflows;
 
 import java.util.function.Consumer;
 
-public class Node<T> {
-    private final Consumer<T> operator;
+public class Node<T> implements Consumer<T>{
+    private Consumer<T> operator;
 
-    public Node(Consumer<T> operator){
+    public void setOperator(Consumer<T> operator){
         this.operator = operator;
     }
 
-    public void run(T input){
+    public void accept(T input){
         operator.accept(input);
     }
 }
