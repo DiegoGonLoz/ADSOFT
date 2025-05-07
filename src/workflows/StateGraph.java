@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class StateGraph<T> implements Consumer<T>{
+public class StateGraph<T> implements StateGraphInterface<T> {
     private final String name;
     private final String description;
     private String initial = null;
