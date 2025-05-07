@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT" />
+    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
+      <change afterPath="$PROJECT_DIR$/tests/Apartado2Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Apartado4Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/TextData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado3Test.java" afterDir="false" />
+    </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +42,12 @@
     &quot;assignee&quot;: &quot;DiegoGonLoz&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DiegoGonLoz/ADSOFT.git&quot;,
-    &quot;accountId&quot;: &quot;abc1697a-d23e-4b86-b582-0ffe9e30938f&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DiegoGonLoz/ADSOFT.git",
+    "accountId": "0d2b716f-bd8d-4d1c-ae7e-595ecc901773"
   }
-}</component>
+}]]></component>
   <component name="PerforceDirect.Settings">
     <option name="useP4IGNORE" value="false" />
     <option name="pathToIgnore" value=".gitignore" />
@@ -80,11 +88,25 @@
       <recent name="myExceptions" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Apartado3Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Apartado3Test" />
+      <module name="ADSOFT" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Apartado3Test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -193,6 +215,7 @@
       <workItem from="1746462368672" duration="2363000" />
       <workItem from="1746508520950" duration="2416000" />
       <workItem from="1746547930031" duration="2153000" />
+      <workItem from="1746614603120" duration="3898000" />
     </task>
     <task id="LOCAL-00011" summary="Bombardeen Adsoft">
       <option name="closed" value="true" />
