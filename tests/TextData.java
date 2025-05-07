@@ -2,31 +2,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TextData {
-    private Map<String, String> data;
+    private final Map<String, String> data;
     private String currentOperation;
 
     public TextData(String initialText) {
         this.data = new HashMap<>();
         this.data.put("text", initialText);
-        this.data.put("result", "");
+        this.data.put("result", initialText);  // Inicializamos result con el texto de entrada
         this.currentOperation = "none";
     }
 
+    // Versión corregida - opera sobre el result actual
     public void toUpperCase() {
-        String text = data.get("text");
-        data.put("result", text.toUpperCase());
+        String currentResult = data.get("result");
+        data.put("result", currentResult.toUpperCase());
         currentOperation = "uppercase";
     }
 
+    // Versión corregida - opera sobre el result actual
     public void reverse() {
-        String text = data.get("text");
-        data.put("result", new StringBuilder(text).reverse().toString());
+        String currentResult = data.get("result");
+        data.put("result", new StringBuilder(currentResult).reverse().toString());
         currentOperation = "reverse";
     }
 
+    // Versión corregida - opera sobre el result actual
     public void append(String suffix) {
-        String text = data.get("text");
-        data.put("result", text + suffix);
+        String currentResult = data.get("result");
+        data.put("result", currentResult + suffix);
         currentOperation = "append";
     }
 

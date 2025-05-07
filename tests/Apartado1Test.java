@@ -2,10 +2,7 @@ import workflows.StateGraph;
 
 public class Apartado1Test {
     public static void main(String[] args) {
-        // Test original con NumericData
         testWorkflow();
-
-        // Test adicional con TextData
         testTextWorkflow();
     }
 
