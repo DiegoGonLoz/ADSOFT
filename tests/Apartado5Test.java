@@ -1,12 +1,22 @@
 import workflows.*;
 
+/**
+ * Clase test para el apartado 5
+ * @author Diego Lesma
+ */
 public class Apartado5Test {
+    /**
+     * Metodo main a ejecutar
+     * @param args vacío
+     */
     public static void main(String[] args) {
-        testProfilerWorkflow();   // Test original con NumericData
-        testTextProfilerWorkflow(); // Test adicional con TextData
+        testProfilerWorkflow();
+        testTextProfilerWorkflow();
     }
 
-    // Test original con NumericData (salida como pide el enunciado)
+    /**
+     * Test con NumericData
+     */
     public static void testProfilerWorkflow() {
         StateGraph<NumericData> g = new StateGraph<>("loop-down", "Get a number, and decrease if positive");
         StateGraphLogger<NumericData> lg = new StateGraphLogger<>(g, "traces.txt");
@@ -23,7 +33,9 @@ public class Apartado5Test {
         System.out.println("history = "+ ((StateGraphProfiler<NumericData>)sg).history());
     }
 
-    // Test adicional con TextData
+    /**
+     * Test con TextData
+     */
     public static void testTextProfilerWorkflow() {
         StateGraph<TextData> g = new StateGraph<>("text-process", "Text processing with profiling");
         StateGraphLogger<TextData> lg = new StateGraphLogger<>(g, "text_traces.txt");

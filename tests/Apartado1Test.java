@@ -1,11 +1,22 @@
 import workflows.StateGraph;
 
+/**
+ * Clase test para el apartado 1
+ * @author Diego Lesma
+ */
 public class Apartado1Test {
+    /**
+     * Metodo main a ejecutar
+     * @param args vacío
+     */
     public static void main(String[] args) {
         testWorkflow();
         testTextWorkflow();
     }
 
+    /**
+     * Test aportado en el enunciado
+     */
     public static void testWorkflow() {
         StateGraph<NumericData> sg = buildWorkflow();
 
@@ -18,6 +29,9 @@ public class Apartado1Test {
         System.out.println("result = " + output);
     }
 
+    /**
+     * Test hecho con una nueva clase
+     */
     public static void testTextWorkflow() {
         StateGraph<TextData> sg = new StateGraph<>("text-ops", "Text operations");
 
@@ -35,6 +49,10 @@ public class Apartado1Test {
         System.out.println("result = " + output);
     }
 
+    /**
+     * Metodo auxiliar empleado en tests anteriores
+     * @return un grafo inicializado para testar
+     */
     public static StateGraph<NumericData> buildWorkflow() {
         StateGraph<NumericData> sg = new StateGraph<>("math2", "Add two numbers, and then square");
         sg.addNode("sum", (NumericData no) -> no.put("result", no.get("op1") + no.get("op2")))
