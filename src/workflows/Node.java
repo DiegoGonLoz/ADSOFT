@@ -1,6 +1,5 @@
 package workflows;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -15,14 +14,17 @@ public class Node<T> implements NodeInterface<T>{
         this.name = name;
     }
 
+    @Override
     public void setOperator(Consumer<? super T> operator){
         this.operator = operator;
     }
 
+    @Override
     public void run(T input){
         operator.accept(input);
     }
 
+    @Override
     public void addEdge(String node, Predicate<T> condition){
         if(edges.containsKey(node)){
             return;
@@ -30,8 +32,14 @@ public class Node<T> implements NodeInterface<T>{
         edges.put(node, condition);
     }
 
+    @Override
     public LinkedHashMap<String, Predicate<T>> getEdges(){
         return new LinkedHashMap<String, Predicate<T>>(edges);
+    }
+
+    @Override
+    public String getName(){
+        return name;
     }
 
     @Override

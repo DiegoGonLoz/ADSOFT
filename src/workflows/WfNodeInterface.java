@@ -3,7 +3,7 @@ package workflows;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
-public interface WfNodeInterface<T, S> {
+public interface WfNodeInterface<T, S> extends NodeInterface<T>{
 
     public WfNodeInterface<T, S> withInjector(Function<T, S> injector);
 

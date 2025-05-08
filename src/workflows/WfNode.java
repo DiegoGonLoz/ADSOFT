@@ -7,9 +7,9 @@ public class WfNode<T, S> extends Node<T> implements WfNodeInterface<T,S>{
     private Function<T, S> injector;
     private BiConsumer<S, T> extractor;
 
-    private WorkflowInterface<S> workflow;
+    private StateGraphInterface<S> workflow;
 
-    public WfNode(String name, WorkflowInterface<S> workflow) {
+    public WfNode(String name, StateGraphInterface<S> workflow) {
         super(name);
 
         this.workflow = workflow;

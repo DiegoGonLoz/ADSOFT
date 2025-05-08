@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change beforePath="$PROJECT_DIR$/tests/Apartado1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/NodeDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/NodeLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/NodeProfiler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/StateGraphDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/StateGraphLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/StateGraphProfiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/NodeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/NodeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/WfNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/WfNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/WfNodeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/WfNodeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/WorkflowInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphInterface.java" afterDir="false" />
     </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -309,7 +321,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746635450598</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746663074315</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746663074315</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746663095364</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746663095364</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746663337713</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746663337713</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746663385620</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1746663385620</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

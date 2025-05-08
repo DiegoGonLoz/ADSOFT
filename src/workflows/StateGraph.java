@@ -3,11 +3,12 @@ package workflows;
 import myExceptions.AlreadyExistingNode;
 import myExceptions.NonExistingNode;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.SequencedSet;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class StateGraph<T> implements WorkflowInterface<T> {
+public class StateGraph<T> implements StateGraphInterface<T> {
     private final String name;
     private final String description;
     private String initial = null;
@@ -15,7 +16,7 @@ public class StateGraph<T> implements WorkflowInterface<T> {
 
     private int steps;
 
-    private final LinkedHashMap<String, Node<T>> nodes = new LinkedHashMap<>();
+    private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();
 
     public StateGraph(String name, String description){
         this.name = name;
@@ -28,7 +29,8 @@ public class StateGraph<T> implements WorkflowInterface<T> {
             throw new AlreadyExistingNode(node, name);
         }
 
-        Node<T> newNode = new Node<T>(node);
+        Node<T> auxNode = new Node<>(node);
+        NodeInterface<T> newNode = createNode(auxNode);
         newNode.setOperator(operator);
 
         nodes.put(node, newNode);
@@ -37,16 +39,27 @@ public class StateGraph<T> implements WorkflowInterface<T> {
     }
 
     @Override
-    public <S> WfNode<T, S> addWfNode(String node, WorkflowInterface<S> wf) {
+    public NodeInterface<T> createNode(NodeInterface<T> node){
+        return node;
+    }
+
+    @Override
+    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) {
         if(existNode(node)){
             throw new AlreadyExistingNode(node, name);
         }
 
-        WfNode<T, S>wfNode = new WfNode<>(node, wf);
+        WfNodeInterface<T, S> wfNode = createWfNode(node, wf);
+        NodeInterface<T> newNode = createNode(wfNode);
 
-        nodes.put(node, wfNode);
+        nodes.put(node, newNode);
 
         return wfNode;
+    }
+
+    @Override
+    public <S> WfNodeInterface<T, S> createWfNode(String node, StateGraphInterface<S> wf){
+        return new WfNode(node, wf);
     }
 
     @Override
@@ -121,8 +134,7 @@ public class StateGraph<T> implements WorkflowInterface<T> {
 
         steps++;
 
-        Node<T> runningNode = nodes.get(node);
-
+        NodeInterface<T> runningNode = nodes.get(node);
         runningNode.run(input);
 
         if(debug){

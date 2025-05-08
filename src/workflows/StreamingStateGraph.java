@@ -23,15 +23,15 @@ public class StreamingStateGraph<T>{
         return graph.addNode(node, operator);
     }
 
-    public <S> WfNodeInterface<List<T>, S> addWfNode(String node, WorkflowInterface<S> wf) throws AlreadyExistingNode {
+    public <S> WfNodeInterface<List<T>, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode {
         return graph.addWfNode(node, wf);
     }
 
-    public WorkflowInterface<List<T>> addEdge(String origin, String destination) {
+    public StateGraphInterface<List<T>> addEdge(String origin, String destination) {
         return graph.addEdge(origin, destination);
     }
 
-    public WorkflowInterface<List<T>> addConditionalEdge(String origin, String destination, Predicate<List<T>> condition) {
+    public StateGraphInterface<List<T>> addConditionalEdge(String origin, String destination, Predicate<List<T>> condition) {
         return graph.addConditionalEdge(origin, destination, condition);
     }
 
