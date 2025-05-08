@@ -60,6 +60,7 @@ public interface StateGraphInterface<T> extends NodeFactory<T>{
     NodeFactory<T> getNodeFactory();
 
     StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory);
+
     /**
      * Metodo run
      * @param input input a correr
