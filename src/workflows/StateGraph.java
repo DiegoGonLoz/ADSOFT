@@ -3,7 +3,8 @@ package workflows;
 import myExceptions.AlreadyExistingNode;
 import myExceptions.NonExistingNode;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.SequencedSet;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -13,20 +14,23 @@ public class StateGraph<T> implements StateGraphInterface<T> {
     private String initial = null;
     private String last = null;
 
-    private final HashMap<String, Consumer<T>> nodes = new HashMap<>();
-    private final HashMap<String, LinkedHashMap<String, Predicate<T>>> edges = new HashMap<>();
+    private int steps;
+
+    private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();
 
     public StateGraph(String name, String description){
         this.name = name;
         this.description = description;
     }
 
-    public StateGraph<T> addNode(String node, Consumer<T> operator) throws AlreadyExistingNode {
+    @Override
+    public StateGraph<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode {
         if(existNode(node)){
             throw new AlreadyExistingNode(node, name);
         }
 
-        Node<T> newNode = new Node<T>();
+        Node<T> auxNode = new Node<>(node);
+        NodeInterface<T> newNode = createNode(auxNode);
         newNode.setOperator(operator);
 
         nodes.put(node, newNode);
@@ -34,22 +38,36 @@ public class StateGraph<T> implements StateGraphInterface<T> {
         return this;
     }
 
-    public <S> WfNode<T, S> addWfNode(String node, StateGraph<S> wf) {
+    @Override
+    public NodeInterface<T> createNode(NodeInterface<T> node){
+        return node;
+    }
+
+    @Override
+    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) {
         if(existNode(node)){
             throw new AlreadyExistingNode(node, name);
         }
 
-        WfNode<T, S>wfNode = new WfNode<>(wf);
+        WfNodeInterface<T, S> wfNode = createWfNode(node, wf);
+        NodeInterface<T> newNode = createNode(wfNode);
 
-        nodes.put(node, wfNode);
+        nodes.put(node, newNode);
 
         return wfNode;
     }
 
+    @Override
+    public <S> WfNodeInterface<T, S> createWfNode(String node, StateGraphInterface<S> wf){
+        return new WfNode(node, wf);
+    }
+
+    @Override
     public StateGraph<T> addEdge(String origin, String destination){
         return addConditionalEdge(origin, destination, (T input) -> true);
     }
 
+    @Override
     public StateGraph<T> addConditionalEdge(String origin, String destination, Predicate<T> condition){
         if(!existNode(origin)){
             throw new NonExistingNode("Node " + origin + " does not exist in graph " + name);
@@ -59,12 +77,12 @@ public class StateGraph<T> implements StateGraphInterface<T> {
             throw new NonExistingNode("Node " + destination + " does not exist in graph " + name);
         }
 
-        edges.computeIfAbsent(origin, k -> new LinkedHashMap<>());
-        edges.get(origin).put(destination, condition);
+        nodes.get(origin).addEdge(destination, condition);
 
         return this;
     }
 
+    @Override
     public void setInitial(String node){
         if(!existNode(node)){
             throw new NonExistingNode("Node " + node + " does not exist in graph " + name);
@@ -73,6 +91,7 @@ public class StateGraph<T> implements StateGraphInterface<T> {
         this.initial = node;
     }
 
+    @Override
     public void setFinal(String node){
         if(!existNode(node)){
             throw new NonExistingNode("Node " + node + " does not exist in graph " + name);
@@ -81,21 +100,29 @@ public class StateGraph<T> implements StateGraphInterface<T> {
         this.last = node;
     }
 
-    public void accept(T input){
-        run(input, false);
-    }
-
+    @Override
     public T run(T input, boolean debug){
         if(this.initial == null){
             throw new NonExistingNode("Initial node does not exist in graph " + name);
         }
 
+        steps = 1;
+
         if(debug){
-            System.out.println("Workflow '"+name+"'("+description+"):\n");
-            /*TODO - Completar*/
+            System.out.println("- Step 1 ("+name+") - input: " + input);
         }
 
-        return runSubtree(input, debug, this.initial);
+        runSubtree(input, debug, this.initial);
+
+        return input;
+    }
+
+    @Override
+    public String toString(){
+        return "Workflow '" + name + "' (" + description + "): \n"+
+                "- Nodes: "+ nodes + "\n"+
+                "- Initial: " + initial +"\n"+
+                "- Final: " + last;
     }
 
     private boolean existNode(String node){
@@ -104,20 +131,25 @@ public class StateGraph<T> implements StateGraphInterface<T> {
 
     private T runSubtree(T input, boolean debug, String node){
         T result = null;
-        /*TODO - Hacer debug*/
 
-        nodes.get(node).accept(input);
+        steps++;
 
+        NodeInterface<T> runningNode = nodes.get(node);
+        runningNode.run(input);
+
+        if(debug){
+            System.out.println("- Step "+ steps+": ("+name+") - "+node+" executed: " +input);
+        }
 
         if(this.last != null &&this.last.equals(node)){
             return input;
         }
 
-        LinkedHashMap<String, Predicate<T>> predicates = edges.get(node);
+        LinkedHashMap<String, Predicate<T>> edges = runningNode.getEdges();
 
-        Set<String> childs = predicates.keySet();
+        SequencedSet<String> childs = edges.sequencedKeySet();
         for(String child : childs){
-            if( predicates.get(child).test(input)){
+            if(edges.get(child).test(input)){
                 result = runSubtree(input, debug, child);
                 if(result != null){
                     return result;
@@ -127,4 +159,6 @@ public class StateGraph<T> implements StateGraphInterface<T> {
 
         return result;
     }
+
+
 }

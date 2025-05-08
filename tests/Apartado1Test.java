@@ -8,7 +8,10 @@ public class Apartado1Test {
 
     public static void testWorkflow() {
         StateGraph<NumericData> sg = buildWorkflow();
-        NumericData input = new NumericData(2, 3);
+
+        System.out.println(sg);
+
+        NumericData input = new NumericData(2,3);
         System.out.println("--- TEST MATH WORKFLOW ---");
         System.out.println("input = " + input);
         NumericData output = sg.run(input, true);
@@ -37,8 +40,10 @@ public class Apartado1Test {
         sg.addNode("sum", (NumericData no) -> no.put("result", no.get("op1") + no.get("op2")))
                 .addNode("square", (NumericData no) -> no.put("result", no.get("result") * no.get("result")));
         sg.addEdge("sum", "square");
+
         sg.setInitial("sum");
         sg.setFinal("square");
+
         return sg;
     }
 }

@@ -1,22 +1,28 @@
 package workflows;
 
+import myExceptions.AlreadyExistingNode;
+
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public interface StateGraphInterface<T> extends Consumer<T>{
-    StateGraph<T> addNode(String node, Consumer<T> operator);
+public interface StateGraphInterface<T>{
+    public StateGraph<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode;
 
-    <S> WfNode<T, S> addWfNode(String node, StateGraph<S> wf);
+    public NodeInterface<T> createNode(NodeInterface<T> node);
 
-    StateGraph<T> addEdge(String origin, String destination);
+    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode;
 
-    StateGraph<T> addConditionalEdge(String origin, String destination, Predicate<T> condition);
+    public <S> WfNodeInterface<T, S> createWfNode(String name, StateGraphInterface<S> wf);
 
-    void setInitial(String node);
+    public StateGraphInterface<T> addEdge(String origin, String destination);
 
-    void setFinal(String node);
+    public StateGraphInterface<T> addConditionalEdge(String origin, String destination, Predicate<T> condition);
 
-    void accept(T input);
+    public void setInitial(String node);
 
-    T run(T input, boolean debug);
+    public void setFinal(String node);
+
+    public T run(T input, boolean debug);
+
+    public String toString();
 }
