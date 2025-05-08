@@ -94,6 +94,12 @@ public class StreamingStateGraph<T>{
         graph.setFinal(node);
     }
 
+    /**
+     * Metodo run
+     * @param input input a ejecutar
+     * @param debug true o false según haya que debuggear
+     * @return lista de objetos
+     */
     public List<T> run(List<T> input, boolean debug) {
         history.addAll(input);
 

@@ -57,9 +57,19 @@ public interface StateGraphInterface<T> extends NodeFactory<T>{
      */
     public void setFinal(String node);
 
+    /**
+     * Metodo para obtener un NodeFactory
+     * @return NodeFactory
+     */
     NodeFactory<T> getNodeFactory();
 
+    /**
+     * Metodo para settear un NodeFactory
+     * @param factory NodeFactory
+     * @return Grafo al que se le añade
+     */
     StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory);
+
     /**
      * Metodo run
      * @param input input a correr
