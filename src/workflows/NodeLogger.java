@@ -6,14 +6,29 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Clase NodeLogger
+ * @param <T> objeto asociado
+ * @author Diego Gonzalez
+ */
 public class NodeLogger<T> extends NodeDecorator<T> {
+    /** fichero asociado */
     private final String file;
 
+    /**
+     * Constructor de NodeLogger
+     * @param node nodo tipo interfaz
+     * @param file fichero asociado
+     */
     public NodeLogger(NodeInterface<T> node, String file) {
         super(node);
         this.file = file;
     }
 
+    /**
+     * Metodo run
+     * @param input input del metodo run
+     */
     @Override
     public void run(T input) {
         super.run(input);
@@ -28,6 +43,10 @@ public class NodeLogger<T> extends NodeDecorator<T> {
         }
     }
 
+    /**
+     * Metodo toString de NodeLogger
+     * @return String con la información del nodo
+     */
     @Override
     public String toString() {
         return super.toString() + " [logged]";

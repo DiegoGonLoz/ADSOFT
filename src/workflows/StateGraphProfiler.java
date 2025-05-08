@@ -4,7 +4,13 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Clase grafo que hereda de StateGraphDecorator
+ * @param <T> objeto asociado
+ * @author Diego Gonzalez
+ */
 public class StateGraphProfiler<T> extends StateGraphDecorator<T>{
+    /** Historial de operaciones */
     private final List<String> history = new LinkedList<String>();
 
     public StateGraphProfiler(StateGraphInterface<T> graph){

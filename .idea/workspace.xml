@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change afterPath="$PROJECT_DIR$/tests/Apartado5Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/AlreadyExistingNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/AlreadyExistingNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/NonExistingNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/NonExistingNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraphInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraphInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/workflows/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado4Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/NodeDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/NodeDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/NodeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/NodeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/NodeLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/NodeLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/NodeProfiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/NodeProfiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraphDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphDecorator.java" afterDir="false" />
     </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -360,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746720931531</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746723180066</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1746723180066</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
