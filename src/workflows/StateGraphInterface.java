@@ -1,7 +1,6 @@
 package workflows;
 
 import myExceptions.AlreadyExistingNode;
-
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -10,7 +9,7 @@ import java.util.function.Predicate;
  * @param <T> objeto asociado
  * @author Diego Gonzalez
  */
-public interface StateGraphInterface<T>{
+public interface StateGraphInterface<T> extends NodeFactory<T>{
     /**
      * Metodo para añadir un nodo
      * @param node nodo a añadir
@@ -18,14 +17,7 @@ public interface StateGraphInterface<T>{
      * @return grafo modificado
      * @throws AlreadyExistingNode Excepción al añadir un nodo ya existente
      */
-    public StateGraph<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode;
-
-    /**
-     * Metodo para crear un nodo
-     * @param node nodo a crear
-     * @return nodo
-     */
-    public NodeInterface<T> createNode(NodeInterface<T> node);
+    public StateGraphInterface<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode;
 
     /**
      * Metodo para añadir un WfNode
@@ -37,21 +29,12 @@ public interface StateGraphInterface<T>{
     public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode;
 
     /**
-     * Metodo para crear un WfNode
-     * @param name nodo a crear
-     * @param wf objeto tipo interfaz de grafo
-     * @return nuevo nodo creado
-     * @param <S> objeto asociado al grafo
-     */
-    public <S> WfNodeInterface<T, S> createWfNode(String name, StateGraphInterface<S> wf);
-
-    /**
      * Metodo para añadir un edge
      * @param origin origen del edge
      * @param destination destino del edge
      * @return grafo modificado
      */
-    public StateGraphInterface<T> addEdge(String origin, String destination);
+    StateGraphInterface<T> addEdge(String origin, String destination);
 
     /**
      * Metodo para añadir un edge con condición
@@ -74,6 +57,9 @@ public interface StateGraphInterface<T>{
      */
     public void setFinal(String node);
 
+    NodeFactory<T> getNodeFactory();
+
+    StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory);
     /**
      * Metodo run
      * @param input input a correr

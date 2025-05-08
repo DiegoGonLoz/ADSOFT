@@ -1,0 +1,2 @@
+[08/05/2025 - 22:40:09] Node upper executed, with output: TextData{text='hello', result='HELLO', operation=uppercase}
+[08/05/2025 - 22:40:09] Node reverse executed, with output: TextData{text='hello', result='OLLEH', operation=reverse}

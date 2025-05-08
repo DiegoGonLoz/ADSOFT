@@ -42,7 +42,7 @@ public class StreamingStateGraph<T>{
      * @return grafo modificado
      * @throws AlreadyExistingNode Excepción al añadir un nodo ya existente
      */
-    public StateGraph<List<T>> addNode(String node, Consumer<? super List<T>> operator) throws AlreadyExistingNode {
+    public StateGraphInterface<List<T>> addNode(String node, Consumer<? super List<T>> operator) throws AlreadyExistingNode {
         return graph.addNode(node, operator);
     }
 

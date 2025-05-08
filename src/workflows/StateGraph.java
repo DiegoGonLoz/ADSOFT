@@ -26,6 +26,7 @@ public class StateGraph<T> implements StateGraphInterface<T> {
     private int steps;
     /** Mapa con los nodos */
     private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();
+    private NodeFactory<T> nodeFactory = this;
 
     /**
      * Constructor de la clase StateGraph
@@ -45,28 +46,24 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @throws AlreadyExistingNode Excepción al añadir un nodo ya existente
      */
     @Override
-    public StateGraph<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode {
-        if(existNode(node)){
+    public StateGraphInterface<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode {
+        if (nodes.containsKey(node)) {
             throw new AlreadyExistingNode(node, name);
         }
-
-        Node<T> auxNode = new Node<>(node);
-        NodeInterface<T> newNode = createNode(auxNode);
+        NodeInterface<T> newNode = nodeFactory.createNode(node);
         newNode.setOperator(operator);
-
         nodes.put(node, newNode);
-
         return this;
     }
 
     /**
      * Metodo para crear un nodo
-     * @param node nodo a crear
+     * @param name nodo a crear
      * @return nodo
      */
     @Override
-    public NodeInterface<T> createNode(NodeInterface<T> node){
-        return node;
+    public NodeInterface<T> createNode(String name) {
+        return new Node<>(name);
     }
 
     /**
@@ -77,29 +74,24 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @param <S> objeto asociado al grafo
      */
     @Override
-    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) {
-        if(existNode(node)){
+    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode {
+        if (nodes.containsKey(node)) {
             throw new AlreadyExistingNode(node, name);
         }
-
-        WfNodeInterface<T, S> wfNode = createWfNode(node, wf);
-        NodeInterface<T> newNode = createNode(wfNode);
-
+        WfNodeInterface<T, S> wfNode = new WfNode<>(node, wf);
+        NodeInterface<T> newNode = nodeFactory.createWfNode(wfNode);
         nodes.put(node, newNode);
-
         return wfNode;
     }
 
     /**
      * Metodo para crear un WfNode
-     * @param node nodo a crear
-     * @param wf objeto tipo interfaz de grafo
+     * @param wfNode objeto tipo interfaz de grafo
      * @return nuevo nodo creado
      * @param <S> objeto asociado al grafo
      */
-    @Override
-    public <S> WfNodeInterface<T, S> createWfNode(String node, StateGraphInterface<S> wf){
-        return new WfNode(node, wf);
+    public <S> NodeInterface<T> createWfNode(WfNodeInterface<T, S> wfNode) {
+        return wfNode;
     }
 
     /**
@@ -109,8 +101,8 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @return grafo modificado
      */
     @Override
-    public StateGraph<T> addEdge(String origin, String destination){
-        return addConditionalEdge(origin, destination, (T input) -> true);
+    public StateGraphInterface<T> addEdge(String origin, String destination) {
+        return addConditionalEdge(origin, destination, input -> true);
     }
 
     /**
@@ -121,17 +113,14 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @return grafo modificado
      */
     @Override
-    public StateGraph<T> addConditionalEdge(String origin, String destination, Predicate<T> condition){
-        if(!existNode(origin)){
+    public StateGraphInterface<T> addConditionalEdge(String origin, String destination, Predicate<T> condition) {
+        if (!nodes.containsKey(origin)) {
             throw new NonExistingNode("Node " + origin + " does not exist in graph " + name);
         }
-
-        if(!existNode(destination)){
+        if (!nodes.containsKey(destination)) {
             throw new NonExistingNode("Node " + destination + " does not exist in graph " + name);
         }
-
         nodes.get(origin).addEdge(destination, condition);
-
         return this;
     }
 
@@ -140,11 +129,10 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @param node nodo a configurar
      */
     @Override
-    public void setInitial(String node){
-        if(!existNode(node)){
+    public void setInitial(String node) {
+        if (!nodes.containsKey(node)) {
             throw new NonExistingNode("Node " + node + " does not exist in graph " + name);
         }
-
         this.initial = node;
     }
 
@@ -153,11 +141,10 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @param node nodo a configurar
      */
     @Override
-    public void setFinal(String node){
-        if(!existNode(node)){
+    public void setFinal(String node) {
+        if (!nodes.containsKey(node)) {
             throw new NonExistingNode("Node " + node + " does not exist in graph " + name);
         }
-
         this.last = node;
     }
 
@@ -168,19 +155,15 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @return objeto tipo input
      */
     @Override
-    public T run(T input, boolean debug){
-        if(this.initial == null){
+    public T run(T input, boolean debug) {
+        if (this.initial == null) {
             throw new NonExistingNode("Initial node does not exist in graph " + name);
         }
-
         steps = 1;
-
-        if(debug){
-            System.out.println("- Step 1 ("+name+") - input: " + input);
+        if (debug) {
+            System.out.println("- Step 1 (" + name + ") - input: " + input);
         }
-
-        runSubtree(input, debug, this.initial);
-
+        runSubtree(input, debug, initial);
         return input;
     }
 
@@ -189,11 +172,11 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @return String con información relevante
      */
     @Override
-    public String toString(){
-        return "Workflow '" + name + "' (" + description + "): \n"+
-                "- Nodes: "+ nodes + "\n"+
-                "- Initial: " + initial +"\n"+
-                "- Final: " + last;
+    public String toString() {
+        return "Workflow '" + name + "' (" + description + "): " +
+                "\n- Nodes: " + nodes +
+                "\n- Initial: " + initial +
+                "\n- Final: " + last;
     }
 
     /**
@@ -212,35 +195,37 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @param node nodo del que obtener el subárbol
      * @return árbol resultado
      */
-    private T runSubtree(T input, boolean debug, String node){
+    private T runSubtree(T input, boolean debug, String node) {
         T result = null;
-
         steps++;
-
         NodeInterface<T> runningNode = nodes.get(node);
         runningNode.run(input);
-
-        if(debug){
-            System.out.println("- Step "+ steps+": ("+name+") - "+node+" executed: " +input);
+        if (debug) {
+            System.out.println("- Step " + steps + ": (" + name + ") - " + node + " executed: " + input);
         }
-
-        if(this.last != null &&this.last.equals(node)){
+        if (last != null && last.equals(node)) {
             return input;
         }
-
         LinkedHashMap<String, Predicate<T>> edges = runningNode.getEdges();
-
-        SequencedSet<String> childs = edges.sequencedKeySet();
-        for(String child : childs){
-            if(edges.get(child).test(input)){
+        SequencedSet<String> children = edges.sequencedKeySet();
+        for (String child : children) {
+            if (edges.get(child).test(input)) {
                 result = runSubtree(input, debug, child);
-                if(result != null){
-                    return result;
-                }
+                if (result != null) return result;
             }
         }
-
         return result;
+    }
+
+    @Override
+    public NodeFactory<T> getNodeFactory() {
+        return nodeFactory;
+    }
+
+    @Override
+    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
+        this.nodeFactory = factory;
+        return this;
     }
 
 

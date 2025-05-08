@@ -18,7 +18,7 @@ public class StateGraphDecorator<T> implements StateGraphInterface<T>{
      * Constructor de la clase StateGraphDecorator
      * @param wrapped interfaz wrapped
      */
-    public StateGraphDecorator(StateGraphInterface<T> wrapped){
+    public StateGraphDecorator(StateGraphInterface<T> wrapped) {
         this.wrapped = wrapped;
     }
 
@@ -30,18 +30,10 @@ public class StateGraphDecorator<T> implements StateGraphInterface<T>{
      * @throws AlreadyExistingNode Excepción al añadir un nodo ya existente
      */
     @Override
-    public StateGraph<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode {
+    public StateGraphInterface<T> addNode(String node,
+                                          Consumer<? super T> operator)
+            throws AlreadyExistingNode {
         return wrapped.addNode(node, operator);
-    }
-
-    /**
-     * Metodo para crear un nodo
-     * @param node nodo a crear
-     * @return nodo
-     */
-    @Override
-    public NodeInterface<T> createNode(NodeInterface<T> node) {
-        return wrapped.createNode(node);
     }
 
     /**
@@ -54,18 +46,6 @@ public class StateGraphDecorator<T> implements StateGraphInterface<T>{
     @Override
     public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode {
         return wrapped.addWfNode(node, wf);
-    }
-
-    /**
-     * Metodo para crear un WfNode
-     * @param node nodo a crear
-     * @param wf objeto tipo interfaz de grafo
-     * @return nuevo nodo creado
-     * @param <S> objeto asociado al grafo
-     */
-    @Override
-    public <S> WfNodeInterface<T, S> createWfNode(String node, StateGraphInterface<S> wf) {
-        return wrapped.createWfNode(node, wf);
     }
 
     /**
@@ -87,7 +67,8 @@ public class StateGraphDecorator<T> implements StateGraphInterface<T>{
      * @return grafo modificado
      */
     @Override
-    public StateGraphInterface<T> addConditionalEdge(String origin, String destination, Predicate<T> condition) {
+    public StateGraphInterface<T> addConditionalEdge(String origin, String destination,
+                                                     Predicate<T> condition) {
         return wrapped.addConditionalEdge(origin, destination, condition);
     }
 
@@ -118,5 +99,30 @@ public class StateGraphDecorator<T> implements StateGraphInterface<T>{
     @Override
     public T run(T input, boolean debug) {
         return wrapped.run(input, debug);
+    }
+
+    @Override
+    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
+        return wrapped.setNodeFactory(factory);
+    }
+
+    @Override
+    public NodeFactory<T> getNodeFactory() {
+        return wrapped.getNodeFactory();
+    }
+
+    @Override
+    public NodeInterface<T> createNode(String name) {
+        return wrapped.createNode(name);
+    }
+
+    @Override
+    public <S> NodeInterface<T> createWfNode(WfNodeInterface<T, S> wfNode) {
+        return wrapped.createWfNode(wfNode);
+    }
+
+    @Override
+    public String toString() {
+        return wrapped.toString();
     }
 }
