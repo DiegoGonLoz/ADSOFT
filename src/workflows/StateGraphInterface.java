@@ -1,28 +1,22 @@
 package workflows;
 
 import myExceptions.AlreadyExistingNode;
-
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public interface StateGraphInterface<T>{
-    public StateGraph<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode;
+public interface StateGraphInterface<T> extends NodeFactory<T> {
+    StateGraphInterface<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode;
 
-    public NodeInterface<T> createNode(NodeInterface<T> node);
+    <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode;
 
-    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode;
+    StateGraphInterface<T> addEdge(String origin, String destination);
 
-    public <S> WfNodeInterface<T, S> createWfNode(String name, StateGraphInterface<S> wf);
+    StateGraphInterface<T> addConditionalEdge(String origin, String destination, Predicate<T> condition);
 
-    public StateGraphInterface<T> addEdge(String origin, String destination);
+    void setInitial(String node);
+    void setFinal(String node);
+    T run(T input, boolean debug);
 
-    public StateGraphInterface<T> addConditionalEdge(String origin, String destination, Predicate<T> condition);
-
-    public void setInitial(String node);
-
-    public void setFinal(String node);
-
-    public T run(T input, boolean debug);
-
-    public String toString();
+    NodeFactory<T> getNodeFactory();
+    StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory);
 }

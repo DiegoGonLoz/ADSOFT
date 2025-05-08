@@ -19,9 +19,9 @@ public class NodeLogger<T> extends NodeDecorator<T> {
         super.run(input);
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm:ss"));
+            writer.write("[" + timestamp + "] Node " + getName() + " executed, with output: " + input);
 
-            writer.write(timestamp + " - Node " + getName() + " executed, with output: " + input);
             writer.newLine();
         } catch (IOException e) {
             System.err.println("Error writing to log file: " + e.getMessage());

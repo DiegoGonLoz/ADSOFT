@@ -19,7 +19,7 @@ public class StreamingStateGraph<T>{
         return Collections.unmodifiableList(history);
     }
 
-    public StateGraph<List<T>> addNode(String node, Consumer<? super List<T>> operator) throws AlreadyExistingNode {
+    public StateGraphInterface<List<T>> addNode(String node, Consumer<? super List<T>> operator) throws AlreadyExistingNode {
         return graph.addNode(node, operator);
     }
 

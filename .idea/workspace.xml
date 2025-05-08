@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change afterPath="$PROJECT_DIR$/tests/Apartado5Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/workflows/NodeFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/AlreadyExistingNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/AlreadyExistingNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/NonExistingNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/NonExistingNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraphInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraphInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado2Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado4Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraphDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraphInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraphLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraphProfiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphProfiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" afterDir="false" />
     </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DiegoGonLoz/ADSOFT.git&quot;,
-    &quot;accountId&quot;: &quot;0d2b716f-bd8d-4d1c-ae7e-595ecc901773&quot;
+    &quot;accountId&quot;: &quot;abc1697a-d23e-4b86-b582-0ffe9e30938f&quot;
   }
 }</component>
   <component name="PerforceDirect.Settings">
@@ -95,7 +97,7 @@
       <recent name="myExceptions" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Apartado5Test">
     <configuration name="Apartado3Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Apartado3Test" />
       <module name="ADSOFT" />
@@ -103,8 +105,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Apartado5Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Apartado5Test" />
+      <module name="ADSOFT" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Apartado5Test" />
         <item itemvalue="Application.Apartado3Test" />
       </list>
     </recent_temporary>
@@ -112,8 +122,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -223,6 +233,7 @@
       <workItem from="1746508520950" duration="2416000" />
       <workItem from="1746547930031" duration="2153000" />
       <workItem from="1746614603120" duration="7210000" />
+      <workItem from="1746726894664" duration="5141000" />
     </task>
     <task id="LOCAL-00011" summary="Bombardeen Adsoft">
       <option name="closed" value="true" />
