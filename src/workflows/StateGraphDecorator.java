@@ -101,26 +101,50 @@ public class StateGraphDecorator<T> implements StateGraphInterface<T>{
         return wrapped.run(input, debug);
     }
 
+    /**
+     * Setter de nodefactory
+     * @param factory NodeFactory
+     * @return grafo
+     */
     @Override
     public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
         return wrapped.setNodeFactory(factory);
     }
 
+    /**
+     * Getter de node factory
+     * @return node factory
+     */
     @Override
     public NodeFactory<T> getNodeFactory() {
         return wrapped.getNodeFactory();
     }
 
+    /**
+     * Metodo create node
+     * @param name Nombre del nodo
+     * @return node interface
+     */
     @Override
     public NodeInterface<T> createNode(String name) {
         return wrapped.createNode(name);
     }
 
+    /**
+     * Metodo create WfNode
+     * @param wfNode nodo de flujo de trabajo
+     * @return node interface
+     * @param <S> objeto asociado
+     */
     @Override
     public <S> NodeInterface<T> createWfNode(WfNodeInterface<T, S> wfNode) {
         return wrapped.createWfNode(wfNode);
     }
 
+    /**
+     * Metodo toString
+     * @return string con información relevante
+     */
     @Override
     public String toString() {
         return wrapped.toString();
