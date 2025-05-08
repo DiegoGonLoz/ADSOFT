@@ -1,17 +1,25 @@
 import workflows.StateGraph;
 
+/**
+ * Clase test para el apartado 3
+ * @author Diego Lesma
+ */
 public class Apartado3Test {
+    /**
+     * Metodo main a ejecutar
+     * @param args vacío
+     */
     public static void main(String[] args) {
-        // Tus tests originales
         testReplicateWorkflow();
         testNestedTextWorkflow();
 
-        // Nuevos tests con TextData
         testTextTransformationWorkflow();
         testTextStatisticsWorkflow();
     }
 
-    // Tus métodos originales (sin cambios)
+    /**
+     * Primer test con NumericData
+     */
     public static void testReplicateWorkflow() {
         StateGraph<NumericData> mathWorkflow = new StateGraph<>("math", "Simple math operations");
         mathWorkflow.addNode("sum", (NumericData no) -> no.put("result", no.get("op1") + no.get("op2")))
@@ -38,6 +46,9 @@ public class Apartado3Test {
         System.out.println("result = " + output);
     }
 
+    /**
+     * Segundo test con NumericData
+     */
     public static void testNestedTextWorkflow() {
         StateGraph<NumericData> lengthWorkflow = new StateGraph<>("length", "Calculate length");
         lengthWorkflow.addNode("length", (NumericData no) -> no.put("result", no.get("op1")))
@@ -64,7 +75,9 @@ public class Apartado3Test {
         System.out.println("result = " + output);
     }
 
-    // Nuevos tests con TextData
+    /**
+     * Primer test con TextData
+     */
     public static void testTextTransformationWorkflow() {
         StateGraph<TextData> sg = new StateGraph<>("text-transform", "Text transformation pipeline");
 
@@ -85,6 +98,9 @@ public class Apartado3Test {
         System.out.println("result = " + output);
     }
 
+    /**
+     * Segundo test con TextData
+     */
     public static void testTextStatisticsWorkflow() {
         StateGraph<NumericData> statsWorkflow = new StateGraph<>("stats", "Text statistics");
         statsWorkflow.addNode("length", (NumericData no) -> no.put("result", no.get("op1")))

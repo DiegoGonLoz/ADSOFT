@@ -1,16 +1,24 @@
-
-
 import workflows.StreamingStateGraph;
 
 import java.util.List;
 
+/**
+ * Clase test para el apartado 4
+ * @author Diego Lesma
+ */
 public class Apartado4Test {
+    /**
+     * Metodo main a ejecutar
+     * @param args vacío
+     */
     public static void main(String[] args) {
-        testAverageWorkflow();    // Test original con DoubleData
-        testTextStreamWorkflow(); // Test adicional con TextData
+        testAverageWorkflow();
+        testTextStreamWorkflow();
     }
 
-    // Test original con DoubleData (salida exacta como pide el enunciado)
+    /**
+     * Test con DoubleData
+     */
     public static void testAverageWorkflow() {
         StreamingStateGraph<DoubleData> sg = buildAverageWorkflow();
 
@@ -23,7 +31,9 @@ public class Apartado4Test {
         System.out.println("History=" + sg.history());
     }
 
-    // Test adicional con TextData
+    /**
+     * Test con TextData
+     */
     public static void testTextStreamWorkflow() {
         StreamingStateGraph<TextData> sg = new StreamingStateGraph<>("text-stream", "Text stream processing");
 
@@ -47,6 +57,10 @@ public class Apartado4Test {
         System.out.println("Final history = " + sg.history());
     }
 
+    /**
+     * Metodo auxiliar para test anteriores
+     * @return grafo inicializado para los tests
+     */
     private static StreamingStateGraph<DoubleData> buildAverageWorkflow() {
         StreamingStateGraph<DoubleData> sg = new StreamingStateGraph<>("average", "Calculates the average of incoming data");
 

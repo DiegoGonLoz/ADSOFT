@@ -1,11 +1,22 @@
 import workflows.StateGraph;
 
+/**
+ * Clase test para el apartado 2
+ * @author Diego Lesma
+ */
 public class Apartado2Test {
+    /**
+     * Metodo main a ejecutar
+     * @param args vacío
+     */
     public static void main(String[] args) {
         testConditionalWorkflow();
         testTextConditionalWorkflow();
     }
 
+    /**
+     * Test usando NumericData
+     */
     public static void testConditionalWorkflow() {
         StateGraph<NumericData> sg = new StateGraph<>("math1", "Add and conditional square");
 
@@ -28,6 +39,9 @@ public class Apartado2Test {
         System.out.println("result = " + output2);
     }
 
+    /**
+     * Test usando TextData
+     */
     public static void testTextConditionalWorkflow() {
         StateGraph<TextData> sg = new StateGraph<>("text-cond", "Conditional text processing");
 
