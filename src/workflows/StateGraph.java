@@ -28,7 +28,6 @@ public class StateGraph<T> implements StateGraphInterface<T> {
     private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();
     private NodeFactory<T> nodeFactory = this;
 
-    public StateGraph(String name, String description) {
     /**
      * Constructor de la clase StateGraph
      * @param name nombre del grafo
@@ -59,14 +58,12 @@ public class StateGraph<T> implements StateGraphInterface<T> {
 
     /**
      * Metodo para crear un nodo
-     * @param node nodo a crear
+     * @param name nodo a crear
      * @return nodo
      */
     @Override
-    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode {
-        if (nodes.containsKey(node)) {
-    public NodeInterface<T> createNode(NodeInterface<T> node){
-        return node;
+    public NodeInterface<T> createNode(String name) {
+        return new Node<>(name);
     }
 
     /**
@@ -77,8 +74,8 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @param <S> objeto asociado al grafo
      */
     @Override
-    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) {
-        if(existNode(node)){
+    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode {
+        if (nodes.containsKey(node)) {
             throw new AlreadyExistingNode(node, name);
         }
         WfNodeInterface<T, S> wfNode = new WfNode<>(node, wf);
@@ -89,16 +86,12 @@ public class StateGraph<T> implements StateGraphInterface<T> {
 
     /**
      * Metodo para crear un WfNode
-     * @param node nodo a crear
-     * @param wf objeto tipo interfaz de grafo
+     * @param wfNode objeto tipo interfaz de grafo
      * @return nuevo nodo creado
      * @param <S> objeto asociado al grafo
      */
-    @Override
-    public StateGraphInterface<T> addEdge(String origin, String destination) {
-        return addConditionalEdge(origin, destination, input -> true);
-    public <S> WfNodeInterface<T, S> createWfNode(String node, StateGraphInterface<S> wf){
-        return new WfNode(node, wf);
+    public <S> NodeInterface<T> createWfNode(WfNodeInterface<T, S> wfNode) {
+        return wfNode;
     }
 
     /**
@@ -108,8 +101,8 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @return grafo modificado
      */
     @Override
-    public StateGraph<T> addEdge(String origin, String destination){
-        return addConditionalEdge(origin, destination, (T input) -> true);
+    public StateGraphInterface<T> addEdge(String origin, String destination) {
+        return addConditionalEdge(origin, destination, input -> true);
     }
 
     /**
@@ -174,17 +167,16 @@ public class StateGraph<T> implements StateGraphInterface<T> {
         return input;
     }
 
-    private T runSubtree(T input, boolean debug, String node) {
     /**
      * Metodo toString de StateGraph
      * @return String con información relevante
      */
     @Override
-    public String toString(){
-        return "Workflow '" + name + "' (" + description + "): \n"+
-                "- Nodes: "+ nodes + "\n"+
-                "- Initial: " + initial +"\n"+
-                "- Final: " + last;
+    public String toString() {
+        return "Workflow '" + name + "' (" + description + "): " +
+                "\n- Nodes: " + nodes +
+                "\n- Initial: " + initial +
+                "\n- Final: " + last;
     }
 
     /**
@@ -203,7 +195,7 @@ public class StateGraph<T> implements StateGraphInterface<T> {
      * @param node nodo del que obtener el subárbol
      * @return árbol resultado
      */
-    private T runSubtree(T input, boolean debug, String node){
+    private T runSubtree(T input, boolean debug, String node) {
         T result = null;
         steps++;
         NodeInterface<T> runningNode = nodes.get(node);
@@ -226,16 +218,6 @@ public class StateGraph<T> implements StateGraphInterface<T> {
     }
 
     @Override
-    public NodeInterface<T> createNode(String name) {
-        return new Node<>(name);
-    }
-
-    @Override
-    public <S> NodeInterface<T> createWfNode(WfNodeInterface<T, S> wfNode) {
-        return wfNode;
-    }
-
-    @Override
     public NodeFactory<T> getNodeFactory() {
         return nodeFactory;
     }
@@ -246,11 +228,5 @@ public class StateGraph<T> implements StateGraphInterface<T> {
         return this;
     }
 
-    @Override
-    public String toString() {
-        return "Workflow '" + name + "' (" + description + "): " +
-                "\n- Nodes: " + nodes +
-                "\n- Initial: " + initial +
-                "\n- Final: " + last;
-    }
+
 }
