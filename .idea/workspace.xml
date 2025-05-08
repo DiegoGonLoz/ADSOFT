@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change afterPath="$PROJECT_DIR$/src/workflows/NodeDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workflows/NodeLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workflows/NodeProfiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workflows/StateGraphDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workflows/StateGraphLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/workflows/StateGraphProfiler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Apartado5Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/AlreadyExistingNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/AlreadyExistingNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/NonExistingNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/myExceptions/NonExistingNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraphInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraphInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/AlreadyExistingNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myExceptions/NonExistingNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/workflows/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/NodeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/NodeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/WfNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/WfNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/WfNodeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/WfNodeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/WorkflowInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado4Test.java" afterDir="false" />
     </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,28 +67,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Apartado1Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Apartado2Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Apartado3Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Apartado4Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProyectosTests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Practica5&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Descargas/PADSOF_2/src/GUI/logIn/logInMainView.java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Perforce&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Apartado1Test.executor": "Run",
+    "Application.Apartado2Test.executor": "Run",
+    "Application.Apartado3Test.executor": "Run",
+    "Application.Apartado4Test.executor": "Run",
+    "Application.Apartado5Test.executor": "Run",
+    "Application.ProyectosTests.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "Practica5",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/diego_gonzalez/Descargas/PADSOF_2/src/GUI/logIn/logInMainView.java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "vcs.Perforce",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="myExceptions" />
@@ -353,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746663385620</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746720931531</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1746720931531</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -4,9 +4,15 @@ import java.util.LinkedHashMap;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+/**
+ * Clase que representa un nodo
+ * @param <T> objeto asociado al nodo
+ * @author Diego Gonzalez
+ */
 public class Node<T> implements NodeInterface<T>{
+    /** Nombre del nodo */
     private String name;
-
+    /** Operador de la clase */
     private Consumer<? super T> operator;
     private final LinkedHashMap<String, Predicate<T>> edges = new LinkedHashMap<>();
 
