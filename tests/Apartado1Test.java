@@ -12,7 +12,6 @@ public class Apartado1Test {
         System.out.println(sg);
 
         NumericData input = new NumericData(2,3);
-        NumericData input = new NumericData(2, 3);
         System.out.println("--- TEST MATH WORKFLOW ---");
         System.out.println("input = " + input);
         NumericData output = sg.run(input, true);

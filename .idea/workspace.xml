@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change afterPath="$PROJECT_DIR$/tests/DoubleData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADSOFT/workflows/StateGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Apartado1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado3Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado4Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TextData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TextData.java" afterDir="false" />
     </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,28 +57,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Apartado1Test.executor": "Run",
-    "Application.Apartado2Test.executor": "Run",
-    "Application.Apartado3Test.executor": "Run",
-    "Application.Apartado4Test.executor": "Run",
-    "Application.ProyectosTests.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "Practica5",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/diego_gonzalez/Descargas/PADSOF_2/src/GUI/logIn/logInMainView.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Perforce",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Apartado1Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Apartado2Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Apartado3Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Apartado4Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProyectosTests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Practica5&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Descargas/PADSOF_2/src/GUI/logIn/logInMainView.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Perforce&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="myExceptions" />

@@ -1,0 +1,27 @@
+<changelist name="Uncommitted_changes_before_Update_at_8_5_25,_2_09_[Changes]" date="1746662958600" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_5_25,_2_09_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 8/5/25, 2:09 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/ADSOFT/workflows/Node.class" />
+    <option name="AFTER_PATH" value="out/production/ADSOFT/workflows/Node.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_5_25,_2_09_[Changes]/Node.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/test/ADSOFT/Apartado1Test.class" />
+    <option name="AFTER_PATH" value="out/test/ADSOFT/Apartado1Test.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_5_25,_2_09_[Changes]/Apartado1Test.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/ADSOFT/workflows/StateGraph.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/ADSOFT/workflows/WfNode.class" />
+    <option name="AFTER_PATH" value="out/production/ADSOFT/workflows/WfNode.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_5_25,_2_09_[Changes]/WfNode.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/test/ADSOFT/Apartado3Test.class" />
+    <option name="AFTER_PATH" value="out/test/ADSOFT/Apartado3Test.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_5_25,_2_09_[Changes]/Apartado3Test.class" />
+  </binary>
+</changelist>

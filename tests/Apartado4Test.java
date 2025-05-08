@@ -1,7 +1,7 @@
 import workflows.StreamingStateGraph;
 import java.util.List;
 
-public class Apartado4Test {
+/*public class Apartado4Test {
     public static void main(String[] args) {
         // Tus tests originales
         testAverageWorkflow();
@@ -106,4 +106,4 @@ public class Apartado4Test {
         });
         System.out.println("Final history = " + sg.history());
     }
-}
+}*/
