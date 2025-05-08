@@ -14,18 +14,19 @@ import java.util.function.Predicate;
  * @author Diego Gonzalez
  */
 public class StateGraph<T> implements StateGraphInterface<T> {
-    /** Nombre */
+    /** Nombre del grafo*/
     private final String name;
-    /** Descripción */
+    /** Descripción del grafo*/
     private final String description;
-    /** Inicial */
+    /** Nodo Inicial */
     private String initial = null;
-    /** Final */
+    /** Nodo Final */
     private String last = null;
-    /** Pasos */
+    /** Pasos de ejecucion*/
     private int steps;
     /** Mapa con los nodos */
     private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();
+    /** Metodo para obtener nodos*/
     private NodeFactory<T> nodeFactory = this;
 
     /**
@@ -180,6 +181,26 @@ public class StateGraph<T> implements StateGraphInterface<T> {
     }
 
     /**
+     * Metodo para obtener el supplier de nodos
+     * @return el supplier de nodos
+     */
+    @Override
+    public NodeFactory<T> getNodeFactory() {
+        return nodeFactory;
+    }
+
+    /**
+     * Metodo para fijar el supplier de nodos
+     * @param factory el nuevo supplier
+     * @return el mismo grafo
+     */
+    @Override
+    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
+        this.nodeFactory = factory;
+        return this;
+    }
+
+    /**
      * Metodo para saber si existe un nodo
      * @param node nodo a comprobar
      * @return true o false según exista o no
@@ -215,17 +236,6 @@ public class StateGraph<T> implements StateGraphInterface<T> {
             }
         }
         return result;
-    }
-
-    @Override
-    public NodeFactory<T> getNodeFactory() {
-        return nodeFactory;
-    }
-
-    @Override
-    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
-        this.nodeFactory = factory;
-        return this;
     }
 
 

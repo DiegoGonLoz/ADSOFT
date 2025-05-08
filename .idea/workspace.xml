@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT" />
+    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagramas/diagrama.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/diagramas/diagrama.uxf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado2Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/DoubleData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/NumericData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/StringData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/TextData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado4Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Apartado5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado5Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DoubleData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/DoubleData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/NumericData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/NumericData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/StringData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/StringData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TextData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/TextData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_traces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text_traces.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/traces.txt" afterDir="false" />
+    </list>
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,16 +106,16 @@
       <recent name="myExceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Apartado5Test">
+  <component name="RunManager" selected="Application.Apartado3Test">
     <configuration name="Apartado3Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Apartado3Test" />
+      <option name="MAIN_CLASS_NAME" value="testsApartados.Apartado3Test" />
       <module name="ADSOFT" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Apartado5Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Apartado5Test" />
+      <option name="MAIN_CLASS_NAME" value="testsApartados.Apartado5Test" />
       <module name="ADSOFT" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -220,6 +243,10 @@
       <workItem from="1746547930031" duration="2153000" />
       <workItem from="1746614603120" duration="7210000" />
       <workItem from="1746726894664" duration="7109000" />
+      <workItem from="1746736887475" duration="2551000" />
+      <workItem from="1746739494313" duration="1400000" />
+      <workItem from="1746740904719" duration="3000" />
+      <workItem from="1746741189675" duration="965000" />
     </task>
     <task id="LOCAL-00011" summary="Bombardeen Adsoft">
       <option name="closed" value="true" />
@@ -373,7 +400,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746736846686</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746737524668</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1746737524668</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,0 +1,1290 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"a82cd155-8e0e-41c7-9e1a-d30e56829cef\" name=\"Changes\" comment=\"Bombardeen ADSOFT\" />\n    <list id=\"f1d900a9-ff89-40be-b1c3-a0b2bbe36706\" name=\"Ignore\" comment=\"Ignore\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"Exception\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Practica4\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;DiegoGonLoz&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/DiegoGonLoz/ADSOFT.git&quot;,\n    &quot;accountId&quot;: &quot;abc1697a-d23e-4b86-b582-0ffe9e30938f&quot;\n  }\n}</component>\n  <component name=\"PerforceDirect.Settings\">\n    <option name=\"useP4IGNORE\" value=\"false\" />\n    <option name=\"pathToIgnore\" value=\".gitignore\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2vE2uCDpRMIcIHyn1E8bsn4m4LE\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Application.Apartado1Test.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Apartado2Test.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Apartado3Test.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Apartado4Test.executor&quot;: &quot;Run&quot;,\n    &quot;Application.Apartado5Test.executor&quot;: &quot;Run&quot;,\n    &quot;Application.ProyectosTests.executor&quot;: &quot;Run&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;com.codeium.enabled&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;Practica5&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/diego_gonzalez/Descargas/PADSOF_2/src/GUI/logIn/logInMainView.java&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Perforce&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateClassDialog.RecentsKey\">\n      <recent name=\"myExceptions\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.Apartado5Test\">\n    <configuration name=\"Apartado3Test\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Apartado3Test\" />\n      <module name=\"ADSOFT\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Apartado5Test\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Apartado5Test\" />\n      <module name=\"ADSOFT\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Apartado5Test\" />\n        <item itemvalue=\"Application.Apartado3Test\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task id=\"LOCAL-00001\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743538277389</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743538277389</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743542037080</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743542037080</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743543628988</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743543628988</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743546751553</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743546751553</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743610909400</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743610909400</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743614369799</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743614369799</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743615817072</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743615817072</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743628259442</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743628259442</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743628994544</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743628994544</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743632780948</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743632780948</updated>\n    </task>\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"a82cd155-8e0e-41c7-9e1a-d30e56829cef\" name=\"Changes\" comment=\"Bombardeen Adsoft\" />\n      <created>1743696133719</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1743696133719</updated>\n      <workItem from=\"1743696135982\" duration=\"19000\" />\n      <workItem from=\"1743791284243\" duration=\"901000\" />\n      <workItem from=\"1743869089613\" duration=\"5074000\" />\n      <workItem from=\"1743938477756\" duration=\"1273000\" />\n      <workItem from=\"1744128752703\" duration=\"684000\" />\n      <workItem from=\"1744217085961\" duration=\"1090000\" />\n      <workItem from=\"1744302917151\" duration=\"2172000\" />\n      <workItem from=\"1745427856310\" duration=\"598000\" />\n      <workItem from=\"1745511053246\" duration=\"34000\" />\n      <workItem from=\"1746029671179\" duration=\"5000\" />\n      <workItem from=\"1746029682683\" duration=\"3878000\" />\n      <workItem from=\"1746206429933\" duration=\"788000\" />\n      <workItem from=\"1746382058482\" duration=\"3555000\" />\n      <workItem from=\"1746459732336\" duration=\"2000\" />\n      <workItem from=\"1746462368672\" duration=\"2363000\" />\n      <workItem from=\"1746508520950\" duration=\"2416000\" />\n      <workItem from=\"1746547930031\" duration=\"2153000\" />\n      <workItem from=\"1746614603120\" duration=\"7210000\" />\n      <workItem from=\"1746726894664\" duration=\"7109000\" />\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1743791392430</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1743791392430</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Bombardeen Adsoft\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744217099753</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744217099753</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744217328044</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744217328044</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744303766270</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744303766270</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744303904914</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744303904914</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1744303984077</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1744303984077</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1745425647860</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1745425647860</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1745511077061</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1745511077061</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746206483424</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746206483424</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746410328782</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746410328782</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746550082814</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746550082814</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746635450598</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746635450598</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746663074315</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746663074315</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746663095364</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746663095364</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746663337713</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746663337713</updated>\n    </task>\n    <task id=\"LOCAL-00026\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746663385620</created>\n      <option name=\"number\" value=\"00026\" />\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746663385620</updated>\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746720931531</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746720931531</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746735134146</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746735134146</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"Bombardeen ADSOFT\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1746736846686</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1746736846686</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"30\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Lesma.guisantada()\" />\n    <MESSAGE value=\"Bombardeen Adsoft\" />\n    <MESSAGE value=\"Ignore\" />\n    <MESSAGE value=\"Bombardeen ADSOFT\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Bombardeen ADSOFT\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/.idea/workspace.xml	(date 1746742185407)
+@@ -4,7 +4,30 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT" />
++    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/diagramas/diagrama.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/diagramas/diagrama.uxf" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado2Test.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado3Test.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado4Test.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/DoubleData.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/NumericData.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/StringData.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/TextData.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraph.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/Apartado1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado1Test.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/Apartado2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado2Test.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/Apartado3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado3Test.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado4Test.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/Apartado5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testsApartados/Apartado5Test.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/DoubleData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/DoubleData.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/NumericData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/NumericData.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/StringData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/StringData.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tests/TextData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/clasesTest/TextData.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/text_traces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text_traces.txt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/traces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/traces.txt" afterDir="false" />
++    </list>
+     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -83,16 +106,16 @@
+       <recent name="myExceptions" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Apartado5Test">
++  <component name="RunManager" selected="Application.Apartado3Test">
+     <configuration name="Apartado3Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Apartado3Test" />
++      <option name="MAIN_CLASS_NAME" value="testsApartados.Apartado3Test" />
+       <module name="ADSOFT" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <configuration name="Apartado5Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Apartado5Test" />
++      <option name="MAIN_CLASS_NAME" value="testsApartados.Apartado5Test" />
+       <module name="ADSOFT" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -220,6 +243,10 @@
+       <workItem from="1746547930031" duration="2153000" />
+       <workItem from="1746614603120" duration="7210000" />
+       <workItem from="1746726894664" duration="7109000" />
++      <workItem from="1746736887475" duration="2551000" />
++      <workItem from="1746739494313" duration="1400000" />
++      <workItem from="1746740904719" duration="3000" />
++      <workItem from="1746741189675" duration="965000" />
+     </task>
+     <task id="LOCAL-00011" summary="Bombardeen Adsoft">
+       <option name="closed" value="true" />
+@@ -373,7 +400,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1746736846686</updated>
+     </task>
+-    <option name="localTasksCounter" value="30" />
++    <task id="LOCAL-00030" summary="Bombardeen ADSOFT">
++      <option name="closed" value="true" />
++      <created>1746737524668</created>
++      <option name="number" value="00030" />
++      <option name="presentableId" value="LOCAL-00030" />
++      <option name="project" value="LOCAL" />
++      <updated>1746737524668</updated>
++    </task>
++    <option name="localTasksCounter" value="31" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: tests/StringData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/StringData.java b/tests/clasesTest/StringData.java
+rename from tests/StringData.java
+rename to tests/clasesTest/StringData.java
+--- a/tests/StringData.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/clasesTest/StringData.java	(date 1746737949772)
+@@ -1,5 +1,7 @@
++package clasesTest;
++
+ /**
+- * Clase StringData
++ * Clase clasesTest.StringData
+  * @author Diego Lesma
+  */
+ public class StringData {
+@@ -11,7 +13,7 @@
+     private int times;
+ 
+     /**
+-     * Constructor de StringData
++     * Constructor de clasesTest.StringData
+      * @param word palabra
+      * @param times times
+      */
+@@ -88,7 +90,7 @@
+     }
+ 
+     /**
+-     * Metodo toString de StringData
++     * Metodo toString de clasesTest.StringData
+      * @return String con información relevante
+      */
+     @Override
+Index: tests/NumericData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/NumericData.java b/tests/clasesTest/NumericData.java
+rename from tests/NumericData.java
+rename to tests/clasesTest/NumericData.java
+--- a/tests/NumericData.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/clasesTest/NumericData.java	(date 1746737949847)
+@@ -1,12 +1,14 @@
++package clasesTest;
++
+ import java.util.LinkedHashMap;
+ 
+ /**
+- * Clase NumericData
++ * Clase clasesTest.NumericData
+  * @author Profesores
+  */
+ public class NumericData extends LinkedHashMap<String, Integer> {
+     /**
+-     * Constructor de NumericData
++     * Constructor de clasesTest.NumericData
+      * @param op1 operando 1
+      * @param op2 operando 2
+      */
+Index: tests/Apartado1Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/Apartado1Test.java b/tests/testsApartados/Apartado1Test.java
+rename from tests/Apartado1Test.java
+rename to tests/testsApartados/Apartado1Test.java
+--- a/tests/Apartado1Test.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/testsApartados/Apartado1Test.java	(date 1746738072774)
+@@ -1,3 +1,7 @@
++package testsApartados;
++
++import clasesTest.NumericData;
++import clasesTest.TextData;
+ import workflows.StateGraph;
+ 
+ /**
+@@ -5,6 +9,13 @@
+  * @author Diego Lesma
+  */
+ public class Apartado1Test {
++    /**
++     * Contructor vacio por defecto
++     */
++    public Apartado1Test(){
++
++    }
++
+     /**
+      * Metodo main a ejecutar
+      * @param args vacío
+Index: tests/Apartado3Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/Apartado3Test.java b/tests/testsApartados/Apartado3Test.java
+rename from tests/Apartado3Test.java
+rename to tests/testsApartados/Apartado3Test.java
+--- a/tests/Apartado3Test.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/testsApartados/Apartado3Test.java	(date 1746738072783)
+@@ -1,3 +1,8 @@
++package testsApartados;
++
++import clasesTest.NumericData;
++import clasesTest.StringData;
++import clasesTest.TextData;
+ import workflows.StateGraph;
+ 
+ /**
+@@ -5,6 +10,13 @@
+  * @author Diego Lesma
+  */
+ public class Apartado3Test {
++    /**
++     * Contructor vacio por defecto
++     */
++    public Apartado3Test(){
++
++    }
++
+     /**
+      * Metodo main a ejecutar
+      * @param args vacío
+@@ -18,7 +30,7 @@
+     }
+ 
+     /**
+-     * Primer test con NumericData
++     * Primer test con clasesTest.NumericData
+      */
+     public static void testReplicateWorkflow() {
+         StateGraph<NumericData> mathWorkflow = new StateGraph<>("math", "Simple math operations");
+@@ -47,7 +59,7 @@
+     }
+ 
+     /**
+-     * Segundo test con NumericData
++     * Segundo test con clasesTest.NumericData
+      */
+     public static void testNestedTextWorkflow() {
+         StateGraph<NumericData> lengthWorkflow = new StateGraph<>("length", "Calculate length");
+@@ -76,7 +88,7 @@
+     }
+ 
+     /**
+-     * Primer test con TextData
++     * Primer test con clasesTest.TextData
+      */
+     public static void testTextTransformationWorkflow() {
+         StateGraph<TextData> sg = new StateGraph<>("text-transform", "Text transformation pipeline");
+@@ -99,7 +111,7 @@
+     }
+ 
+     /**
+-     * Segundo test con TextData
++     * Segundo test con clasesTest.TextData
+      */
+     public static void testTextStatisticsWorkflow() {
+         StateGraph<NumericData> statsWorkflow = new StateGraph<>("stats", "Text statistics");
+Index: diagramas/diagrama.uxf
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<diagram program=\"umlet\" version=\"15.1\">\n  <zoom_level>10</zoom_level>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>720</x>\n      <y>1180</y>\n      <w>130</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>StateGraph&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>830</x>\n      <y>1060</y>\n      <w>170</w>\n      <h>50</h>\n    </coordinates>\n    <panel_attributes>&lt;&lt;interface&gt;&gt;\n/StateGraphInterface&lt;T&gt;/\n</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>1000</x>\n      <y>1180</y>\n      <w>180</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>StateGraphDecorator&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>900</x>\n      <y>1320</y>\n      <w>170</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>StateGraphProfiler&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>1170</x>\n      <y>1320</y>\n      <w>170</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>StateGraphLogger&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>1120</x>\n      <y>1210</y>\n      <w>160</w>\n      <h>130</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;-</panel_attributes>\n    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;110.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>970</x>\n      <y>1210</y>\n      <w>120</w>\n      <h>130</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;-</panel_attributes>\n    <additional_attributes>100.0;10.0;100.0;40.0;10.0;40.0;10.0;110.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>920</x>\n      <y>1100</y>\n      <w>200</w>\n      <h>100</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;.</panel_attributes>\n    <additional_attributes>10.0;10.0;180.0;80.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>770</x>\n      <y>1100</y>\n      <w>130</w>\n      <h>100</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;.</panel_attributes>\n    <additional_attributes>110.0;10.0;10.0;80.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>840</x>\n      <y>1190</y>\n      <w>180</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;\nm1=wrapped</panel_attributes>\n    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>660</x>\n      <y>740</y>\n      <w>130</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>Node&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>790</x>\n      <y>160</y>\n      <w>250</w>\n      <h>550</h>\n    </coordinates>\n    <panel_attributes>&lt;&lt;interface&gt;&gt;\n/NodeInterface&lt;T&gt;/\n--\n/+ addNode(node: String,/\n/      operator: Consumer&lt;? super T&gt;):/\n/      StateGraphInterface&lt;T&gt;/\n\n/+ addWfNode(node: String,/\n/      wf: StateGraphInterface&lt;S&gt;):/\n/      WfNodeInterface&lt;T,S&gt;/\n\n/+ addEdge(origin: String,/\n/       destination: String):/\n/       StateGraphInterface&lt;T&gt;/\n\n/+ addConditionalEdge(origin: String,/\n/       destination: String,/\n/       condition: Predicate&lt;T&gt;):/\n/       StateGraphInterface&lt;T&gt;/\n\n\n</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>950</x>\n      <y>740</y>\n      <w>170</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>NodeDecorator&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>840</x>\n      <y>880</y>\n      <w>170</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>NodeProfiler&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>1110</x>\n      <y>880</y>\n      <w>170</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>NodeLogger&lt;T&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>1060</x>\n      <y>770</y>\n      <w>160</w>\n      <h>130</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;-</panel_attributes>\n    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;110.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>910</x>\n      <y>770</y>\n      <w>120</w>\n      <h>130</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;-</panel_attributes>\n    <additional_attributes>100.0;10.0;100.0;40.0;10.0;40.0;10.0;110.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>860</x>\n      <y>700</y>\n      <w>200</w>\n      <h>60</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;.</panel_attributes>\n    <additional_attributes>10.0;10.0;180.0;40.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>710</x>\n      <y>700</y>\n      <w>130</w>\n      <h>60</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;&lt;.</panel_attributes>\n    <additional_attributes>110.0;10.0;10.0;40.0</additional_attributes>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>780</x>\n      <y>750</y>\n      <w>190</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;\nm1=wrapped</panel_attributes>\n    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>260</x>\n      <y>990</y>\n      <w>290</w>\n      <h>230</h>\n    </coordinates>\n    <panel_attributes>StreamingStateGraph&lt;T&gt;\n--\n- history: List&lt;T&gt;\n--\n+ addNode(node: String,\n        operator: Consumer&lt;? super List&lt;T&gt;): \n        StateGraphInterface&lt;List&lt;T&gt;&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n  <element>\n    <id>Relation</id>\n    <coordinates>\n      <x>150</x>\n      <y>1040</y>\n      <w>130</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;\nm1=graph</panel_attributes>\n    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>\n  </element>\n  <element>\n    <id>UMLClass</id>\n    <coordinates>\n      <x>0</x>\n      <y>1030</y>\n      <w>160</w>\n      <h>40</h>\n    </coordinates>\n    <panel_attributes>StateGraph&lt;List&lt;T&gt;&gt;</panel_attributes>\n    <additional_attributes/>\n  </element>\n</diagram>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/diagramas/diagrama.uxf b/diagramas/diagrama.uxf
+--- a/diagramas/diagrama.uxf	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/diagramas/diagrama.uxf	(date 1746740830206)
+@@ -1,202 +1,372 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <diagram program="umlet" version="15.1">
+-  <zoom_level>10</zoom_level>
++  <zoom_level>3</zoom_level>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>720</x>
+-      <y>1180</y>
+-      <w>130</w>
+-      <h>40</h>
++      <x>501</x>
++      <y>423</y>
++      <w>93</w>
++      <h>264</h>
+     </coordinates>
+-    <panel_attributes>StateGraph&lt;T&gt;</panel_attributes>
++    <panel_attributes>StateGraph&lt;T&gt;
++--
++- name: String
++_- description: String_
++- initial: String
++- last: String
++- steps: int
++_- nodes: LinkedHashMap&lt;String, 
++                                      NodeInterface&lt;T&gt;&gt;
++- private nodeFactory: NodeFactory&lt;T&gt;
++--
+++ addNode(node: String,
++      operator: Consumer&lt;? super T&gt;):
++      StateGraphInterface&lt;T&gt;
++
+++ createNode(name: String): NodeInterface&lt;T&gt;
++
+++ addWfNode(node: String,
++      wf: StateGraphInterface&lt;S&gt;):
++      WfNodeInterface&lt;T,S&gt;
++
+++ createWfNode(name: String): NodeInterface&lt;T&gt;
++
+++ addEdge(origin: String,
++       destination: String):
++       StateGraphInterface&lt;T&gt;
++
+++ addConditionalEdge(origin: String,
++       destination: String,
++       condition: Predicate&lt;T&gt;):
++       StateGraphInterface&lt;T&gt;
++
+++ setInicial(node: String): void
++
+++ setFinal(node: String): void
++
+++ getNodeFactory(): NodeFactory&lt;T&gt;
++
+++ setNodeFactory(factory: NodeFactory&lt;T&gt;):
++       StateGraphInterface&lt;T&gt;
++
+++ run(input: T, debug: boolean): T
++
+++ toString(): String
++
+++ getNodeFactory(): NodeFactory&lt;T&gt;
++
+++ setNodeFactory(factory: NodeFactory&lt;T&gt;): 
++       StateGraphInterface&lt;T&gt;
++
++- existNode(node: String): boolean
++
++- runSubtree(input: T, debug: boolean,
++        node: String): T
++
++</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>830</x>
+-      <y>1060</y>
+-      <w>170</w>
+-      <h>50</h>
++      <x>576</x>
++      <y>240</y>
++      <w>87</w>
++      <h>162</h>
+     </coordinates>
+     <panel_attributes>&lt;&lt;interface&gt;&gt;
+ /StateGraphInterface&lt;T&gt;/
++--
++/+ addNode(node: String,/
++/      operator: Consumer&lt;? super T&gt;):/
++/      StateGraphInterface&lt;T&gt;/
++
++/+ addWfNode(node: String,/
++/      wf: StateGraphInterface&lt;S&gt;):/
++/      WfNodeInterface&lt;T,S&gt;/
++
++/+ addEdge(origin: String,/
++/       destination: String):/
++/       StateGraphInterface&lt;T&gt;/
++
++/+ addConditionalEdge(origin: String,/
++/       destination: String,/
++/       condition: Predicate&lt;T&gt;):/
++/       StateGraphInterface&lt;T&gt;/
++
++/+ setInicial(node: String): void/
++
++/+ setFinal(node: String): void/
++
++/+ getNodeFactory(): NodeFactory&lt;T&gt;/
++
++/+ setNodeFactory(factory: NodeFactory&lt;T&gt;):/
++/       StateGraphInterface&lt;T&gt;/
++
++/+ run(input: T, debug: boolean): T/
++
++/+ toString(): String/
+ </panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>1000</x>
+-      <y>1180</y>
+-      <w>180</w>
+-      <h>40</h>
++      <x>645</x>
++      <y>417</y>
++      <w>93</w>
++      <h>201</h>
+     </coordinates>
+-    <panel_attributes>StateGraphDecorator&lt;T&gt;</panel_attributes>
++    <panel_attributes>StateGraphDecorator&lt;T&gt;
++--
+++ addNode(node: String,
++      operator: Consumer&lt;? super T&gt;):
++      StateGraphInterface&lt;T&gt;
++
+++ createNode(name: String): NodeInterface&lt;T&gt;
++
+++ addWfNode(node: String,
++      wf: StateGraphInterface&lt;S&gt;):
++      WfNodeInterface&lt;T,S&gt;
++
+++ createWfNode(name: String): NodeInterface&lt;T&gt;
++
+++ addEdge(origin: String,
++       destination: String):
++       StateGraphInterface&lt;T&gt;
++
+++ addConditionalEdge(origin: String,
++       destination: String,
++       condition: Predicate&lt;T&gt;):
++       StateGraphInterface&lt;T&gt;
++
+++ setInicial(node: String): void
++
+++ setFinal(node: String): void
++
+++ getNodeFactory(): NodeFactory&lt;T&gt;
++
+++ setNodeFactory(factory: NodeFactory&lt;T&gt;):
++       StateGraphInterface&lt;T&gt;
++
+++ run(input: T, debug: boolean): T
++
+++ toString(): String
++
+++ getNodeFactory(): NodeFactory&lt;T&gt;
++
+++ setNodeFactory(factory: NodeFactory&lt;T&gt;): 
++       StateGraphInterface&lt;T&gt;
++
++</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>900</x>
+-      <y>1320</y>
+-      <w>170</w>
+-      <h>40</h>
++      <x>606</x>
++      <y>636</y>
++      <w>66</w>
++      <h>33</h>
+     </coordinates>
+-    <panel_attributes>StateGraphProfiler&lt;T&gt;</panel_attributes>
++    <panel_attributes>StateGraphProfiler&lt;T&gt;
++--
++_-history: List&lt;String&gt;_
++--
+++ addTrace(trace: String): void
++
+++ history(): List&lt;String&gt;</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>1170</x>
+-      <y>1320</y>
+-      <w>170</w>
+-      <h>40</h>
++      <x>696</x>
++      <y>645</y>
++      <w>51</w>
++      <h>18</h>
+     </coordinates>
+-    <panel_attributes>StateGraphLogger&lt;T&gt;</panel_attributes>
++    <panel_attributes>StateGraphLogger&lt;T&gt;
++--
++_-file: String_</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>1120</x>
+-      <y>1210</y>
+-      <w>160</w>
+-      <h>130</h>
++      <x>681</x>
++      <y>615</y>
++      <w>48</w>
++      <h>36</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+-    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;110.0</additional_attributes>
++    <additional_attributes>10.0;10.0;10.0;60.0;140.0;60.0;140.0;100.0</additional_attributes>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>970</x>
+-      <y>1210</y>
+-      <w>120</w>
+-      <h>130</h>
++      <x>636</x>
++      <y>615</y>
++      <w>36</w>
++      <h>27</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+-    <additional_attributes>100.0;10.0;100.0;40.0;10.0;40.0;10.0;110.0</additional_attributes>
++    <additional_attributes>100.0;10.0;100.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>920</x>
+-      <y>1100</y>
+-      <w>200</w>
+-      <h>100</h>
++      <x>603</x>
++      <y>399</y>
++      <w>78</w>
++      <h>24</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+-    <additional_attributes>10.0;10.0;180.0;80.0</additional_attributes>
++    <additional_attributes>10.0;10.0;240.0;60.0</additional_attributes>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>770</x>
+-      <y>1100</y>
+-      <w>130</w>
+-      <h>100</h>
++      <x>555</x>
++      <y>399</y>
++      <w>42</w>
++      <h>30</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+-    <additional_attributes>110.0;10.0;10.0;80.0</additional_attributes>
++    <additional_attributes>120.0;10.0;10.0;80.0</additional_attributes>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>840</x>
+-      <y>1190</y>
+-      <w>180</w>
+-      <h>40</h>
++      <x>591</x>
++      <y>504</y>
++      <w>60</w>
++      <h>12</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+ m1=wrapped</panel_attributes>
+-    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
++    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>660</x>
+-      <y>740</y>
+-      <w>130</w>
+-      <h>40</h>
++      <x>195</x>
++      <y>312</y>
++      <w>111</w>
++      <h>96</h>
+     </coordinates>
+-    <panel_attributes>Node&lt;T&gt;</panel_attributes>
++    <panel_attributes>Node&lt;T&gt;
++--
++- name: String
++- operator: Consumer&lt;? super T&gt;
++_-edges: LinkedHashMap&lt;String, Predicate&lt;T&gt;&gt;
++--
+++ setOperador(operator: Consumer&lt;? superT&gt;): void
++
+++ run(input: T): void
++
+++ addEdge(node: String, 
++       condition: Predicate&lt;T&gt;): void
++
+++ getEdges(): LinkedHashMap&lt;String, Predicate&lt;T&gt;&gt;
++
+++ getName(): String
++
+++ toString(): String</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>790</x>
+-      <y>160</y>
+-      <w>250</w>
+-      <h>550</h>
++      <x>279</x>
++      <y>192</y>
++      <w>102</w>
++      <h>75</h>
+     </coordinates>
+     <panel_attributes>&lt;&lt;interface&gt;&gt;
+ /NodeInterface&lt;T&gt;/
+ --
+-/+ addNode(node: String,/
+-/      operator: Consumer&lt;? super T&gt;):/
+-/      StateGraphInterface&lt;T&gt;/
++/+ setOperador(operator: Consumer&lt;? superT&gt;): void/
+ 
+-/+ addWfNode(node: String,/
+-/      wf: StateGraphInterface&lt;S&gt;):/
+-/      WfNodeInterface&lt;T,S&gt;/
++/+ run(input: T): void/
+ 
+-/+ addEdge(origin: String,/
+-/       destination: String):/
+-/       StateGraphInterface&lt;T&gt;/
++/+ addEdge(node: String, /
++/       condition: Predicate&lt;T&gt;): void/
+ 
+-/+ addConditionalEdge(origin: String,/
+-/       destination: String,/
+-/       condition: Predicate&lt;T&gt;):/
+-/       StateGraphInterface&lt;T&gt;/
++/+ getEdges(): LinkedHashMap&lt;String, Predicate&lt;T&gt;&gt;/
+ 
++/+ getName(): String/
+ 
+-</panel_attributes>
++/+ toString(): String/</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>950</x>
+-      <y>740</y>
+-      <w>170</w>
+-      <h>40</h>
++      <x>351</x>
++      <y>312</y>
++      <w>72</w>
++      <h>51</h>
+     </coordinates>
+-    <panel_attributes>NodeDecorator&lt;T&gt;</panel_attributes>
++    <panel_attributes>NodeDecorator&lt;T&gt;
++--
+++ setOperador(operator: Consumer&lt;? superT&gt;): void
++
+++ run(input: T): void
++
+++ addEdge(node: String, 
++       condition: Predicate&lt;T&gt;): void
++
+++ getEdges(): LinkedHashMap&lt;String, Predicate&lt;T&gt;&gt;
++
+++ getName(): String
++
+++ toString(): String</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>840</x>
+-      <y>880</y>
+-      <w>170</w>
+-      <h>40</h>
++      <x>321</x>
++      <y>393</y>
++      <w>66</w>
++      <h>33</h>
+     </coordinates>
+-    <panel_attributes>NodeProfiler&lt;T&gt;</panel_attributes>
++    <panel_attributes>NodeProfiler&lt;T&gt;
++--
++_- graph: StrateGraphProfile&lt;T&gt;_
++--
+++ run(input: T): void
++
+++ toString(): String</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>1110</x>
+-      <y>880</y>
+-      <w>170</w>
+-      <h>40</h>
++      <x>402</x>
++      <y>393</y>
++      <w>51</w>
++      <h>36</h>
+     </coordinates>
+-    <panel_attributes>NodeLogger&lt;T&gt;</panel_attributes>
++    <panel_attributes>NodeLogger&lt;T&gt;
++--
++_-file: String_
++--
+++ run(input: T): void
++
+++ toString(): String
++</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>1060</x>
+-      <y>770</y>
+-      <w>160</w>
+-      <h>130</h>
++      <x>387</x>
++      <y>360</y>
++      <w>48</w>
++      <h>39</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+     <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;110.0</additional_attributes>
+@@ -204,10 +374,10 @@
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>910</x>
+-      <y>770</y>
+-      <w>120</w>
+-      <h>130</h>
++      <x>342</x>
++      <y>360</y>
++      <w>36</w>
++      <h>39</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+     <additional_attributes>100.0;10.0;100.0;40.0;10.0;40.0;10.0;110.0</additional_attributes>
+@@ -215,61 +385,84 @@
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>860</x>
+-      <y>700</y>
+-      <w>200</w>
+-      <h>60</h>
++      <x>327</x>
++      <y>264</y>
++      <w>60</w>
++      <h>54</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+-    <additional_attributes>10.0;10.0;180.0;40.0</additional_attributes>
++    <additional_attributes>10.0;10.0;180.0;160.0</additional_attributes>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>710</x>
+-      <y>700</y>
+-      <w>130</w>
+-      <h>60</h>
++      <x>282</x>
++      <y>264</y>
++      <w>39</w>
++      <h>54</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+-    <additional_attributes>110.0;10.0;10.0;40.0</additional_attributes>
++    <additional_attributes>110.0;10.0;10.0;160.0</additional_attributes>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>780</x>
+-      <y>750</y>
+-      <w>190</w>
+-      <h>40</h>
++      <x>303</x>
++      <y>354</y>
++      <w>54</w>
++      <h>12</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+ m1=wrapped</panel_attributes>
+-    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
++    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>260</x>
+-      <y>990</y>
+-      <w>290</w>
+-      <h>230</h>
++      <x>846</x>
++      <y>276</y>
++      <w>87</w>
++      <h>147</h>
+     </coordinates>
+     <panel_attributes>StreamingStateGraph&lt;T&gt;
+ --
+ - history: List&lt;T&gt;
+ --
+++ history(): List&lt;T&gt;
++
+ + addNode(node: String,
+         operator: Consumer&lt;? super List&lt;T&gt;): 
+-        StateGraphInterface&lt;List&lt;T&gt;&gt;</panel_attributes>
++        StateGraphInterface&lt;List&lt;T&gt;&gt;
++
+++ addWfNode(node: String,
++        wf: StateGraphInterface&lt;S&gt;):
++        WfNodeInterface&lt;List&lt;T&gt;, S&gt;
++
+++ addEdge(origin: String,
++        destination: String):
++        StateGraphInterface&lt;List&lt;T&gt;&gt;
++
+++ addConditionalEdge(origin: String,
++        destination: String,
++        condition: Predicate&lt;T&gt;):
++        StateGraphInterface&lt;List&lt;T&gt;&gt;
++
+++ setInitial(node: String): void
++
+++ setFinal(node: String): void
++
+++ run(input: T, debug: boolean): T
++
+++ toString(): String</panel_attributes>
+     <additional_attributes/>
+   </element>
+   <element>
+     <id>Relation</id>
+     <coordinates>
+-      <x>150</x>
+-      <y>1040</y>
+-      <w>130</w>
+-      <h>40</h>
++      <x>813</x>
++      <y>291</y>
++      <w>39</w>
++      <h>12</h>
+     </coordinates>
+     <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+ m1=graph</panel_attributes>
+@@ -278,12 +471,99 @@
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+-      <x>0</x>
+-      <y>1030</y>
+-      <w>160</w>
+-      <h>40</h>
++      <x>768</x>
++      <y>288</y>
++      <w>48</w>
++      <h>12</h>
+     </coordinates>
+     <panel_attributes>StateGraph&lt;List&lt;T&gt;&gt;</panel_attributes>
+     <additional_attributes/>
++  </element>
++  <element>
++    <id>UMLClass</id>
++    <coordinates>
++      <x>570</x>
++      <y>171</y>
++      <w>96</w>
++      <h>45</h>
++    </coordinates>
++    <panel_attributes>&lt;&lt;interface&gt;&gt;
++/NodeFactory&lt;T&gt;/
++--
++/+ createNode(name: String):/
++/       NodeInterface&lt;T&gt;/
++
++/+ createWfNode(wfNode: WfNodeInterface&lt;T,S&gt;):/
++/       NodeInterface&lt;T&gt;/
++</panel_attributes>
++    <additional_attributes/>
++  </element>
++  <element>
++    <id>Relation</id>
++    <coordinates>
++      <x>615</x>
++      <y>213</y>
++      <w>9</w>
++      <h>33</h>
++    </coordinates>
++    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
++    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
++  </element>
++  <element>
++    <id>UMLClass</id>
++    <coordinates>
++      <x>6</x>
++      <y>201</y>
++      <w>126</w>
++      <h>51</h>
++    </coordinates>
++    <panel_attributes>&lt;&lt;interface&gt;&gt;
++WfNodeInterface&lt;T&gt;
++--
++/+ withInjector(injector: Function&lt;T,S&gt;): WfNode&lt;T,S&gt;)/
++
++/+ withExtractor(extractor: BiConsumer&lt;S, T&gt;): WfNode&lt;T,S&gt;/</panel_attributes>
++    <additional_attributes/>
++  </element>
++  <element>
++    <id>UMLClass</id>
++    <coordinates>
++      <x>15</x>
++      <y>330</y>
++      <w>126</w>
++      <h>51</h>
++    </coordinates>
++    <panel_attributes>WfNode&lt;T&gt;
++--
++- injector: Function&lt;T,S&gt;
++- extractor: BiConsumer&lt;S, T&gt;
++- workflow: StateGraphInterface&lt;S&gt;
++--
+++ withInjector(injector: Function&lt;T,S&gt;): WfNode&lt;T,S&gt;)
++
+++ withExtractor(extractor: BiConsumer&lt;S, T&gt;): WfNode&lt;T,S&gt;</panel_attributes>
++    <additional_attributes/>
++  </element>
++  <element>
++    <id>Relation</id>
++    <coordinates>
++      <x>75</x>
++      <y>249</y>
++      <w>9</w>
++      <h>87</h>
++    </coordinates>
++    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
++    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
++  </element>
++  <element>
++    <id>Relation</id>
++    <coordinates>
++      <x>138</x>
++      <y>357</y>
++      <w>63</w>
++      <h>9</h>
++    </coordinates>
++    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
++    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+   </element>
+ </diagram>
+Index: src/workflows/StateGraph.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package workflows;\n\nimport myExceptions.AlreadyExistingNode;\nimport myExceptions.NonExistingNode;\n\nimport java.util.LinkedHashMap;\nimport java.util.SequencedSet;\nimport java.util.function.Consumer;\nimport java.util.function.Predicate;\n\n/**\n * Clase tipo grafo\n * @param <T> objeto asociado\n * @author Diego Gonzalez\n */\npublic class StateGraph<T> implements StateGraphInterface<T> {\n    /** Nombre */\n    private final String name;\n    /** Descripción */\n    private final String description;\n    /** Inicial */\n    private String initial = null;\n    /** Final */\n    private String last = null;\n    /** Pasos */\n    private int steps;\n    /** Mapa con los nodos */\n    private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();\n    private NodeFactory<T> nodeFactory = this;\n\n    /**\n     * Constructor de la clase StateGraph\n     * @param name nombre del grafo\n     * @param description descripción del grafo\n     */\n    public StateGraph(String name, String description){\n        this.name = name;\n        this.description = description;\n    }\n\n    /**\n     * Metodo para añadir un nodo\n     * @param node nodo a añadir\n     * @param operator operador\n     * @return grafo modificado\n     * @throws AlreadyExistingNode Excepción al añadir un nodo ya existente\n     */\n    @Override\n    public StateGraphInterface<T> addNode(String node, Consumer<? super T> operator) throws AlreadyExistingNode {\n        if (nodes.containsKey(node)) {\n            throw new AlreadyExistingNode(node, name);\n        }\n        NodeInterface<T> newNode = nodeFactory.createNode(node);\n        newNode.setOperator(operator);\n        nodes.put(node, newNode);\n        return this;\n    }\n\n    /**\n     * Metodo para crear un nodo\n     * @param name nodo a crear\n     * @return nodo\n     */\n    @Override\n    public NodeInterface<T> createNode(String name) {\n        return new Node<>(name);\n    }\n\n    /**\n     * Metodo para añadir un WfNode\n     * @param node nodo a añadir\n     * @param wf objeto tipo interfaz de grafo\n     * @return objeto tipo interfaz WfNodeInterface\n     * @param <S> objeto asociado al grafo\n     */\n    @Override\n    public <S> WfNodeInterface<T, S> addWfNode(String node, StateGraphInterface<S> wf) throws AlreadyExistingNode {\n        if (nodes.containsKey(node)) {\n            throw new AlreadyExistingNode(node, name);\n        }\n        WfNodeInterface<T, S> wfNode = new WfNode<>(node, wf);\n        NodeInterface<T> newNode = nodeFactory.createWfNode(wfNode);\n        nodes.put(node, newNode);\n        return wfNode;\n    }\n\n    /**\n     * Metodo para crear un WfNode\n     * @param wfNode objeto tipo interfaz de grafo\n     * @return nuevo nodo creado\n     * @param <S> objeto asociado al grafo\n     */\n    public <S> NodeInterface<T> createWfNode(WfNodeInterface<T, S> wfNode) {\n        return wfNode;\n    }\n\n    /**\n     * Metodo para añadir un edge\n     * @param origin origen del edge\n     * @param destination destino del edge\n     * @return grafo modificado\n     */\n    @Override\n    public StateGraphInterface<T> addEdge(String origin, String destination) {\n        return addConditionalEdge(origin, destination, input -> true);\n    }\n\n    /**\n     * Metodo para añadir un edge con condición\n     * @param origin origen del edge\n     * @param destination destino del edge\n     * @param condition condición a aplicar\n     * @return grafo modificado\n     */\n    @Override\n    public StateGraphInterface<T> addConditionalEdge(String origin, String destination, Predicate<T> condition) {\n        if (!nodes.containsKey(origin)) {\n            throw new NonExistingNode(\"Node \" + origin + \" does not exist in graph \" + name);\n        }\n        if (!nodes.containsKey(destination)) {\n            throw new NonExistingNode(\"Node \" + destination + \" does not exist in graph \" + name);\n        }\n        nodes.get(origin).addEdge(destination, condition);\n        return this;\n    }\n\n    /**\n     * Metodo para configurar un nodo como inicial\n     * @param node nodo a configurar\n     */\n    @Override\n    public void setInitial(String node) {\n        if (!nodes.containsKey(node)) {\n            throw new NonExistingNode(\"Node \" + node + \" does not exist in graph \" + name);\n        }\n        this.initial = node;\n    }\n\n    /**\n     * Metodo para configurar un nodo como final\n     * @param node nodo a configurar\n     */\n    @Override\n    public void setFinal(String node) {\n        if (!nodes.containsKey(node)) {\n            throw new NonExistingNode(\"Node \" + node + \" does not exist in graph \" + name);\n        }\n        this.last = node;\n    }\n\n    /**\n     * Metodo run\n     * @param input input a correr\n     * @param debug booleano para saber si hay que debuggear o no\n     * @return objeto tipo input\n     */\n    @Override\n    public T run(T input, boolean debug) {\n        if (this.initial == null) {\n            throw new NonExistingNode(\"Initial node does not exist in graph \" + name);\n        }\n        steps = 1;\n        if (debug) {\n            System.out.println(\"- Step 1 (\" + name + \") - input: \" + input);\n        }\n        runSubtree(input, debug, initial);\n        return input;\n    }\n\n    /**\n     * Metodo toString de StateGraph\n     * @return String con información relevante\n     */\n    @Override\n    public String toString() {\n        return \"Workflow '\" + name + \"' (\" + description + \"): \" +\n                \"\\n- Nodes: \" + nodes +\n                \"\\n- Initial: \" + initial +\n                \"\\n- Final: \" + last;\n    }\n\n    /**\n     * Metodo para saber si existe un nodo\n     * @param node nodo a comprobar\n     * @return true o false según exista o no\n     */\n    private boolean existNode(String node){\n        return nodes.containsKey(node);\n    }\n\n    /**\n     * Metodo para correr un subárbol del principal\n     * @param input input a ejecutar\n     * @param debug true o false según se quiera debuggear\n     * @param node nodo del que obtener el subárbol\n     * @return árbol resultado\n     */\n    private T runSubtree(T input, boolean debug, String node) {\n        T result = null;\n        steps++;\n        NodeInterface<T> runningNode = nodes.get(node);\n        runningNode.run(input);\n        if (debug) {\n            System.out.println(\"- Step \" + steps + \": (\" + name + \") - \" + node + \" executed: \" + input);\n        }\n        if (last != null && last.equals(node)) {\n            return input;\n        }\n        LinkedHashMap<String, Predicate<T>> edges = runningNode.getEdges();\n        SequencedSet<String> children = edges.sequencedKeySet();\n        for (String child : children) {\n            if (edges.get(child).test(input)) {\n                result = runSubtree(input, debug, child);\n                if (result != null) return result;\n            }\n        }\n        return result;\n    }\n\n    @Override\n    public NodeFactory<T> getNodeFactory() {\n        return nodeFactory;\n    }\n\n    @Override\n    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {\n        this.nodeFactory = factory;\n        return this;\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/workflows/StateGraph.java b/src/workflows/StateGraph.java
+--- a/src/workflows/StateGraph.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/src/workflows/StateGraph.java	(date 1746739803378)
+@@ -14,18 +14,19 @@
+  * @author Diego Gonzalez
+  */
+ public class StateGraph<T> implements StateGraphInterface<T> {
+-    /** Nombre */
++    /** Nombre del grafo*/
+     private final String name;
+-    /** Descripción */
++    /** Descripción del grafo*/
+     private final String description;
+-    /** Inicial */
++    /** Nodo Inicial */
+     private String initial = null;
+-    /** Final */
++    /** Nodo Final */
+     private String last = null;
+-    /** Pasos */
++    /** Pasos de ejecucion*/
+     private int steps;
+     /** Mapa con los nodos */
+     private final LinkedHashMap<String, NodeInterface<T>> nodes = new LinkedHashMap<>();
++    /** Metodo para obtener nodos*/
+     private NodeFactory<T> nodeFactory = this;
+ 
+     /**
+@@ -179,6 +180,26 @@
+                 "\n- Final: " + last;
+     }
+ 
++    /**
++     * Metodo para obtener el supplier de nodos
++     * @return el supplier de nodos
++     */
++    @Override
++    public NodeFactory<T> getNodeFactory() {
++        return nodeFactory;
++    }
++
++    /**
++     * Metodo para fijar el supplier de nodos
++     * @param factory el nuevo supplier
++     * @return el mismo grafo
++     */
++    @Override
++    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
++        this.nodeFactory = factory;
++        return this;
++    }
++
+     /**
+      * Metodo para saber si existe un nodo
+      * @param node nodo a comprobar
+@@ -217,16 +238,5 @@
+         return result;
+     }
+ 
+-    @Override
+-    public NodeFactory<T> getNodeFactory() {
+-        return nodeFactory;
+-    }
+-
+-    @Override
+-    public StateGraphInterface<T> setNodeFactory(NodeFactory<T> factory) {
+-        this.nodeFactory = factory;
+-        return this;
+-    }
+-
+ 
+ }
+Index: traces.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[08/05/2025 - 22:40:09] Node decrease executed, with output: {op1=2, op2=0, result=0}\n[08/05/2025 - 22:40:09] Node decrease executed, with output: {op1=1, op2=0, result=0}\n[08/05/2025 - 22:40:09] Node decrease executed, with output: {op1=0, op2=0, result=0}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/traces.txt b/traces.txt
+--- a/traces.txt	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/traces.txt	(date 1746738075434)
+@@ -1,3 +1,6 @@
+ [08/05/2025 - 22:40:09] Node decrease executed, with output: {op1=2, op2=0, result=0}
+ [08/05/2025 - 22:40:09] Node decrease executed, with output: {op1=1, op2=0, result=0}
+ [08/05/2025 - 22:40:09] Node decrease executed, with output: {op1=0, op2=0, result=0}
++[08/05/2025 - 23:01:15] Node decrease executed, with output: {op1=2, op2=0, result=0}
++[08/05/2025 - 23:01:15] Node decrease executed, with output: {op1=1, op2=0, result=0}
++[08/05/2025 - 23:01:15] Node decrease executed, with output: {op1=0, op2=0, result=0}
+Index: text_traces.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[08/05/2025 - 22:40:09] Node upper executed, with output: TextData{text='hello', result='HELLO', operation=uppercase}\n[08/05/2025 - 22:40:09] Node reverse executed, with output: TextData{text='hello', result='OLLEH', operation=reverse}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/text_traces.txt b/text_traces.txt
+--- a/text_traces.txt	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/text_traces.txt	(date 1746738075439)
+@@ -1,2 +1,4 @@
+-[08/05/2025 - 22:40:09] Node upper executed, with output: TextData{text='hello', result='HELLO', operation=uppercase}
+-[08/05/2025 - 22:40:09] Node reverse executed, with output: TextData{text='hello', result='OLLEH', operation=reverse}
++[08/05/2025 - 22:40:09] Node upper executed, with output: clasesTest.TextData{text='hello', result='HELLO', operation=uppercase}
++[08/05/2025 - 22:40:09] Node reverse executed, with output: clasesTest.TextData{text='hello', result='OLLEH', operation=reverse}
++[08/05/2025 - 23:01:15] Node upper executed, with output: clasesTest.TextData{text='hello', result='HELLO', operation=uppercase}
++[08/05/2025 - 23:01:15] Node reverse executed, with output: clasesTest.TextData{text='hello', result='OLLEH', operation=reverse}
+Index: tests/Apartado5Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/Apartado5Test.java b/tests/testsApartados/Apartado5Test.java
+rename from tests/Apartado5Test.java
+rename to tests/testsApartados/Apartado5Test.java
+--- a/tests/Apartado5Test.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/testsApartados/Apartado5Test.java	(date 1746738072765)
+@@ -1,3 +1,7 @@
++package testsApartados;
++
++import clasesTest.NumericData;
++import clasesTest.TextData;
+ import workflows.*;
+ 
+ /**
+@@ -5,6 +9,13 @@
+  * @author Diego Lesma
+  */
+ public class Apartado5Test {
++    /**
++     * Contructor vacio por defecto
++     */
++    public Apartado5Test(){
++
++    }
++
+     /**
+      * Metodo main a ejecutar
+      * @param args vacío
+@@ -15,7 +26,7 @@
+     }
+ 
+     /**
+-     * Test con NumericData
++     * Test con clasesTest.NumericData
+      */
+     public static void testProfilerWorkflow() {
+         StateGraph<NumericData> g = new StateGraph<>("loop-down", "Get a number, and decrease if positive");
+@@ -34,7 +45,7 @@
+     }
+ 
+     /**
+-     * Test con TextData
++     * Test con clasesTest.TextData
+      */
+     public static void testTextProfilerWorkflow() {
+         StateGraph<TextData> g = new StateGraph<>("text-process", "Text processing with profiling");
+Index: tests/Apartado2Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/Apartado2Test.java b/tests/testsApartados/Apartado2Test.java
+rename from tests/Apartado2Test.java
+rename to tests/testsApartados/Apartado2Test.java
+--- a/tests/Apartado2Test.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/testsApartados/Apartado2Test.java	(date 1746738072804)
+@@ -1,3 +1,7 @@
++package testsApartados;
++
++import clasesTest.NumericData;
++import clasesTest.TextData;
+ import workflows.StateGraph;
+ 
+ /**
+@@ -5,6 +9,13 @@
+  * @author Diego Lesma
+  */
+ public class Apartado2Test {
++    /**
++     * Contructor vacio por defecto
++     */
++    public Apartado2Test(){
++
++    }
++
+     /**
+      * Metodo main a ejecutar
+      * @param args vacío
+@@ -15,7 +26,7 @@
+     }
+ 
+     /**
+-     * Test usando NumericData
++     * Test usando clasesTest.NumericData
+      */
+     public static void testConditionalWorkflow() {
+         StateGraph<NumericData> sg = new StateGraph<>("math1", "Add and conditional square");
+@@ -40,7 +51,7 @@
+     }
+ 
+     /**
+-     * Test usando TextData
++     * Test usando clasesTest.TextData
+      */
+     public static void testTextConditionalWorkflow() {
+         StateGraph<TextData> sg = new StateGraph<>("text-cond", "Conditional text processing");
+Index: tests/DoubleData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/DoubleData.java b/tests/clasesTest/DoubleData.java
+rename from tests/DoubleData.java
+rename to tests/clasesTest/DoubleData.java
+--- a/tests/DoubleData.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/clasesTest/DoubleData.java	(date 1746738072798)
+@@ -1,14 +1,16 @@
++package clasesTest;
++
+ /**
+  * Clase DubleData usada para tests
+  */
+-class DoubleData {
++public class DoubleData {
+     /** Valor */
+     private final double value;
+     /** Media */
+     private double average;
+ 
+     /**
+-     * Constructor de DoubleData
++     * Constructor de clasesTest.DoubleData
+      * @param value valor
+      * @param average media
+      */
+@@ -36,7 +38,7 @@
+     public void setAverage(double avg) { this.average = avg; }
+ 
+     /**
+-     * Metodo toString de DoubleData
++     * Metodo toString de clasesTest.DoubleData
+      * @return String con información relevante
+      */
+     @Override
+Index: tests/Apartado4Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/Apartado4Test.java b/tests/testsApartados/Apartado4Test.java
+rename from tests/Apartado4Test.java
+rename to tests/testsApartados/Apartado4Test.java
+--- a/tests/Apartado4Test.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/testsApartados/Apartado4Test.java	(date 1746738072791)
+@@ -1,3 +1,7 @@
++package testsApartados;
++
++import clasesTest.DoubleData;
++import clasesTest.TextData;
+ import workflows.StreamingStateGraph;
+ 
+ import java.util.List;
+@@ -7,6 +11,13 @@
+  * @author Diego Lesma
+  */
+ public class Apartado4Test {
++    /**
++     * Contructor vacio por defecto
++     */
++    public Apartado4Test(){
++
++    }
++
+     /**
+      * Metodo main a ejecutar
+      * @param args vacío
+@@ -32,7 +43,7 @@
+     }
+ 
+     /**
+-     * Test con TextData
++     * Test con clasesTest.TextData
+      */
+     public static void testTextStreamWorkflow() {
+         StreamingStateGraph<TextData> sg = new StreamingStateGraph<>("text-stream", "Text stream processing");
+Index: tests/TextData.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/TextData.java b/tests/clasesTest/TextData.java
+rename from tests/TextData.java
+rename to tests/clasesTest/TextData.java
+--- a/tests/TextData.java	(revision d086df5fce5f39450a92e96a80c865902eebe7a8)
++++ b/tests/clasesTest/TextData.java	(date 1746737949728)
+@@ -1,8 +1,10 @@
++package clasesTest;
++
+ import java.util.HashMap;
+ import java.util.Map;
+ 
+ /**
+- * Clase TextData
++ * Clase clasesTest.TextData
+  * @author Diego Lesma
+  */
+ public class TextData {
+@@ -12,7 +14,7 @@
+     private String currentOperation;
+ 
+     /**
+-     * Constructor de TextData
++     * Constructor de clasesTest.TextData
+      * @param initialText texto inicial
+      */
+     public TextData(String initialText) {
+@@ -88,7 +90,7 @@
+      */
+     @Override
+     public String toString() {
+-        return "TextData{text='" + data.get("text") + "', result='" + data.get("result") +
++        return "clasesTest.TextData{text='" + data.get("text") + "', result='" + data.get("result") +
+                 "', operation=" + currentOperation + "}";
+     }
+ }
