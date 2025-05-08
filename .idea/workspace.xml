@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ADSOFT/Apartado2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ADSOFT/Apartado2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/StateGraphProfiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StateGraphProfiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/StreamingStateGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/WfNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/WfNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/workflows/WfNodeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/workflows/WfNodeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado3Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado4Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Apartado5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Apartado5Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DoubleData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DoubleData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/NumericData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/NumericData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/StringData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/StringData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TextData.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TextData.java" afterDir="false" />
-    </list>
+    <list default="true" id="a82cd155-8e0e-41c7-9e1a-d30e56829cef" name="Changes" comment="Bombardeen ADSOFT" />
     <list id="f1d900a9-ff89-40be-b1c3-a0b2bbe36706" name="Ignore" comment="Ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746731906721</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Bombardeen ADSOFT">
+      <option name="closed" value="true" />
+      <created>1746734885541</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1746734885541</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
