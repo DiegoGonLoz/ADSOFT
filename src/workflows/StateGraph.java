@@ -99,7 +99,9 @@ public class StateGraph<T> implements WorkflowInterface<T> {
             System.out.println("- Step 1 ("+name+") - input: " + input);
         }
 
-        return runSubtree(input, debug, this.initial);
+        runSubtree(input, debug, this.initial);
+
+        return input;
     }
 
     @Override
