@@ -4,6 +4,8 @@ public class Apartado1Test {
     public static void main(String[] args) {
         StateGraph<NumericData> sg = buildWorkflow();
 
+        System.out.println(sg);
+
         NumericData input = new NumericData(2,3);
         System.out.println("input = " + input);
         NumericData output = sg.run(input, true);

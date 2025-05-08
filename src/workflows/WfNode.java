@@ -3,13 +3,15 @@ package workflows;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
-public class WfNode<T, S> extends Node<T> {
+public class WfNode<T, S> extends Node<T> implements WfNodeInterface<T,S>{
     private Function<T, S> injector;
     private BiConsumer<S, T> extractor;
 
-    private StateGraph<S> workflow;
+    private WorkflowInterface<S> workflow;
 
-    public WfNode(StateGraph<S> workflow) {
+    public WfNode(String name, WorkflowInterface<S> workflow) {
+        super(name);
+
         this.workflow = workflow;
 
         setOperator(input -> {
@@ -17,7 +19,7 @@ public class WfNode<T, S> extends Node<T> {
                 throw new IllegalStateException("Injector y extractor deben ser configurados antes de usar el nodo.");
             }
             S inputS = this.injector.apply(input);
-            this.workflow.accept(inputS);
+            this.workflow.run(inputS, false);
             this.extractor.accept(inputS, input);
         });
     }

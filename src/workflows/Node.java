@@ -1,15 +1,41 @@
 package workflows;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
-public class Node<T> implements Consumer<T>{
-    private Consumer<T> operator;
+public class Node<T> implements NodeInterface<T>{
+    private String name;
 
-    public void setOperator(Consumer<T> operator){
+    private Consumer<? super T> operator;
+    private final LinkedHashMap<String, Predicate<T>> edges = new LinkedHashMap<>();
+
+    public Node(String name){
+        this.name = name;
+    }
+
+    public void setOperator(Consumer<? super T> operator){
         this.operator = operator;
     }
 
-    public void accept(T input){
+    public void run(T input){
         operator.accept(input);
+    }
+
+    public void addEdge(String node, Predicate<T> condition){
+        if(edges.containsKey(node)){
+            return;
+        }
+        edges.put(node, condition);
+    }
+
+    public LinkedHashMap<String, Predicate<T>> getEdges(){
+        return new LinkedHashMap<String, Predicate<T>>(edges);
+    }
+
+    @Override
+    public String toString(){
+        return "Node " + name + " (" + edges.keySet().size() + " output nodes)";
     }
 }
